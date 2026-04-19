@@ -5,6 +5,7 @@ import TestTerman from '../components/TestTerman'
 import TestAptitudes from '../components/TestAptitudes'
 import TestRazonamiento from '../components/TestRazonamiento'
 import TestIntereses from '../components/TestIntereses'
+import TestMBTI from '../components/TestMBTI'
 import './Tests.css'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
@@ -120,8 +121,14 @@ function Tests() {
 
     const accesoGuardado = localStorage.getItem('aprova_acceso')
 
-    // Modo prueba: /tests?prueba=1 (solo si no hay acceso real guardado)
-    if (modoPrueba && !accesoGuardado) {
+    // Modo prueba: /tests?prueba=1 — resetea todo para poder probar cualquier test
+    if (modoPrueba) {
+      localStorage.removeItem('aprova_tests_completados')
+      localStorage.removeItem('aprova_top3_aptitudes')
+      localStorage.removeItem('aprova_top3_intereses')
+      localStorage.removeItem('aprova_razonamiento_progreso')
+      setTestsCompletados([])
+      setDiagnostico(null)
       const accesoPrueba = { email: 'prueba@aprova.com', nombre: 'Usuario Prueba', modalidad: 'modalidad1' }
       localStorage.setItem('aprova_acceso', JSON.stringify(accesoPrueba))
       setAcceso(accesoPrueba)
@@ -231,6 +238,15 @@ function Tests() {
       componente: 'razonamiento'
     })
 
+    list.push({
+      id: 'mbti',
+      nombre: 'Test de Personalidad MBTI',
+      descripcion: 'Identifica tu tipo de personalidad en 4 dimensiones: Extraversión/Introversión, Sensación/Intuición, Pensamiento/Sentimiento y Juicio/Percepción',
+      duracion: '15-20 min',
+      preguntas: 72,
+      componente: 'mbti'
+    })
+
     return list
   })()
 
@@ -336,6 +352,19 @@ function Tests() {
     )
   }
 
+  // Si se seleccionó el test MBTI
+  if (testActual && testActual.componente === 'mbti') {
+    return (
+      <div className="tests-page">
+        <TestMBTI
+          acceso={acceso}
+          onVolver={() => setTestActual(null)}
+          onCompletado={() => handleTestCompletado('mbti')}
+        />
+      </div>
+    )
+  }
+
   const AREA_NOMBRES = { FM: 'Físico-Matemáticas', B: 'Biológicas', Q: 'Químicas', A: 'Administrativas', S: 'Sociales', H: 'Humanidades' }
 
   // Vista de selección de tests
@@ -386,6 +415,12 @@ function Tests() {
                     bloqueado = true
                     mensajeBloqueo = `Completa los subtipos de áreas primero`
                   }
+                }
+              } else if (test.id === 'mbti') {
+                // MBTI requiere razonamiento completado
+                if (!testsCompletados.includes('razonamiento')) {
+                  bloqueado = true
+                  mensajeBloqueo = 'Completa el Test de Razonamiento primero'
                 }
               }
 

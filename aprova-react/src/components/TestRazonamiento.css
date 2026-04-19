@@ -625,6 +625,60 @@
   transform: translateY(-44%);
 }
 
+.zoom-hint {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  color: #9ca3af;
+  padding: 4px 0 8px;
+}
+
+.zoom-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.zoom-modal {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  overflow: auto;
+}
+
+.zoom-img {
+  width: 100%;
+  max-width: none;
+  display: block;
+}
+
+.zoom-cerrar {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  color: #374151;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
 .respuestas-container {
   width: 220px;
   flex-shrink: 0;
@@ -723,28 +777,36 @@
   margin-bottom: 20px;
 }
 
-.perceptiva-modelo {
-  margin-bottom: 32px;
+.perceptiva-enunciado {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
 }
 
-.perceptiva-label {
-  display: block;
+.perceptiva-combo {
+  font-size: 36px;
+  font-weight: 600;
+  font-family: monospace;
+  letter-spacing: 3px;
+  color: #374151;
+  padding: 8px 4px;
+}
+
+.perceptiva-subrayado {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 6px;
+  text-decoration-color: #534AB7;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.perceptiva-instruccion {
   font-size: 14px;
   color: #6b7280;
-  margin-bottom: 8px;
-}
-
-.perceptiva-target {
-  display: inline-block;
-  font-size: 48px;
-  font-weight: 700;
-  color: #1f2937;
-  background: #f0f9ff;
-  border: 3px solid #3b82f6;
-  border-radius: 12px;
-  padding: 16px 32px;
-  font-family: monospace;
-  letter-spacing: 4px;
+  margin: 0 0 20px;
 }
 
 .perceptiva-opciones {
@@ -770,13 +832,13 @@
 }
 
 .perceptiva-opcion:hover {
-  border-color: #3b82f6;
-  background: #eff6ff;
+  border-color: #534AB7;
+  background: #EEEDFE;
 }
 
 .perceptiva-opcion.seleccionada {
-  background: #3b82f6;
-  border-color: #3b82f6;
+  background: #534AB7;
+  border-color: #534AB7;
   color: #fff;
 }
 
@@ -952,7 +1014,7 @@
 
   .ortografia-opciones { grid-template-columns: 1fr; }
 
-  .perceptiva-target { font-size: 36px; padding: 12px 24px; }
+  .perceptiva-combo { font-size: 28px; }
   .perceptiva-opcion { font-size: 18px; padding: 12px 16px; }
 }
 
@@ -960,6 +1022,6 @@
   .respuestas-grid { flex-direction: column; }
   .pregunta-row { padding: 6px 10px; }
   .opcion-mini { width: 24px; height: 24px; font-size: 11px; }
-  .perceptiva-target { font-size: 28px; padding: 10px 20px; }
+  .perceptiva-combo { font-size: 22px; }
   .perceptiva-opcion { font-size: 16px; padding: 10px 12px; min-width: 60px; }
 }

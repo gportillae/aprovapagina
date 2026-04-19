@@ -1206,6 +1206,100 @@ async function generarExcel({ nombre, email, modalidad, testNombre, respuestas, 
       zRow.getCell(5).font = { size: 10 }
     })
 
+  } else if (tipoResultado === 'mbti') {
+    // ===== TEST MBTI =====
+    const mbtiSheet = workbook.addWorksheet('MBTI')
+    mbtiSheet.addRow(['TEST DE PERSONALIDAD MBTI'])
+    mbtiSheet.getRow(1).font = titleFont
+    mbtiSheet.mergeCells('A1:F1')
+    mbtiSheet.addRow([])
+    mbtiSheet.addRow(['Nombre:', nombre])
+    mbtiSheet.addRow(['Fecha:', new Date().toLocaleDateString('es-MX', { timeZone: 'America/Mexico_City' })])
+    mbtiSheet.addRow([])
+
+    // Tipo resultado
+    const tipo = respuestas.tipo || ''
+    const desc = respuestas.descripcion || ''
+    mbtiSheet.addRow(['Tipo de personalidad:', tipo])
+    mbtiSheet.getRow(6).font = { bold: true, size: 14 }
+    mbtiSheet.getRow(6).getCell(2).font = { bold: true, size: 20, color: { argb: 'FF534AB7' } }
+    mbtiSheet.addRow(['Descripción:', desc])
+    mbtiSheet.addRow([])
+
+    // Tabla de dimensiones
+    const dimHdr = mbtiSheet.addRow(['Dimensión', 'Polo 1', 'Puntaje', 'Polo 2', 'Puntaje', 'Dominante'])
+    dimHdr.fill = headerFill
+    dimHdr.font = headerFont
+    mbtiSheet.getColumn(1).width = 30
+    mbtiSheet.getColumn(2).width = 18
+    mbtiSheet.getColumn(3).width = 12
+    mbtiSheet.getColumn(4).width = 18
+    mbtiSheet.getColumn(5).width = 12
+    mbtiSheet.getColumn(6).width = 16
+
+    const dimNames = {
+      EI: { nombre: 'Extraversión - Introversión', polo1: 'Extraversión (E)', polo2: 'Introversión (I)' },
+      SN: { nombre: 'Sensación - Intuición', polo1: 'Sensación (S)', polo2: 'Intuición (N)' },
+      TF: { nombre: 'Pensamiento - Sentimiento', polo1: 'Pensamiento (T)', polo2: 'Sentimiento (F)' },
+      JP: { nombre: 'Juicio - Percepción', polo1: 'Juicio (J)', polo2: 'Percepción (P)' }
+    }
+
+    const dims = respuestas.dimensiones || {}
+    Object.entries(dims).forEach(([key, dim]) => {
+      const info = dimNames[key]
+      if (!info) return
+      const polo1Key = key[0]
+      const polo2Key = key[1]
+      const row = mbtiSheet.addRow([info.nombre, info.polo1, dim[polo1Key], info.polo2, dim[polo2Key], dim.dominante])
+      row.getCell(1).font = { bold: true }
+      // Colorear dominante
+      const domCol = dim.dominante === polo1Key ? 3 : 5
+      row.getCell(domCol).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF534AB7' } }
+      row.getCell(domCol).font = { bold: true, color: { argb: 'FFFFFFFF' } }
+      row.getCell(6).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFEEEDFE' } }
+      row.getCell(6).font = { bold: true, size: 14, color: { argb: 'FF534AB7' } }
+      row.getCell(6).alignment = { horizontal: 'center' }
+    })
+
+    // Gráfica visual
+    mbtiSheet.addRow([])
+    mbtiSheet.addRow([])
+    const grafTitle = mbtiSheet.addRow(['PERFIL MBTI'])
+    grafTitle.font = { bold: true, size: 14, color: { argb: 'FF26215C' } }
+    mbtiSheet.addRow([])
+
+    Object.entries(dims).forEach(([key, dim]) => {
+      const info = dimNames[key]
+      if (!info) return
+      const polo1Key = key[0]
+      const polo2Key = key[1]
+      const total = dim[polo1Key] + dim[polo2Key]
+      const pct1 = total > 0 ? Math.round((dim[polo1Key] / total) * 100) : 50
+      const pct2 = 100 - pct1
+
+      const row = mbtiSheet.addRow([info.polo1, pct1 + '%', '', '', pct2 + '%', info.polo2])
+      row.getCell(1).font = { bold: dim.dominante === polo1Key, size: 11 }
+      row.getCell(1).alignment = { horizontal: 'right' }
+      row.getCell(2).font = { bold: true, size: 11, color: { argb: 'FF534AB7' } }
+      row.getCell(2).alignment = { horizontal: 'center' }
+      row.getCell(5).font = { bold: true, size: 11, color: { argb: 'FFAFA9EC' } }
+      row.getCell(5).alignment = { horizontal: 'center' }
+      row.getCell(6).font = { bold: dim.dominante === polo2Key, size: 11 }
+
+      // Barra visual con celdas coloreadas
+      const barRow = mbtiSheet.addRow([])
+      const totalCols = 20
+      const cols1 = Math.round((pct1 / 100) * totalCols)
+      for (let c = 1; c <= totalCols; c++) {
+        barRow.getCell(c).fill = {
+          type: 'pattern', pattern: 'solid',
+          fgColor: { argb: c <= cols1 ? 'FF534AB7' : 'FFAFA9EC' }
+        }
+      }
+      barRow.height = 12
+      mbtiSheet.addRow([])
+    })
+
   } else {
     // Genérico
     const genSheet = workbook.addWorksheet('Respuestas')

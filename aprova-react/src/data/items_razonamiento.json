@@ -2260,9 +2260,9 @@
           "id": 1,
           "modelo": "nv",
           "opciones": [
-            "xn",
-            "xv",
             "nx",
+            "xv",
+            "xn",
             "vx",
             "nv"
           ],
@@ -2272,13 +2272,13 @@
           "id": 2,
           "modelo": "bd",
           "opciones": [
-            "bl",
-            "ld",
-            "lb",
             "dl",
-            "bd"
+            "bd",
+            "bl",
+            "lb",
+            "ld"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 3,
@@ -2286,21 +2286,21 @@
           "opciones": [
             "ra",
             "ur",
+            "au",
             "ar",
-            "ru",
-            "au"
+            "ru"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 4,
           "modelo": "wv",
           "opciones": [
-            "vw",
-            "vu",
-            "wv",
+            "uw",
             "wu",
-            "uw"
+            "wv",
+            "vu",
+            "vw"
           ],
           "correcta": 3
         },
@@ -2308,21 +2308,21 @@
           "id": 5,
           "modelo": "um",
           "opciones": [
-            "wu",
             "wm",
-            "mu",
             "mw",
-            "um"
+            "um",
+            "wu",
+            "mu"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 6,
           "modelo": "79",
           "opciones": [
+            "97",
             "76",
             "69",
-            "97",
             "79",
             "67"
           ],
@@ -2332,37 +2332,37 @@
           "id": 7,
           "modelo": "ra",
           "opciones": [
-            "ar",
-            "na",
-            "nr",
             "rn",
-            "ra"
+            "ar",
+            "ra",
+            "nr",
+            "na"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 8,
           "modelo": "ma",
           "opciones": [
+            "ma",
+            "zm",
             "az",
             "za",
-            "zm",
-            "mz",
-            "ma"
+            "mz"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 9,
           "modelo": "NA",
           "opciones": [
-            "NV",
             "VN",
             "AV",
             "VA",
-            "NA"
+            "NA",
+            "NV"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 10,
@@ -2370,11 +2370,11 @@
           "opciones": [
             "QO",
             "QC",
-            "OC",
+            "CQ",
             "OQ",
-            "CQ"
+            "OC"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 11,
@@ -2382,8 +2382,8 @@
           "opciones": [
             "CU",
             "US",
-            "CC",
             "UU",
+            "CC",
             "UC"
           ],
           "correcta": 5
@@ -2393,46 +2393,46 @@
           "modelo": "4H",
           "opciones": [
             "N4",
-            "NH",
-            "4N",
             "HN",
-            "4H"
+            "4N",
+            "4H",
+            "NH"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 13,
           "modelo": "Rr",
           "opciones": [
-            "RP",
-            "PP",
+            "Rr",
             "rr",
-            "pR",
-            "Rr"
+            "PP",
+            "RP",
+            "pR"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 14,
           "modelo": "8a",
           "opciones": [
-            "aA",
-            "Aa",
             "8A",
+            "8a",
+            "Aa",
             "A8",
-            "8a"
+            "aA"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 15,
           "modelo": "LT",
           "opciones": [
-            "tT",
             "Tl",
-            "Tt",
+            "tt",
+            "tT",
             "LT",
-            "tt"
+            "Tt"
           ],
           "correcta": 4
         },
@@ -2440,10 +2440,10 @@
           "id": 16,
           "modelo": "Vv",
           "opciones": [
-            "Av",
             "av",
-            "AA",
             "VV",
+            "Av",
+            "AA",
             "Vv"
           ],
           "correcta": 5
@@ -2452,58 +2452,58 @@
           "id": 17,
           "modelo": "4d",
           "opciones": [
-            "3a",
-            "4c",
-            "4a",
             "3c",
-            "4d"
+            "3a",
+            "4a",
+            "4d",
+            "4c"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 18,
           "modelo": "V5",
           "opciones": [
-            "X9",
             "V9",
+            "V5",
             "X7",
-            "V7",
-            "V5"
+            "X9",
+            "V7"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 19,
           "modelo": "9b",
           "opciones": [
-            "b7",
+            "9b",
             "A9",
             "79",
             "7b",
-            "9b"
+            "b7"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 20,
           "modelo": "02",
           "opciones": [
             "25",
-            "52",
-            "20",
             "05",
-            "02"
+            "52",
+            "02",
+            "20"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 21,
           "modelo": "ar",
           "opciones": [
             "or",
-            "ra",
             "ro",
             "oa",
+            "ra",
             "ar"
           ],
           "correcta": 5
@@ -2512,58 +2512,58 @@
           "id": 22,
           "modelo": "ol",
           "opciones": [
-            "lc",
-            "oc",
             "lo",
+            "ol",
             "co",
-            "ol"
+            "lc",
+            "oc"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 23,
           "modelo": "1s",
           "opciones": [
-            "13",
             "sl",
             "31",
-            "3s",
-            "1s"
+            "13",
+            "1s",
+            "3s"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 24,
           "modelo": "ca",
           "opciones": [
-            "ma",
             "mc",
-            "cm",
+            "ca",
             "am",
-            "ca"
+            "cm",
+            "ma"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 25,
           "modelo": "wx",
           "opciones": [
-            "wv",
-            "xv",
-            "vw",
             "vx",
-            "wx"
+            "wv",
+            "wx",
+            "xv",
+            "vw"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 26,
           "modelo": "un",
           "opciones": [
-            "nu",
             "ud",
-            "du",
             "nd",
+            "du",
+            "nu",
             "un"
           ],
           "correcta": 5
@@ -2572,58 +2572,58 @@
           "id": 27,
           "modelo": "kf",
           "opciones": [
-            "lf",
-            "lk",
             "kl",
+            "lf",
+            "kf",
             "fk",
-            "kf"
+            "lk"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 28,
           "modelo": "pq",
           "opciones": [
             "qp",
-            "gp",
             "qg",
-            "gq",
-            "pq"
+            "gp",
+            "pq",
+            "gq"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 29,
           "modelo": "2q",
           "opciones": [
-            "2u",
-            "qu",
-            "u2",
             "q2",
-            "2q"
+            "qu",
+            "2q",
+            "u2",
+            "2u"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 30,
           "modelo": "41",
           "opciones": [
+            "41",
+            "44",
             "40",
             "14",
-            "11",
-            "44",
-            "41"
+            "11"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 31,
           "modelo": "re",
           "opciones": [
-            "ne",
+            "nr",
             "en",
             "rn",
-            "nr",
+            "ne",
             "re"
           ],
           "correcta": 5
@@ -2633,56 +2633,56 @@
           "modelo": "db",
           "opciones": [
             "bd",
-            "bb",
+            "db",
             "ld",
             "dd",
-            "db"
+            "bb"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 33,
           "modelo": "DR",
           "opciones": [
-            "BR",
             "BD",
+            "BR",
+            "DR",
             "RB",
-            "RD",
-            "DR"
+            "RD"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 34,
           "modelo": "WM",
           "opciones": [
-            "MV",
-            "VM",
             "MW",
+            "WM",
             "VW",
-            "WM"
+            "VM",
+            "MV"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 35,
           "modelo": "OB",
           "opciones": [
-            "BO",
-            "BD",
-            "DO",
+            "OB",
             "OD",
-            "OB"
+            "BD",
+            "BO",
+            "DO"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 36,
           "modelo": "PR",
           "opciones": [
-            "PB",
             "RB",
             "RP",
+            "PB",
             "BP",
             "PR"
           ],
@@ -2692,37 +2692,37 @@
           "id": 37,
           "modelo": "DD",
           "opciones": [
-            "bB",
-            "Dd",
-            "Db",
             "dB",
-            "DD"
+            "DD",
+            "bB",
+            "Db",
+            "Dd"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 38,
           "modelo": "FF",
           "opciones": [
+            "eF",
+            "Ef",
             "EE",
             "Fe",
-            "eF",
-            "FF",
-            "Ef"
+            "FF"
           ],
-          "correcta": 4
+          "correcta": 5
         },
         {
           "id": 39,
           "modelo": "ZE",
           "opciones": [
-            "eZ",
+            "Zz",
             "Ze",
             "zE",
-            "Zz",
-            "ZE"
+            "ZE",
+            "eZ"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 40,
@@ -2730,19 +2730,19 @@
           "opciones": [
             "zn",
             "zZ",
-            "ZN",
+            "NZ",
             "Zz",
-            "NZ"
+            "ZN"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 41,
           "modelo": "7b",
           "opciones": [
             "7c",
-            "9e",
             "9b",
+            "9e",
             "9c",
             "7b"
           ],
@@ -2752,49 +2752,49 @@
           "id": 42,
           "modelo": "7c",
           "opciones": [
-            "7b",
-            "2b",
-            "2d",
             "7d",
-            "7c"
+            "7b",
+            "7c",
+            "2d",
+            "2b"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 43,
           "modelo": "3n",
           "opciones": [
+            "3n",
+            "Sn",
             "ns",
             "n3",
-            "Sn",
-            "3s",
-            "3n"
+            "3s"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 44,
           "modelo": "20",
           "opciones": [
-            "52",
             "05",
             "25",
             "02",
-            "20"
+            "20",
+            "52"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 45,
           "modelo": "ac",
           "opciones": [
-            "ca",
             "ce",
-            "ae",
+            "ac",
+            "ca",
             "ec",
-            "ac"
+            "ae"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 46,
@@ -2802,8 +2802,8 @@
           "opciones": [
             "vo",
             "av",
-            "ao",
             "ov",
+            "ao",
             "va"
           ],
           "correcta": 5
@@ -2813,57 +2813,57 @@
           "modelo": "ol",
           "opciones": [
             "vo",
-            "av",
-            "lo",
             "co",
-            "ol"
+            "lo",
+            "ol",
+            "av"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 48,
           "modelo": "ra",
           "opciones": [
-            "ar",
-            "rf",
+            "ra",
             "fr",
-            "fa",
-            "ra"
+            "rf",
+            "ar",
+            "fa"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 49,
           "modelo": "ma",
           "opciones": [
-            "cm",
-            "ca",
+            "ma",
             "am",
+            "ca",
             "mc",
-            "ma"
+            "cm"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 50,
           "modelo": "or",
           "opciones": [
-            "cr",
-            "co",
-            "rc",
             "oc",
-            "or"
+            "co",
+            "cr",
+            "or",
+            "rc"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 51,
           "modelo": "hc",
           "opciones": [
+            "ch",
+            "oh",
             "oc",
             "ho",
-            "oh",
-            "ch",
             "hc"
           ],
           "correcta": 5
@@ -2872,58 +2872,58 @@
           "id": 52,
           "modelo": "se",
           "opciones": [
-            "rs",
-            "es",
+            "se",
             "er",
             "re",
-            "se"
+            "rs",
+            "es"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 53,
           "modelo": "ur",
           "opciones": [
-            "ar",
             "ru",
+            "ar",
             "au",
-            "ra",
-            "ur"
+            "ur",
+            "ra"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 54,
           "modelo": "gq",
           "opciones": [
-            "qg",
             "pq",
+            "gq",
             "qp",
             "gp",
-            "gq"
+            "qg"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 55,
           "modelo": "na",
           "opciones": [
+            "an",
             "nm",
             "am",
-            "mn",
-            "an",
-            "na"
+            "na",
+            "mn"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 56,
           "modelo": "gj",
           "opciones": [
             "gp",
-            "jp",
             "pg",
             "jg",
+            "jp",
             "gj"
           ],
           "correcta": 5
@@ -2932,58 +2932,58 @@
           "id": 57,
           "modelo": "pt",
           "opciones": [
-            "et",
-            "pe",
             "ep",
+            "pt",
             "tp",
-            "pt"
+            "et",
+            "pe"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 58,
           "modelo": "na",
           "opciones": [
-            "rn",
-            "ra",
             "ar",
-            "nr",
-            "na"
+            "ra",
+            "rn",
+            "na",
+            "nr"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 59,
           "modelo": "db",
           "opciones": [
-            "bb",
-            "bd",
-            "ld",
             "dd",
-            "db"
+            "bd",
+            "db",
+            "ld",
+            "bb"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 60,
           "modelo": "a8",
           "opciones": [
-            "1a",
-            "81",
-            "18",
             "8a",
-            "a8"
+            "1a",
+            "a8",
+            "81",
+            "18"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 61,
           "modelo": "HN",
           "opciones": [
-            "HZ",
             "ZN",
-            "NH",
             "ZH",
+            "NH",
+            "HZ",
             "HN"
           ],
           "correcta": 5
@@ -2992,57 +2992,57 @@
           "id": 62,
           "modelo": "BB",
           "opciones": [
-            "RB",
-            "RP",
             "BR",
+            "RB",
+            "BB",
             "RR",
-            "BB"
+            "RP"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 63,
           "modelo": "CC",
           "opciones": [
+            "CC",
             "CU",
             "UC",
             "US",
-            "UU",
-            "CC"
+            "UU"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 64,
           "modelo": "RP",
           "opciones": [
-            "BP",
-            "RB",
             "PB",
+            "RP",
             "PR",
-            "RP"
+            "RB",
+            "BP"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 65,
           "modelo": "JK",
           "opciones": [
-            "KJ",
+            "JK",
             "CK",
-            "JC",
             "KC",
-            "JK"
+            "KJ",
+            "JC"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 66,
           "modelo": "ll",
           "opciones": [
-            "lT",
-            "Tt",
             "Tl",
+            "Tt",
+            "lT",
             "TT",
             "ll"
           ],
@@ -3053,12 +3053,12 @@
           "modelo": "Xs",
           "opciones": [
             "SX",
-            "XS",
+            "Xs",
             "sX",
             "sx",
-            "Xs"
+            "XS"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 68,
@@ -3066,43 +3066,43 @@
           "opciones": [
             "tt",
             "Tt",
+            "LT",
             "tT",
-            "Tl",
-            "LT"
+            "Tl"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 69,
           "modelo": "ZN",
           "opciones": [
-            "zZ",
-            "NZ",
             "zn",
+            "ZN",
             "Zz",
-            "ZN"
+            "NZ",
+            "zZ"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 70,
           "modelo": "qg",
           "opciones": [
-            "QG",
-            "qq",
-            "GQ",
+            "qg",
             "Qg",
-            "qg"
+            "qq",
+            "QG",
+            "GQ"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 71,
           "modelo": "1c",
           "opciones": [
+            "la",
             "4d",
             "4c",
-            "la",
             "2d",
             "1c"
           ],
@@ -3112,37 +3112,37 @@
           "id": 72,
           "modelo": "A9",
           "opciones": [
-            "79",
-            "b7",
-            "9b",
+            "A9",
             "7b",
-            "A9"
+            "79",
+            "9b",
+            "b7"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 73,
           "modelo": "78",
           "opciones": [
+            "78",
+            "81",
             "71",
             "18",
-            "81",
-            "17",
-            "78"
+            "17"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 74,
           "modelo": "db",
           "opciones": [
-            "4d",
+            "b4",
             "bd",
             "d4",
-            "b4",
-            "db"
+            "db",
+            "4d"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 75,
@@ -3150,20 +3150,20 @@
           "opciones": [
             "46",
             "6u",
-            "u4",
+            "4u",
             "u6",
-            "4u"
+            "u4"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 76,
           "modelo": "x7",
           "opciones": [
             "3x",
+            "73",
             "37",
             "7x",
-            "73",
             "x7"
           ],
           "correcta": 5
@@ -3173,57 +3173,57 @@
           "modelo": "ls",
           "opciones": [
             "13",
-            "sl",
             "31",
             "3s",
-            "ls"
+            "ls",
+            "sl"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 78,
           "modelo": "dn",
           "opciones": [
-            "ed",
-            "nd",
             "de",
-            "en",
-            "dn"
+            "dn",
+            "nd",
+            "ed",
+            "en"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 79,
           "modelo": "nf",
           "opciones": [
-            "in",
             "fi",
             "ni",
+            "nf",
             "fn",
-            "nf"
+            "in"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 80,
           "modelo": "35",
           "opciones": [
-            "53",
             "3h",
-            "h3",
+            "35",
+            "53",
             "5h",
-            "35"
+            "h3"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 81,
           "modelo": "ld",
           "opciones": [
-            "bd",
             "dl",
-            "lb",
+            "bd",
             "bl",
+            "lb",
             "ld"
           ],
           "correcta": 5
@@ -3232,58 +3232,58 @@
           "id": 82,
           "modelo": "lk",
           "opciones": [
-            "lf",
-            "fk",
-            "kl",
             "kf",
-            "lk"
+            "lf",
+            "kl",
+            "lk",
+            "fk"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 83,
           "modelo": "6d",
           "opciones": [
-            "9d",
-            "d6",
+            "6d",
             "d9",
-            "69",
-            "6d"
+            "d6",
+            "9d",
+            "69"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 84,
           "modelo": "ZV",
           "opciones": [
-            "XX",
-            "VZ",
+            "ZV",
             "VX",
+            "VZ",
             "XV",
-            "ZV"
+            "XX"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 85,
           "modelo": "8a",
           "opciones": [
             "ja",
-            "8j",
-            "a8",
             "j8",
-            "8a"
+            "8j",
+            "8a",
+            "a8"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 86,
           "modelo": "97",
           "opciones": [
-            "69",
-            "76",
             "67",
             "79",
+            "69",
+            "76",
             "97"
           ],
           "correcta": 5
@@ -3292,58 +3292,58 @@
           "id": 87,
           "modelo": "ne",
           "opciones": [
-            "nr",
-            "rn",
             "re",
+            "ne",
             "en",
-            "ne"
+            "nr",
+            "rn"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 88,
           "modelo": "X4",
           "opciones": [
-            "4X",
             "4V",
+            "4X",
             "V4",
-            "Vx",
-            "X4"
+            "X4",
+            "Vx"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 89,
           "modelo": "vn",
           "opciones": [
-            "zv",
             "zn",
-            "nv",
+            "vn",
             "vz",
-            "vn"
+            "nv",
+            "zv"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 90,
           "modelo": "8B",
           "opciones": [
+            "8B",
             "8R",
-            "R8",
-            "B8",
             "RB",
-            "8B"
+            "R8",
+            "B8"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 91,
           "modelo": "OC",
           "opciones": [
-            "QO",
-            "OQ",
             "CQ",
             "QC",
+            "OQ",
+            "QO",
             "OC"
           ],
           "correcta": 5
@@ -3353,57 +3353,57 @@
           "modelo": "OB",
           "opciones": [
             "DO",
-            "OD",
             "BO",
+            "OB",
             "BD",
-            "OB"
+            "OD"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 93,
           "modelo": "YX",
           "opciones": [
-            "ZX",
-            "YZ",
             "XY",
-            "ZY",
-            "YX"
+            "YZ",
+            "ZX",
+            "YX",
+            "ZY"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 94,
           "modelo": "UO",
           "opciones": [
-            "OC",
-            "OU",
-            "CO",
             "UC",
-            "UO"
+            "OU",
+            "UO",
+            "CO",
+            "OC"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 95,
           "modelo": "Cc",
           "opciones": [
             "OO",
-            "Oc",
-            "cc",
             "cO",
-            "Cc"
+            "Cc",
+            "Oc",
+            "cc"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 96,
           "modelo": "aA",
           "opciones": [
-            "Aa",
+            "8A",
             "A8",
             "8a",
-            "8A",
+            "Aa",
             "aA"
           ],
           "correcta": 5
@@ -3412,57 +3412,57 @@
           "id": 97,
           "modelo": "Ze",
           "opciones": [
+            "Ze",
             "ZE",
-            "zE",
             "eZ",
             "ZZ",
-            "Ze"
+            "zE"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 98,
           "modelo": "pp",
           "opciones": [
+            "pp",
             "bP",
             "bB",
             "BP",
-            "Pb",
-            "pp"
+            "Pb"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 99,
           "modelo": "cz",
           "opciones": [
-            "Cz",
-            "CZ",
             "zC",
+            "cz",
             "Zc",
-            "cz"
+            "CZ",
+            "Cz"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 100,
           "modelo": "C8",
           "opciones": [
-            "C5",
             "C3",
-            "S8",
+            "C8",
             "S3",
-            "C8"
+            "C5",
+            "S8"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 101,
           "modelo": "ZY",
           "opciones": [
-            "YZ",
-            "VX",
             "VY",
+            "VX",
+            "YZ",
             "XY",
             "ZY"
           ],
@@ -3473,56 +3473,56 @@
           "modelo": "c6",
           "opciones": [
             "b9",
-            "69",
-            "6c",
+            "c6",
             "96",
-            "c6"
+            "6c",
+            "69"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 103,
           "modelo": "ou",
           "opciones": [
             "ua",
-            "uo",
+            "ou",
             "ao",
-            "oa",
-            "ou"
+            "uo",
+            "oa"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 104,
           "modelo": "co",
           "opciones": [
-            "oc",
+            "lo",
             "ol",
             "lc",
-            "lo",
-            "co"
+            "co",
+            "oc"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 105,
           "modelo": "X7",
           "opciones": [
             "V7",
+            "X7",
             "X9",
-            "V9",
             "V5",
-            "X7"
+            "V9"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 106,
           "modelo": "c8",
           "opciones": [
+            "8c",
             "8s",
             "cS",
-            "8c",
             "Sc",
             "c8"
           ],
@@ -3532,49 +3532,49 @@
           "id": 107,
           "modelo": "bo",
           "opciones": [
-            "tb",
-            "ot",
-            "ob",
+            "bo",
             "bt",
-            "bo"
+            "tb",
+            "ob",
+            "ot"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 108,
           "modelo": "5e",
           "opciones": [
+            "5e",
+            "2e",
             "3d",
             "4d",
-            "2e",
-            "2d",
-            "5e"
+            "2d"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 109,
           "modelo": "cr",
           "opciones": [
-            "dc",
             "rc",
-            "rd",
             "dr",
-            "cr"
+            "rd",
+            "cr",
+            "dc"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 110,
           "modelo": "st",
           "opciones": [
-            "sw",
             "ts",
-            "tw",
+            "sw",
+            "st",
             "ws",
-            "st"
+            "tw"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 111,
@@ -3582,8 +3582,8 @@
           "opciones": [
             "mw",
             "wu",
-            "mu",
             "wm",
+            "mu",
             "um"
           ],
           "correcta": 5
@@ -3593,57 +3593,57 @@
           "modelo": "pp",
           "opciones": [
             "qq",
-            "qp",
             "pq",
             "pg",
-            "pp"
+            "pp",
+            "qp"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 113,
           "modelo": "xn",
           "opciones": [
-            "xv",
-            "vx",
+            "xn",
             "nx",
-            "nv",
-            "xn"
+            "vx",
+            "xv",
+            "nv"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 114,
           "modelo": "um",
           "opciones": [
-            "mn",
-            "un",
             "nu",
+            "un",
+            "um",
             "mu",
-            "um"
+            "mn"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 115,
           "modelo": "nz",
           "opciones": [
-            "nn",
             "zz",
-            "zn",
             "mn",
-            "nz"
+            "nn",
+            "nz",
+            "zn"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 116,
           "modelo": "yp",
           "opciones": [
-            "pg",
-            "py",
-            "yg",
             "gy",
+            "pg",
+            "yg",
+            "py",
             "yp"
           ],
           "correcta": 5
@@ -3652,58 +3652,58 @@
           "id": 117,
           "modelo": "59",
           "opciones": [
-            "5Y",
-            "Y9",
-            "95",
+            "59",
             "9Y",
-            "59"
+            "95",
+            "5Y",
+            "Y9"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 118,
           "modelo": "uo",
           "opciones": [
-            "un",
             "ou",
+            "uo",
             "on",
-            "nu",
-            "uo"
+            "un",
+            "nu"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 119,
           "modelo": "un",
           "opciones": [
-            "nd",
-            "ud",
             "nu",
+            "un",
+            "ud",
             "du",
-            "un"
+            "nd"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 120,
           "modelo": "44",
           "opciones": [
             "41",
-            "40",
-            "11",
             "14",
-            "44"
+            "40",
+            "44",
+            "11"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 121,
           "modelo": "RP",
           "opciones": [
-            "rr",
-            "pR",
             "PP",
             "Rr",
+            "rr",
+            "pR",
             "RP"
           ],
           "correcta": 5
@@ -3712,58 +3712,58 @@
           "id": 122,
           "modelo": "LT",
           "opciones": [
-            "TL",
-            "IT",
             "TI",
+            "LT",
             "IL",
-            "LT"
+            "TL",
+            "IT"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 123,
           "modelo": "WM",
           "opciones": [
-            "MV",
-            "VM",
             "VW",
-            "MW",
-            "WM"
+            "VM",
+            "MV",
+            "WM",
+            "MW"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 124,
           "modelo": "Wu",
           "opciones": [
-            "uU",
             "uW",
-            "Uu",
+            "Wu",
             "WM",
-            "Wu"
+            "Uu",
+            "uU"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 125,
           "modelo": "3c",
           "opciones": [
-            "c3",
-            "xc",
-            "3x",
             "cx",
-            "3c"
+            "c3",
+            "3c",
+            "xc",
+            "3x"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 126,
           "modelo": "AV",
           "opciones": [
-            "NV",
-            "NA",
             "VN",
             "VA",
+            "NA",
+            "NV",
             "AV"
           ],
           "correcta": 5
@@ -3772,58 +3772,58 @@
           "id": 127,
           "modelo": "Yy",
           "opciones": [
-            "Xy",
-            "XX",
             "xX",
+            "Xy",
+            "Yy",
             "YX",
-            "Yy"
+            "XX"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 128,
           "modelo": "FE",
           "opciones": [
-            "EL",
             "LE",
+            "FE",
+            "EL",
             "LF",
-            "FL",
-            "FE"
+            "FL"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 129,
           "modelo": "NV",
           "opciones": [
-            "MN",
-            "MV",
             "VN",
             "NM",
-            "NV"
+            "NV",
+            "MV",
+            "MN"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 130,
           "modelo": "FF",
           "opciones": [
-            "eF",
+            "FF",
             "Ef",
-            "Fe",
             "EE",
-            "FF"
+            "eF",
+            "Fe"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 131,
           "modelo": "8C",
           "opciones": [
-            "C8",
+            "S8",
             "S5",
             "8S",
-            "S8",
+            "C8",
             "8C"
           ],
           "correcta": 5
@@ -3833,56 +3833,56 @@
           "modelo": "6h",
           "opciones": [
             "h6",
-            "h8",
+            "6h",
             "8h",
             "86",
-            "6h"
+            "h8"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 133,
           "modelo": "4a",
           "opciones": [
+            "4a",
             "4d",
             "4c",
             "3a",
-            "3c",
-            "4a"
+            "3c"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 134,
           "modelo": "Z4",
           "opciones": [
-            "4Z",
-            "14",
             "Z1",
+            "Z4",
             "1Z",
-            "Z4"
+            "14",
+            "4Z"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 135,
           "modelo": "Qo",
           "opciones": [
-            "QQ",
             "oq",
-            "Qq",
+            "Qo",
             "OQ",
-            "Qo"
+            "QQ",
+            "Qq"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 136,
           "modelo": "xe",
           "opciones": [
-            "xc",
             "ce",
             "ec",
+            "xc",
             "ex",
             "xe"
           ],
@@ -3892,58 +3892,58 @@
           "id": 137,
           "modelo": "ro",
           "opciones": [
-            "oa",
-            "ra",
-            "ar",
+            "ro",
             "or",
-            "ro"
+            "oa",
+            "ar",
+            "ra"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 138,
           "modelo": "8c",
           "opciones": [
             "6c",
-            "8a",
+            "8c",
             "7a",
-            "7c",
-            "8c"
+            "8a",
+            "7c"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 139,
           "modelo": "ue",
           "opciones": [
-            "us",
+            "se",
             "su",
             "eu",
-            "se",
-            "ue"
+            "ue",
+            "us"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 140,
           "modelo": "wr",
           "opciones": [
             "wo",
+            "wr",
             "ow",
-            "ro",
             "rw",
-            "wr"
+            "ro"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 141,
           "modelo": "wu",
           "opciones": [
             "vu",
+            "wv",
             "vw",
             "uw",
-            "wv",
             "wu"
           ],
           "correcta": 5
@@ -3952,58 +3952,58 @@
           "id": 142,
           "modelo": "ie",
           "opciones": [
-            "er",
-            "re",
             "ir",
             "ri",
-            "ie"
+            "er",
+            "ie",
+            "re"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 143,
           "modelo": "31",
           "opciones": [
-            "13",
             "23",
             "32",
-            "21",
-            "31"
+            "31",
+            "13",
+            "21"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 144,
           "modelo": "2q",
           "opciones": [
-            "q2",
             "qu",
             "u2",
             "2u",
-            "2q"
+            "2q",
+            "q2"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 145,
           "modelo": "wx",
           "opciones": [
-            "vw",
             "wv",
-            "vx",
+            "vw",
+            "wx",
             "xv",
-            "wx"
+            "vx"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 146,
           "modelo": "ea",
           "opciones": [
-            "et",
             "te",
-            "ae",
+            "et",
             "ta",
+            "ae",
             "ea"
           ],
           "correcta": 5
@@ -4013,57 +4013,57 @@
           "modelo": "SI",
           "opciones": [
             "SV",
-            "IV",
             "VS",
             "VI",
-            "SI"
+            "SI",
+            "IV"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 148,
           "modelo": "th",
           "opciones": [
-            "et",
-            "he",
+            "th",
             "ht",
-            "eh",
-            "th"
+            "he",
+            "et",
+            "eh"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 149,
           "modelo": "zm",
           "opciones": [
-            "za",
-            "mz",
             "ma",
+            "mz",
+            "zm",
             "az",
-            "zm"
+            "za"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 150,
           "modelo": "xs",
           "opciones": [
-            "ax",
-            "sx",
-            "sa",
             "xa",
-            "xs"
+            "sx",
+            "ax",
+            "xs",
+            "sa"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 151,
           "modelo": "aV",
           "opciones": [
-            "Av",
-            "VV",
             "Vv",
             "AA",
+            "Av",
+            "VV",
             "aV"
           ],
           "correcta": 5
@@ -4072,58 +4072,58 @@
           "id": 152,
           "modelo": "mW",
           "opciones": [
-            "WM",
-            "wW",
-            "MM",
+            "mW",
             "Mw",
-            "mW"
+            "MM",
+            "WM",
+            "wW"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 153,
           "modelo": "4N",
           "opciones": [
-            "4H",
             "NH",
+            "4H",
             "N4",
-            "HN",
-            "4N"
+            "4N",
+            "HN"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 154,
           "modelo": "DD",
           "opciones": [
-            "bB",
+            "Db",
+            "DD",
             "Dd",
             "dB",
-            "Db",
-            "DD"
+            "bB"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 155,
           "modelo": "3S",
           "opciones": [
+            "3S",
             "S3",
-            "S8",
-            "83",
             "38",
-            "3S"
+            "S8",
+            "83"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 156,
           "modelo": "OV",
           "opciones": [
-            "OX",
-            "XX",
-            "OO",
             "XO",
+            "OO",
+            "XX",
+            "OX",
             "OV"
           ],
           "correcta": 5
@@ -4132,58 +4132,58 @@
           "id": 157,
           "modelo": "8C",
           "opciones": [
-            "C8",
-            "8S",
             "S8",
+            "8C",
             "S5",
-            "8C"
+            "C8",
+            "8S"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 158,
           "modelo": "X7",
           "opciones": [
-            "V5",
-            "V7",
             "X9",
-            "V9",
-            "X7"
+            "V7",
+            "V5",
+            "X7",
+            "V9"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 159,
           "modelo": "17",
           "opciones": [
-            "L1",
+            "17",
             "1L",
-            "L7",
             "7L",
-            "17"
+            "L7",
+            "L1"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 160,
           "modelo": "RB",
           "opciones": [
             "BD",
-            "RD",
-            "DR",
             "BR",
-            "RB"
+            "RB",
+            "RD",
+            "DR"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 161,
           "modelo": "17",
           "opciones": [
-            "78",
-            "81",
             "71",
             "18",
+            "81",
+            "78",
             "17"
           ],
           "correcta": 5
@@ -4192,49 +4192,49 @@
           "id": 162,
           "modelo": "Ww",
           "opciones": [
-            "vv",
-            "Vv",
             "Wv",
+            "vv",
+            "Ww",
             "wV",
-            "Ww"
+            "Vv"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 163,
           "modelo": "MN",
           "opciones": [
+            "MN",
             "Mm",
             "nn",
             "NN",
-            "mM",
-            "MN"
+            "mM"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 164,
           "modelo": "b9",
           "opciones": [
-            "69",
-            "c6",
-            "96",
             "6c",
-            "b9"
+            "96",
+            "b9",
+            "c6",
+            "69"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 165,
           "modelo": "2d",
           "opciones": [
-            "1a",
             "4d",
-            "1c",
+            "2d",
             "4c",
-            "2d"
+            "1a",
+            "1c"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 166,
@@ -4253,56 +4253,56 @@
           "modelo": "VY",
           "opciones": [
             "ZX",
-            "YZ",
-            "XY",
+            "VY",
             "VX",
-            "VY"
+            "XY",
+            "YZ"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 168,
           "modelo": "Sn",
           "opciones": [
             "n3",
-            "3s",
             "3n",
-            "ns",
-            "Sn"
+            "Sn",
+            "3s",
+            "ns"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 169,
           "modelo": "ro",
           "opciones": [
-            "wo",
-            "wr",
-            "rw",
             "ow",
-            "ro"
+            "rw",
+            "wr",
+            "ro",
+            "wo"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 170,
           "modelo": "oa",
           "opciones": [
-            "ar",
-            "ra",
-            "ro",
+            "oa",
             "or",
-            "oa"
+            "ra",
+            "ar",
+            "ro"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 171,
           "modelo": "fi",
           "opciones": [
-            "fn",
             "in",
             "nf",
+            "fn",
             "ni",
             "fi"
           ],
@@ -4312,58 +4312,58 @@
           "id": 172,
           "modelo": "uw",
           "opciones": [
-            "wv",
-            "vw",
-            "vu",
+            "uw",
             "wu",
-            "uw"
+            "wv",
+            "vu",
+            "vw"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 173,
           "modelo": "eh",
           "opciones": [
+            "eh",
             "ht",
-            "et",
             "he",
-            "th",
-            "eh"
+            "et",
+            "th"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 174,
           "modelo": "mn",
           "opciones": [
-            "nm",
             "na",
-            "an",
             "am",
-            "mn"
+            "an",
+            "mn",
+            "nm"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 175,
           "modelo": "8a",
           "opciones": [
             "8j",
+            "8a",
             "ja",
-            "a8",
             "j8",
-            "8a"
+            "a8"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 176,
           "modelo": "5Y",
           "opciones": [
             "95",
+            "Y9",
             "9Y",
             "59",
-            "Y9",
             "5Y"
           ],
           "correcta": 5
@@ -4373,57 +4373,57 @@
           "modelo": "kl",
           "opciones": [
             "lk",
-            "kf",
             "fk",
             "lf",
-            "kl"
+            "kl",
+            "kf"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 178,
           "modelo": "ma",
           "opciones": [
-            "ca",
-            "am",
             "me",
-            "cm",
-            "ma"
+            "am",
+            "ma",
+            "ca",
+            "cm"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 179,
           "modelo": "nv",
           "opciones": [
-            "xv",
             "vx",
             "nx",
+            "nv",
             "xn",
-            "nv"
+            "xv"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 180,
           "modelo": "rs",
           "opciones": [
-            "re",
             "er",
-            "es",
+            "re",
             "se",
-            "rs"
+            "rs",
+            "es"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 181,
           "modelo": "4X",
           "opciones": [
-            "4V",
-            "V4",
-            "VX",
             "X4",
+            "4V",
+            "VX",
+            "V4",
             "4X"
           ],
           "correcta": 5
@@ -4432,58 +4432,58 @@
           "id": 182,
           "modelo": "nn",
           "opciones": [
-            "mn",
-            "zz",
-            "nz",
+            "nn",
             "zn",
-            "nn"
+            "nz",
+            "mn",
+            "zz"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 183,
           "modelo": "TI",
           "opciones": [
-            "LT",
-            "IL",
             "TL",
-            "IT",
-            "TI"
+            "TI",
+            "IL",
+            "LT",
+            "IT"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 184,
           "modelo": "11",
           "opciones": [
-            "14",
-            "40",
+            "11",
             "41",
+            "40",
             "44",
-            "11"
+            "14"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 185,
           "modelo": "su",
           "opciones": [
-            "eu",
-            "us",
-            "se",
             "ue",
-            "su"
+            "us",
+            "eu",
+            "su",
+            "se"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 186,
           "modelo": "RB",
           "opciones": [
-            "BP",
-            "RP",
             "PR",
             "PB",
+            "BP",
+            "RP",
             "RB"
           ],
           "correcta": 5
@@ -4492,58 +4492,58 @@
           "id": 187,
           "modelo": "RP",
           "opciones": [
-            "Rr",
-            "rr",
-            "PP",
             "pR",
-            "RP"
+            "RP",
+            "PP",
+            "Rr",
+            "rr"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 188,
           "modelo": "sX",
           "opciones": [
-            "XS",
             "Xs",
+            "XS",
             "sx",
-            "SX",
-            "sX"
+            "sX",
+            "SX"
           ],
-          "correcta": 5
+          "correcta": 4
         },
         {
           "id": 189,
           "modelo": "ar",
           "opciones": [
-            "ra",
             "na",
-            "rn",
+            "ar",
             "nr",
-            "ar"
+            "rn",
+            "ra"
           ],
-          "correcta": 5
+          "correcta": 2
         },
         {
           "id": 190,
           "modelo": "UO",
           "opciones": [
+            "UO",
             "OU",
-            "OC",
-            "UC",
             "CO",
-            "UO"
+            "OC",
+            "UC"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 191,
           "modelo": "RD",
           "opciones": [
-            "DR",
-            "BD",
             "RB",
             "BR",
+            "BD",
+            "DR",
             "RD"
           ],
           "correcta": 5
@@ -4552,58 +4552,58 @@
           "id": 192,
           "modelo": "XO",
           "opciones": [
-            "OV",
-            "XX",
+            "XO",
             "OO",
+            "OV",
             "OX",
-            "XO"
+            "XX"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 193,
           "modelo": "ZH",
           "opciones": [
-            "HZ",
+            "ZH",
             "ZN",
+            "HZ",
             "HN",
-            "NH",
-            "ZH"
+            "NH"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 194,
           "modelo": "Av",
           "opciones": [
-            "Vv",
-            "VV",
-            "aV",
+            "Av",
             "AA",
-            "Av"
+            "aV",
+            "VV",
+            "Vv"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 195,
           "modelo": "OQ",
           "opciones": [
-            "CQ",
-            "QO",
-            "OC",
             "QC",
-            "OQ"
+            "QO",
+            "OQ",
+            "CQ",
+            "OC"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 196,
           "modelo": "zE",
           "opciones": [
-            "Ze",
+            "Zz",
             "eZ",
             "ZE",
-            "Zz",
+            "Ze",
             "zE"
           ],
           "correcta": 5
@@ -4613,36 +4613,36 @@
           "modelo": "qg",
           "opciones": [
             "Qg",
-            "GQ",
             "qq",
+            "qg",
             "QG",
-            "qg"
+            "GQ"
           ],
-          "correcta": 5
+          "correcta": 3
         },
         {
           "id": 198,
           "modelo": "mM",
           "opciones": [
+            "mM",
             "nn",
             "MN",
             "Mm",
-            "NN",
-            "mM"
+            "NN"
           ],
-          "correcta": 5
+          "correcta": 1
         },
         {
           "id": 199,
           "modelo": "QQ",
           "opciones": [
-            "oq",
-            "OQ",
-            "Qo",
             "Qq",
-            "QQ"
+            "Qo",
+            "QQ",
+            "OQ",
+            "oq"
           ],
-          "correcta": 5
+          "correcta": 3
         }
       ]
     }

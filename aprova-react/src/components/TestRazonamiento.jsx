@@ -60,6 +60,7 @@ function TestRazonamiento({ acceso, onVolver, onCompletado }) {
 
   const [enviando, setEnviando] = useState(false)
   const [error, setError] = useState('')
+  const [zoomImagen, setZoomImagen] = useState(null)
   const topRef = useRef(null)
 
   const seccionKey = seccionActiva
@@ -139,6 +140,40 @@ function TestRazonamiento({ acceso, onVolver, onCompletado }) {
     setRespuestas(prev => ({ ...prev, [key]: valor }))
   }
 
+  // Generar enunciado de pregunta perceptiva: 5 parejas, una es el modelo (subrayada), 4 son distractores
+  const generarEnunciadoPerceptiva = (item) => {
+    // Seed determinista por id para que no cambie al re-render
+    let seed = item.id * 997 + 31
+    const rand = () => { seed = (seed * 16807) % 2147483647; return seed / 2147483647 }
+
+    const letras = 'abcdefghijklmnopqrstuvwxyz0123456789'
+    const modelo = item.modelo
+    const usadas = new Set([modelo, ...item.opciones])
+
+    // Generar 4 distractores similares al modelo (misma longitud, letras parecidas)
+    const distractores = []
+    while (distractores.length < 4) {
+      let d = ''
+      for (let i = 0; i < modelo.length; i++) {
+        const charIdx = letras.indexOf(modelo[i].toLowerCase())
+        const offset = Math.floor(rand() * 3) + 1
+        const dir = rand() > 0.5 ? 1 : -1
+        const newIdx = (charIdx + offset * dir + letras.length) % letras.length
+        d += letras[newIdx]
+      }
+      if (!usadas.has(d) && !distractores.includes(d)) {
+        distractores.push(d)
+      }
+    }
+
+    // Mezclar modelo con distractores
+    const enunciado = [...distractores]
+    const posModelo = Math.floor(rand() * 5)
+    enunciado.splice(posModelo, 0, modelo)
+
+    return enunciado
+  }
+
   const handlePerceptivaRespuesta = (itemId, opcionIdx) => {
     const key = `perceptiva_${itemId}`
     setRespuestas(prev => ({ ...prev, [key]: opcionIdx }))
@@ -203,13 +238,26 @@ function TestRazonamiento({ acceso, onVolver, onCompletado }) {
           }
         })
       } else if (sec.tipo === 'perceptiva' && sec.items) {
-        sec.items.forEach(item => {
+        // Solo contar Parte 2 (la Parte 1 es de práctica)
+        const mitad = Math.ceil(sec.items.length / 2)
+        const itemsParte2 = sec.items.slice(mitad)
+        itemsParte2.forEach(item => {
           const respKey = `perceptiva_${item.id}`
           if (respuestas[respKey]) {
             respondidas++
             if (respuestas[respKey] === item.correcta) correctas++
           }
         })
+
+        resultados[key] = {
+          nombre: sec.nombre,
+          totalPreguntas: itemsParte2.length,
+          respondidas,
+          correctas,
+          porcentaje: itemsParte2.length > 0 ? Math.round((correctas / itemsParte2.length) * 100) : 0,
+          centil: buscarCentil(key, correctas)
+        }
+        return
       }
 
       resultados[key] = {
@@ -534,10 +582,10 @@ function TestRazonamiento({ acceso, onVolver, onCompletado }) {
     const paginasOriginales = seccion.paginas
     const letras = seccion.tipoRespuesta.split('')
 
-    // Dividir páginas con más de 4 preguntas en sub-páginas (mitad superior/inferior)
+    // Dividir páginas con más de 6 preguntas en sub-páginas (mitad superior/inferior)
     const subPaginas = []
     paginasOriginales.forEach(pag => {
-      if (pag.preguntas.length > 4) {
+      if (pag.preguntas.length > 6) {
         const mitad = Math.ceil(pag.preguntas.length / 2)
         subPaginas.push({ imagen: pag.imagen, preguntas: pag.preguntas.slice(0, mitad), parte: 'top' })
         subPaginas.push({ imagen: pag.imagen, preguntas: pag.preguntas.slice(mitad), parte: 'bottom' })
@@ -560,11 +608,21 @@ function TestRazonamiento({ acceso, onVolver, onCompletado }) {
           <span>{contarRespuestasSeccion(seccionKey)}/{seccion.totalPreguntas}</span>
         </div>
 
+        {zoomImagen && (
+          <div className="zoom-overlay" onClick={() => setZoomImagen(null)}>
+            <div className="zoom-modal" onClick={e => e.stopPropagation()}>
+              <button className="zoom-cerrar" onClick={() => setZoomImagen(null)}>✕</button>
+              <img src={zoomImagen} alt="Zoom" className="zoom-img" />
+            </div>
+          </div>
+        )}
+
         <div className="imagen-respuestas-layout">
-          <div className="imagen-container">
+          <div className="imagen-container" onClick={() => setZoomImagen(`/dat5/${pagInfo.imagen}`)} style={{ cursor: 'zoom-in' }}>
             <div className={`imagen-clip imagen-clip-${pagInfo.parte}`}>
               <img src={`/dat5/${pagInfo.imagen}`} alt={`${seccion.nombre} - Página ${paginaActual + 1}`} className="imagen-test" />
             </div>
+            <span className="zoom-hint">Toca la imagen para ampliar</span>
           </div>
 
           <div className="respuestas-container">
@@ -669,10 +727,14 @@ function TestRazonamiento({ acceso, onVolver, onCompletado }) {
         </div>
 
         <div className="perceptiva-container">
-          <div className="perceptiva-modelo">
-            <span className="perceptiva-label">Modelo:</span>
-            <span className="perceptiva-target">{item.modelo}</span>
+          <div className="perceptiva-enunciado">
+            {generarEnunciadoPerceptiva(item).map((combo, idx) => (
+              <span key={idx} className={`perceptiva-combo ${combo === item.modelo ? 'perceptiva-subrayado' : ''}`}>
+                {combo}
+              </span>
+            ))}
           </div>
+          <p className="perceptiva-instruccion">Selecciona la combinación que coincide con la subrayada</p>
           <div className="perceptiva-opciones">
             {item.opciones.map((opcion, idx) => {
               const seleccionada = respuestas[`perceptiva_${item.id}`] === (idx + 1)
