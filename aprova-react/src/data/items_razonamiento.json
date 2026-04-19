@@ -1,0 +1,4659 @@
+{
+  "nombre": "Test de Razonamiento",
+  "descripcion": "Batería de Aptitudes Diferenciales (DAT-5) - Evalúa diferentes tipos de razonamiento",
+  "secciones": {
+    "verbal": {
+      "nombre": "Razonamiento Verbal",
+      "instrucciones": "En esta prueba hay frases a las que les falta la primera y la última palabra. Su tarea consiste en elegir las palabras que completen la frase de modo que tenga sentido. La primera palabra del par va al comienzo de la frase y la segunda al final.",
+      "ejemplo": "\"... es a lapicero como tinta es a ...\" → Respuesta: D (mina — pluma)",
+      "totalPreguntas": 40,
+      "tiempoLimite": 1200,
+      "tipoRespuesta": "ABCDE",
+      "tipo": "texto",
+      "items": [
+        {
+          "id": 1,
+          "texto": "... es a empezar como fin es a ...",
+          "opciones": [
+            "A. comienzo — continuar",
+            "B. emprender — comienzo",
+            "C. inicio — terminar",
+            "D. terminar — conclusión",
+            "E. objetivo — iniciar"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 2,
+          "texto": "... es a mago como chiste es a ...",
+          "opciones": [
+            "A. truco — habilidad",
+            "B. actor — risa",
+            "C. comediante — actor",
+            "D. habilidad — trágico",
+            "E. truco — humorista"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 3,
+          "texto": "... es a pentágono como diez es a ...",
+          "opciones": [
+            "A. polígono — doble",
+            "B. cinco — decálogo",
+            "C. ángulo — decálogo",
+            "D. pentagrama — cinco",
+            "E. decámetro — doble"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 4,
+          "texto": "... es a mano como calcetín es a ...",
+          "opciones": [
+            "A. dedo — zapato",
+            "B. guante — pie",
+            "C. gesto — zapato",
+            "D. brazo — pie",
+            "E. pulgar — lana"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 5,
+          "texto": "... es a arañar como avispa es a ...",
+          "opciones": [
+            "A. uña — aguijón",
+            "B. gato — picar",
+            "C. morder — araña",
+            "D. uña — tela",
+            "E. morder — veneno"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 6,
+          "texto": "... es a izar como abajo es a ...",
+          "opciones": [
+            "A. subir — arriba",
+            "B. peso — descender",
+            "C. arriba — arriar",
+            "D. vela — mar",
+            "E. bandera — vela"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 7,
+          "texto": "... es a boca como guiño es a ...",
+          "opciones": [
+            "A. mueca — ojo",
+            "B. cara — gesto",
+            "C. ademán — burla",
+            "D. diente — gesto",
+            "E. rostro — ojo"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 8,
+          "texto": "... es a tierra como golfo es a ...",
+          "opciones": [
+            "A. cabo — mar",
+            "B. lago — bahía",
+            "C. muelle — cabo",
+            "D. mar — playa",
+            "E. río — bahía"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 9,
+          "texto": "... es a tarde como primero es a ...",
+          "opciones": [
+            "A. temprano — número",
+            "B. pronto — uno",
+            "C. mañana — pronto",
+            "D. mañana — último",
+            "E. segundo — último"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 10,
+          "texto": "... es a red como eslabón es a ...",
+          "opciones": [
+            "A. pesca — hierro",
+            "B. malla — cadena",
+            "C. tejido — anillo",
+            "D. barca — hierro",
+            "E. hilo — pedernal"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 11,
+          "texto": "... es a ordinario como peculiar es a ...",
+          "opciones": [
+            "A. habitual — general",
+            "B. común — característico",
+            "C. raro — propio",
+            "D. familiar — vulgar",
+            "E. raro — específico"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 12,
+          "texto": "... es a nuez como piel es a ...",
+          "opciones": [
+            "A. fruta — animal",
+            "B. cáscara — uva",
+            "C. vegetal — corteza",
+            "D. aceite — vino",
+            "E. ardilla — lobo"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 13,
+          "texto": "... es a pobreza como abundancia es a ...",
+          "opciones": [
+            "A. dinero — ahorro",
+            "B. dinero — opulencia",
+            "C. riqueza — bienestar",
+            "D. escasez — miseria",
+            "E. riqueza — escasez"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 14,
+          "texto": "... es a flota como soldado es a ...",
+          "opciones": [
+            "A. mar — guerra",
+            "B. barco — guerra",
+            "C. buque — ejército",
+            "D. mar — infantería",
+            "E. armada — capitán"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 15,
+          "texto": "... es a alumno como pediatra es a ...",
+          "opciones": [
+            "A. educación — salud",
+            "B. profesor — médico",
+            "C. colegio — maestro",
+            "D. libro — puericultor",
+            "E. profesor — niño"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 16,
+          "texto": "... es a azar como recompensa es a ...",
+          "opciones": [
+            "A. sorteo — castigo",
+            "B. suerte — fortuna",
+            "C. destino — elección",
+            "D. suerte — mérito",
+            "E. premio — dinero"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 17,
+          "texto": "... es a muelle como avión es a ...",
+          "opciones": [
+            "A. puerto — piloto",
+            "B. mercancía — nave",
+            "C. aterrizaje — pista",
+            "D. descarga — comandante",
+            "E. barco — hangar"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 18,
+          "texto": "... es a frecuente como escaso es a ...",
+          "opciones": [
+            "A. corriente — bastante",
+            "B. ordinario — vulgar",
+            "C. abundante — raro",
+            "D. suficiente — habitual",
+            "E. vulgar — corriente"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 19,
+          "texto": "... es a despejar como clave es a ...",
+          "opciones": [
+            "A. tiempo — aclarar",
+            "B. resolver — símbolo",
+            "C. ocultar — secreto",
+            "D. incógnita — descifrar",
+            "E. problema — ocultar"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 20,
+          "texto": "... es a abandonar como aceptar es a ...",
+          "opciones": [
+            "A. desertar — dimitir",
+            "B. iniciar — consentir",
+            "C. dimitir — renunciar",
+            "D. emprender — renunciar",
+            "E. huir — rechazar"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 21,
+          "texto": "... es a avión como timonel es a ...",
+          "opciones": [
+            "A. motor — hélice",
+            "B. aeropuerto — puerto",
+            "C. piloto — embarcación",
+            "D. piloto — capitán",
+            "E. embarcación — timón"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 22,
+          "texto": "... es a copia como creación es a ...",
+          "opciones": [
+            "A. original — reproducción",
+            "B. auténtico — invención",
+            "C. falso — fraude",
+            "D. real — ficticio",
+            "E. imitación — fraude"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 23,
+          "texto": "... es a cortés como tosco es a ...",
+          "opciones": [
+            "A. gentil — grotesco",
+            "B. delicado — terco",
+            "C. educado — grosero",
+            "D. correcto — fino",
+            "E. grosero — rudo"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 24,
+          "texto": "... es a fatiga como bebida es a ...",
+          "opciones": [
+            "A. descanso — sed",
+            "B. trabajo — sed",
+            "C. cansancio — agua",
+            "D. sueño — alimento",
+            "E. trabajo — alimento"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 25,
+          "texto": "... es a cuervo como pelo es a ...",
+          "opciones": [
+            "A. nido — cabeza",
+            "B. ave — animal",
+            "C. rapiña — zorro",
+            "D. pluma — zorro",
+            "E. ave — abrigo"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 26,
+          "texto": "... es a ganar como desear es a ...",
+          "opciones": [
+            "A. trabajar — pedir",
+            "B. perder — optar",
+            "C. competir — conseguir",
+            "D. jugar — escoger",
+            "E. participar — aborrecer"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 27,
+          "texto": "... es a tiempo como inmenso es a ...",
+          "opciones": [
+            "A. movimiento — medida",
+            "B. momento — vasto",
+            "C. eterno — cantidad",
+            "D. dilatado — momento",
+            "E. medida — cantidad"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 28,
+          "texto": "... es a caliente como gélido es a ...",
+          "opciones": [
+            "A. hirviente — tórrido",
+            "B. tórrido — frío",
+            "C. tibio — incandescente",
+            "D. templado — glaciar",
+            "E. fuego — frío"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 29,
+          "texto": "... es a aceptación como proyecto es a ...",
+          "opciones": [
+            "A. promesa — compromiso",
+            "B. presupuesto — plano",
+            "C. propuesta — ejecución",
+            "D. obra — oferta",
+            "E. contrato — obligación"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 30,
+          "texto": "... es a consultar como respuesta es a ...",
+          "opciones": [
+            "A. interrogar — argumento",
+            "B. aconsejar — duda",
+            "C. consejo — réplica",
+            "D. preguntar — consejo",
+            "E. opinión — disputar"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 31,
+          "texto": "... es a zanja como arado es a ...",
+          "opciones": [
+            "A. cimiento — surco",
+            "B. excavar — tierra",
+            "C. draga — cultivo",
+            "D. excavadora — surco",
+            "E. hoyo — siembra"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 32,
+          "texto": "... es a rechazar como agredir es a ...",
+          "opciones": [
+            "A. avanzar — insultar",
+            "B. luchar — enemigo",
+            "C. repeler — retroceder",
+            "D. atacar — repeler",
+            "E. golpe — daño"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 33,
+          "texto": "... es a árbol como manantial es a ...",
+          "opciones": [
+            "A. tierra — fuente",
+            "B. fruta — roca",
+            "C. hierba — nieve",
+            "D. tallo — río",
+            "E. abono — fuente"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 34,
+          "texto": "... es a separar como proximidad es a ...",
+          "opciones": [
+            "A. unir — cercanía",
+            "B. despedida — volver",
+            "C. alejar — incluir",
+            "D. juntar — distancia",
+            "E. cercanía — amistad"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 35,
+          "texto": "... es a esculpir como cuero es a ...",
+          "opciones": [
+            "A. buril — repujar",
+            "B. curtir — piel",
+            "C. cincel — adornar",
+            "D. piedra — repujar",
+            "E. estatua — tallar"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 36,
+          "texto": "... es a fino como copioso es a ...",
+          "opciones": [
+            "A. sutil — escaso",
+            "B. delgado — escaso",
+            "C. gordo — opulento",
+            "D. elegante — exiguo",
+            "E. grueso — exiguo"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 37,
+          "texto": "... es a frase como letra es a ...",
+          "opciones": [
+            "A. verbo — escritura",
+            "B. escritura — música",
+            "C. párrafo — escritura",
+            "D. adjetivo — ortografía",
+            "E. palabra — palabra"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 38,
+          "texto": "... es a vigilia como dormir es a ...",
+          "opciones": [
+            "A. atención — soñar",
+            "B. sueño — velar",
+            "C. noche — soñar",
+            "D. despertar — fatiga",
+            "E. centinela — descansar"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 39,
+          "texto": "... es a labranza como máquina es a ...",
+          "opciones": [
+            "A. campo — herramienta",
+            "B. tierra — producción",
+            "C. agricultor — ingeniero",
+            "D. apero — mecánico",
+            "E. apero — fabricación"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 40,
+          "texto": "... es a seguridad como indicio es a ...",
+          "opciones": [
+            "A. policía — crimen",
+            "B. sospecha — evidencia",
+            "C. justicia — prueba",
+            "D. sospecha — orden",
+            "E. certeza — persuasión"
+          ],
+          "correcta": "B"
+        }
+      ],
+      "respuestas": [
+        "C",
+        "E",
+        "B",
+        "B",
+        "B",
+        "C",
+        "A",
+        "A",
+        "D",
+        "B",
+        "B",
+        "B",
+        "E",
+        "C",
+        "E",
+        "D",
+        "E",
+        "C",
+        "D",
+        "D",
+        "C",
+        "A",
+        "C",
+        "A",
+        "D",
+        "C",
+        "C",
+        "B",
+        "C",
+        "D",
+        "D",
+        "D",
+        "D",
+        "D",
+        "D",
+        "E",
+        "E",
+        "B",
+        "E",
+        "B"
+      ]
+    },
+    "numerico": {
+      "nombre": "Razonamiento Numérico",
+      "instrucciones": "Esta prueba intenta comprobar su capacidad para razonar con números. Lea cada ejercicio, observe las posibles respuestas y decida cuál es la mejor. Si necesita hacer cálculos, puede usar papel en blanco, pero no use calculadora. En algunos ejercicios, la respuesta correcta no aparece; en ese caso, marque E (Ninguna de ellas).",
+      "ejemplo": "¿Qué número continúa esta serie? 2  4  6  8  ? → Respuesta: B (10)",
+      "totalPreguntas": 40,
+      "tiempoLimite": 1200,
+      "tipoRespuesta": "ABCDE",
+      "tipo": "texto",
+      "items": [
+        {
+          "id": 1,
+          "texto": "¿Qué cifra debería reemplazar a la F en esta división cuyo resultado es correcto?\n\nF73 : F3 = 11",
+          "opciones": [
+            "A. 9",
+            "B. 8",
+            "C. 6",
+            "D. 4",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 2,
+          "texto": "3x² + 7x − 9x + 10 =",
+          "opciones": [
+            "A. −60x² + 10",
+            "B. 3x² − 63x + 10",
+            "C. 3x² − 2x + 10",
+            "D. 3x² − 16x + 10",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 3,
+          "texto": "5 − 12 =",
+          "opciones": [
+            "A. −12 + 5",
+            "B. 12 − 5",
+            "C. −(5 − 12)",
+            "D. −(12 + 5)",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 4,
+          "texto": "¿Qué cifra debería ir en lugar de la P en esta suma cuyo resultado es correcto?\n\n    4 P P P 4\n  + 4 P P 7\n  ─────────\n  4 7 6 7 1",
+          "opciones": [
+            "A. 9",
+            "B. 8",
+            "C. 3",
+            "D. 2",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 5,
+          "texto": "¿Cuál es el resto de dividir 2.480.739 entre 20?",
+          "opciones": [
+            "A. 1",
+            "B. 9",
+            "C. 29",
+            "D. 39",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 6,
+          "texto": "¿Qué número puede sustituir a la L para que la proporción sea correcta?\n\n4/L = L/36",
+          "opciones": [
+            "A. 3",
+            "B. 9",
+            "C. 12",
+            "D. 18",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 7,
+          "texto": "(1/2 + 1/4) / (1/2 + 1/2) =",
+          "opciones": [
+            "A. 1/2",
+            "B. 3/4",
+            "C. 4/3",
+            "D. 3/2",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 8,
+          "texto": "El 30% del 50% de 300 es:",
+          "opciones": [
+            "A. 150",
+            "B. 90",
+            "C. 50",
+            "D. 45",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 9,
+          "texto": "¿Qué número debería sustituir a la K en esta división cuyo resultado es correcto?\n\n11K8 : 47 = K4",
+          "opciones": [
+            "A. 2",
+            "B. 3",
+            "C. 5",
+            "D. 6",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 10,
+          "texto": "4 = 10% de ____",
+          "opciones": [
+            "A. 0,4",
+            "B. 4",
+            "C. 40",
+            "D. 400",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 11,
+          "texto": "16x² + 4y² + 3x² =",
+          "opciones": [
+            "A. 19x² + 4y²",
+            "B. 19x⁴ + 4y²",
+            "C. 23x²y²",
+            "D. 23x⁴y²",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 12,
+          "texto": "¿Qué número debe sustituir a la N para que la proporción sea correcta?\n\n8/12 = N/6",
+          "opciones": [
+            "A. 16",
+            "B. 5",
+            "C. 4",
+            "D. 2",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 13,
+          "texto": "Si 2x³ + 6x = 2x² + 3x + 5, entonces x =",
+          "opciones": [
+            "A. −2,5",
+            "B. −5/4",
+            "C. −1",
+            "D. 0,6",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 14,
+          "texto": "¿Qué suma es MAYOR que uno?\n\nA. 1/5 + 3/4\nB. 2/3 + 3/8\nC. 8/12 + 1/3\nD. 5/8 + 1/4",
+          "opciones": [
+            "A. 1/5 + 3/4",
+            "B. 2/3 + 3/8",
+            "C. 8/12 + 1/3",
+            "D. 5/8 + 1/4",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 15,
+          "texto": "¿Qué cifra debe sustituir a la J en esta suma cuyo resultado es correcto?\n\n  2 4 J 4\n+ 2 J J 7\n────────\n  5 4 J 1",
+          "opciones": [
+            "A. 0",
+            "B. 6",
+            "C. 8",
+            "D. 9",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 16,
+          "texto": "¿Qué número debería continuar la serie?\n\n√100   9   √64   7   ?",
+          "opciones": [
+            "A. 5",
+            "B. √36",
+            "C. √49",
+            "D. 8",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 17,
+          "texto": "¿Cuál es el número MÁS PEQUEÑO que es divisible exactamente por 2, 4, 7 y 21?",
+          "opciones": [
+            "A. 1.176",
+            "B. 168",
+            "C. 84",
+            "D. 42",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 18,
+          "texto": "¿Qué cifra debería sustituir a la N en esta resta cuyo resultado es correcto?\n\n  3 N 3 N 3\n−   3 N N 3\n──────────\n  3 2 7 0 0",
+          "opciones": [
+            "A. 1",
+            "B. 4",
+            "C. 5",
+            "D. 6",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 19,
+          "texto": "(15/21) : (7/3) =",
+          "opciones": [
+            "A. 15/49",
+            "B. 5/3",
+            "C. 15/7",
+            "D. 15",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 20,
+          "texto": "¿Cuál es el resultado de (84.189 × 1,99) / 6,889 redondeado al número entero más próximo?",
+          "opciones": [
+            "A. 28",
+            "B. 24",
+            "C. 20",
+            "D. 16",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 21,
+          "texto": "¿Qué cifra debe sustituir a la R en esta resta cuyo resultado es correcto?\n\n  3 R 3 3\n−   9 R 9\n────────\n  2 R 5 4",
+          "opciones": [
+            "A. 0",
+            "B. 1",
+            "C. 6",
+            "D. 8",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 22,
+          "texto": "¿Qué número es divisible exactamente entre 3?",
+          "opciones": [
+            "A. 766",
+            "B. 768",
+            "C. 796",
+            "D. 976",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 23,
+          "texto": "y + x + 7x − 6y =",
+          "opciones": [
+            "A. 8x + 5y",
+            "B. 7x − 6y",
+            "C. 7x² − 6y²",
+            "D. 5y − 8x",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "E"
+        },
+        {
+          "id": 24,
+          "texto": "¿Qué número continuaría la serie?\n\n2.400   1.200   600   300   ?",
+          "opciones": [
+            "A. 0",
+            "B. 100",
+            "C. 150",
+            "D. 200",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 25,
+          "texto": "¿Cuál es el millar más próximo al que podría redondearse 710 × 80?",
+          "opciones": [
+            "A. 50.000",
+            "B. 55.000",
+            "C. 57.000",
+            "D. 60.000",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 26,
+          "texto": "¿Qué cifra debería sustituir a la A en esta multiplicación cuyo resultado es correcto?\n\n    6 A 6\n  ×     A 2\n  ─────────\n  6 4 0 3 2",
+          "opciones": [
+            "A. 9",
+            "B. 7",
+            "C. 5",
+            "D. 1",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 27,
+          "texto": "mn = y\nSi y = 10, entonces m =",
+          "opciones": [
+            "A. 10 − n",
+            "B. n − 10",
+            "C. n/10",
+            "D. 10/n",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 28,
+          "texto": "(5 × 2) / (4 × 15) =",
+          "opciones": [
+            "A. 6",
+            "B. 5/6",
+            "C. 2/3",
+            "D. 1/6",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 29,
+          "texto": "¿Qué número debe sustituir a la T para que la proporción sea correcta?\n\n1,3/T = 0,2/0,8",
+          "opciones": [
+            "A. 6,5",
+            "B. 5,2",
+            "C. 4,0",
+            "D. 1,04",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 30,
+          "texto": "¿Qué valores de x hacen que sea verdadera la expresión x + 3 ≥ 11?",
+          "opciones": [
+            "A. 5, 6, 7",
+            "B. 6, 7, 8",
+            "C. 7, 8, 9",
+            "D. 8, 9, 10",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 31,
+          "texto": "¿Qué cifra debe sustituir a la F en la siguiente división cuyo resultado es correcto?\n\n2F1F2 : F855 = 6; resto = 2",
+          "opciones": [
+            "A. 9",
+            "B. 7",
+            "C. 4",
+            "D. 3",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 32,
+          "texto": "¿Cuál de las siguientes expresiones vale uno?\n\nA. (−3 × 2)/6\nB. −6/(−2 × −3)\nC. (2 × −3)/6\nD. 6/(−3 × −2)",
+          "opciones": [
+            "A. (−3 × 2)/6",
+            "B. −6/(−2 × −3)",
+            "C. (2 × −3)/6",
+            "D. 6/(−3 × −2)",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 33,
+          "texto": "¿Qué cifra debería sustituir a la J en esta multiplicación cuyo resultado es correcto?\n\n  1 J 5 6\n×       J\n────────\n  5 8 2 J",
+          "opciones": [
+            "A. 3",
+            "B. 4",
+            "C. 7",
+            "D. 9",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 34,
+          "texto": "¿Cuál es el resultado, redondeado al número entero más próximo, de la siguiente operación?\n\n(1 + 1/9) × (2 + 2/3) × (5 + 1/5)",
+          "opciones": [
+            "A. 20",
+            "B. 15",
+            "C. 10",
+            "D. 5",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 35,
+          "texto": "¿Qué número debería sustituir a la H para que la proporción fuera correcta?\n\n12%/9% = 4%/H",
+          "opciones": [
+            "A. 0,03%",
+            "B. 0,3%",
+            "C. 3%",
+            "D. 30%",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 36,
+          "texto": "2 × 100.000 + 8 × 1.000 + 9 × 10 =",
+          "opciones": [
+            "A. 28.090",
+            "B. 28.900",
+            "C. 190.000",
+            "D. 208.090",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 37,
+          "texto": "Si x = 10, entonces 3x² − x =",
+          "opciones": [
+            "A. 50",
+            "B. 200",
+            "C. 270",
+            "D. 290",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 38,
+          "texto": "a = 1/2 bh\nSi b = 6 y a = 14, entonces h =",
+          "opciones": [
+            "A. 14/3",
+            "B. 7/3",
+            "C. 7/6",
+            "D. 6/7",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 39,
+          "texto": "Usando el diagrama: Si introduce el número 8, ¿cuántas veces pasará por el paso 4 para llegar al final?\n\n[Paso 1: Introducir número → Paso 2: Multiplicar por 2 → Paso 3: ¿Mayor que 15? NO→Paso 2, SÍ→Paso 4 → Paso 4: Dividir por 4 → Paso 5: ¿Menor que 7? NO→Paso 2, SÍ→Paso 6 → Paso 6: Restarle 1 → Paso 7: Final]",
+          "opciones": [
+            "A. 8",
+            "B. 4",
+            "C. 2",
+            "D. 1",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 40,
+          "texto": "Usando el diagrama anterior: Si introduce el número 3, ¿cuál será el número cuando llegue al final?",
+          "opciones": [
+            "A. 6",
+            "B. 5",
+            "C. 3",
+            "D. 2",
+            "E. Ninguna de ellas"
+          ],
+          "correcta": "B"
+        }
+      ],
+      "respuestas": [
+        "D",
+        "C",
+        "A",
+        "C",
+        "E",
+        "C",
+        "B",
+        "D",
+        "A",
+        "C",
+        "A",
+        "C",
+        "E",
+        "B",
+        "D",
+        "B",
+        "C",
+        "D",
+        "A",
+        "B",
+        "E",
+        "B",
+        "E",
+        "C",
+        "C",
+        "A",
+        "D",
+        "D",
+        "B",
+        "D",
+        "D",
+        "D",
+        "B",
+        "B",
+        "C",
+        "D",
+        "D",
+        "A",
+        "D",
+        "B"
+      ]
+    },
+    "abstracto": {
+      "nombre": "Razonamiento Abstracto",
+      "instrucciones": "En esta prueba hay una serie de figuras que forman una secuencia. Debe encontrar qué figura (A, B, C, D o E) es la que continúa la serie. Observe las figuras y descubra qué es lo que cambia de una a la siguiente.",
+      "totalPreguntas": 40,
+      "tiempoLimite": 1200,
+      "tipoRespuesta": "ABCDE",
+      "tipo": "imagen",
+      "paginas": [
+        {
+          "imagen": "DAT-5  16.jpeg",
+          "preguntas": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "opciones": 5
+        },
+        {
+          "imagen": "DAT-5  17.jpeg",
+          "preguntas": [
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16
+          ],
+          "opciones": 5
+        },
+        {
+          "imagen": "DAT-5  18.jpeg",
+          "preguntas": [
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "opciones": 5
+        },
+        {
+          "imagen": "DAT-5  19.jpeg",
+          "preguntas": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32
+          ],
+          "opciones": 5
+        },
+        {
+          "imagen": "DAT-5  20.jpeg",
+          "preguntas": [
+            33,
+            34,
+            35,
+            36,
+            37,
+            38,
+            39,
+            40
+          ],
+          "opciones": 5
+        }
+      ],
+      "respuestas": [
+        "D",
+        "E",
+        "B",
+        "B",
+        "C",
+        "A",
+        "B",
+        "B",
+        "B",
+        "C",
+        "E",
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "C",
+        "E",
+        "C",
+        "C",
+        "D",
+        "C",
+        "E",
+        "A",
+        "B",
+        "A",
+        "E",
+        "D",
+        "A",
+        "D",
+        "C",
+        "B",
+        "E",
+        "D",
+        "E",
+        "B",
+        "B",
+        "E",
+        "D",
+        "D"
+      ]
+    },
+    "mecanico": {
+      "nombre": "Razonamiento Mecánico",
+      "instrucciones": "En esta prueba hay dibujos sobre los cuales se hacen preguntas. Lea cada pregunta, observe la figura y elija la mejor respuesta (A, B o C). Si la pregunta se refiere a dos o más figuras, son iguales excepto en un detalle.",
+      "totalPreguntas": 60,
+      "tiempoLimite": 1200,
+      "tipoRespuesta": "ABC",
+      "tipo": "imagen",
+      "paginas": [
+        {
+          "imagen": "DAT-5  23.jpeg",
+          "preguntas": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  24.jpeg",
+          "preguntas": [
+            7,
+            8,
+            9,
+            10,
+            11,
+            12
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  25.jpeg",
+          "preguntas": [
+            13,
+            14,
+            15,
+            16,
+            17,
+            18
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  26.jpeg",
+          "preguntas": [
+            19,
+            20,
+            21,
+            22,
+            23,
+            24
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  27.jpeg",
+          "preguntas": [
+            25,
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  28.jpeg",
+          "preguntas": [
+            31,
+            32,
+            33,
+            34,
+            35,
+            36
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  29.jpeg",
+          "preguntas": [
+            37,
+            38,
+            39,
+            40,
+            41,
+            42
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  30.jpeg",
+          "preguntas": [
+            43,
+            44,
+            45,
+            46,
+            47,
+            48
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  31.jpeg",
+          "preguntas": [
+            49,
+            50,
+            51,
+            52,
+            53,
+            54
+          ],
+          "opciones": 3
+        },
+        {
+          "imagen": "DAT-5  32.jpeg",
+          "preguntas": [
+            55,
+            56,
+            57,
+            58,
+            59,
+            60
+          ],
+          "opciones": 3
+        }
+      ],
+      "respuestas": [
+        "A",
+        "B",
+        "A",
+        "C",
+        "A",
+        "C",
+        "B",
+        "B",
+        "A",
+        "A",
+        "B",
+        "B",
+        "A",
+        "C",
+        "A",
+        "B",
+        "B",
+        "C",
+        "A",
+        "C",
+        "B",
+        "A",
+        "A",
+        "C",
+        "A",
+        "B",
+        "C",
+        "B",
+        "A",
+        "A",
+        "B",
+        "B",
+        "A",
+        "C",
+        "A",
+        "C",
+        "B",
+        "B",
+        "C",
+        "A",
+        "A",
+        "C",
+        "B",
+        "B",
+        "A",
+        "B",
+        "A",
+        "B",
+        "A",
+        "C",
+        "A",
+        "B",
+        "A",
+        "C",
+        "A",
+        "A",
+        "B",
+        "B",
+        "B",
+        "C"
+      ]
+    },
+    "espacial": {
+      "nombre": "Relaciones Espaciales",
+      "instrucciones": "En cada ejercicio se presenta un modelo o patrón con zonas sombreadas y pequeños dibujos. A la derecha hay cuatro figuras 3D. Averigüe cuál es la ÚNICA que puede formarse a partir del modelo. El modelo siempre muestra la superficie EXTERIOR.",
+      "totalPreguntas": 50,
+      "tiempoLimite": 1500,
+      "tipoRespuesta": "ABCD",
+      "tipo": "imagen",
+      "paginas": [
+        {
+          "imagen": "DAT-5  35.jpeg",
+          "preguntas": [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  36.jpeg",
+          "preguntas": [
+            6,
+            7,
+            8,
+            9,
+            10
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  37.jpeg",
+          "preguntas": [
+            11,
+            12,
+            13,
+            14,
+            15
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  38.jpeg",
+          "preguntas": [
+            16,
+            17,
+            18,
+            19,
+            20
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  39.jpeg",
+          "preguntas": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  40.jpeg",
+          "preguntas": [
+            26,
+            27,
+            28,
+            29,
+            30
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  41.jpeg",
+          "preguntas": [
+            31,
+            32,
+            33,
+            34,
+            35
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  42.jpeg",
+          "preguntas": [
+            36,
+            37,
+            38,
+            39,
+            40
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  43.jpeg",
+          "preguntas": [
+            41,
+            42,
+            43,
+            44,
+            45
+          ],
+          "opciones": 4
+        },
+        {
+          "imagen": "DAT-5  44.jpeg",
+          "preguntas": [
+            46,
+            47,
+            48,
+            49,
+            50
+          ],
+          "opciones": 4
+        }
+      ],
+      "respuestas": [
+        "D",
+        "C",
+        "C",
+        "B",
+        "A",
+        "A",
+        "D",
+        "B",
+        "D",
+        "D",
+        "A",
+        "C",
+        "B",
+        "D",
+        "A",
+        "A",
+        "A",
+        "C",
+        "D",
+        "A",
+        "C",
+        "D",
+        "B",
+        "D",
+        "B",
+        "B",
+        "A",
+        "A",
+        "C",
+        "C",
+        "B",
+        "D",
+        "A",
+        "B",
+        "D",
+        "B",
+        "C",
+        "B",
+        "C",
+        "C",
+        "B",
+        "B",
+        "C",
+        "B",
+        "C",
+        "B",
+        "D",
+        "C",
+        "D",
+        "B"
+      ]
+    },
+    "ortografia": {
+      "nombre": "Ortografía",
+      "instrucciones": "En esta prueba se presentan grupos de cuatro palabras. Tu tarea consiste en identificar cuál de las cuatro palabras está MAL ESCRITA (tiene un error ortográfico). Selecciona la opción (A, B, C o D) que contenga la palabra con error.",
+      "ejemplo": "A. televisión  B. avión  C. hobio  D. camión → Respuesta: C (hobio, debería ser \"obvio\")",
+      "totalPreguntas": 40,
+      "tiempoLimite": 720,
+      "tipoRespuesta": "ABCD",
+      "tipo": "texto",
+      "items": [
+        {
+          "id": 1,
+          "opciones": [
+            "A. absurdo",
+            "B. solemnidad",
+            "C. subrepticio",
+            "D. deshacer"
+          ],
+          "palabras": [
+            "absurdo",
+            "solemnidad",
+            "subrepticio",
+            "deshacer"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 2,
+          "opciones": [
+            "A. inmediato",
+            "B. herrage",
+            "C. proyecto",
+            "D. borde"
+          ],
+          "palabras": [
+            "inmediato",
+            "herrage",
+            "proyecto",
+            "borde"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 3,
+          "opciones": [
+            "A. ambibalente",
+            "B. reanudar",
+            "C. betín",
+            "D. obvio"
+          ],
+          "palabras": [
+            "ambibalente",
+            "reanudar",
+            "betín",
+            "obvio"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 4,
+          "opciones": [
+            "A. escurrir",
+            "B. variar",
+            "C. pabor",
+            "D. sobrecoger"
+          ],
+          "palabras": [
+            "escurrir",
+            "variar",
+            "pabor",
+            "sobrecoger"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 5,
+          "opciones": [
+            "A. recolección",
+            "B. enmoecer",
+            "C. rojizo",
+            "D. humeante"
+          ],
+          "palabras": [
+            "recolección",
+            "enmoecer",
+            "rojizo",
+            "humeante"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 6,
+          "opciones": [
+            "A. desván",
+            "B. hoguera",
+            "C. hyedra",
+            "D. aspecto"
+          ],
+          "palabras": [
+            "desván",
+            "hoguera",
+            "hyedra",
+            "aspecto"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 7,
+          "opciones": [
+            "A. hierba",
+            "B. bicho",
+            "C. mensagero",
+            "D. guijarro"
+          ],
+          "palabras": [
+            "hierba",
+            "bicho",
+            "mensagero",
+            "guijarro"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 8,
+          "opciones": [
+            "A. enagenar",
+            "B. tranquilizar",
+            "C. ayuda",
+            "D. río"
+          ],
+          "palabras": [
+            "enagenar",
+            "tranquilizar",
+            "ayuda",
+            "río"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 9,
+          "opciones": [
+            "A. adoptar",
+            "B. quehacer",
+            "C. ohasis",
+            "D. abombar"
+          ],
+          "palabras": [
+            "adoptar",
+            "quehacer",
+            "ohasis",
+            "abombar"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 10,
+          "opciones": [
+            "A. pertinad",
+            "B. colmillo",
+            "C. coordinar",
+            "D. probar"
+          ],
+          "palabras": [
+            "pertinad",
+            "colmillo",
+            "coordinar",
+            "probar"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 11,
+          "opciones": [
+            "A. deshonesto",
+            "B. ojival",
+            "C. fragil",
+            "D. combinación"
+          ],
+          "palabras": [
+            "deshonesto",
+            "ojival",
+            "fragil",
+            "combinación"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 12,
+          "opciones": [
+            "A. mordad",
+            "B. esbozo",
+            "C. estructura",
+            "D. víctima"
+          ],
+          "palabras": [
+            "mordad",
+            "esbozo",
+            "estructura",
+            "víctima"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 13,
+          "opciones": [
+            "A. arduo",
+            "B. injenio",
+            "C. hervir",
+            "D. brizna"
+          ],
+          "palabras": [
+            "arduo",
+            "injenio",
+            "hervir",
+            "brizna"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 14,
+          "opciones": [
+            "A. afanar",
+            "B. capataz",
+            "C. urtar",
+            "D. pavor"
+          ],
+          "palabras": [
+            "afanar",
+            "capataz",
+            "urtar",
+            "pavor"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 15,
+          "opciones": [
+            "A. auje",
+            "B. mesilla",
+            "C. trillo",
+            "D. labio"
+          ],
+          "palabras": [
+            "auje",
+            "mesilla",
+            "trillo",
+            "labio"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 16,
+          "opciones": [
+            "A. sorbo",
+            "B. enredo",
+            "C. eshortar",
+            "D. explorar"
+          ],
+          "palabras": [
+            "sorbo",
+            "enredo",
+            "eshortar",
+            "explorar"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 17,
+          "opciones": [
+            "A. inofensivo",
+            "B. invernar",
+            "C. ficción",
+            "D. ortelano"
+          ],
+          "palabras": [
+            "inofensivo",
+            "invernar",
+            "ficción",
+            "ortelano"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 18,
+          "opciones": [
+            "A. obstinado",
+            "B. coibido",
+            "C. esquirla",
+            "D. intuición"
+          ],
+          "palabras": [
+            "obstinado",
+            "coibido",
+            "esquirla",
+            "intuición"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 19,
+          "opciones": [
+            "A. adiacente",
+            "B. follaje",
+            "C. hinchazón",
+            "D. bagatela"
+          ],
+          "palabras": [
+            "adiacente",
+            "follaje",
+            "hinchazón",
+            "bagatela"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 20,
+          "opciones": [
+            "A. esquisito",
+            "B. inexorable",
+            "C. ondular",
+            "D. bóveda"
+          ],
+          "palabras": [
+            "esquisito",
+            "inexorable",
+            "ondular",
+            "bóveda"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 21,
+          "opciones": [
+            "A. exageración",
+            "B. dioptría",
+            "C. honroso",
+            "D. vetusto"
+          ],
+          "palabras": [
+            "exageración",
+            "dioptría",
+            "honroso",
+            "vetusto"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 22,
+          "opciones": [
+            "A. cavidad",
+            "B. latitud",
+            "C. adversario",
+            "D. optener"
+          ],
+          "palabras": [
+            "cavidad",
+            "latitud",
+            "adversario",
+            "optener"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 23,
+          "opciones": [
+            "A. sequedad",
+            "B. hidrografía",
+            "C. voluptuoso",
+            "D. espropiar"
+          ],
+          "palabras": [
+            "sequedad",
+            "hidrografía",
+            "voluptuoso",
+            "espropiar"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 24,
+          "opciones": [
+            "A. hormiga",
+            "B. bellota",
+            "C. dibán",
+            "D. gélido"
+          ],
+          "palabras": [
+            "hormiga",
+            "bellota",
+            "dibán",
+            "gélido"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 25,
+          "opciones": [
+            "A. veterano",
+            "B. bamboleo",
+            "C. estridencia",
+            "D. desnudez"
+          ],
+          "palabras": [
+            "veterano",
+            "bamboleo",
+            "estridencia",
+            "desnudez"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 26,
+          "opciones": [
+            "A. reojo",
+            "B. husmear",
+            "C. botella",
+            "D. ecatombe"
+          ],
+          "palabras": [
+            "reojo",
+            "husmear",
+            "botella",
+            "ecatombe"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 27,
+          "opciones": [
+            "A. enervado",
+            "B. aviso",
+            "C. estruendo",
+            "D. bagabundo"
+          ],
+          "palabras": [
+            "enervado",
+            "aviso",
+            "estruendo",
+            "bagabundo"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 28,
+          "opciones": [
+            "A. metehoro",
+            "B. intervalo",
+            "C. abollado",
+            "D. holgado"
+          ],
+          "palabras": [
+            "metehoro",
+            "intervalo",
+            "abollado",
+            "holgado"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 29,
+          "opciones": [
+            "A. sugestivo",
+            "B. caracter",
+            "C. esbelto",
+            "D. áspid"
+          ],
+          "palabras": [
+            "sugestivo",
+            "caracter",
+            "esbelto",
+            "áspid"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 30,
+          "opciones": [
+            "A. tibio",
+            "B. extraer",
+            "C. optuso",
+            "D. roer"
+          ],
+          "palabras": [
+            "tibio",
+            "extraer",
+            "optuso",
+            "roer"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 31,
+          "opciones": [
+            "A. cóncabo",
+            "B. hematoma",
+            "C. estribo",
+            "D. dehesa"
+          ],
+          "palabras": [
+            "cóncabo",
+            "hematoma",
+            "estribo",
+            "dehesa"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 32,
+          "opciones": [
+            "A. saya",
+            "B. ausencia",
+            "C. arrodillar",
+            "D. crugido"
+          ],
+          "palabras": [
+            "saya",
+            "ausencia",
+            "arrodillar",
+            "crugido"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 33,
+          "opciones": [
+            "A. deshollinador",
+            "B. rectil",
+            "C. truhán",
+            "D. inmobiliario"
+          ],
+          "palabras": [
+            "deshollinador",
+            "rectil",
+            "truhán",
+            "inmobiliario"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 34,
+          "opciones": [
+            "A. hondonada",
+            "B. testura",
+            "C. espectáculo",
+            "D. bienestar"
+          ],
+          "palabras": [
+            "hondonada",
+            "testura",
+            "espectáculo",
+            "bienestar"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 35,
+          "opciones": [
+            "A. extraño",
+            "B. abutarda",
+            "C. umbral",
+            "D. presbítero"
+          ],
+          "palabras": [
+            "extraño",
+            "abutarda",
+            "umbral",
+            "presbítero"
+          ],
+          "correcta": "B"
+        },
+        {
+          "id": 36,
+          "opciones": [
+            "A. luciérnaga",
+            "B. bolsillo",
+            "C. prever",
+            "D. cerragero"
+          ],
+          "palabras": [
+            "luciérnaga",
+            "bolsillo",
+            "prever",
+            "cerragero"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 37,
+          "opciones": [
+            "A. actualidad",
+            "B. exhaustivo",
+            "C. ejecutar",
+            "D. escased"
+          ],
+          "palabras": [
+            "actualidad",
+            "exhaustivo",
+            "ejecutar",
+            "escased"
+          ],
+          "correcta": "D"
+        },
+        {
+          "id": 38,
+          "opciones": [
+            "A. alhelí",
+            "B. hastío",
+            "C. alcallata",
+            "D. tatuaje"
+          ],
+          "palabras": [
+            "alhelí",
+            "hastío",
+            "alcallata",
+            "tatuaje"
+          ],
+          "correcta": "C"
+        },
+        {
+          "id": 39,
+          "opciones": [
+            "A. hoquedad",
+            "B. hatillo",
+            "C. ahuyentar",
+            "D. vereda"
+          ],
+          "palabras": [
+            "hoquedad",
+            "hatillo",
+            "ahuyentar",
+            "vereda"
+          ],
+          "correcta": "A"
+        },
+        {
+          "id": 40,
+          "opciones": [
+            "A. extremecer",
+            "B. inspección",
+            "C. prez",
+            "D. autóctono"
+          ],
+          "palabras": [
+            "extremecer",
+            "inspección",
+            "prez",
+            "autóctono"
+          ],
+          "correcta": "A"
+        }
+      ],
+      "respuestas": [
+        "C",
+        "B",
+        "A",
+        "C",
+        "B",
+        "C",
+        "C",
+        "A",
+        "C",
+        "A",
+        "C",
+        "A",
+        "B",
+        "C",
+        "A",
+        "C",
+        "D",
+        "B",
+        "A",
+        "A",
+        "B",
+        "D",
+        "D",
+        "C",
+        "D",
+        "D",
+        "D",
+        "A",
+        "B",
+        "C",
+        "A",
+        "D",
+        "B",
+        "B",
+        "B",
+        "D",
+        "D",
+        "C",
+        "A",
+        "A"
+      ]
+    },
+    "perceptiva": {
+      "nombre": "Rapidez y Precisión Perceptiva",
+      "instrucciones": "Verás cinco combinaciones de letras o números. UNA de ellas aparece resaltada (es el modelo). Tu tarea es identificar rápidamente cuál es el modelo y seleccionarlo. Trabaja lo más rápido posible sin cometer errores.",
+      "totalPreguntas": 199,
+      "tiempoLimiteParte": 180,
+      "partes": 2,
+      "tipoRespuesta": "12345",
+      "tipo": "perceptiva",
+      "items": [
+        {
+          "id": 1,
+          "modelo": "nv",
+          "opciones": [
+            "xn",
+            "xv",
+            "nx",
+            "vx",
+            "nv"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 2,
+          "modelo": "bd",
+          "opciones": [
+            "bl",
+            "ld",
+            "lb",
+            "dl",
+            "bd"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 3,
+          "modelo": "au",
+          "opciones": [
+            "ra",
+            "ur",
+            "ar",
+            "ru",
+            "au"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 4,
+          "modelo": "wv",
+          "opciones": [
+            "vw",
+            "vu",
+            "wv",
+            "wu",
+            "uw"
+          ],
+          "correcta": 3
+        },
+        {
+          "id": 5,
+          "modelo": "um",
+          "opciones": [
+            "wu",
+            "wm",
+            "mu",
+            "mw",
+            "um"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 6,
+          "modelo": "79",
+          "opciones": [
+            "76",
+            "69",
+            "97",
+            "79",
+            "67"
+          ],
+          "correcta": 4
+        },
+        {
+          "id": 7,
+          "modelo": "ra",
+          "opciones": [
+            "ar",
+            "na",
+            "nr",
+            "rn",
+            "ra"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 8,
+          "modelo": "ma",
+          "opciones": [
+            "az",
+            "za",
+            "zm",
+            "mz",
+            "ma"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 9,
+          "modelo": "NA",
+          "opciones": [
+            "NV",
+            "VN",
+            "AV",
+            "VA",
+            "NA"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 10,
+          "modelo": "CQ",
+          "opciones": [
+            "QO",
+            "QC",
+            "OC",
+            "OQ",
+            "CQ"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 11,
+          "modelo": "UC",
+          "opciones": [
+            "CU",
+            "US",
+            "CC",
+            "UU",
+            "UC"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 12,
+          "modelo": "4H",
+          "opciones": [
+            "N4",
+            "NH",
+            "4N",
+            "HN",
+            "4H"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 13,
+          "modelo": "Rr",
+          "opciones": [
+            "RP",
+            "PP",
+            "rr",
+            "pR",
+            "Rr"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 14,
+          "modelo": "8a",
+          "opciones": [
+            "aA",
+            "Aa",
+            "8A",
+            "A8",
+            "8a"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 15,
+          "modelo": "LT",
+          "opciones": [
+            "tT",
+            "Tl",
+            "Tt",
+            "LT",
+            "tt"
+          ],
+          "correcta": 4
+        },
+        {
+          "id": 16,
+          "modelo": "Vv",
+          "opciones": [
+            "Av",
+            "av",
+            "AA",
+            "VV",
+            "Vv"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 17,
+          "modelo": "4d",
+          "opciones": [
+            "3a",
+            "4c",
+            "4a",
+            "3c",
+            "4d"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 18,
+          "modelo": "V5",
+          "opciones": [
+            "X9",
+            "V9",
+            "X7",
+            "V7",
+            "V5"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 19,
+          "modelo": "9b",
+          "opciones": [
+            "b7",
+            "A9",
+            "79",
+            "7b",
+            "9b"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 20,
+          "modelo": "02",
+          "opciones": [
+            "25",
+            "52",
+            "20",
+            "05",
+            "02"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 21,
+          "modelo": "ar",
+          "opciones": [
+            "or",
+            "ra",
+            "ro",
+            "oa",
+            "ar"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 22,
+          "modelo": "ol",
+          "opciones": [
+            "lc",
+            "oc",
+            "lo",
+            "co",
+            "ol"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 23,
+          "modelo": "1s",
+          "opciones": [
+            "13",
+            "sl",
+            "31",
+            "3s",
+            "1s"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 24,
+          "modelo": "ca",
+          "opciones": [
+            "ma",
+            "mc",
+            "cm",
+            "am",
+            "ca"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 25,
+          "modelo": "wx",
+          "opciones": [
+            "wv",
+            "xv",
+            "vw",
+            "vx",
+            "wx"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 26,
+          "modelo": "un",
+          "opciones": [
+            "nu",
+            "ud",
+            "du",
+            "nd",
+            "un"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 27,
+          "modelo": "kf",
+          "opciones": [
+            "lf",
+            "lk",
+            "kl",
+            "fk",
+            "kf"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 28,
+          "modelo": "pq",
+          "opciones": [
+            "qp",
+            "gp",
+            "qg",
+            "gq",
+            "pq"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 29,
+          "modelo": "2q",
+          "opciones": [
+            "2u",
+            "qu",
+            "u2",
+            "q2",
+            "2q"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 30,
+          "modelo": "41",
+          "opciones": [
+            "40",
+            "14",
+            "11",
+            "44",
+            "41"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 31,
+          "modelo": "re",
+          "opciones": [
+            "ne",
+            "en",
+            "rn",
+            "nr",
+            "re"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 32,
+          "modelo": "db",
+          "opciones": [
+            "bd",
+            "bb",
+            "ld",
+            "dd",
+            "db"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 33,
+          "modelo": "DR",
+          "opciones": [
+            "BR",
+            "BD",
+            "RB",
+            "RD",
+            "DR"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 34,
+          "modelo": "WM",
+          "opciones": [
+            "MV",
+            "VM",
+            "MW",
+            "VW",
+            "WM"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 35,
+          "modelo": "OB",
+          "opciones": [
+            "BO",
+            "BD",
+            "DO",
+            "OD",
+            "OB"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 36,
+          "modelo": "PR",
+          "opciones": [
+            "PB",
+            "RB",
+            "RP",
+            "BP",
+            "PR"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 37,
+          "modelo": "DD",
+          "opciones": [
+            "bB",
+            "Dd",
+            "Db",
+            "dB",
+            "DD"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 38,
+          "modelo": "FF",
+          "opciones": [
+            "EE",
+            "Fe",
+            "eF",
+            "FF",
+            "Ef"
+          ],
+          "correcta": 4
+        },
+        {
+          "id": 39,
+          "modelo": "ZE",
+          "opciones": [
+            "eZ",
+            "Ze",
+            "zE",
+            "Zz",
+            "ZE"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 40,
+          "modelo": "NZ",
+          "opciones": [
+            "zn",
+            "zZ",
+            "ZN",
+            "Zz",
+            "NZ"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 41,
+          "modelo": "7b",
+          "opciones": [
+            "7c",
+            "9e",
+            "9b",
+            "9c",
+            "7b"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 42,
+          "modelo": "7c",
+          "opciones": [
+            "7b",
+            "2b",
+            "2d",
+            "7d",
+            "7c"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 43,
+          "modelo": "3n",
+          "opciones": [
+            "ns",
+            "n3",
+            "Sn",
+            "3s",
+            "3n"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 44,
+          "modelo": "20",
+          "opciones": [
+            "52",
+            "05",
+            "25",
+            "02",
+            "20"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 45,
+          "modelo": "ac",
+          "opciones": [
+            "ca",
+            "ce",
+            "ae",
+            "ec",
+            "ac"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 46,
+          "modelo": "va",
+          "opciones": [
+            "vo",
+            "av",
+            "ao",
+            "ov",
+            "va"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 47,
+          "modelo": "ol",
+          "opciones": [
+            "vo",
+            "av",
+            "lo",
+            "co",
+            "ol"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 48,
+          "modelo": "ra",
+          "opciones": [
+            "ar",
+            "rf",
+            "fr",
+            "fa",
+            "ra"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 49,
+          "modelo": "ma",
+          "opciones": [
+            "cm",
+            "ca",
+            "am",
+            "mc",
+            "ma"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 50,
+          "modelo": "or",
+          "opciones": [
+            "cr",
+            "co",
+            "rc",
+            "oc",
+            "or"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 51,
+          "modelo": "hc",
+          "opciones": [
+            "oc",
+            "ho",
+            "oh",
+            "ch",
+            "hc"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 52,
+          "modelo": "se",
+          "opciones": [
+            "rs",
+            "es",
+            "er",
+            "re",
+            "se"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 53,
+          "modelo": "ur",
+          "opciones": [
+            "ar",
+            "ru",
+            "au",
+            "ra",
+            "ur"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 54,
+          "modelo": "gq",
+          "opciones": [
+            "qg",
+            "pq",
+            "qp",
+            "gp",
+            "gq"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 55,
+          "modelo": "na",
+          "opciones": [
+            "nm",
+            "am",
+            "mn",
+            "an",
+            "na"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 56,
+          "modelo": "gj",
+          "opciones": [
+            "gp",
+            "jp",
+            "pg",
+            "jg",
+            "gj"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 57,
+          "modelo": "pt",
+          "opciones": [
+            "et",
+            "pe",
+            "ep",
+            "tp",
+            "pt"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 58,
+          "modelo": "na",
+          "opciones": [
+            "rn",
+            "ra",
+            "ar",
+            "nr",
+            "na"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 59,
+          "modelo": "db",
+          "opciones": [
+            "bb",
+            "bd",
+            "ld",
+            "dd",
+            "db"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 60,
+          "modelo": "a8",
+          "opciones": [
+            "1a",
+            "81",
+            "18",
+            "8a",
+            "a8"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 61,
+          "modelo": "HN",
+          "opciones": [
+            "HZ",
+            "ZN",
+            "NH",
+            "ZH",
+            "HN"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 62,
+          "modelo": "BB",
+          "opciones": [
+            "RB",
+            "RP",
+            "BR",
+            "RR",
+            "BB"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 63,
+          "modelo": "CC",
+          "opciones": [
+            "CU",
+            "UC",
+            "US",
+            "UU",
+            "CC"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 64,
+          "modelo": "RP",
+          "opciones": [
+            "BP",
+            "RB",
+            "PB",
+            "PR",
+            "RP"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 65,
+          "modelo": "JK",
+          "opciones": [
+            "KJ",
+            "CK",
+            "JC",
+            "KC",
+            "JK"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 66,
+          "modelo": "ll",
+          "opciones": [
+            "lT",
+            "Tt",
+            "Tl",
+            "TT",
+            "ll"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 67,
+          "modelo": "Xs",
+          "opciones": [
+            "SX",
+            "XS",
+            "sX",
+            "sx",
+            "Xs"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 68,
+          "modelo": "LT",
+          "opciones": [
+            "tt",
+            "Tt",
+            "tT",
+            "Tl",
+            "LT"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 69,
+          "modelo": "ZN",
+          "opciones": [
+            "zZ",
+            "NZ",
+            "zn",
+            "Zz",
+            "ZN"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 70,
+          "modelo": "qg",
+          "opciones": [
+            "QG",
+            "qq",
+            "GQ",
+            "Qg",
+            "qg"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 71,
+          "modelo": "1c",
+          "opciones": [
+            "4d",
+            "4c",
+            "la",
+            "2d",
+            "1c"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 72,
+          "modelo": "A9",
+          "opciones": [
+            "79",
+            "b7",
+            "9b",
+            "7b",
+            "A9"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 73,
+          "modelo": "78",
+          "opciones": [
+            "71",
+            "18",
+            "81",
+            "17",
+            "78"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 74,
+          "modelo": "db",
+          "opciones": [
+            "4d",
+            "bd",
+            "d4",
+            "b4",
+            "db"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 75,
+          "modelo": "4u",
+          "opciones": [
+            "46",
+            "6u",
+            "u4",
+            "u6",
+            "4u"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 76,
+          "modelo": "x7",
+          "opciones": [
+            "3x",
+            "37",
+            "7x",
+            "73",
+            "x7"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 77,
+          "modelo": "ls",
+          "opciones": [
+            "13",
+            "sl",
+            "31",
+            "3s",
+            "ls"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 78,
+          "modelo": "dn",
+          "opciones": [
+            "ed",
+            "nd",
+            "de",
+            "en",
+            "dn"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 79,
+          "modelo": "nf",
+          "opciones": [
+            "in",
+            "fi",
+            "ni",
+            "fn",
+            "nf"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 80,
+          "modelo": "35",
+          "opciones": [
+            "53",
+            "3h",
+            "h3",
+            "5h",
+            "35"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 81,
+          "modelo": "ld",
+          "opciones": [
+            "bd",
+            "dl",
+            "lb",
+            "bl",
+            "ld"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 82,
+          "modelo": "lk",
+          "opciones": [
+            "lf",
+            "fk",
+            "kl",
+            "kf",
+            "lk"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 83,
+          "modelo": "6d",
+          "opciones": [
+            "9d",
+            "d6",
+            "d9",
+            "69",
+            "6d"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 84,
+          "modelo": "ZV",
+          "opciones": [
+            "XX",
+            "VZ",
+            "VX",
+            "XV",
+            "ZV"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 85,
+          "modelo": "8a",
+          "opciones": [
+            "ja",
+            "8j",
+            "a8",
+            "j8",
+            "8a"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 86,
+          "modelo": "97",
+          "opciones": [
+            "69",
+            "76",
+            "67",
+            "79",
+            "97"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 87,
+          "modelo": "ne",
+          "opciones": [
+            "nr",
+            "rn",
+            "re",
+            "en",
+            "ne"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 88,
+          "modelo": "X4",
+          "opciones": [
+            "4X",
+            "4V",
+            "V4",
+            "Vx",
+            "X4"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 89,
+          "modelo": "vn",
+          "opciones": [
+            "zv",
+            "zn",
+            "nv",
+            "vz",
+            "vn"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 90,
+          "modelo": "8B",
+          "opciones": [
+            "8R",
+            "R8",
+            "B8",
+            "RB",
+            "8B"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 91,
+          "modelo": "OC",
+          "opciones": [
+            "QO",
+            "OQ",
+            "CQ",
+            "QC",
+            "OC"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 92,
+          "modelo": "OB",
+          "opciones": [
+            "DO",
+            "OD",
+            "BO",
+            "BD",
+            "OB"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 93,
+          "modelo": "YX",
+          "opciones": [
+            "ZX",
+            "YZ",
+            "XY",
+            "ZY",
+            "YX"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 94,
+          "modelo": "UO",
+          "opciones": [
+            "OC",
+            "OU",
+            "CO",
+            "UC",
+            "UO"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 95,
+          "modelo": "Cc",
+          "opciones": [
+            "OO",
+            "Oc",
+            "cc",
+            "cO",
+            "Cc"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 96,
+          "modelo": "aA",
+          "opciones": [
+            "Aa",
+            "A8",
+            "8a",
+            "8A",
+            "aA"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 97,
+          "modelo": "Ze",
+          "opciones": [
+            "ZE",
+            "zE",
+            "eZ",
+            "ZZ",
+            "Ze"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 98,
+          "modelo": "pp",
+          "opciones": [
+            "bP",
+            "bB",
+            "BP",
+            "Pb",
+            "pp"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 99,
+          "modelo": "cz",
+          "opciones": [
+            "Cz",
+            "CZ",
+            "zC",
+            "Zc",
+            "cz"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 100,
+          "modelo": "C8",
+          "opciones": [
+            "C5",
+            "C3",
+            "S8",
+            "S3",
+            "C8"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 101,
+          "modelo": "ZY",
+          "opciones": [
+            "YZ",
+            "VX",
+            "VY",
+            "XY",
+            "ZY"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 102,
+          "modelo": "c6",
+          "opciones": [
+            "b9",
+            "69",
+            "6c",
+            "96",
+            "c6"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 103,
+          "modelo": "ou",
+          "opciones": [
+            "ua",
+            "uo",
+            "ao",
+            "oa",
+            "ou"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 104,
+          "modelo": "co",
+          "opciones": [
+            "oc",
+            "ol",
+            "lc",
+            "lo",
+            "co"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 105,
+          "modelo": "X7",
+          "opciones": [
+            "V7",
+            "X9",
+            "V9",
+            "V5",
+            "X7"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 106,
+          "modelo": "c8",
+          "opciones": [
+            "8s",
+            "cS",
+            "8c",
+            "Sc",
+            "c8"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 107,
+          "modelo": "bo",
+          "opciones": [
+            "tb",
+            "ot",
+            "ob",
+            "bt",
+            "bo"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 108,
+          "modelo": "5e",
+          "opciones": [
+            "3d",
+            "4d",
+            "2e",
+            "2d",
+            "5e"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 109,
+          "modelo": "cr",
+          "opciones": [
+            "dc",
+            "rc",
+            "rd",
+            "dr",
+            "cr"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 110,
+          "modelo": "st",
+          "opciones": [
+            "sw",
+            "ts",
+            "tw",
+            "ws",
+            "st"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 111,
+          "modelo": "um",
+          "opciones": [
+            "mw",
+            "wu",
+            "mu",
+            "wm",
+            "um"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 112,
+          "modelo": "pp",
+          "opciones": [
+            "qq",
+            "qp",
+            "pq",
+            "pg",
+            "pp"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 113,
+          "modelo": "xn",
+          "opciones": [
+            "xv",
+            "vx",
+            "nx",
+            "nv",
+            "xn"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 114,
+          "modelo": "um",
+          "opciones": [
+            "mn",
+            "un",
+            "nu",
+            "mu",
+            "um"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 115,
+          "modelo": "nz",
+          "opciones": [
+            "nn",
+            "zz",
+            "zn",
+            "mn",
+            "nz"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 116,
+          "modelo": "yp",
+          "opciones": [
+            "pg",
+            "py",
+            "yg",
+            "gy",
+            "yp"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 117,
+          "modelo": "59",
+          "opciones": [
+            "5Y",
+            "Y9",
+            "95",
+            "9Y",
+            "59"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 118,
+          "modelo": "uo",
+          "opciones": [
+            "un",
+            "ou",
+            "on",
+            "nu",
+            "uo"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 119,
+          "modelo": "un",
+          "opciones": [
+            "nd",
+            "ud",
+            "nu",
+            "du",
+            "un"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 120,
+          "modelo": "44",
+          "opciones": [
+            "41",
+            "40",
+            "11",
+            "14",
+            "44"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 121,
+          "modelo": "RP",
+          "opciones": [
+            "rr",
+            "pR",
+            "PP",
+            "Rr",
+            "RP"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 122,
+          "modelo": "LT",
+          "opciones": [
+            "TL",
+            "IT",
+            "TI",
+            "IL",
+            "LT"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 123,
+          "modelo": "WM",
+          "opciones": [
+            "MV",
+            "VM",
+            "VW",
+            "MW",
+            "WM"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 124,
+          "modelo": "Wu",
+          "opciones": [
+            "uU",
+            "uW",
+            "Uu",
+            "WM",
+            "Wu"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 125,
+          "modelo": "3c",
+          "opciones": [
+            "c3",
+            "xc",
+            "3x",
+            "cx",
+            "3c"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 126,
+          "modelo": "AV",
+          "opciones": [
+            "NV",
+            "NA",
+            "VN",
+            "VA",
+            "AV"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 127,
+          "modelo": "Yy",
+          "opciones": [
+            "Xy",
+            "XX",
+            "xX",
+            "YX",
+            "Yy"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 128,
+          "modelo": "FE",
+          "opciones": [
+            "EL",
+            "LE",
+            "LF",
+            "FL",
+            "FE"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 129,
+          "modelo": "NV",
+          "opciones": [
+            "MN",
+            "MV",
+            "VN",
+            "NM",
+            "NV"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 130,
+          "modelo": "FF",
+          "opciones": [
+            "eF",
+            "Ef",
+            "Fe",
+            "EE",
+            "FF"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 131,
+          "modelo": "8C",
+          "opciones": [
+            "C8",
+            "S5",
+            "8S",
+            "S8",
+            "8C"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 132,
+          "modelo": "6h",
+          "opciones": [
+            "h6",
+            "h8",
+            "8h",
+            "86",
+            "6h"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 133,
+          "modelo": "4a",
+          "opciones": [
+            "4d",
+            "4c",
+            "3a",
+            "3c",
+            "4a"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 134,
+          "modelo": "Z4",
+          "opciones": [
+            "4Z",
+            "14",
+            "Z1",
+            "1Z",
+            "Z4"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 135,
+          "modelo": "Qo",
+          "opciones": [
+            "QQ",
+            "oq",
+            "Qq",
+            "OQ",
+            "Qo"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 136,
+          "modelo": "xe",
+          "opciones": [
+            "xc",
+            "ce",
+            "ec",
+            "ex",
+            "xe"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 137,
+          "modelo": "ro",
+          "opciones": [
+            "oa",
+            "ra",
+            "ar",
+            "or",
+            "ro"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 138,
+          "modelo": "8c",
+          "opciones": [
+            "6c",
+            "8a",
+            "7a",
+            "7c",
+            "8c"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 139,
+          "modelo": "ue",
+          "opciones": [
+            "us",
+            "su",
+            "eu",
+            "se",
+            "ue"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 140,
+          "modelo": "wr",
+          "opciones": [
+            "wo",
+            "ow",
+            "ro",
+            "rw",
+            "wr"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 141,
+          "modelo": "wu",
+          "opciones": [
+            "vu",
+            "vw",
+            "uw",
+            "wv",
+            "wu"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 142,
+          "modelo": "ie",
+          "opciones": [
+            "er",
+            "re",
+            "ir",
+            "ri",
+            "ie"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 143,
+          "modelo": "31",
+          "opciones": [
+            "13",
+            "23",
+            "32",
+            "21",
+            "31"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 144,
+          "modelo": "2q",
+          "opciones": [
+            "q2",
+            "qu",
+            "u2",
+            "2u",
+            "2q"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 145,
+          "modelo": "wx",
+          "opciones": [
+            "vw",
+            "wv",
+            "vx",
+            "xv",
+            "wx"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 146,
+          "modelo": "ea",
+          "opciones": [
+            "et",
+            "te",
+            "ae",
+            "ta",
+            "ea"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 147,
+          "modelo": "SI",
+          "opciones": [
+            "SV",
+            "IV",
+            "VS",
+            "VI",
+            "SI"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 148,
+          "modelo": "th",
+          "opciones": [
+            "et",
+            "he",
+            "ht",
+            "eh",
+            "th"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 149,
+          "modelo": "zm",
+          "opciones": [
+            "za",
+            "mz",
+            "ma",
+            "az",
+            "zm"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 150,
+          "modelo": "xs",
+          "opciones": [
+            "ax",
+            "sx",
+            "sa",
+            "xa",
+            "xs"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 151,
+          "modelo": "aV",
+          "opciones": [
+            "Av",
+            "VV",
+            "Vv",
+            "AA",
+            "aV"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 152,
+          "modelo": "mW",
+          "opciones": [
+            "WM",
+            "wW",
+            "MM",
+            "Mw",
+            "mW"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 153,
+          "modelo": "4N",
+          "opciones": [
+            "4H",
+            "NH",
+            "N4",
+            "HN",
+            "4N"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 154,
+          "modelo": "DD",
+          "opciones": [
+            "bB",
+            "Dd",
+            "dB",
+            "Db",
+            "DD"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 155,
+          "modelo": "3S",
+          "opciones": [
+            "S3",
+            "S8",
+            "83",
+            "38",
+            "3S"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 156,
+          "modelo": "OV",
+          "opciones": [
+            "OX",
+            "XX",
+            "OO",
+            "XO",
+            "OV"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 157,
+          "modelo": "8C",
+          "opciones": [
+            "C8",
+            "8S",
+            "S8",
+            "S5",
+            "8C"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 158,
+          "modelo": "X7",
+          "opciones": [
+            "V5",
+            "V7",
+            "X9",
+            "V9",
+            "X7"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 159,
+          "modelo": "17",
+          "opciones": [
+            "L1",
+            "1L",
+            "L7",
+            "7L",
+            "17"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 160,
+          "modelo": "RB",
+          "opciones": [
+            "BD",
+            "RD",
+            "DR",
+            "BR",
+            "RB"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 161,
+          "modelo": "17",
+          "opciones": [
+            "78",
+            "81",
+            "71",
+            "18",
+            "17"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 162,
+          "modelo": "Ww",
+          "opciones": [
+            "vv",
+            "Vv",
+            "Wv",
+            "wV",
+            "Ww"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 163,
+          "modelo": "MN",
+          "opciones": [
+            "Mm",
+            "nn",
+            "NN",
+            "mM",
+            "MN"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 164,
+          "modelo": "b9",
+          "opciones": [
+            "69",
+            "c6",
+            "96",
+            "6c",
+            "b9"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 165,
+          "modelo": "2d",
+          "opciones": [
+            "1a",
+            "4d",
+            "1c",
+            "4c",
+            "2d"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 166,
+          "modelo": "4h",
+          "opciones": [
+            "h4",
+            "24",
+            "2h",
+            "42",
+            "4h"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 167,
+          "modelo": "VY",
+          "opciones": [
+            "ZX",
+            "YZ",
+            "XY",
+            "VX",
+            "VY"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 168,
+          "modelo": "Sn",
+          "opciones": [
+            "n3",
+            "3s",
+            "3n",
+            "ns",
+            "Sn"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 169,
+          "modelo": "ro",
+          "opciones": [
+            "wo",
+            "wr",
+            "rw",
+            "ow",
+            "ro"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 170,
+          "modelo": "oa",
+          "opciones": [
+            "ar",
+            "ra",
+            "ro",
+            "or",
+            "oa"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 171,
+          "modelo": "fi",
+          "opciones": [
+            "fn",
+            "in",
+            "nf",
+            "ni",
+            "fi"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 172,
+          "modelo": "uw",
+          "opciones": [
+            "wv",
+            "vw",
+            "vu",
+            "wu",
+            "uw"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 173,
+          "modelo": "eh",
+          "opciones": [
+            "ht",
+            "et",
+            "he",
+            "th",
+            "eh"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 174,
+          "modelo": "mn",
+          "opciones": [
+            "nm",
+            "na",
+            "an",
+            "am",
+            "mn"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 175,
+          "modelo": "8a",
+          "opciones": [
+            "8j",
+            "ja",
+            "a8",
+            "j8",
+            "8a"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 176,
+          "modelo": "5Y",
+          "opciones": [
+            "95",
+            "9Y",
+            "59",
+            "Y9",
+            "5Y"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 177,
+          "modelo": "kl",
+          "opciones": [
+            "lk",
+            "kf",
+            "fk",
+            "lf",
+            "kl"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 178,
+          "modelo": "ma",
+          "opciones": [
+            "ca",
+            "am",
+            "me",
+            "cm",
+            "ma"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 179,
+          "modelo": "nv",
+          "opciones": [
+            "xv",
+            "vx",
+            "nx",
+            "xn",
+            "nv"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 180,
+          "modelo": "rs",
+          "opciones": [
+            "re",
+            "er",
+            "es",
+            "se",
+            "rs"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 181,
+          "modelo": "4X",
+          "opciones": [
+            "4V",
+            "V4",
+            "VX",
+            "X4",
+            "4X"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 182,
+          "modelo": "nn",
+          "opciones": [
+            "mn",
+            "zz",
+            "nz",
+            "zn",
+            "nn"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 183,
+          "modelo": "TI",
+          "opciones": [
+            "LT",
+            "IL",
+            "TL",
+            "IT",
+            "TI"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 184,
+          "modelo": "11",
+          "opciones": [
+            "14",
+            "40",
+            "41",
+            "44",
+            "11"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 185,
+          "modelo": "su",
+          "opciones": [
+            "eu",
+            "us",
+            "se",
+            "ue",
+            "su"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 186,
+          "modelo": "RB",
+          "opciones": [
+            "BP",
+            "RP",
+            "PR",
+            "PB",
+            "RB"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 187,
+          "modelo": "RP",
+          "opciones": [
+            "Rr",
+            "rr",
+            "PP",
+            "pR",
+            "RP"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 188,
+          "modelo": "sX",
+          "opciones": [
+            "XS",
+            "Xs",
+            "sx",
+            "SX",
+            "sX"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 189,
+          "modelo": "ar",
+          "opciones": [
+            "ra",
+            "na",
+            "rn",
+            "nr",
+            "ar"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 190,
+          "modelo": "UO",
+          "opciones": [
+            "OU",
+            "OC",
+            "UC",
+            "CO",
+            "UO"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 191,
+          "modelo": "RD",
+          "opciones": [
+            "DR",
+            "BD",
+            "RB",
+            "BR",
+            "RD"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 192,
+          "modelo": "XO",
+          "opciones": [
+            "OV",
+            "XX",
+            "OO",
+            "OX",
+            "XO"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 193,
+          "modelo": "ZH",
+          "opciones": [
+            "HZ",
+            "ZN",
+            "HN",
+            "NH",
+            "ZH"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 194,
+          "modelo": "Av",
+          "opciones": [
+            "Vv",
+            "VV",
+            "aV",
+            "AA",
+            "Av"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 195,
+          "modelo": "OQ",
+          "opciones": [
+            "CQ",
+            "QO",
+            "OC",
+            "QC",
+            "OQ"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 196,
+          "modelo": "zE",
+          "opciones": [
+            "Ze",
+            "eZ",
+            "ZE",
+            "Zz",
+            "zE"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 197,
+          "modelo": "qg",
+          "opciones": [
+            "Qg",
+            "GQ",
+            "qq",
+            "QG",
+            "qg"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 198,
+          "modelo": "mM",
+          "opciones": [
+            "nn",
+            "MN",
+            "Mm",
+            "NN",
+            "mM"
+          ],
+          "correcta": 5
+        },
+        {
+          "id": 199,
+          "modelo": "QQ",
+          "opciones": [
+            "oq",
+            "OQ",
+            "Qo",
+            "Qq",
+            "QQ"
+          ],
+          "correcta": 5
+        }
+      ]
+    }
+  },
+  "ordenSecciones": [
+    "verbal",
+    "numerico",
+    "abstracto",
+    "mecanico",
+    "espacial",
+    "ortografia",
+    "perceptiva"
+  ]
+}

@@ -1,0 +1,311 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  .nav { background: #534AB7; padding: 0 24px; display: flex; align-items: center; justify-content: space-between; height: 64px; border-radius: var(--border-radius-lg) var(--border-radius-lg) 0 0; }
+  .nav-logo { display: flex; align-items: center; gap: 10px; }
+  .nav-logo img { height: 42px; width: auto; object-fit: contain; filter: brightness(0) invert(1); }
+  .nav-tagline { color: #CECBF6; font-size: 11px; }
+  .nav-links { display: flex; gap: 20px; }
+  .nav-links span { color: #CECBF6; font-size: 13px; cursor: pointer; }
+  .nav-links span.active { color: #fff; border-bottom: 2px solid #AFA9EC; padding-bottom: 2px; }
+  .hero-servicios { background: #EEEDFE; padding: 40px 32px 32px; text-align: center; }
+  .hero-servicios .badge { display: inline-block; background: #CECBF6; color: #3C3489; font-size: 12px; font-weight: 500; padding: 4px 14px; border-radius: 20px; margin-bottom: 14px; }
+  .hero-servicios h1 { font-size: 24px; font-weight: 500; color: #26215C; margin-bottom: 10px; }
+  .hero-servicios p { font-size: 14px; color: #534AB7; line-height: 1.6; max-width: 440px; margin: 0 auto; }
+  .section { padding: 36px 24px; }
+  .section-label { font-size: 11px; font-weight: 500; color: #7F77DD; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+  .section h2 { font-size: 20px; font-weight: 500; color: #26215C; margin-bottom: 6px; }
+  .section .sub { font-size: 13px; color: var(--color-text-secondary); margin-bottom: 24px; line-height: 1.5; }
+  .modalidades { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .mod-card { background: var(--color-background-primary); border: 0.5px solid #AFA9EC; border-radius: var(--border-radius-lg); overflow: hidden; }
+  .mod-card.destacada { border: 2px solid #7F77DD; }
+  .mod-header { background: #EEEDFE; padding: 20px; }
+  .mod-header.destacada { background: #CECBF6; }
+  .mod-num { font-size: 11px; font-weight: 500; color: #7F77DD; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 6px; }
+  .mod-title { font-size: 17px; font-weight: 500; color: #26215C; margin-bottom: 6px; }
+  .mod-desc { font-size: 12px; color: #534AB7; line-height: 1.5; }
+  .mod-badge { display: inline-block; background: #534AB7; color: #EEEDFE; font-size: 11px; padding: 3px 10px; border-radius: 10px; margin-top: 10px; }
+  .mod-body { padding: 20px; }
+  .mod-body h4 { font-size: 12px; font-weight: 500; color: #7F77DD; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 12px; }
+  .feature { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+  .feature-dot { width: 18px; height: 18px; border-radius: 50%; background: #EEEDFE; display: flex; align-items: center; justify-content: center; flex-shrink: 0; margin-top: 1px; }
+  .feature-dot svg { width: 10px; height: 10px; }
+  .feature-dot.pu { background: #CECBF6; }
+  .feature p { font-size: 13px; color: var(--color-text-primary); line-height: 1.4; }
+  .feature p span { font-size: 12px; color: var(--color-text-secondary); display: block; }
+  .mod-cta { margin-top: 20px; display: flex; flex-direction: column; gap: 8px; }
+  .btn-wa { background: #25D366; color: #fff; border: none; padding: 11px 16px; border-radius: var(--border-radius-md); font-size: 13px; font-weight: 500; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; }
+  .btn-form { background: transparent; color: #534AB7; border: 1.5px solid #534AB7; padding: 10px 16px; border-radius: var(--border-radius-md); font-size: 13px; font-weight: 500; cursor: pointer; }
+  .btn-form:hover { background: #EEEDFE; }
+  .proceso { background: #26215C; padding: 36px 24px; }
+  .proceso .section-label { color: #AFA9EC; }
+  .proceso h2 { color: #fff; font-size: 20px; font-weight: 500; margin-bottom: 24px; }
+  .steps { display: flex; flex-direction: column; gap: 0; }
+  .step { display: flex; gap: 16px; position: relative; padding-bottom: 24px; }
+  .step:last-child { padding-bottom: 0; }
+  .step-left { display: flex; flex-direction: column; align-items: center; }
+  .step-num { width: 32px; height: 32px; border-radius: 50%; background: #534AB7; color: #fff; font-size: 13px; font-weight: 500; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .step-line { width: 1px; flex: 1; background: #534AB7; margin-top: 6px; }
+  .step:last-child .step-line { display: none; }
+  .step-text { padding-top: 4px; }
+  .step-text h4 { font-size: 14px; font-weight: 500; color: #fff; margin-bottom: 4px; }
+  .step-text p { font-size: 12px; color: #AFA9EC; line-height: 1.5; }
+  .step-tag { display: inline-block; font-size: 10px; background: #3C3489; color: #CECBF6; padding: 2px 8px; border-radius: 8px; margin-top: 6px; }
+  .faq { padding: 36px 24px; }
+  .faq-item { border-bottom: 0.5px solid #CECBF6; padding: 14px 0; cursor: pointer; }
+  .faq-item:first-of-type { border-top: 0.5px solid #CECBF6; }
+  .faq-q { display: flex; justify-content: space-between; align-items: center; }
+  .faq-q p { font-size: 14px; font-weight: 500; color: #26215C; }
+  .faq-q span { color: #7F77DD; font-size: 18px; line-height: 1; }
+  .faq-a { font-size: 13px; color: var(--color-text-secondary); line-height: 1.6; margin-top: 10px; display: none; }
+  .faq-a.open { display: block; }
+  .contacto-strip { background: #EEEDFE; padding: 32px 24px; text-align: center; }
+  .contacto-strip h2 { font-size: 18px; font-weight: 500; color: #26215C; margin-bottom: 8px; }
+  .contacto-strip p { font-size: 13px; color: #534AB7; margin-bottom: 20px; }
+  .contact-form { background: var(--color-background-primary); border: 0.5px solid #AFA9EC; border-radius: var(--border-radius-lg); padding: 20px; text-align: left; max-width: 440px; margin: 0 auto; }
+  .form-group { margin-bottom: 14px; }
+  .form-group label { font-size: 12px; font-weight: 500; color: #3C3489; display: block; margin-bottom: 6px; }
+  .form-group input, .form-group select, .form-group textarea { width: 100%; border: 0.5px solid #AFA9EC; border-radius: var(--border-radius-md); padding: 10px 12px; font-size: 13px; color: var(--color-text-primary); background: var(--color-background-primary); font-family: var(--font-sans); }
+  .form-group textarea { height: 80px; resize: none; }
+  .btn-submit { width: 100%; background: #534AB7; color: #fff; border: none; padding: 12px; border-radius: var(--border-radius-md); font-size: 14px; font-weight: 500; cursor: pointer; margin-top: 4px; }
+  .divider { height: 0.5px; background: #CECBF6; margin: 0 24px; }
+  .footer { background: #26215C; padding: 20px 24px; display: flex; justify-content: space-between; align-items: center; border-radius: 0 0 var(--border-radius-lg) var(--border-radius-lg); }
+  .footer p { color: #AFA9EC; font-size: 12px; }
+  .footer-links { display: flex; gap: 16px; }
+  .footer-links span { color: #7F77DD; font-size: 12px; cursor: pointer; }
+</style>
+
+<div style="border-radius: var(--border-radius-lg); overflow: hidden; border: 0.5px solid var(--color-border-tertiary);">
+
+  <div class="nav">
+    <div class="nav-logo">
+      <img src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png" alt="APROVA" onerror="this.style.display='none'"/>
+      <span class="nav-tagline">Orientación Vocacional</span>
+    </div>
+    <div class="nav-links">
+      <span onclick="sendPrompt('Muéstrame el prototipo de la página de inicio de APROVA')">Inicio</span>
+      <span class="active">Servicios</span>
+      <span>Contenido</span>
+      <span>Testimonios</span>
+      <span>Contacto</span>
+    </div>
+  </div>
+
+  <div class="hero-servicios">
+    <div class="badge">Nuestros servicios</div>
+    <h1>Dos caminos, un mismo destino</h1>
+    <p>Elige la modalidad que mejor se adapte a ti. Ambas incluyen tests psicométricos diseñados por nuestros especialistas.</p>
+  </div>
+
+  <div class="section">
+    <div class="section-label">Modalidades</div>
+    <h2>¿Cuál es para ti?</h2>
+    <p class="sub">Compara las opciones y contáctanos para recibir más información o agendar tu proceso.</p>
+
+    <div class="modalidades">
+
+      <div class="mod-card">
+        <div class="mod-header">
+          <div class="mod-num">Modalidad 1</div>
+          <div class="mod-title">Solo tests</div>
+          <div class="mod-desc">Ideal si buscas una primera exploración de tu perfil vocacional desde casa.</div>
+        </div>
+        <div class="mod-body">
+          <h4>Incluye</h4>
+          <div class="feature">
+            <div class="feature-dot">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#534AB7" stroke-width="1.5"><polyline points="2,5 4,7 8,3"/></svg>
+            </div>
+            <p>Tests psicométricos en línea<span>Diseñados por especialistas APROVA</span></p>
+          </div>
+          <div class="feature">
+            <div class="feature-dot">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#534AB7" stroke-width="1.5"><polyline points="2,5 4,7 8,3"/></svg>
+            </div>
+            <p>Perfil vocacional por correo<span>Análisis de personalidad, habilidades e intereses</span></p>
+          </div>
+          <div class="feature">
+            <div class="feature-dot">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#534AB7" stroke-width="1.5"><polyline points="2,5 4,7 8,3"/></svg>
+            </div>
+            <p>Resultados confidenciales<span>Solo tú y el especialista los ven</span></p>
+          </div>
+          <div class="mod-cta">
+            <button class="btn-wa" onclick="sendPrompt('¿Qué mensaje de WhatsApp enviaría alguien interesado en la Modalidad 1 de APROVA?')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="white" stroke-width="1.5"/></svg>
+              Consultar por WhatsApp
+            </button>
+            <button class="btn-form" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Llenar formulario</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="mod-card destacada">
+        <div class="mod-header destacada">
+          <div class="mod-num" style="color:#534AB7">Modalidad 2</div>
+          <div class="mod-title">Tests + asesoría virtual</div>
+          <div class="mod-desc">El proceso completo con acompañamiento personalizado de principio a fin.</div>
+          <div class="mod-badge">Más completo</div>
+        </div>
+        <div class="mod-body">
+          <h4>Incluye</h4>
+          <div class="feature">
+            <div class="feature-dot pu">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#3C3489" stroke-width="1.5"><polyline points="2,5 4,7 8,3"/></svg>
+            </div>
+            <p>Todo lo de la Modalidad 1<span>Tests + perfil vocacional por correo</span></p>
+          </div>
+          <div class="feature">
+            <div class="feature-dot pu">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#3C3489" stroke-width="1.5"><polyline points="2,5 4,7 8,3"/></svg>
+            </div>
+            <p>Múltiples sesiones virtuales<span>Videoconferencia con tu especialista APROVA</span></p>
+          </div>
+          <div class="feature">
+            <div class="feature-dot pu">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#3C3489" stroke-width="1.5"><polyline points="2,5 4,7 8,3"/></svg>
+            </div>
+            <p>Coaching personalizado<span>Proceso de ~12 horas dividido en sesiones</span></p>
+          </div>
+          <div class="feature">
+            <div class="feature-dot pu">
+              <svg viewBox="0 0 10 10" fill="none" stroke="#3C3489" stroke-width="1.5"><polyline points="2,5 4,7 8,3"/></svg>
+            </div>
+            <p>Seguimiento continuo<span>Acompañamiento hasta la decisión final</span></p>
+          </div>
+          <div class="mod-cta">
+            <button class="btn-wa" onclick="sendPrompt('¿Qué mensaje de WhatsApp enviaría alguien interesado en la Modalidad 2 de APROVA?')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.955 9.955 0 0012 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" fill="none" stroke="white" stroke-width="1.5"/></svg>
+              Consultar por WhatsApp
+            </button>
+            <button class="btn-form" onclick="document.getElementById('form-section').scrollIntoView({behavior:'smooth'})">Llenar formulario</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="proceso">
+    <div class="section-label">El camino</div>
+    <h2>¿Cómo es el proceso?</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-left"><div class="step-num">1</div><div class="step-line"></div></div>
+        <div class="step-text">
+          <h4>Contáctanos y elige tu modalidad</h4>
+          <p>Por WhatsApp o formulario. Te respondemos en menos de 24 horas.</p>
+          <span class="step-tag">Ambas modalidades</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">2</div><div class="step-line"></div></div>
+        <div class="step-text">
+          <h4>Accedes a los tests psicométricos</h4>
+          <p>Los respondes en línea a tu ritmo. Tus resultados son confidenciales.</p>
+          <span class="step-tag">Ambas modalidades</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">3</div><div class="step-line"></div></div>
+        <div class="step-text">
+          <h4>Recibes tu perfil vocacional</h4>
+          <p>Análisis detallado de tu personalidad, habilidades, valores e intereses profesionales.</p>
+          <span class="step-tag">Ambas modalidades</span>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-left"><div class="step-num">4</div><div class="step-line"></div></div>
+        <div class="step-text">
+          <h4>Sesiones de coaching virtual</h4>
+          <p>Proceso de ~12 horas dividido en sesiones de 2 horas. Acompañamiento hasta tu decisión.</p>
+          <span class="step-tag" style="background:#534AB7">Solo Modalidad 2</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="faq section">
+    <div class="section-label">Preguntas frecuentes</div>
+    <h2>Lo que más nos preguntan</h2>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><p>¿Los resultados de los tests son confidenciales?</p><span>+</span></div>
+      <div class="faq-a">Sí. Solo tú y tu especialista APROVA tienen acceso a los resultados. Nunca se comparten con terceros.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><p>¿Las sesiones virtuales son en vivo o grabadas?</p><span>+</span></div>
+      <div class="faq-a">Son sesiones en vivo por videoconferencia con tu especialista asignado. Se agendan en horarios convenientes para ti.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><p>¿Tienen servicio en Guadalajara y Ciudad de México?</p><span>+</span></div>
+      <div class="faq-a">Sí. Tenemos especialistas en Aguascalientes, Guadalajara y CDMX. La modalidad virtual está disponible desde cualquier lugar.</div>
+    </div>
+    <div class="faq-item" onclick="toggleFaq(this)">
+      <div class="faq-q"><p>¿A qué edad es recomendable hacer la orientación?</p><span>+</span></div>
+      <div class="faq-a">Idealmente en los últimos años de preparatoria, aunque también trabajamos con jóvenes que ya están en universidad y desean reorientar su carrera.</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="contacto-strip" id="form-section">
+    <div class="section-label" style="color:#7F77DD">Contáctanos</div>
+    <h2>¿Tienes dudas? Escríbenos</h2>
+    <p>Te respondemos en menos de 24 horas. Sin compromiso.</p>
+    <div class="contact-form">
+      <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" placeholder="Tu nombre completo"/>
+      </div>
+      <div class="form-group">
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="tucorreo@ejemplo.com"/>
+      </div>
+      <div class="form-group">
+        <label>Ciudad</label>
+        <select>
+          <option value="">Selecciona tu ciudad</option>
+          <option>Aguascalientes</option>
+          <option>Guadalajara</option>
+          <option>Ciudad de México</option>
+          <option>Otra ciudad</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Modalidad de interés</label>
+        <select>
+          <option value="">¿Cuál te interesa?</option>
+          <option>Modalidad 1 — Solo tests</option>
+          <option>Modalidad 2 — Tests + asesoría virtual</option>
+          <option>No sé aún, quiero más información</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Mensaje (opcional)</label>
+        <textarea placeholder="¿Tienes alguna pregunta en particular?"></textarea>
+      </div>
+      <button class="btn-submit" onclick="sendPrompt('¿Qué pasa después de que alguien llena el formulario de contacto en APROVA?')">Enviar mensaje</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>© 2025 APROVA · aprovamx.com</p>
+    <div class="footer-links">
+      <span>Privacidad</span>
+      <span>Términos</span>
+      <span>(449) 911 9192</span>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function toggleFaq(el) {
+  const ans = el.querySelector('.faq-a');
+  const icon = el.querySelector('.faq-q span');
+  const isOpen = ans.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(a => a.classList.remove('open'));
+  document.querySelectorAll('.faq-q span').forEach(s => s.textContent = '+');
+  if (!isOpen) { ans.classList.add('open'); icon.textContent = '−'; }
+}
+</script>

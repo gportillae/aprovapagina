@@ -1,0 +1,201 @@
+.pago-page {
+  min-height: 80vh;
+  background: linear-gradient(135deg, var(--color-primary-bg) 0%, var(--color-white) 100%);
+  padding: 60px 24px;
+}
+
+.pago-container {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+.pago-info {
+  padding-right: 20px;
+}
+
+.pago-badge {
+  display: inline-block;
+  background: var(--color-primary-pale);
+  color: var(--color-primary-dark);
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 16px;
+  margin-bottom: 16px;
+}
+
+.pago-info h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--color-primary-darker);
+  margin-bottom: 12px;
+}
+
+.pago-info > p {
+  font-size: 16px;
+  color: var(--color-text-secondary);
+  margin-bottom: 32px;
+}
+
+.producto-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-primary-lighter);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.producto-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--color-primary-darker);
+  margin-bottom: 8px;
+}
+
+.producto-card > p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+}
+
+.producto-card ul {
+  list-style: none;
+  padding: 0;
+}
+
+.producto-card li {
+  font-size: 14px;
+  color: var(--color-text-primary);
+  padding: 6px 0;
+  padding-left: 24px;
+  position: relative;
+}
+
+.producto-card li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.seguridad-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--color-text-secondary);
+  font-size: 13px;
+}
+
+.seguridad-info svg {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+}
+
+/* Formulario */
+.pago-form-container {
+  background: var(--color-white);
+  border: 1px solid var(--color-primary-lighter);
+  border-radius: var(--border-radius-lg);
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(83, 74, 183, 0.08);
+}
+
+.pago-form h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary-darker);
+  margin-bottom: 24px;
+}
+
+.pago-form .form-group {
+  margin-bottom: 20px;
+}
+
+.pago-form label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-primary-dark);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.pago-form input {
+  width: 100%;
+  border: 1px solid var(--color-primary-lighter);
+  border-radius: var(--border-radius-sm);
+  padding: 14px 16px;
+  font-size: 15px;
+  color: var(--color-text-primary);
+  transition: border-color 0.2s ease;
+}
+
+.pago-form input:focus {
+  border-color: var(--color-primary);
+}
+
+.form-hint {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 6px;
+  display: block;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: var(--border-radius-sm);
+  font-size: 14px;
+  margin-bottom: 16px;
+}
+
+.btn-pagar {
+  width: 100%;
+  background: var(--color-primary);
+  color: var(--color-white);
+  border: none;
+  padding: 16px;
+  border-radius: var(--border-radius-md);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.btn-pagar:hover:not(:disabled) {
+  background: var(--color-primary-dark);
+}
+
+.btn-pagar:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.pago-nota {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  text-align: center;
+  margin-top: 16px;
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pago-container {
+    grid-template-columns: 1fr;
+  }
+
+  .pago-info {
+    padding-right: 0;
+  }
+
+  .pago-info h1 {
+    font-size: 26px;
+  }
+}

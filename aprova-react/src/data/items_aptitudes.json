@@ -1,0 +1,666 @@
+{
+  "nombre": "BRP - Autoevaluación de Aptitudes",
+  "descripcion": "Sistema de evaluación de 12 aptitudes con 120 ítems",
+  "instrucciones": "A continuación te presentamos una serie de actividades. Califícalas de acuerdo con tu grado de habilidad:\n\n5 = Mucho muy hábil\n4 = Muy hábil\n3 = Medianamente hábil\n2 = Poco hábil\n1 = Nada hábil",
+  "opciones": [
+    {
+      "valor": 5,
+      "texto": "Mucho muy hábil"
+    },
+    {
+      "valor": 4,
+      "texto": "Muy hábil"
+    },
+    {
+      "valor": 3,
+      "texto": "Medianamente hábil"
+    },
+    {
+      "valor": 2,
+      "texto": "Poco hábil"
+    },
+    {
+      "valor": 1,
+      "texto": "Nada hábil"
+    }
+  ],
+  "aptitudes": [
+    "Abstracta o Científica",
+    "Coordinación Visomotriz",
+    "Numérica",
+    "Verbal",
+    "Persuasiva",
+    "Mecánica",
+    "Social",
+    "Directiva",
+    "Organización",
+    "Musical",
+    "Artístico Plástica",
+    "Espacial"
+  ],
+  "maxPorAptitud": 50,
+  "niveles": {
+    "Muy Alto": [
+      40,
+      50
+    ],
+    "Alto": [
+      30,
+      39
+    ],
+    "Medio": [
+      20,
+      29
+    ],
+    "Bajo": [
+      10,
+      19
+    ],
+    "Muy Bajo": [
+      0,
+      9
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "texto": "Comprender con facilidad cómo se conectan algunos elementos, por ejemplo, las relaciones entre los órganos del cuerpo humano, las relaciones que se dan entre los elementos químicos, etc.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 2,
+      "texto": "Decorar con pincel fino, pequeñas figuras humanas (pintar la boca, ojos, cejas, etc.)",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 3,
+      "texto": "Ayudar a un especialista en diseño de juegos electrónicos a realizar juegos sencillos que impliquen razonamiento numérico.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 4,
+      "texto": "Darte cuenta cuándo un conferencista, al estar presentando su tema, lo expone de manera coordinada.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 5,
+      "texto": "Dar buenas ideas a un grupo de vendedores (que van casa por casa) acerca de cómo convencer a los clientes para comprar el producto ofrecido.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 6,
+      "texto": "Aprender las partes y funciones de un velero, así como su operación y armado.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 7,
+      "texto": "Escuchar a alguien durante un largo periodo, sin interrumpirle, sin juzgarlo, y aceptarlo como es.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 8,
+      "texto": "Distribuir las funciones y responsabilidades a los miembros de un grupo o equipo de trabajo, procurando que todos se sientan lo más conformes con esta distribución.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 9,
+      "texto": "Tomar un curso sobre cómo realizar los inventarios de un pequeño almacén, mediante una computadora sencilla y aprender fácilmente.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 10,
+      "texto": "Apreciar las diferencias entre la música clásica, la popular y la moderna.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 11,
+      "texto": "Diseñar el logotipo de una empresa.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 12,
+      "texto": "Armar rompecabezas geométricos (cubo de rubick).",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 13,
+      "texto": "Hacer trazos finos en papel, sin perder la línea y sin ayuda de reglas.",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 14,
+      "texto": "Reconocer tus errores cuando discutes con otra persona, aunque ésta no sea de tu total agrado o tenga puntos contrarios a los tuyos.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 15,
+      "texto": "Diseñar una revista de pasatiempo, con problemas sencillos, con base en relaciones numéricas (aritmética-algebra).",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 16,
+      "texto": "Explicar fácilmente, al terminar una lectura (sobre cualquier género de novelas), cómo se relacionan los personajes o cómo se desarrolla la trama.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 17,
+      "texto": "Idear un sistema rápido a un cronista deportivo, para que gráficamente pueda organizar datos deportivos tales como: hits promedio de bateo, bases robadas, home runes, etc., de una temporada.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 18,
+      "texto": "Ser presidente de un club social y decirle a cada uno de los miembros de la mesa directiva sus aciertos y, sin dudar, sus errores, de forma precisa.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 19,
+      "texto": "Aprender las partes y funciones de un planeador, así como su operación y armado.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 20,
+      "texto": "Dar buenas sugerencias a un grupo de publicistas sobre cómo presentar un producto en un comercial de t.v. o de radio.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 21,
+      "texto": "Entender las nomenclaturas químicas o el funcionamiento estructural de todos los órganos del cuerpo humano.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 22,
+      "texto": "Diseñar figuras geométricas en 3 dimensiones variando las posiciones y perspectivas.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 23,
+      "texto": "Aprender técnicas para realizar pinturas en acuarela y oleo.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 24,
+      "texto": "Aprender el manejo de la herramienta propia para modelar y esculpir barro, trabajar vidrio, porcelana, latón y piel, de manera artesanal.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 25,
+      "texto": "Darte cuenta fácilmente si el profesor omitió un dato o punto necesario para la resolución de un problema durante el examen de matemáticas y saber con precisión lo que faltó.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 26,
+      "texto": "Idear un sistema para pequeñas tiendas de regalos, en el que puedan llevar un inventario de la existencia de sus productos.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 27,
+      "texto": "Hacer un buen resumen de un libro o escrito que hayas leído, con toda la información relevante bien organizada.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 28,
+      "texto": "Orientarte rápidamente en una gran ciudad.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 29,
+      "texto": "Operar y dar mantenimiento a un tractor agrícola, incluyendo sus implementos.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 30,
+      "texto": "Cumplir, a la perfección, una tarea asignada por tus padres, un profesor o jefe de trabajo.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 31,
+      "texto": "Aprender a leer, interpretar y combinar notas musicales.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 32,
+      "texto": "Decorar bellamente el aparador de una tienda o un puesto en una feria o verbena.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 33,
+      "texto": "Reconocer en una persona que no sea de tu agrado, su fortaleza, sus virtudes y sus aciertos.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 34,
+      "texto": "Comentar en un programa televisivo de la universidad, las ventajas y desventajas de las planillas que aspiran a dirigir la sociedad de alumnos, y argumentar a favor de una de ellas.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 35,
+      "texto": "Sacar astillas de la piel con pinzas para las cejas (en el primer intento).",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 36,
+      "texto": "Aprender a usar métodos científicos para profundizar en el conocimiento de las relaciones que, por ejemplo, hay entre los seres vivos que hay en el ecosistema, los cambios químicos que se dan en la naturaleza, etc.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 37,
+      "texto": "Entender el punto de vista de un compañero y poder explicar fácilmente todas sus razones para ver las cosas desde esa perspectiva (aunque no te agrade ese punto de vista ni tu compañero).",
+      "aptitud": "Social"
+    },
+    {
+      "id": 38,
+      "texto": "Entender fácilmente artículos de revistas que versan sobre investigación en ciencias naturales, como química, biología, geofísica, etc.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 39,
+      "texto": "Detectar, con facilidad, errores en un plan de trabajo que te pidieron revisar (pueden ser errores en fechas, metas que se proponen, pasos, puntos omitidos, etc.)",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 40,
+      "texto": "Instalar, operar, y darle mantenimiento a una computadora casera con sólo estudiar el manual o instructivo de operaciones.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 41,
+      "texto": "Identificar errores ortográficos, en la organización de los párrafos y errores de redacción de un periódico al momento de estar leyéndolo.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 42,
+      "texto": "Darle buenas sugerencias a un banco pequeño acerca de cómo organizar los departamentos de atención al público con el fin de que los clientes no hagan largas colas de espera.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 43,
+      "texto": "Darte cuenta cuándo un profesor comete errores al estar explicando al grupo la solución (procedimientos) de un problema de matemáticas.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 44,
+      "texto": "Soldar los transistores de un radio sin derramar soldadura, ni tocar con el soldador partes cercanas al transistor.",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 45,
+      "texto": "Sugerir a alguien que va a construir su casa la forma en que debería ir la distribución de la misma, aprovechando al máximo todos los espacios.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 46,
+      "texto": "Trabajar durante las vacaciones en el departamento de un almacén comercial (libros, música, ferretería, etc.) y aumentar en ese periodo las ventas o consumo por los clientes que lo visitan.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 47,
+      "texto": "Aprender a ejecutar, con dominio, uno o varios instrumentos musicales.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 48,
+      "texto": "Recordar, detalladamente, las indicaciones dadas por alguien para llegar a una dirección desconocida.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 49,
+      "texto": "Aprender a diferenciar lo bello de la pintura de los grandes clásicos, en relación con otras pinturas.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 50,
+      "texto": "Dar, a una asamblea de padres de familia un discurso que sea sumamente emotivo y convincente para cambiar ciertas actitudes de ellos.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 51,
+      "texto": "Explicar de modo lógico y claro en una clase cómo evolucionan y se transforman los seres vivos, de acuerdo con las teoría evolucionistas de Darwin, y explicar en que consistieron los métodos y descubrimientos de algunos grande químicos como Pasteur.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 52,
+      "texto": "Fungir como tercero en un conflicto (sin tomar partido por las personas involucradas) y conciliar a las partes en pugna aunque una de ellas te simpatice mucho.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 53,
+      "texto": "Supervisar y corregir la redacción de un discurso que algún compañero tuyo vaya a dirigir a una asamblea.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 54,
+      "texto": "Aprender el sistema de clasificación que se utiliza para los archivos de la Nación.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 55,
+      "texto": "Entender la clase de matemáticas.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 56,
+      "texto": "Ensartar hilos finos en agujas muy pequeñas sin que lo intentes más de 3 veces",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 57,
+      "texto": "Interpretar y aplicar el reglamento a un miembro de una sociedad o de un club de amigos que lo haya infringido (aunque esta aplicación implique la expulsión del grupo de alguien muy amigo tuyo.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 58,
+      "texto": "Entender con facilidad los reportajes y artículos de la revista Mecánica Popular.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 59,
+      "texto": "Recordar, durante una segunda visita, el lugar de una colonia intrincada, en donde vive alguien conocido.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 60,
+      "texto": "Aprender a complementar los distintos instrumentos musicales en la ejecución de una pieza",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 61,
+      "texto": "Aprender técnicas para construir maquetas y objetos de cualquier tipo a escala.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 62,
+      "texto": "Orientarse con ayuda de mapas en una gran ciudad.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 63,
+      "texto": "Entender fácilmente la explicación de un armero sobre cómo funciona cierto tipo de armamento militar ya sean fusiles, ametralladoras, o artillería pesada.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 64,
+      "texto": "Prever e identificar las consecuencias para ti y para los demás (de manera detallada y precisa) de las decisiones que tomas.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 65,
+      "texto": "Colocar sin errores, con pinzas pequeñas los engranes de un reloj.",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 66,
+      "texto": "Explicar una lección de matemáticas a un grupo de compañeros menos aventajado, de manera más sencilla que el profesor.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 67,
+      "texto": "Aprender y mejorar el sistema de clasificación y localización de piezas en una refaccionaria.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 68,
+      "texto": "Explicar de forma clara y lógica a un grupo de personas, con tus propias palabras y con ejemplos ilustrativos un pasaje o un capítulo de algún libro que hayas leído.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 69,
+      "texto": "Comprender con facilidad cómo una persona cercana a ti ve desde su interior el mundo. Comprender también los sentimientos que tiene y sus esperanzas.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 70,
+      "texto": "Aplicar las leyes y teoría de la química o de la biología cuando resolvemos un problema de esa naturaleza.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 71,
+      "texto": "Generar argumentos, ante un auditorio, a favor de tu punto de vista o de algún proyecto.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 72,
+      "texto": "Aprender a hacer arreglos musicales.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 73,
+      "texto": "Resolver problemas de matemáticas, seleccionar las fórmulas y procedimientos necesarios de manera precisa y fácil.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 74,
+      "texto": "Apretar, con un pequeño desarmador, los tornillos de los anteojos.",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 75,
+      "texto": "Planear una estrategia para que un grupo de compañeros tuyos tenga éxito en una campaña política o en cualquier actividad.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 76,
+      "texto": "Aprender con facilidad a afinar automóviles o a dar mantenimiento y reparación a aparatos caseros como: podadora de pasto, calentadores de gas, estufas, etc.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 77,
+      "texto": "Dar ideas al párroco o ministro de tu iglesia acerca de cómo mejorar sus sermones explicaciones hacia los feligreses.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 78,
+      "texto": "Obtener fácilmente conclusiones o una síntesis de algún trabajo que haya encargado el profesor de biología o química sobre cualquier tema.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 79,
+      "texto": "Darte cuenta de los deseos, preocupaciones o sentimientos de alguien, sólo por ver sus gestos o movimientos.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 80,
+      "texto": "Entender con mucha precisión las instrucciones y las preguntas de un examen.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 81,
+      "texto": "Diseñarle a una pequeña ferretería un sistema para localizar rápidamente los productos que el cliente pide.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 82,
+      "texto": "Combinar materiales de todo tipo (yeso, madera, pinturas) para hacer objetos de ornato como floreros, pisapapeles, ceniceros, etc.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 83,
+      "texto": "Aprender a escribir y leer música y a la vez hacer composiciones musicales.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 84,
+      "texto": "Distinguir errores en las perspectivas de los dibujos.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 85,
+      "texto": "Hacerle ver a un grupo que discute cosas que no han considerado o puntos omitidos que puedan influir en sus opiniones sobre lo discutido.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 86,
+      "texto": "Construir, en un taller de aficionados, artefactos sencillos como un velero, un planeador o un cuatriciclo, siguiendo los planos de una revista.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 87,
+      "texto": "Lograr entusiasmar a un grupo de trabajo que se encuentra pesimista en cuanto a las metas de trabajo por lograr.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 88,
+      "texto": "Enhebrar rápidamente un collar de perlas.",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 89,
+      "texto": "Darte cuenta de inmediato de cuál es el error de un compañero que no puede resolver un problema de matemáticas.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 90,
+      "texto": "Participar con un diseño tuyo, con probabilidades de ganar, en un concurso de la escuela cuyo objetivo o meta sea el de proponer un sistema de clasificación para los expedientes de los estudiantes.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 91,
+      "texto": "Darte cuenta de inmediato cuando un profesor te aplicó un examen con errores de redacción en las instrucciones y en las preguntas.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 92,
+      "texto": "Predecir la forma en que un conocido tuyo va a actuar, lo que va a decir y a pensar en una situación dada.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 93,
+      "texto": "Comprender la relación entre estructura y funciones de los órganos de cuerpo humano; establecer cómo se relacionan todos los sistemas, o hacer esto mismo con temas de química, como por ejemplo la tabla periódica.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 94,
+      "texto": "Diseñar la decoración de un hogar u oficina.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 95,
+      "texto": "Hacerle a un carpintero, detalladamente (con ángulos, medidas, superficies, etc.), un diseño sobre el tipo de muebles que deseas que haga.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 96,
+      "texto": "Entender los métodos (cómo hicieron sus hipótesis, cómo relacionaron, cómo comprobaron, cómo aplicaron sus teorías, etc.) por lo que un químico o algún biólogo famoso logra llegar a sus descubrimientos.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 97,
+      "texto": "Darte cuenta rápidamente cuando alguien está pasando por un mal momento y necesita ayuda sin que te lo diga.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 98,
+      "texto": "Escribir un guion teatral o alguna pequeña obra relacionando y ordenando correctamente los diálogos de los personajes, las escenas, etc.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 99,
+      "texto": "Mejorar el procedimiento de inscripciones en la escuela, creando uno más rápido, más fácil, práctico y eficiente.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 100,
+      "texto": "Prestar ayuda al profesor de matemáticas para plantear problemas de repaso referentes a las clases.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 101,
+      "texto": "Pegar piedras preciosas en un collar viendo a través de una lupa.",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 102,
+      "texto": "Hacer que todos los miembros de un grupo de trabajo den lo mejor que tienen sin sentirse presionados o perseguidos.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 103,
+      "texto": "Aprender (fácilmente) en un curso, la reparación de productos electrónicos, mecánicos, etc., y la teoría que los fundamenta.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 104,
+      "texto": "Aprender a ser un buen orador mediante un curso rápido y sencillo.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 105,
+      "texto": "Darte cuenta cuando alguien tuvo errores en la ejecución de una pieza musical.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 106,
+      "texto": "Dibujar figuras a detalle, sombreadas, en movimiento, etc.",
+      "aptitud": "Artístico Plástica"
+    },
+    {
+      "id": 107,
+      "texto": "Ejemplificar fácilmente como se pueden observar en la vida cotidiana las leyes y principios de la biología o química.",
+      "aptitud": "Abstracta o Científica"
+    },
+    {
+      "id": 108,
+      "texto": "Saber identificar el momento oportuno para dar un consejo, empezar una conversación o hacerle una pregunta a alguien sin que se sienta presionado.",
+      "aptitud": "Social"
+    },
+    {
+      "id": 109,
+      "texto": "Redactar artículos para el periódico escolar de manera clara y organizada.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 110,
+      "texto": "Organizar eficientemente los archivos y documentos de una oficina.",
+      "aptitud": "Verbal"
+    },
+    {
+      "id": 111,
+      "texto": "Resolver problemas matemáticos de manera creativa encontrando distintas soluciones.",
+      "aptitud": "Organización"
+    },
+    {
+      "id": 112,
+      "texto": "Distinguir entre diferentes géneros musicales y sus características.",
+      "aptitud": "Numérica"
+    },
+    {
+      "id": 113,
+      "texto": "Realizar trabajos manuales que requieren precisión y pulso firme.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 114,
+      "texto": "Dirigir reuniones de trabajo de manera efectiva.",
+      "aptitud": "Coordinación Visomotriz"
+    },
+    {
+      "id": 115,
+      "texto": "Entender el funcionamiento de máquinas y aparatos mecánicos.",
+      "aptitud": "Directiva"
+    },
+    {
+      "id": 116,
+      "texto": "Convencer a otros de adoptar tu punto de vista.",
+      "aptitud": "Mecánica"
+    },
+    {
+      "id": 117,
+      "texto": "Apreciar y analizar composiciones musicales complejas.",
+      "aptitud": "Persuasiva"
+    },
+    {
+      "id": 118,
+      "texto": "Visualizar objetos desde diferentes ángulos mentalmente.",
+      "aptitud": "Musical"
+    },
+    {
+      "id": 119,
+      "texto": "Crear obras artísticas originales.",
+      "aptitud": "Espacial"
+    },
+    {
+      "id": 120,
+      "texto": "Crear obras artísticas originales.",
+      "aptitud": "Artístico Plástica"
+    }
+  ]
+}

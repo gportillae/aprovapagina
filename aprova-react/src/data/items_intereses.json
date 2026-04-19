@@ -1,0 +1,715 @@
+{
+  "nombre": "BRP - Inventario de Intereses Ocupacionales",
+  "escalas": [
+    "Biológicos",
+    "Mecánico Constructivo",
+    "Campestre",
+    "Geofísicos",
+    "Servicio Social",
+    "Literativo",
+    "Organización",
+    "Ejecutivo Persuasivo",
+    "Cálculo",
+    "Contabilidad",
+    "Musical",
+    "Artístico Plástico",
+    "Científico"
+  ],
+  "opciones": [
+    {
+      "valor": 5,
+      "texto": "Me gusta mucho"
+    },
+    {
+      "valor": 4,
+      "texto": "Me gusta"
+    },
+    {
+      "valor": 3,
+      "texto": "Me es indiferente"
+    },
+    {
+      "valor": 2,
+      "texto": "Me desagrada"
+    },
+    {
+      "valor": 1,
+      "texto": "Me desagrada mucho"
+    }
+  ],
+  "maxPorEscala": 50,
+  "niveles": {
+    "Muy Alto": [
+      41,
+      50
+    ],
+    "Alto": [
+      31,
+      40
+    ],
+    "Medio": [
+      21,
+      30
+    ],
+    "Bajo": [
+      11,
+      20
+    ],
+    "Muy Bajo": [
+      1,
+      10
+    ]
+  },
+  "items": [
+    {
+      "id": 1,
+      "texto": "Ser comentarista de temas diversos en un programa de televisión.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 2,
+      "texto": "Leer una revista en donde se explique cómo se relacionan los seres vivos, en el ecosistema.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 3,
+      "texto": "Coleccionar revistas como la de Mecánica popular y Ármelo usted mismo.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 4,
+      "texto": "Vivir temporadas largas en las rancherías y en las labores o cultivos para realizar trabajos diversos.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 5,
+      "texto": "Visitar una exposición donde se exhiben residuos de meteoritos o rocas de todo tipo provenientes del espacio, de grutas famosas, del fondo del océano, etcétera.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 6,
+      "texto": "Participar en campañas cuyo fin es concientizar a la población marginada de la necesidad de organizarse para crear cooperativas de consumo.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 7,
+      "texto": "Leer biografías u obras de literatos famosos.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 8,
+      "texto": "Observar en una biblioteca cómo clasifican sus libros, y conocer el sistema de clasificación.",
+      "escala": "Organización"
+    },
+    {
+      "id": 9,
+      "texto": "Participar en un grupo musical dedicado a rescatar e interpretar música no comercial.",
+      "escala": "Musical"
+    },
+    {
+      "id": 10,
+      "texto": "Colaborar con el grupo 'Amigos de la Tierra' (biólogos, químicos, bioquímicos, médicos, etc.), en la recolección de datos estadísticos que demuestren la necesidad de cuidar nuestro mundo.",
+      "escala": "Científico"
+    },
+    {
+      "id": 11,
+      "texto": "Ser parte de un jurado que califique, en un concurso, la mejor composición escenográfica.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 12,
+      "texto": "Aprender a llevar en orden las cuentas de una tienda escolar.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 13,
+      "texto": "Aprender más sobre la materia de 'Matemáticas'.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 14,
+      "texto": "Asistir a una conferencia que trate acerca de los últimos conocimientos que se tienen respecto al virus del SIDA.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 15,
+      "texto": "Excursionar en el bosque con un grupo de trabajo que explore esa región, en la búsqueda de yacimientos petroleros o mineros.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 16,
+      "texto": "Ser el orador oficial en una campaña política.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 17,
+      "texto": "Asistir a una conferencia donde se explican las causas de la formación de montañas y del subsuelo.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 18,
+      "texto": "Leer artículos acerca de los adelantos en el diseño y fabricación de motores para automóvil.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 19,
+      "texto": "Hacer colectas en la comunidad para obtener fondos cuyo fin será mejorar las condiciones de los pobres y de los enfermos.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 20,
+      "texto": "Conocer programas computacionales para hacer cálculos y operaciones matemáticas.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 21,
+      "texto": "Ayudar en un periódico, revista o gacetilla, en la revisión de la redacción, estilo y ortografía de los artículos que publican.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 22,
+      "texto": "Trabajar durante los ratos libres en una empresa destinada a diseñar programas para organizar la información obtenida en los últimos censos poblacionales.",
+      "escala": "Organización"
+    },
+    {
+      "id": 23,
+      "texto": "Leer acerca de la vida y obras de los grandes músicos clásicos y modernos.",
+      "escala": "Musical"
+    },
+    {
+      "id": 24,
+      "texto": "Presenciar y aprender en un laboratorio, los procedimientos o métodos de análisis que realizan los científicos (biólogos, médicos, agrónomos, bioquímicos, etc.), respecto a temas de especialidad.",
+      "escala": "Científico"
+    },
+    {
+      "id": 25,
+      "texto": "Visitar un museo donde haya conferencias de arte y que además exhiba pinturas, esculturas y estilos arquitectónicos de diversa índole.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 26,
+      "texto": "Trabajar en un despacho de contadores haciendo operaciones numéricas y llevando libros de contabilidad durante los ratos libres.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 27,
+      "texto": "Realizar actividades que requieren de las matemáticas.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 28,
+      "texto": "Ayudar a un grupo de presos o reos en su readaptación.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 29,
+      "texto": "Participar en un comité electoral donde se plantee la forma de organizar la información de los comicios electorales (votos).",
+      "escala": "Organización"
+    },
+    {
+      "id": 30,
+      "texto": "Pertenecer a un grupo de amigos cuya meta es analizar las diferentes corrientes actuales de la música y para ejecutar piezas musicales.",
+      "escala": "Musical"
+    },
+    {
+      "id": 31,
+      "texto": "Leer artículos que hablen de los últimos hallazgos que químicos y biólogos han hecho en relación con los contaminantes del agua destinada al consumo en una gran ciudad con consecuencias en los organismos vivos en general.",
+      "escala": "Científico"
+    },
+    {
+      "id": 32,
+      "texto": "Asistir a un curso práctico de técnicas y uso de materiales para construcción de maquetas.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 33,
+      "texto": "Participar como jurado en un concurso de cuentos cortos.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 34,
+      "texto": "Asistir a una exposición de herramientas nuevas para la reparación y fabricación de objetos.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 35,
+      "texto": "Trabajar en un acuario con biólogos expertos, dedicados a mantener en buenas condiciones a los seres vivos que ahí se encuentren.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 36,
+      "texto": "Conocer la historia de la formación de la corteza terrestre.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 37,
+      "texto": "Ser portavoz de la sociedad de los alumnos ante los directivos de la escuela.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 38,
+      "texto": "Pertenecer a un club de estudiosos dedicados a la exploración de lugares naturales como las montañas, los bosques, los desiertos y la vida campesina.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 39,
+      "texto": "Observar como un contador público hace cálculos de los impuestos que una empresa debe pagar al Estado.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 40,
+      "texto": "Diseñar un programa computacional para que las amas de casa, a través de un sistema sencillo, lleven el control de lo que falta en su despensa, de los pagos por hacer y de los gastos en general.",
+      "escala": "Organización"
+    },
+    {
+      "id": 41,
+      "texto": "Participar en un programa que promueva, entre los vecinos de una colonia, mayor solidaridad y mejoras en los servicios como vigilancia, alumbrado, etcétera.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 42,
+      "texto": "Diseñar problemas numéricos para una revista de pasatiempo.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 43,
+      "texto": "Participar voluntariamente con un grupo de científicos que se dediquen a observar y dar a conocer los índices de contaminación en una gran ciudad, más las consecuencias de esto.",
+      "escala": "Científico"
+    },
+    {
+      "id": 44,
+      "texto": "Hacer guiones para teatro, televisión y radio.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 45,
+      "texto": "Leer artículos que hablen de la reproducción bacteriana.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 46,
+      "texto": "Organizar caminatas por las orillas de las zonas agrícolas de una región.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 47,
+      "texto": "Leer artículos de las causas y las consecuencias de los terremotos.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 48,
+      "texto": "Conocer e interpretar los datos presentados en la sección financiera de los noticiarios.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 49,
+      "texto": "Participar en grupos que se dedican a desarrollar técnicas y habilidades para concursar en actividades regionales, tales como discusiones, debates o polémicas.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 50,
+      "texto": "Tomar un curso relacionado con el funcionamiento e instalación de una computadora.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 51,
+      "texto": "Leer las revistas que contengan reportajes acerca de diseño, decoración, uso de materiales para la construcción de piezas de ornato, técnicas de litografía, etcétera.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 52,
+      "texto": "Visitar el Conservatorio Nacional para conocer las técnicas y métodos que se emplean para enseñar la ejecución de cualquier instrumento musical.",
+      "escala": "Musical"
+    },
+    {
+      "id": 53,
+      "texto": "Aprender de un grupo de artesanos la forma como trabajan el latón, la piel, el vidrio, el emplomado, la decoración cerámica, etcétera.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 54,
+      "texto": "Leer revistas musicales que hablen de diferentes tipos de música.",
+      "escala": "Musical"
+    },
+    {
+      "id": 55,
+      "texto": "Convencer a tu grupo escolar para realizar algún proyecto o programa de actividades que tú crees importantes para todos.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 56,
+      "texto": "Trabajar en una secretaría de Estado y que el desempeño de tu labor implique realizar largas caminatas por las regiones desérticas de nuestro país.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 57,
+      "texto": "Observar un documental referente a intervenciones quirúrgicas.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 58,
+      "texto": "Pertenecer a un club o sociedad cuyo fin sea analizar y compartir ideas respecto a novelas escritas en cualquier género (ficción, misterio, terror, etc.).",
+      "escala": "Literativo"
+    },
+    {
+      "id": 59,
+      "texto": "Aprender cómo un ingeniero aplica las matemáticas a su trabajo.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 60,
+      "texto": "Conocer la manera en que el comité de censo poblacional organiza sus datos.",
+      "escala": "Organización"
+    },
+    {
+      "id": 61,
+      "texto": "Ver documentales televisivos que muestren los últimos hallazgos en relación con la formación del interior de la Tierra.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 62,
+      "texto": "Leer la biografía y obra de investigadores famosos.",
+      "escala": "Científico"
+    },
+    {
+      "id": 63,
+      "texto": "Ayudar o alentar a cualquier compañero de clase que pasa por un mal momento.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 64,
+      "texto": "Calcular los costos y las ganancias de un festival que realizarán tus compañeros.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 65,
+      "texto": "Reparar los artefactos como licuadoras, tostadoras de pan, timbres, etcétera.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 66,
+      "texto": "Asistir a una conferencia referente a fósiles marinos y terrestres.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 67,
+      "texto": "Leer revistas que contengan información de los últimos avances en las ciencias de medicina, bioquímica, química y biología.",
+      "escala": "Científico"
+    },
+    {
+      "id": 68,
+      "texto": "Participar en campañas de concientización ciudadana.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 69,
+      "texto": "Hacer el informe financiero (ingresos y egresos) de la sociedad de alumnos.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 70,
+      "texto": "Asistir a un curso práctico ofrecido por una compañía dedicada a la fabricación de herramientas, para aprender el manejo de sus nuevas herramientas.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 71,
+      "texto": "Realizar un programa de televisión donde se hable de la historia y evolución de la música.",
+      "escala": "Musical"
+    },
+    {
+      "id": 72,
+      "texto": "Trabajar durante las vacaciones en una galería de arte, con algún escultor, pintor o diseñador famoso.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 73,
+      "texto": "Encargarse de la publicidad, promoción y venta de boletos para un festival estudiantil.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 74,
+      "texto": "Aprender más sobre la materia de 'Biología'.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 75,
+      "texto": "Conocer, durante los fines de semana, lugares alejados de la ciudad, tales como establos, zonas agrícolas, poblados campesinos, regiones montañosas, etcétera.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 76,
+      "texto": "Ver películas acerca de la historia de la literatura y los literatos.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 77,
+      "texto": "Ayudar a un prestigiado maestro matemático a dar sus clases a los alumnos menos aventajados y a encontrar nuevas aplicaciones de la ciencia matemática.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 78,
+      "texto": "Observar cómo el centro de computación de una empresa organiza los datos referentes a nóminas y prestaciones de los empleados.",
+      "escala": "Organización"
+    },
+    {
+      "id": 79,
+      "texto": "Ayudar al bibliotecario de la escuela a diseñar un sistema con el que localicen de manera rápida a los alumnos que deben libros y que, además, ayude a encontrar libros fácilmente.",
+      "escala": "Organización"
+    },
+    {
+      "id": 80,
+      "texto": "Leer artículos que traten acerca de estilos arquitectónicos, de escultura y de pintura.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 81,
+      "texto": "Asistir a conciertos y conferencias de música clásica y moderna.",
+      "escala": "Musical"
+    },
+    {
+      "id": 82,
+      "texto": "Leer artículos que expliquen cómo funcionan los instrumentos de aeronavegación.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 83,
+      "texto": "Revisar los gastos hechos en casa durante un tiempo, con el fin de supervisar si se ha cuidado el presupuesto familiar.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 84,
+      "texto": "Fundar en tu ciudad grupos de ayuda mutua tales como Alcohólicos Anónimos o Drogadictos Anónimos.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 85,
+      "texto": "Asistir a una exposición de aparatos y máquinas electrónicas que apoyen a las ciencias médica, biológica y química, en su labor de investigación.",
+      "escala": "Científico"
+    },
+    {
+      "id": 86,
+      "texto": "Resolver acertijos, juegos y rompecabezas de tipo numérico.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 87,
+      "texto": "Escuchar conferencias acerca de las nuevas técnicas visuales y escritas de comunicación.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 88,
+      "texto": "Participar en campañas de reforestación, plantando árboles en las zonas boscosas del país.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 89,
+      "texto": "Leer artículos donde se explique cómo los mares erosionan la tierra.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 90,
+      "texto": "Presenciar un panel donde se hable de las epidemias y su control.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 91,
+      "texto": "Pertenecer a un club donde se dialogue, se polemicen temas de actualidad y se aprenda a hablar en público.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 92,
+      "texto": "Estudiar con algunos ecologistas las consecuencias de la sobreexplotación de las plantas.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 93,
+      "texto": "Coleccionar revistas que muestren paisajes insólitos.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 94,
+      "texto": "Dar clases de redacción, ortografía y técnicas de guión.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 95,
+      "texto": "Jugar con programas computacionales donde se empleen las matemáticas.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 96,
+      "texto": "Asistir a un plantel donde se hable de los últimos adelantos en metodología de la investigación en ciencias naturales.",
+      "escala": "Científico"
+    },
+    {
+      "id": 97,
+      "texto": "Trabajar con un grupo de geólogos que investigan yacimientos de petróleo.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 98,
+      "texto": "Ayudar a la parroquia o a la iglesia en la catequización y evangelización de los feligreses.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 99,
+      "texto": "Tomar un curso práctico referente a leyes fiscales (impuestos) para ayudar a un grupo de contadores.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 100,
+      "texto": "Leer escritos de la revista Mecánica popular que explican cómo reparar aparatos electrodomésticos y cómo montar aparatos electromecánicos y electrónicos.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 101,
+      "texto": "Asistir a un concierto de música moderna, ejecutado por una famosa sinfónica.",
+      "escala": "Musical"
+    },
+    {
+      "id": 102,
+      "texto": "Trabajar, en ratos libres, en un despacho donde se diseñen logotipos.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 103,
+      "texto": "Ser jurado en un concurso que califique el mejor sistema para organizar los expedientes de los alumnos de preparatoria.",
+      "escala": "Organización"
+    },
+    {
+      "id": 104,
+      "texto": "Ser miembro de un grupo de feligreses cuyo fin sea darle ideas al párroco o ministro acerca de la forma en que puede mejorar sus sermones.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 105,
+      "texto": "Tomar un curso que hable del cuidado y conservación de las especies vivas.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 106,
+      "texto": "Ayudar a los periodistas de televisión en la redacción de las noticias.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 107,
+      "texto": "Ayudar al profesor de matemáticas a hacer los ejercicios de repaso para dar la clase.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 108,
+      "texto": "Ser parte de un grupo de estudiantes dedicados a diseñar las técnicas de investigación que pueda aportar datos para el cuidado de nuestro planeta.",
+      "escala": "Científico"
+    },
+    {
+      "id": 109,
+      "texto": "Explorar islas desiertas en el océano.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 110,
+      "texto": "Trabajar con un grupo de geólogos que se dediquen a localizar yacimientos minerales.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 111,
+      "texto": "Ver un programa de televisión dedicado a mostrar la importancia de las ciencias sociales en la vida comunitaria (psicología, derecho, educación, sociología).",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 112,
+      "texto": "Conocer técnicas para convencer a la gente de que cambie de opinión.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 113,
+      "texto": "Conocer el sistema de clasificación que se emplea para ordenar los archivos de la Nación.",
+      "escala": "Organización"
+    },
+    {
+      "id": 114,
+      "texto": "Aprender a manejar programas de computación para diseñar, a través de la computadora, grabados, planos arquitectónicos, logotipos, etcétera.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 115,
+      "texto": "Asistir a una convención de músicos para conocer los últimos avances de la electrónica y su relación con la música.",
+      "escala": "Musical"
+    },
+    {
+      "id": 116,
+      "texto": "Ver una exposición de buques marinos y saber cómo están diseñados.",
+      "escala": "Mecánico Constructivo"
+    },
+    {
+      "id": 117,
+      "texto": "Trabajar durante los ratos libres en una empresa que se dedique a diseñar programas de contabilidad por diferentes corporativos.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 118,
+      "texto": "Leer revistas que tratan de la dinámica de los ríos subterráneos.",
+      "escala": "Geofísicos"
+    },
+    {
+      "id": 119,
+      "texto": "Trabajar en tiempos libres en una tienda comercial dedicada a la venta de CD musicales explicando a los compradores el valor musical de los diferentes géneros de música que ahí se venden.",
+      "escala": "Musical"
+    },
+    {
+      "id": 120,
+      "texto": "Trabajar con un grupo de escenógrafos.",
+      "escala": "Artístico Plástico"
+    },
+    {
+      "id": 121,
+      "texto": "Hacer un programa computacional para la mesa directiva de tu escuela para llevar su contabilidad, sus inventarios, etcétera.",
+      "escala": "Organización"
+    },
+    {
+      "id": 122,
+      "texto": "Dar un mensaje emotivo a un auditorio.",
+      "escala": "Ejecutivo Persuasivo"
+    },
+    {
+      "id": 123,
+      "texto": "Ayudar a trabajadores inmigrantes a defender sus derechos y sus intereses.",
+      "escala": "Servicio Social"
+    },
+    {
+      "id": 124,
+      "texto": "Acompañar, en mar abierto, a un grupo de pescadores.",
+      "escala": "Campestre"
+    },
+    {
+      "id": 125,
+      "texto": "Conocer cómo se aplica la computación en la investigación de las ciencias médicas, químicas y biológicas.",
+      "escala": "Científico"
+    },
+    {
+      "id": 126,
+      "texto": "Formar una compañía que se dedique a diseñar programas computacionales y rompecabezas numéricos.",
+      "escala": "Cálculo"
+    },
+    {
+      "id": 127,
+      "texto": "Escribir ensayos y cuentos cortos para una revista de circulación nacional.",
+      "escala": "Literativo"
+    },
+    {
+      "id": 128,
+      "texto": "Participar como miembro en el Club de Amigos del Planeta Tierra.",
+      "escala": "Biológicos"
+    },
+    {
+      "id": 129,
+      "texto": "Asistir a conferencias en las que se hable de fenómenos tales como inflación y deuda.",
+      "escala": "Contabilidad"
+    },
+    {
+      "id": 130,
+      "texto": "Observar cómo está diseñado el armamento pesado o artillería militar.",
+      "escala": "Mecánico Constructivo"
+    }
+  ]
+}

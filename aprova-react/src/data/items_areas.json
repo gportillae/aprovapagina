@@ -1,0 +1,4886 @@
+{
+  "nombre": "Test de Áreas Vocacionales",
+  "secciones": [
+    {
+      "key": "PU",
+      "nombre": "Preferencias Universitarias",
+      "color": "#3498DB",
+      "totalItems": 60,
+      "subareas": [
+        "Físico-Matemáticas",
+        "Biológicas",
+        "Químicas",
+        "Administrativas",
+        "Sociales",
+        "Humanidades"
+      ]
+    },
+    {
+      "key": "FM",
+      "nombre": "Físico-Matemáticas",
+      "color": "#E74C3C",
+      "totalItems": 80,
+      "subareas": [
+        "Puras",
+        "Artefactos",
+        "Naturaleza",
+        "Industria",
+        "Construcción",
+        "Manejo de datos",
+        "Medición Geodésica",
+        "Diseño"
+      ]
+    },
+    {
+      "key": "B",
+      "nombre": "Biológicas",
+      "color": "#27AE60",
+      "totalItems": 70,
+      "subareas": [
+        "Puras",
+        "Salud Humana",
+        "Salud Animal",
+        "Terrestre",
+        "Silvícola",
+        "Ambientalista",
+        "Marítima"
+      ]
+    },
+    {
+      "key": "Q",
+      "nombre": "Químicas",
+      "color": "#9B59B6",
+      "totalItems": 70,
+      "subareas": [
+        "Puras",
+        "Inorgánicas",
+        "Org. Bioq. Alimentos",
+        "Org. Bioq. Clínica",
+        "Org. Bioq. Farmacología",
+        "Químicas Agrícolas",
+        "Org. Petroquímico Industrial"
+      ]
+    },
+    {
+      "key": "A",
+      "nombre": "Administrativas",
+      "color": "#F39C12",
+      "totalItems": 90,
+      "subareas": [
+        "Rec. Instrumentales",
+        "Rec. Financieros",
+        "Rec. Humanos",
+        "Rec. Comerciales",
+        "Rec. Turísticos",
+        "Rec. Públicos",
+        "Rec. Educativos",
+        "Rec. Agrícolas",
+        "Rec. Mineros"
+      ]
+    },
+    {
+      "key": "S",
+      "nombre": "Sociales",
+      "color": "#1ABC9C",
+      "totalItems": 60,
+      "subareas": [
+        "Principios y Leyes",
+        "Rel. Asistencial",
+        "Rel. Existencial",
+        "Rel. Legal",
+        "Rel. Educacional",
+        "Rel. Interhumana"
+      ]
+    },
+    {
+      "key": "H",
+      "nombre": "Humanidades",
+      "color": "#E91E63",
+      "totalItems": 100,
+      "subareas": [
+        "Humanidades",
+        "Expresión Oral",
+        "Expresión Escrita",
+        "Expresión Plástica",
+        "Expresión Corporal",
+        "Expresión Auditiva",
+        "Complementación",
+        "Idiomas",
+        "Combinación",
+        "Cuidado Cultural"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "PU_1",
+      "num": 1,
+      "texto": "Resolver operaciones matemáticas",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 1
+    },
+    {
+      "id": "PU_2",
+      "num": 2,
+      "texto": "Ser asistente por temporadas de un investigador que trabaje en programas de investigación aplicada a la genética en seres vivos.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 1
+    },
+    {
+      "id": "PU_3",
+      "num": 3,
+      "texto": "Conocer los compuestos químicos de las sustancias",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 1
+    },
+    {
+      "id": "PU_4",
+      "num": 4,
+      "texto": "Hacer inventarios de lo que hay en un almacén.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 1
+    },
+    {
+      "id": "PU_5",
+      "num": 5,
+      "texto": "Ayudar a un grupo de campesinos a organizarse.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 1
+    },
+    {
+      "id": "PU_6",
+      "num": 6,
+      "texto": "Participar en un jurado que calificará un concurso teatral, en cuanto a escenografía, coreografía y guion de la obra.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 1
+    },
+    {
+      "id": "PU_7",
+      "num": 7,
+      "texto": "Trabajar en un centro dedicado a la producción de los modelos matemáticos y físicos para mejorar los productos en la industria.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 2
+    },
+    {
+      "id": "PU_8",
+      "num": 8,
+      "texto": "Participar en una operación médica.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 2
+    },
+    {
+      "id": "PU_9",
+      "num": 9,
+      "texto": "Manejar instrumentos y aparatos para elaborar productos químicos.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 2
+    },
+    {
+      "id": "PU_10",
+      "num": 10,
+      "texto": "Organizar los detalles de venta al público en un almacén.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 2
+    },
+    {
+      "id": "PU_11",
+      "num": 11,
+      "texto": "Ayudar en la rehabilitación de los presos.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 2
+    },
+    {
+      "id": "PU_12",
+      "num": 12,
+      "texto": "Diseñar la escenografía de un programa televisivo.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 2
+    },
+    {
+      "id": "PU_13",
+      "num": 13,
+      "texto": "Aplicar los principios y leyes de la física.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 3
+    },
+    {
+      "id": "PU_14",
+      "num": 14,
+      "texto": "Conocer a fondo los problemas ecológicos (ecosistema)",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 3
+    },
+    {
+      "id": "PU_15",
+      "num": 15,
+      "texto": "Hacer análisis químicos del agua (su potabilidad)",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 3
+    },
+    {
+      "id": "PU_16",
+      "num": 16,
+      "texto": "Determinar la relación entre inversión y utilidad de una empresa.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 3
+    },
+    {
+      "id": "PU_17",
+      "num": 17,
+      "texto": "Conocer las causas que intervienen en la desintegración familiar.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 3
+    },
+    {
+      "id": "PU_18",
+      "num": 18,
+      "texto": "Manejar con habilidad las cámaras de fotografía y cine.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 3
+    },
+    {
+      "id": "PU_19",
+      "num": 19,
+      "texto": "Calcular las fuerzas y resultantes físicas.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 4
+    },
+    {
+      "id": "PU_20",
+      "num": 20,
+      "texto": "Aplicar los principios de la cadena alimentaria entre las especies, para su conservación.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 4
+    },
+    {
+      "id": "PU_21",
+      "num": 21,
+      "texto": "Estudiar a fondo los efectos de la quimioterapia en el hombre.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 4
+    },
+    {
+      "id": "PU_22",
+      "num": 22,
+      "texto": "Determinar las funciones de los empleados en una empresa.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 4
+    },
+    {
+      "id": "PU_23",
+      "num": 23,
+      "texto": "Hacer programas para educación de los huérfanos de la casa-hogar.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 4
+    },
+    {
+      "id": "PU_24",
+      "num": 24,
+      "texto": "Conocer cómo eran nuestros antepasados a través de las pinturas, esculturas y danzas que nos legaron.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 4
+    },
+    {
+      "id": "PU_25",
+      "num": 25,
+      "texto": "Calcular matemáticamente, a través de una computadora, la probabilidad de éxito en un proyecto cualquiera",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 5
+    },
+    {
+      "id": "PU_26",
+      "num": 26,
+      "texto": "Conocer cómo funciona la reproducción bacteriana.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 5
+    },
+    {
+      "id": "PU_27",
+      "num": 27,
+      "texto": "Ser hábil para obtener nuevos compuestos químicos.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 5
+    },
+    {
+      "id": "PU_28",
+      "num": 28,
+      "texto": "Determinar los elementos sociales que estimulan los procesos económicos inflacionarios.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 5
+    },
+    {
+      "id": "PU_29",
+      "num": 29,
+      "texto": "Investigar las costumbres de vida entre las clases sociales y sus diferencias.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 5
+    },
+    {
+      "id": "PU_30",
+      "num": 30,
+      "texto": "Producir y dirigir audiovisuales, teatro y películas.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 5
+    },
+    {
+      "id": "PU_31",
+      "num": 31,
+      "texto": "Usar modelos matemáticos y físicos para realizar un trabajo.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 6
+    },
+    {
+      "id": "PU_32",
+      "num": 32,
+      "texto": "Conocer la estructura y funciones de la anatomía animal o humana.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 6
+    },
+    {
+      "id": "PU_33",
+      "num": 33,
+      "texto": "Hacer experimentos en el laboratorio de química.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 6
+    },
+    {
+      "id": "PU_34",
+      "num": 34,
+      "texto": "Llevar el inventario de productos que tiene una bodega, a través de un programa computacional.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 6
+    },
+    {
+      "id": "PU_35",
+      "num": 35,
+      "texto": "Participar en campañas de educación y concientización política.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 6
+    },
+    {
+      "id": "PU_36",
+      "num": 36,
+      "texto": "Idear nuevas técnicas de pintura, escultura y grabado.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 6
+    },
+    {
+      "id": "PU_37",
+      "num": 37,
+      "texto": "Diseñar fórmulas matemáticas y físicas, aplicables a una labor cualquiera.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 7
+    },
+    {
+      "id": "PU_38",
+      "num": 38,
+      "texto": "Conocer las causas del suicidio colectivo en algunas especies.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 7
+    },
+    {
+      "id": "PU_39",
+      "num": 39,
+      "texto": "Analizar los elementos químicos de algunas sustancias.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 7
+    },
+    {
+      "id": "PU_40",
+      "num": 40,
+      "texto": "Organizar y dirigir una empresa turística.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 7
+    },
+    {
+      "id": "PU_41",
+      "num": 41,
+      "texto": "Ayudar a una persona que pasa por momentos difíciles.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 7
+    },
+    {
+      "id": "PU_42",
+      "num": 42,
+      "texto": "Investigar por qué y para qué existe el hombre.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 7
+    },
+    {
+      "id": "PU_43",
+      "num": 43,
+      "texto": "Calcular áreas, perímetros y volumen (pueden ser calderas, hornos metalúrgicos, construcciones, etc.).",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 8
+    },
+    {
+      "id": "PU_44",
+      "num": 44,
+      "texto": "Conocer las causas de la extinción de algunos organismos vivos y cómo evitarla.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 8
+    },
+    {
+      "id": "PU_45",
+      "num": 45,
+      "texto": "Determinar, mediante el análisis químico, la presencia de alguna enfermedad.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 8
+    },
+    {
+      "id": "PU_46",
+      "num": 46,
+      "texto": "Hacer las declaraciones fiscales a una pequeña cámara de comerciantes.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 8
+    },
+    {
+      "id": "PU_47",
+      "num": 47,
+      "texto": "Conocer las causas, consecuencias y soluciones del divorcio.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 8
+    },
+    {
+      "id": "PU_48",
+      "num": 48,
+      "texto": "Saber cuáles son las diferencias y semejanzas entre la música, las artesanías y las danzas características de los distintos grupos culturales.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 8
+    },
+    {
+      "id": "PU_49",
+      "num": 49,
+      "texto": "Probar nuevos programas computacionales para realizar operaciones numéricas.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 9
+    },
+    {
+      "id": "PU_50",
+      "num": 50,
+      "texto": "Conocer técnicas de mejoramiento de semillas y ganado.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 9
+    },
+    {
+      "id": "PU_51",
+      "num": 51,
+      "texto": "Manejar los productos químicos adecuados para la conservación de los alimentos.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 9
+    },
+    {
+      "id": "PU_52",
+      "num": 52,
+      "texto": "Tener un despacho para asesorar empresas en el mejoramiento de su administración.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 9
+    },
+    {
+      "id": "PU_53",
+      "num": 53,
+      "texto": "Participar en programas educativos que ayuden a evitar el alcoholismo y la drogadicción.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 9
+    },
+    {
+      "id": "PU_54",
+      "num": 54,
+      "texto": "Conocer la vida religiosa y artística de las tribus indígenas de nuestro país.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 9
+    },
+    {
+      "id": "PU_55",
+      "num": 55,
+      "texto": "Explicar matemática y físicamente los probables resultados de un diseño cualquiera.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Físico-Matemáticas",
+      "grupo": 10
+    },
+    {
+      "id": "PU_56",
+      "num": 56,
+      "texto": "Conocer técnicas de siembra y recolección de frutas.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Biológicas",
+      "grupo": 10
+    },
+    {
+      "id": "PU_57",
+      "num": 57,
+      "texto": "Observar y conocer cómo actúan los reactivos químicos.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Químicas",
+      "grupo": 10
+    },
+    {
+      "id": "PU_58",
+      "num": 58,
+      "texto": "Vigilar los rendimientos económicos de una empresa.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Administrativas",
+      "grupo": 10
+    },
+    {
+      "id": "PU_59",
+      "num": 59,
+      "texto": "Conocer el comportamiento humano y las causas que lo motivan.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Sociales",
+      "grupo": 10
+    },
+    {
+      "id": "PU_60",
+      "num": 60,
+      "texto": "Seleccionar la música más adecuada para una película.",
+      "area": "PU",
+      "areaNombre": "Preferencias Universitarias",
+      "subarea": "Humanidades",
+      "grupo": 10
+    },
+    {
+      "id": "FM_1",
+      "num": 1,
+      "texto": "Descubrir nuevas fórmulas matemáticas.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 1
+    },
+    {
+      "id": "FM_2",
+      "num": 2,
+      "texto": "Aplicar las teorías de la física al diseño de motores eléctricos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 1
+    },
+    {
+      "id": "FM_3",
+      "num": 3,
+      "texto": "Deducir por medio de los principios físicos y el cálculo, el lugar donde pudiera existir un manto acuífero, en el subsuelo.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 1
+    },
+    {
+      "id": "FM_4",
+      "num": 4,
+      "texto": "Diseñar un sistema para controlar la calidad de los productos en una empresa.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 1
+    },
+    {
+      "id": "FM_5",
+      "num": 5,
+      "texto": "Calcular la estructura de un edificio, para su construcción.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 1
+    },
+    {
+      "id": "FM_6",
+      "num": 6,
+      "texto": "Hacer las estadísticas de accidentes, para una compañía de seguros.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 1
+    },
+    {
+      "id": "FM_7",
+      "num": 7,
+      "texto": "Asesorar a compañías constructoras en la determinación de colindancias y áreas de terreno donde se construirá un fraccionamiento.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 1
+    },
+    {
+      "id": "FM_8",
+      "num": 8,
+      "texto": "Trabajar para una industria automotriz, en el diseño de carrocerías para automóviles y de los interiores del mismo.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 1
+    },
+    {
+      "id": "FM_9",
+      "num": 9,
+      "texto": "Buscar nuevas formas numéricas que permitan explicar y predecir algunos fenómenos físicos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 2
+    },
+    {
+      "id": "FM_10",
+      "num": 10,
+      "texto": "Conocer el sistema interno de una computadora.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 2
+    },
+    {
+      "id": "FM_11",
+      "num": 11,
+      "texto": "Explorar en el campo abierto las posibilidades de existencia de un manto petrolero o minero.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 2
+    },
+    {
+      "id": "FM_12",
+      "num": 12,
+      "texto": "Organizar una empresa rural para que su proceso industrial de manufactura sea más eficiente.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 2
+    },
+    {
+      "id": "FM_13",
+      "num": 13,
+      "texto": "Supervisar la construcción de carreteras y puentes.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 2
+    },
+    {
+      "id": "FM_14",
+      "num": 14,
+      "texto": "Hacer estudios estadísticos para el Gobierno federal en cuanto a la proporción de tráfico de una carretera.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 2
+    },
+    {
+      "id": "FM_15",
+      "num": 15,
+      "texto": "Hacer estudios para una compañía constructora que se encarga de construir una nueva línea ferroviaria y de determinar los niveles o alturas a los que tendrá que condicionarse esta obra.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 2
+    },
+    {
+      "id": "FM_16",
+      "num": 16,
+      "texto": "Diseñar en una empresa mueblera, los sillones y sillas que lanzará al mercado.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 2
+    },
+    {
+      "id": "FM_17",
+      "num": 17,
+      "texto": "Profundizar en las teorías de Albert Einstein.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 3
+    },
+    {
+      "id": "FM_18",
+      "num": 18,
+      "texto": "Conocer el funcionamiento de los instrumentos de aeronavegación.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 3
+    },
+    {
+      "id": "FM_19",
+      "num": 19,
+      "texto": "Saber cuál es la composición de las rocas y de las capas geofísicas.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 3
+    },
+    {
+      "id": "FM_20",
+      "num": 20,
+      "texto": "Conocer con detalle cómo se relacionan los diferentes departamentos de una empresa.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 3
+    },
+    {
+      "id": "FM_21",
+      "num": 21,
+      "texto": "Diseñar casa habitación.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 3
+    },
+    {
+      "id": "FM_22",
+      "num": 22,
+      "texto": "Asesorar a la Comisión Nacional de Censos Poblacionales en campañas acerca de cómo llevar e interpretar la estadística de la información obtenida.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 3
+    },
+    {
+      "id": "FM_23",
+      "num": 23,
+      "texto": "Hacer estudios para el  Gobierno federal respecto a la probabilidad de construir canales de riego que puedan conducir el agua, con base en el cálculo de la fuerza de gravedad.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 3
+    },
+    {
+      "id": "FM_24",
+      "num": 24,
+      "texto": "Trabajar en una empresa que fabrica novedades en la línea de regalos y diseñar nuevos modelos de productos (cajas musicales, bolsas de mano, etc).",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 3
+    },
+    {
+      "id": "FM_25",
+      "num": 25,
+      "texto": "Conocer a fondo la lógica de las matemáticas.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 4
+    },
+    {
+      "id": "FM_26",
+      "num": 26,
+      "texto": "Conocer y reparar los instrumentos electrónicos de un hospital.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 4
+    },
+    {
+      "id": "FM_27",
+      "num": 27,
+      "texto": "Explicar el porqué de la formación de las montañas y los terrenos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 4
+    },
+    {
+      "id": "FM_28",
+      "num": 28,
+      "texto": "Diseñar el orden en que deben operar los diferentes departamentos de una nueva empresa manufacturera.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 4
+    },
+    {
+      "id": "FM_29",
+      "num": 29,
+      "texto": "Remodelar construcciones antiguas.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 4
+    },
+    {
+      "id": "FM_30",
+      "num": 30,
+      "texto": "Asesorar a una compañía de seguros para determinar los costos de los mismos, con base en la probabilidad de accidentes.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 4
+    },
+    {
+      "id": "FM_31",
+      "num": 31,
+      "texto": "Medir grandes extensiones de terreno para realizar una división exacta del mismo.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 4
+    },
+    {
+      "id": "FM_32",
+      "num": 32,
+      "texto": "Trabajar en el departamento de diseño para muebles de baño en una empresa  fabricante de porcelanas.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 4
+    },
+    {
+      "id": "FM_33",
+      "num": 33,
+      "texto": "Conocer a fondo la relación entre álgebra y geometría.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 5
+    },
+    {
+      "id": "FM_34",
+      "num": 34,
+      "texto": "Conocer a fondo el funcionamiento de los sistemas eléctricos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 5
+    },
+    {
+      "id": "FM_35",
+      "num": 35,
+      "texto": "Conocer y explicar la historia y evolución de la geografía marina.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 5
+    },
+    {
+      "id": "FM_36",
+      "num": 36,
+      "texto": "Supervisar y analizar las funciones de los diversos departamentos en una industria.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 5
+    },
+    {
+      "id": "FM_37",
+      "num": 37,
+      "texto": "Embellecer las construcciones de un centro turístico.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 5
+    },
+    {
+      "id": "FM_38",
+      "num": 38,
+      "texto": "Diseñarle un modelo matemático a una industria con el fin de que mejore la calidad de sus productos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 5
+    },
+    {
+      "id": "FM_39",
+      "num": 39,
+      "texto": "Medir alturas de terrenos y montañas con el objeto de elaborar cartas geográficas.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 5
+    },
+    {
+      "id": "FM_40",
+      "num": 40,
+      "texto": "Asesorar a una compañía constructora de carrocerías para remolques en el diseño de los mismos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 5
+    },
+    {
+      "id": "FM_41",
+      "num": 41,
+      "texto": "Lograr nuevas aplicaciones de matemáticas a problemas de física.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 6
+    },
+    {
+      "id": "FM_42",
+      "num": 42,
+      "texto": "Calcular la resistencia y duración de un motor, bajo condiciones experimentales.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 6
+    },
+    {
+      "id": "FM_43",
+      "num": 43,
+      "texto": "Conocer el porqué  de la formación de los diferentes fósiles marinos y terrestres.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 6
+    },
+    {
+      "id": "FM_44",
+      "num": 44,
+      "texto": "Diseñar la empresa del futuro.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 6
+    },
+    {
+      "id": "FM_45",
+      "num": 45,
+      "texto": "Diseñar zonas urbanas más habitables y dignas, a menor costo.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 6
+    },
+    {
+      "id": "FM_46",
+      "num": 46,
+      "texto": "Trabajar en un departamento universitario que reúna información acerca de los alumnos y aportar ideas de cómo organizar estadísticamente los datos",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 6
+    },
+    {
+      "id": "FM_47",
+      "num": 47,
+      "texto": "Hacer cálculos para una compañía minera respecto a los niveles de profundidad de sus excavaciones con el fin de evitarles inundaciones.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 6
+    },
+    {
+      "id": "FM_48",
+      "num": 48,
+      "texto": "Aprender técnicas para el diseño y dibujo de piezas mecánicas o de cualquier tipo.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 6
+    },
+    {
+      "id": "FM_49",
+      "num": 49,
+      "texto": "Buscar nuevas relaciones entre el cálculo y la geometría.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 7
+    },
+    {
+      "id": "FM_50",
+      "num": 50,
+      "texto": "Conocer cómo funcionan los medios de comunicación electrónicos (televisión por satélite, teléfonos, etc.).",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 7
+    },
+    {
+      "id": "FM_51",
+      "num": 51,
+      "texto": "Saber detectar posibles vetas de minerales.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 7
+    },
+    {
+      "id": "FM_52",
+      "num": 52,
+      "texto": "Encontrar nuevos sistemas para manufacturar productos en forma tal que, por su costo, puedan ser más accesibles al público.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 7
+    },
+    {
+      "id": "FM_53",
+      "num": 53,
+      "texto": "Calcular y diseñar lozas, columnas y cimientos para una construcción.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 7
+    },
+    {
+      "id": "FM_54",
+      "num": 54,
+      "texto": "Diseñar un modelo matemático y estadístico para una gran cadena de supermercados, con el fin de predecir el éxito que tendría con sus clientes al inaugurar na nueva tienda",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 7
+    },
+    {
+      "id": "FM_55",
+      "num": 55,
+      "texto": "Hacer estudios topológicos para ayudar a los agricultores a nivelar bien sus terrenos de riego.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 7
+    },
+    {
+      "id": "FM_56",
+      "num": 56,
+      "texto": "Aplicar el dibujo y la geometría para el diseño de nuevos modelos en muebles de cocina en general.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 7
+    },
+    {
+      "id": "FM_57",
+      "num": 57,
+      "texto": "Profundizar en el estudio de la física y de las matemáticas.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 8
+    },
+    {
+      "id": "FM_58",
+      "num": 58,
+      "texto": "Conocer cómo funcionan y se manejan los instrumentos de navegación marina.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 8
+    },
+    {
+      "id": "FM_59",
+      "num": 59,
+      "texto": "Conocer cómo están constituidas las capas del subsuelo.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 8
+    },
+    {
+      "id": "FM_60",
+      "num": 60,
+      "texto": "Saber cómo deben estar distribuidos y relacionados los departamentos en una maquila que elabore ropa.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 8
+    },
+    {
+      "id": "FM_61",
+      "num": 61,
+      "texto": "Conocer en detalle la historia de la construcción y los estilos arquitectónicos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 8
+    },
+    {
+      "id": "FM_62",
+      "num": 62,
+      "texto": "Asesorar a un departamento del Estado acerca de cómo llevar la estadística nacional de la mortalidad.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 8
+    },
+    {
+      "id": "FM_63",
+      "num": 63,
+      "texto": "Determinar, por medio del cálculo, la altura sobre el nivel del mar de algunas regiones.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 8
+    },
+    {
+      "id": "FM_64",
+      "num": 64,
+      "texto": "Conocer las técnicas del diseño y modelado que permitan hacer piezas para reproducirlas en serie.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 8
+    },
+    {
+      "id": "FM_65",
+      "num": 65,
+      "texto": "Investigar de qué manera se podría aplicar la física y las matemáticas a las ciencias en general.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 9
+    },
+    {
+      "id": "FM_66",
+      "num": 66,
+      "texto": "Saber en detalle cómo está diseñado un avión, además de conocer los principios físicos que lo rigen.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 9
+    },
+    {
+      "id": "FM_67",
+      "num": 67,
+      "texto": "Saber cómo pronosticar el clima y los fenómenos meteorológicos en general.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 9
+    },
+    {
+      "id": "FM_68",
+      "num": 68,
+      "texto": "Diseñar dentro de una empresa comercial el procedimiento de compra y venta de forma tal que el cliente y la empresa estén siempre contentos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 9
+    },
+    {
+      "id": "FM_69",
+      "num": 69,
+      "texto": "Conocer las propiedades de los materiales de construcción (cemento, varilla, etc.).",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 9
+    },
+    {
+      "id": "FM_70",
+      "num": 70,
+      "texto": "Asesorar a un grupo de directivos de una compañía de seguros en cuanto a cómo recabar datos estadísticos de siniestros.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 9
+    },
+    {
+      "id": "FM_71",
+      "num": 71,
+      "texto": "Asesorar al municipio en la medición de colindancias de los terrenos urbanos para actualizar el catastro.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 9
+    },
+    {
+      "id": "FM_72",
+      "num": 72,
+      "texto": "Trabajar en una empresa o industria que fabrique productos, como carritos tubulares de supermercados y mejorar los diseños de los mismos.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 9
+    },
+    {
+      "id": "FM_73",
+      "num": 73,
+      "texto": "Dedicarse de por vida a investigar nuevas fórmulas matemáticas, físicas, etcétera.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Puras",
+      "grupo": 10
+    },
+    {
+      "id": "FM_74",
+      "num": 74,
+      "texto": "Conocer a fondo el funcionamiento de relojes, radios, motores, etcétera",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Artefactos",
+      "grupo": 10
+    },
+    {
+      "id": "FM_75",
+      "num": 75,
+      "texto": "Diseñar sistemas de extracción para los minerales del subsuelo.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Naturaleza",
+      "grupo": 10
+    },
+    {
+      "id": "FM_76",
+      "num": 76,
+      "texto": "Asesorar a empresas para mejorar el proceso de manufactura en los productos que generan.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Industria",
+      "grupo": 10
+    },
+    {
+      "id": "FM_77",
+      "num": 77,
+      "texto": "Crear construcciones con un estilo arquitectónico donde la gente que las habite disfrute de algo insólito y experimente bienestar.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Construcción",
+      "grupo": 10
+    },
+    {
+      "id": "FM_78",
+      "num": 78,
+      "texto": "Aplicar las matemáticas en la resolución de problemas sociales.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Manejo de datos",
+      "grupo": 10
+    },
+    {
+      "id": "FM_79",
+      "num": 79,
+      "texto": "Diseñar cartas marítimas donde los tripulantes de navíos puedan observar las elevaciones exactas de los terrenos bajo el mar.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Medición Geodésica",
+      "grupo": 10
+    },
+    {
+      "id": "FM_80",
+      "num": 80,
+      "texto": "Trabajar en un centro de diseño que asesore a empresas en la actualización de modelos de mobiliarios para oficina, modelos nuevos de motocicletas, de bicicletas, etcétera.",
+      "area": "FM",
+      "areaNombre": "Físico-Matemáticas",
+      "subarea": "Diseño",
+      "grupo": 10
+    },
+    {
+      "id": "B_1",
+      "num": 1,
+      "texto": "Conocer profundamente la relación entre os organismos de la cadena alimentaria.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 1
+    },
+    {
+      "id": "B_2",
+      "num": 2,
+      "texto": "Participar en una intervención quirúrgica",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 1
+    },
+    {
+      "id": "B_3",
+      "num": 3,
+      "texto": "Conocer y controlar las epidemias que afectan a las aves.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 1
+    },
+    {
+      "id": "B_4",
+      "num": 4,
+      "texto": "Saber cómo aplicar las técnicas de rotación de cultivos.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 1
+    },
+    {
+      "id": "B_5",
+      "num": 5,
+      "texto": "Trabajar en una región boscosa del país, en la reforestación de donde han sido talados los árboles.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 1
+    },
+    {
+      "id": "B_6",
+      "num": 6,
+      "texto": "Diseñar para el gobierno municipal mejores formas de recolección y uso de la basura.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 1
+    },
+    {
+      "id": "B_7",
+      "num": 7,
+      "texto": "Estudiar a fondo las relaciones entre los organismos marinos y el medio en el que viven.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 1
+    },
+    {
+      "id": "B_8",
+      "num": 8,
+      "texto": "Conocer con detalle la vida de los insectos y de los microorganismos.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 2
+    },
+    {
+      "id": "B_9",
+      "num": 9,
+      "texto": "Conocer la anatomía humana, su estructura y su función.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 2
+    },
+    {
+      "id": "B_10",
+      "num": 10,
+      "texto": "Saber vacunar al ganado para prevenir sus enfermedades.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 2
+    },
+    {
+      "id": "B_11",
+      "num": 11,
+      "texto": "Conocer la tecnología de preparación de tierra para cultivo.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 2
+    },
+    {
+      "id": "B_12",
+      "num": 12,
+      "texto": "Conocer con detalle las teorías existentes respecto a la vida y función de árboles de todo tipo: frutales, coníferas, maderas preciosas, etcétera.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 2
+    },
+    {
+      "id": "B_13",
+      "num": 13,
+      "texto": "Realizar estudios del uso racional del agua y su conservación en una ciudad.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 2
+    },
+    {
+      "id": "B_14",
+      "num": 14,
+      "texto": "Conocer técnicas para cultivar artificialmente algunos tipos de peces.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 2
+    },
+    {
+      "id": "B_15",
+      "num": 15,
+      "texto": "Investigar las consecuencias que acarrearía el desbalance del ecosistema.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 3
+    },
+    {
+      "id": "B_16",
+      "num": 16,
+      "texto": "Conocer los nutrimientos más adecuados para el organismo humano.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 3
+    },
+    {
+      "id": "B_17",
+      "num": 17,
+      "texto": "Participar en la operación o intervención quirúrgica de caballos, vacas, etcétera.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 3
+    },
+    {
+      "id": "B_18",
+      "num": 18,
+      "texto": "Conocer las enfermedades típicas de las hortalizas, sus remedios y su técnica de siembra.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 3
+    },
+    {
+      "id": "B_19",
+      "num": 19,
+      "texto": "Trabajar en un aserradero supervisando el corte  racional de árboles.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 3
+    },
+    {
+      "id": "B_20",
+      "num": 20,
+      "texto": "Realizar investigaciones encaminadas a mejorar el ecosistema.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 3
+    },
+    {
+      "id": "B_21",
+      "num": 21,
+      "texto": "Conocer con detalle el comportamiento de los peces, para utilizarlo en las técnicas para su captura.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 3
+    },
+    {
+      "id": "B_22",
+      "num": 22,
+      "texto": "Profundizar en las teorías darwinianas acerca de la evolución de las especies.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 4
+    },
+    {
+      "id": "B_23",
+      "num": 23,
+      "texto": "Saber las técnicas de odontología para intervenciones bucales.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 4
+    },
+    {
+      "id": "B_24",
+      "num": 24,
+      "texto": "Conocer y tratar las enfermedades más comunes del ganado vacuno.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 4
+    },
+    {
+      "id": "B_25",
+      "num": 25,
+      "texto": "Trabajar en algún huerto productor de cítricos controlando sus plagas, sus enfermedades y conocer las técnicas de siembra y de reproducción de los mismos.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 4
+    },
+    {
+      "id": "B_26",
+      "num": 26,
+      "texto": "Diseñar programas para la siembra de árboles de madera científica y organizada.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 4
+    },
+    {
+      "id": "B_27",
+      "num": 27,
+      "texto": "Asesorar al gobierno de un estado para el correcto manejo de desechos industriales con visos a evitar la destrucción del ambiente.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 4
+    },
+    {
+      "id": "B_28",
+      "num": 28,
+      "texto": "Conocer la anatomía de los peces con el fin de controlar su reproducción y captura para alimento.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 4
+    },
+    {
+      "id": "B_29",
+      "num": 29,
+      "texto": "Conocer con detalle las leyes de la herencia y la genética.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 5
+    },
+    {
+      "id": "B_30",
+      "num": 30,
+      "texto": "Conocer el funcionamiento de los órganos del cuerpo humano.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 5
+    },
+    {
+      "id": "B_31",
+      "num": 31,
+      "texto": "Conocer el tratamiento más adecuado para las enfermedades bovinas.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 5
+    },
+    {
+      "id": "B_32",
+      "num": 32,
+      "texto": "Conocer con detalle las técnicas más eficientes de riego y fertilización de la tierra.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 5
+    },
+    {
+      "id": "B_33",
+      "num": 33,
+      "texto": "Trabajar en un vivero dedicado exclusivamente al estudio y reproducción de árboles de todo tipo.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 5
+    },
+    {
+      "id": "B_34",
+      "num": 34,
+      "texto": "Asesorar a un grupo de compañías constructoras en el diseño de ubicación de áreas verdes y en el manejo de drenajes de un nuevo asentamiento humano.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 5
+    },
+    {
+      "id": "B_35",
+      "num": 35,
+      "texto": "Usar técnicas para cultivar artificialmente ostiones, almejas, caracoles, camarones, etcétera.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 5
+    },
+    {
+      "id": "B_36",
+      "num": 36,
+      "texto": "Conocer cómo se distribuye la fauna marina.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 6
+    },
+    {
+      "id": "B_37",
+      "num": 37,
+      "texto": "Conocer la estructura y funcionamiento del ojo humano, sus anomalías y tratamiento.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 6
+    },
+    {
+      "id": "B_38",
+      "num": 38,
+      "texto": "Supervisar en los rastros el estado de salud de las reses que serán sacrificadas.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 6
+    },
+    {
+      "id": "B_39",
+      "num": 39,
+      "texto": "Saber cómo distribuir las instalaciones de un establo para ganado de engorda.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 6
+    },
+    {
+      "id": "B_40",
+      "num": 40,
+      "texto": "Trabajar en un aserradero supervisando la producción de maderas y derivados de los árboles.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 6
+    },
+    {
+      "id": "B_41",
+      "num": 41,
+      "texto": "Proponer, con fundamentos, la construcción de una planta tratadora de aguas residuales en un municipio.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 6
+    },
+    {
+      "id": "B_42",
+      "num": 42,
+      "texto": "Aplicar técnicas de procesado de alimentos de origen marino (peces).",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 6
+    },
+    {
+      "id": "B_43",
+      "num": 43,
+      "texto": "Entender las causas y los mecanismos de la emigración de aves y peces.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 7
+    },
+    {
+      "id": "B_44",
+      "num": 44,
+      "texto": "Diseñar un programa para la más rápida recuperación de los enfermos.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 7
+    },
+    {
+      "id": "B_45",
+      "num": 45,
+      "texto": "Investigar los tratamientos más adecuados para el parto en el ganado.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 7
+    },
+    {
+      "id": "B_46",
+      "num": 46,
+      "texto": "Participar en programas de mejoramiento de forrajes y alimentos para la producción del ganado lechero.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 7
+    },
+    {
+      "id": "B_47",
+      "num": 47,
+      "texto": "Estudiar la estructura de los diferentes tipos de árboles de una región selvática y las  funciones de la forma en que se relacionan.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 7
+    },
+    {
+      "id": "B_48",
+      "num": 48,
+      "texto": "Ser un experto en el diagnóstico del impacto ambiental que podría causar en el ecosistema una planta termoeléctrica, un hospital o una industria.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 7
+    },
+    {
+      "id": "B_49",
+      "num": 49,
+      "texto": "Trabajar en un buque pesquero como supervisor de calidad de los productos marinos que ahí mismo se enlatan.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 7
+    },
+    {
+      "id": "B_50",
+      "num": 50,
+      "texto": "Conocer las causas de origen biológico que intervienen en la extinción de algunas especies.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 8
+    },
+    {
+      "id": "B_51",
+      "num": 51,
+      "texto": "Participar en un equipo que investigue los efectos del exceso de colesterol en el organismo humano.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 8
+    },
+    {
+      "id": "B_52",
+      "num": 52,
+      "texto": "Cuidar la salud de los animales de una granja.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 8
+    },
+    {
+      "id": "B_53",
+      "num": 53,
+      "texto": "Diseñar nuevos sistemas de irrigación, fecundación y fertilización de hortalizas.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 8
+    },
+    {
+      "id": "B_54",
+      "num": 54,
+      "texto": "Ser un experto en enfermedades y plagas de árboles.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 8
+    },
+    {
+      "id": "B_55",
+      "num": 55,
+      "texto": "Desarrollar, con fundamentos, nuevas leyes que legislen a la industria en el uso de sus residuos, desechos y ubicación para prevenir la contaminación ambiental.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 8
+    },
+    {
+      "id": "B_56",
+      "num": 56,
+      "texto": "Clasificar peces de acuerdo con su valor comercial y alimenticio.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 8
+    },
+    {
+      "id": "B_57",
+      "num": 57,
+      "texto": "Hacer estudios para determinar qué animales están en peligro de extinción.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 9
+    },
+    {
+      "id": "B_58",
+      "num": 58,
+      "texto": "Manejar con destreza el instrumental médico.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 9
+    },
+    {
+      "id": "B_59",
+      "num": 59,
+      "texto": "Conocer las enfermedades de la raza canina y su tratamiento.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 9
+    },
+    {
+      "id": "B_60",
+      "num": 60,
+      "texto": "Crear nueva tecnología para mejorar la producción de la siembra de granos.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 9
+    },
+    {
+      "id": "B_61",
+      "num": 61,
+      "texto": "Conocer a fondo la vida  de los bosques y las selvas, además, la manera como interactúan los distintos tipos de árboles.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 9
+    },
+    {
+      "id": "B_62",
+      "num": 62,
+      "texto": "Trabajar en organismos e instituciones  dedicadas a la investigación y preservación del medio.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 9
+    },
+    {
+      "id": "B_63",
+      "num": 63,
+      "texto": "Producir alimentos para el hombre con productos del mar.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 9
+    },
+    {
+      "id": "B_64",
+      "num": 64,
+      "texto": "Conocer las teorías existentes acerca de la microbiología.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Puras",
+      "grupo": 10
+    },
+    {
+      "id": "B_65",
+      "num": 65,
+      "texto": "Conocer las diferencias entre la anatomía masculina y la femenina.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Humana",
+      "grupo": 10
+    },
+    {
+      "id": "B_66",
+      "num": 66,
+      "texto": "Hacer inseminaciones artificiales en el ganado.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Salud Animal",
+      "grupo": 10
+    },
+    {
+      "id": "B_67",
+      "num": 67,
+      "texto": "Crear mejores fuentes alimenticias para el ganado.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Terrestre",
+      "grupo": 10
+    },
+    {
+      "id": "B_68",
+      "num": 68,
+      "texto": "Ser un experto en la industrialización y explotación de los recursos madereros.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Silvícola",
+      "grupo": 10
+    },
+    {
+      "id": "B_69",
+      "num": 69,
+      "texto": "Proponer nuevas formas de vida urbana, que tengan como fin el beneficio de la Tierra (armonizar hombre-naturaleza).",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Ambientalista",
+      "grupo": 10
+    },
+    {
+      "id": "B_70",
+      "num": 70,
+      "texto": "Supervisar estanques donde existan criaderos de langostino y camarón.",
+      "area": "B",
+      "areaNombre": "Biológicas",
+      "subarea": "Marítima",
+      "grupo": 10
+    },
+    {
+      "id": "Q_1",
+      "num": 1,
+      "texto": "Investigar la composición molecular de cualquier sustancia en un laboratorio dedicado a la investigación.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 1
+    },
+    {
+      "id": "Q_2",
+      "num": 2,
+      "texto": "Trabajar para una industria metalúrgica en la obtención de nuevas aleaciones y tipos de metales.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 1
+    },
+    {
+      "id": "Q_3",
+      "num": 3,
+      "texto": "Aplicar técnicas químicas para elaborar productos alimenticios, como leche, quesos, jamón chorizos, sardinas, atún, etcétera.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 1
+    },
+    {
+      "id": "Q_4",
+      "num": 4,
+      "texto": "Hacer análisis clínicos en un hospital para identificar las bacterias que enferman a los individuos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 1
+    },
+    {
+      "id": "Q_5",
+      "num": 5,
+      "texto": "Trabajar para una campaña que produce medicamentos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 1
+    },
+    {
+      "id": "Q_6",
+      "num": 6,
+      "texto": "Producir fertilizantes para árboles frutales y plantas de consumo humano.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 1
+    },
+    {
+      "id": "Q_7",
+      "num": 7,
+      "texto": "Diseñar un procedimiento químico para elaborar pinturas con propiedades nuevas",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 1
+    },
+    {
+      "id": "Q_8",
+      "num": 8,
+      "texto": "Investigar las diferencias entre química orgánica e inorgánica.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 2
+    },
+    {
+      "id": "Q_9",
+      "num": 9,
+      "texto": "Supervisar el proceso químico en una fundidora productora de acero.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 2
+    },
+    {
+      "id": "Q_10",
+      "num": 10,
+      "texto": "Conocer de qué manera los microorganismos producen la fermentación de ciertas sustancias para utilizarlos en la elaboración de algunas bebidas.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 2
+    },
+    {
+      "id": "Q_11",
+      "num": 11,
+      "texto": "Conocer técnicas químicas para detectar la presencia de algunas enfermedades en el cuerpo humano.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 2
+    },
+    {
+      "id": "Q_12",
+      "num": 12,
+      "texto": "Trabajar en un laboratorio productor de medicamentos a base de penicilina.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 2
+    },
+    {
+      "id": "Q_13",
+      "num": 13,
+      "texto": "Conocer cómo actúan algunas sustancias químicas en el control de plagas de los sembradíos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 2
+    },
+    {
+      "id": "Q_14",
+      "num": 14,
+      "texto": "Supervisar la calidad de producción en una planta química industrial donde se elaboren aceites y aditivos de motores.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 2
+    },
+    {
+      "id": "Q_15",
+      "num": 15,
+      "texto": "Dedicarme a investigar en el laboratorio químico de una universidad y publicar los resultados de dicha investigación.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 3
+    },
+    {
+      "id": "Q_16",
+      "num": 16,
+      "texto": "Aplicar las técnicas químicas para obtener sustancias más perdurables en la fabricación de espejos y metales preciosos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 3
+    },
+    {
+      "id": "Q_17",
+      "num": 17,
+      "texto": "Trabajar en el laboratorio químico de una compañía dedicada a producir compuestos necesarios en la elaboración de alimentos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 3
+    },
+    {
+      "id": "Q_18",
+      "num": 18,
+      "texto": "Diseñar un modelo químico que rápidamente y con base en reactivos fáciles de usar en casa sea capaz de detectar: a)  el grado de azúcar en la sangre de una persona diabética;  b)  si hay embarazo, o c) una anormalidad en el organismo.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 3
+    },
+    {
+      "id": "Q_19",
+      "num": 19,
+      "texto": "Aplicar técnicas químicas para producir nuevos analgésicos y cierto tipo de drogas.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 3
+    },
+    {
+      "id": "Q_20",
+      "num": 20,
+      "texto": "Asesorar a un grupo de agricultores acerca del tipo de sustancias químicas que deben usar en sus sembradíos para el control de plagas.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 3
+    },
+    {
+      "id": "Q_21",
+      "num": 21,
+      "texto": "Diseñar un procedimiento químico para lograr plásticos resistentes.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 3
+    },
+    {
+      "id": "Q_22",
+      "num": 22,
+      "texto": "Profundizar en la composición química de los reactivos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 4
+    },
+    {
+      "id": "Q_23",
+      "num": 23,
+      "texto": "Trabajar en una planta química que produzca reactivos para el cemento y materiales de construcción.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 4
+    },
+    {
+      "id": "Q_24",
+      "num": 24,
+      "texto": "Supervisar el correcto uso de los conservadores en una empresa dedicada a producir embutidos como salchicha, jamón o productos del mar enlatados.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 4
+    },
+    {
+      "id": "Q_25",
+      "num": 25,
+      "texto": "Realizar análisis de microbios en un laboratorio, para combatir epidemias.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 4
+    },
+    {
+      "id": "Q_26",
+      "num": 26,
+      "texto": "Investigar una fórmula química que sea capaz de servir como medicamento o tratamiento eficaz contra los trastornos nerviosos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 4
+    },
+    {
+      "id": "Q_27",
+      "num": 27,
+      "texto": "Hacer una investigación para el Gobierno federal respecto a los compuestos químicos ecológicamente más idóneos en el control de las plagas de las hortalizas.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 4
+    },
+    {
+      "id": "Q_28",
+      "num": 28,
+      "texto": "Trabajar en planta química que produzca lacas y barnices.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 4
+    },
+    {
+      "id": "Q_29",
+      "num": 29,
+      "texto": "Enseñar química en la universidad",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 5
+    },
+    {
+      "id": "Q_30",
+      "num": 30,
+      "texto": "Diseñar nuevos equipos e instrumentos químicos para producir mejores productos de porcelana, barro y cerámica.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 5
+    },
+    {
+      "id": "Q_31",
+      "num": 31,
+      "texto": "Conocer el uso de los compuestos químicos en la elaboración de la cerveza.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 5
+    },
+    {
+      "id": "Q_32",
+      "num": 32,
+      "texto": "Diseñar un nuevo proceso químico que permita identificar el tipo de bacterias que afectan a un organismo",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 5
+    },
+    {
+      "id": "Q_33",
+      "num": 33,
+      "texto": "Realizar trabajos de investigación tendientes a desarrollar fórmulas nuevas y más eficientes en la producción de anticonceptivos, hormonas sintéticas, etcétera.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 5
+    },
+    {
+      "id": "Q_34",
+      "num": 34,
+      "texto": "Trabajar en la Secretaría de Agricultura como analista o evaluador de las sustancias que se usan en la prevención de enfermedades de plantas como la tomatera y la patata",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 5
+    },
+    {
+      "id": "Q_35",
+      "num": 35,
+      "texto": "Trabajar en una empresa dedicada a la producción de explosivos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 5
+    },
+    {
+      "id": "Q_36",
+      "num": 36,
+      "texto": "Profundizar en todos los grandes descubrimientos químicos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 6
+    },
+    {
+      "id": "Q_37",
+      "num": 37,
+      "texto": "Utilizar las técnicas químicas para producir cobre, zinc, etc., en una siderúrgica.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 6
+    },
+    {
+      "id": "Q_38",
+      "num": 38,
+      "texto": "Investigar las propiedades nutritivas de los peces y de los organismos marinos en general",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 6
+    },
+    {
+      "id": "Q_39",
+      "num": 39,
+      "texto": "Saber después de un análisis de microbios a un organismo enfermo, qué tipo de compuesto fármaco es el adecuado para su tratamiento.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 6
+    },
+    {
+      "id": "Q_40",
+      "num": 40,
+      "texto": "Trabajar en un laboratorio químico dedicado a dictaminar la peligrosidad del uso de ciertos fármacos por el hombre.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 6
+    },
+    {
+      "id": "Q_41",
+      "num": 41,
+      "texto": "Ser un experto en el diagnóstico y análisis de sustancias químicas que componen el suelo específico para siembra, con el propósito de mejorarlo.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 6
+    },
+    {
+      "id": "Q_42",
+      "num": 42,
+      "texto": "Conocer las técnicas de producción de asfaltos e impermeabilizantes.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 6
+    },
+    {
+      "id": "Q_43",
+      "num": 43,
+      "texto": "Crear nuevos métodos de análisis químicos y publicarlos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 7
+    },
+    {
+      "id": "Q_44",
+      "num": 44,
+      "texto": "Diseñar un proceso químico para obtener nuevos desinfectantes o bactericidas.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 7
+    },
+    {
+      "id": "Q_45",
+      "num": 45,
+      "texto": "Conocer técnicas de conservación química que eviten la descomposición de los alimentos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 7
+    },
+    {
+      "id": "Q_46",
+      "num": 46,
+      "texto": "Estudiar nuevos procedimientos para la detección del cáncer por medio de la orina.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 7
+    },
+    {
+      "id": "Q_47",
+      "num": 47,
+      "texto": "Diseñar para una industria un procedimiento químico para producir tratamientos anti-diarreicos, anti-infecciosos, etcétera.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 7
+    },
+    {
+      "id": "Q_48",
+      "num": 48,
+      "texto": "Hacer análisis de nutrimientos de pastos forrajeros.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 7
+    },
+    {
+      "id": "Q_49",
+      "num": 49,
+      "texto": "Trabajar en un laboratorio químico de Petróleos Mexicanos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 7
+    },
+    {
+      "id": "Q_50",
+      "num": 50,
+      "texto": "Investigar fenómenos químicos no explicados todavía.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 8
+    },
+    {
+      "id": "Q_51",
+      "num": 51,
+      "texto": "Supervisar en una industria el proceso químico para la elaboración de sales y minerales.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 8
+    },
+    {
+      "id": "Q_52",
+      "num": 52,
+      "texto": "Ser un perito del estado químico de los alimentos que están en venta al público.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 8
+    },
+    {
+      "id": "Q_53",
+      "num": 53,
+      "texto": "Trabajar en los laboratorios con un grupo de ginecólogos dedicados  a hacer pruebas a las pacientes respecto a la existencia de embarazo.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 8
+    },
+    {
+      "id": "Q_54",
+      "num": 54,
+      "texto": "Supervisar en una empresa la calidad química de la producción de cremas antisépticas.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 8
+    },
+    {
+      "id": "Q_55",
+      "num": 55,
+      "texto": "Trabajar en un laboratorio dedicado a realizar análisis de los elementos agrícolas, como suelos, pastos, enfermedades de plantas, etcétera.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 8
+    },
+    {
+      "id": "Q_56",
+      "num": 56,
+      "texto": "Trabajar en un laboratorio dedicado a producir nuevas fibras sintéticas derivadas del petróleo.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 8
+    },
+    {
+      "id": "Q_57",
+      "num": 57,
+      "texto": "Trabajar en un instituto de ciencias e investigación en química.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 9
+    },
+    {
+      "id": "Q_58",
+      "num": 58,
+      "texto": "Trabajar en una empresa vigilando el proceso químico de elaboración de aceros, etcétera.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 9
+    },
+    {
+      "id": "Q_59",
+      "num": 59,
+      "texto": "Diagnosticar mediante análisis químicos, la potabilidad del agua.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 9
+    },
+    {
+      "id": "Q_60",
+      "num": 60,
+      "texto": "Hacer análisis de sangre a los pacientes en un hospital.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 9
+    },
+    {
+      "id": "Q_61",
+      "num": 61,
+      "texto": "Conocer el procedimiento para elaborar fármacos que ayuden a los diabéticos o a cualquier otro tipo de enfermos.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 9
+    },
+    {
+      "id": "Q_62",
+      "num": 62,
+      "texto": "Asesorar a un grupo de agricultores acerca del uso correcto de insecticidas y pesticidas.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 9
+    },
+    {
+      "id": "Q_63",
+      "num": 63,
+      "texto": "Trabajar en los laboratorios químicos de una empresa dedicada a la fabricación de neumáticos (llantas) para automóviles.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 9
+    },
+    {
+      "id": "Q_64",
+      "num": 64,
+      "texto": "Experimentar nuevas fórmulas químicas y posteriormente hacer uniforme al respecto para publicarlo en una revista de investigación.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Puras",
+      "grupo": 10
+    },
+    {
+      "id": "Q_65",
+      "num": 65,
+      "texto": "Diseñar un procedimiento químico para elaborar aluminio, acero u otro tipo de metales.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Inorgánicas",
+      "grupo": 10
+    },
+    {
+      "id": "Q_66",
+      "num": 66,
+      "texto": "Conocer técnicas químicas para aprovechar los recursos alimenticios de algunos vegetales.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Alimentos",
+      "grupo": 10
+    },
+    {
+      "id": "Q_67",
+      "num": 67,
+      "texto": "Conocer el procedimiento químico para la detección del virus del SIDA.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Clínica",
+      "grupo": 10
+    },
+    {
+      "id": "Q_68",
+      "num": 68,
+      "texto": "Diseñar procedimientos para la conservación de algunos fármacos de origen orgánico que serán transportados a grandes distancias.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Bioq. Farmacología",
+      "grupo": 10
+    },
+    {
+      "id": "Q_69",
+      "num": 69,
+      "texto": "Trabajar en un departamento de análisis, cuya función sea la de controlar la buena calidad de los concentrados que se producen en una empresa de alimentos para ganado.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Químicas Agrícolas",
+      "grupo": 10
+    },
+    {
+      "id": "Q_70",
+      "num": 70,
+      "texto": "Conocer técnicas químicas para elaborar energéticos como gasolina y diesel.",
+      "area": "Q",
+      "areaNombre": "Químicas",
+      "subarea": "Org. Petroquímico Industrial",
+      "grupo": 10
+    },
+    {
+      "id": "A_1",
+      "num": 1,
+      "texto": "Llevar en computadora los inventarios de una empresa.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 1
+    },
+    {
+      "id": "A_2",
+      "num": 2,
+      "texto": "Hacer las declaraciones fiscales de algunas empresas.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 1
+    },
+    {
+      "id": "A_3",
+      "num": 3,
+      "texto": "Seleccionar personal en un centro de reclutamiento.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 1
+    },
+    {
+      "id": "A_4",
+      "num": 4,
+      "texto": "Trabajar en una compañía dedicada a la distribución de productos novedosos.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 1
+    },
+    {
+      "id": "A_5",
+      "num": 5,
+      "texto": "Administrar una agencia de viajes.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 1
+    },
+    {
+      "id": "A_6",
+      "num": 6,
+      "texto": "Planear los gastos que realizará un municipio.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 1
+    },
+    {
+      "id": "A_7",
+      "num": 7,
+      "texto": "Diseñar una campaña financiera para construir nuevos laboratorios en una universidad.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 1
+    },
+    {
+      "id": "A_8",
+      "num": 8,
+      "texto": "Asesorar a un grupo de campesinos en la comercialización de sus productos.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 1
+    },
+    {
+      "id": "A_9",
+      "num": 9,
+      "texto": "Dirigir una empresa minera.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 1
+    },
+    {
+      "id": "A_10",
+      "num": 10,
+      "texto": "Dirigir un centro computacional donde se maneje la información de un gran centro comercial.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 2
+    },
+    {
+      "id": "A_11",
+      "num": 11,
+      "texto": "Llevar en libros el control de egresos e ingresos de un corporativo.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 2
+    },
+    {
+      "id": "A_12",
+      "num": 12,
+      "texto": "Planear nuevas fórmulas de trabajo para que los empleados de un corporativo se sientan más satisfechos y contentos con sus labores.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 2
+    },
+    {
+      "id": "A_13",
+      "num": 13,
+      "texto": "Planificar campañas para introducir en las principales tiendas del extranjero algunos productos nacionales.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 2
+    },
+    {
+      "id": "A_14",
+      "num": 14,
+      "texto": "Promover turísticamente a la región.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 2
+    },
+    {
+      "id": "A_15",
+      "num": 15,
+      "texto": "Hacer presupuestos al gobierno del estado para campañas sociales.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 2
+    },
+    {
+      "id": "A_16",
+      "num": 16,
+      "texto": "Dirigir una institución educativa.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 2
+    },
+    {
+      "id": "A_17",
+      "num": 17,
+      "texto": "Administrar una propiedad agrícola.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 2
+    },
+    {
+      "id": "A_18",
+      "num": 18,
+      "texto": "Organizar los departamentos que laboren en una oficina dedicada a la explotación de minerales.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 2
+    },
+    {
+      "id": "A_19",
+      "num": 19,
+      "texto": "Someter a prueba nuevos programas computacionales para llevar el control de facturas en una negociación.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 3
+    },
+    {
+      "id": "A_20",
+      "num": 20,
+      "texto": "Realizar trabajos que le demuestren a un corporativo o asociación sus estados financieros objetivamente.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 3
+    },
+    {
+      "id": "A_21",
+      "num": 21,
+      "texto": "Implementar sistemas de remuneración y premio a los trabajadores, con el fin de que éstos se desempeñen más exitosamente.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 3
+    },
+    {
+      "id": "A_22",
+      "num": 22,
+      "texto": "Asesorar a grandes almacenes haciéndoles estudios que les ayuden a determinar las posibilidades de éxito al abrir un nuevo centro comercial.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 3
+    },
+    {
+      "id": "A_23",
+      "num": 23,
+      "texto": "Diseñar programas que motiven a los huéspedes de un complejo hotelero a regresar.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 3
+    },
+    {
+      "id": "A_24",
+      "num": 24,
+      "texto": "Asesorar a un grupo de gobernantes acerca de cómo utilizar los recursos financieros.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 3
+    },
+    {
+      "id": "A_25",
+      "num": 25,
+      "texto": "Trabajar en la organización de una institución educativa para el manejo eficiente de las colegiaturas.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 3
+    },
+    {
+      "id": "A_26",
+      "num": 26,
+      "texto": "Trabajar en un banco agrícola implementando programas crediticios que lleven a los agricultores a una mayor optimización de los mismos.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 3
+    },
+    {
+      "id": "A_27",
+      "num": 27,
+      "texto": "Diseñar sistemas de control en el almacenaje de maquinaria y equipo minero.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 3
+    },
+    {
+      "id": "A_28",
+      "num": 28,
+      "texto": "Implementar un sistema computarizado en el que un almacén pueda llevar el control diario en los precios de sus mercancías.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 4
+    },
+    {
+      "id": "A_29",
+      "num": 29,
+      "texto": "Verificar que sea exacta la información de un estado financiero presentado por un despacho de contadores.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 4
+    },
+    {
+      "id": "A_30",
+      "num": 30,
+      "texto": "Investigar la imagen que un centro comercial tiene entre sus clientes.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 4
+    },
+    {
+      "id": "A_31",
+      "num": 31,
+      "texto": "Trabajar en un despacho dedicado a facilitar los trámites aduanales que requieren algunas empresas en la importación y exportación de sus productos.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 4
+    },
+    {
+      "id": "A_32",
+      "num": 32,
+      "texto": "Trabajar en la Secretaría de Turismo.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 4
+    },
+    {
+      "id": "A_33",
+      "num": 33,
+      "texto": "Diseñar modelos administrativos que simplifiquen los servicios del Estado a los contribuyentes.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 4
+    },
+    {
+      "id": "A_34",
+      "num": 34,
+      "texto": "Implementar en una escuela sistemas administrativos más eficientes.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 4
+    },
+    {
+      "id": "A_35",
+      "num": 35,
+      "texto": "Implementar sistemas de comercialización de productos agrícolas, que permitan obtener mayores ganancias a los agricultores.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 4
+    },
+    {
+      "id": "A_36",
+      "num": 36,
+      "texto": "Comercializar los productos de un complejo siderúrgico.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 4
+    },
+    {
+      "id": "A_37",
+      "num": 37,
+      "texto": "Utilizar modernas computadoras para llevar el control de nómina del personal de una empresa.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 5
+    },
+    {
+      "id": "A_38",
+      "num": 38,
+      "texto": "Calcular si una empresa tiene utilidades o pérdidas económicas en su operación.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 5
+    },
+    {
+      "id": "A_39",
+      "num": 39,
+      "texto": "Diseñar programas de capacitación para los empleados de una industria.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 5
+    },
+    {
+      "id": "A_40",
+      "num": 40,
+      "texto": "Supervisar y diseñar campañas publicitarias para los centros comerciales de la región.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 5
+    },
+    {
+      "id": "A_41",
+      "num": 41,
+      "texto": "Diseñar planes de viaje para visitantes extranjeros.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 5
+    },
+    {
+      "id": "A_42",
+      "num": 42,
+      "texto": "Mejorar los procedimientos en las oficinas de pago de impuestos a través de modernos equipos de computación.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 5
+    },
+    {
+      "id": "A_43",
+      "num": 43,
+      "texto": "Trabajar en el departamento de una universidad, cuya labor sea planear e implementar campañas financieras para mejorar las instalaciones de dicha institución.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 5
+    },
+    {
+      "id": "A_44",
+      "num": 44,
+      "texto": "Dirigir una empresa agrícola.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 5
+    },
+    {
+      "id": "A_45",
+      "num": 45,
+      "texto": "Trabajar en un departamento laboral dedicado a contratar personal altamente especializado en los trabajos de extracción y beneficio de minerales.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 5
+    },
+    {
+      "id": "A_46",
+      "num": 46,
+      "texto": "Mantener actualizado a un corporativo con la información de su empresa, con base a la tecnología computacional.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 6
+    },
+    {
+      "id": "A_47",
+      "num": 47,
+      "texto": "Asesorar a un hospital acerca de cómo administrar sus utilidades económicas.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 6
+    },
+    {
+      "id": "A_48",
+      "num": 48,
+      "texto": "Dirigir una nueva empresa turística.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 6
+    },
+    {
+      "id": "A_49",
+      "num": 49,
+      "texto": "Asesorar a grupo de artesanos en a comercialización de su producción.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 6
+    },
+    {
+      "id": "A_50",
+      "num": 50,
+      "texto": "Fungir como presidente en un complejo hotelero.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 6
+    },
+    {
+      "id": "A_51",
+      "num": 51,
+      "texto": "Hacer presupuestos de gastos en una campaña política.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 6
+    },
+    {
+      "id": "A_52",
+      "num": 52,
+      "texto": "Ocupar un puesto directivo en una universidad prestigiada.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 6
+    },
+    {
+      "id": "A_53",
+      "num": 53,
+      "texto": "Organizar grupos de campesinos para optimizar la compra de implementos para siembra.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 6
+    },
+    {
+      "id": "A_54",
+      "num": 54,
+      "texto": "Hacer estudios de compra de maquinaria y de implementos mineros a una empresa dedicada a la minería.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 6
+    },
+    {
+      "id": "A_55",
+      "num": 55,
+      "texto": "Conocer métodos y técnicas de programación computacional, para llevar el control de entrada y salida de mercancía en una bodega.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 7
+    },
+    {
+      "id": "A_56",
+      "num": 56,
+      "texto": "Asesorar a una asociación de comerciantes para tramitar sus asuntos en la oficina federal de hacienda.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 7
+    },
+    {
+      "id": "A_57",
+      "num": 57,
+      "texto": "Diseñar un programa para que el producto de una industria sea mejor aceptado por el público (mejorar la imagen).",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 7
+    },
+    {
+      "id": "A_58",
+      "num": 58,
+      "texto": "Hacer estudios en la comunidad para determinar qué tipo de productos comerciales tendrán más éxito.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 7
+    },
+    {
+      "id": "A_59",
+      "num": 59,
+      "texto": "Administrar una empresa dedicada al intercambio de tiempos compartidos.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 7
+    },
+    {
+      "id": "A_60",
+      "num": 60,
+      "texto": "Fungir como tesorero en el gobierno del estado.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 7
+    },
+    {
+      "id": "A_61",
+      "num": 61,
+      "texto": "Dirigir a un grupo de maestros que implementarán un programa de mejoramiento académico.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 7
+    },
+    {
+      "id": "A_62",
+      "num": 62,
+      "texto": "Ser parte de una brigada de profesionales que se dediquen a asesorar a un grupo de agricultores en la organización de empresas rurales.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 7
+    },
+    {
+      "id": "A_63",
+      "num": 63,
+      "texto": "Trabajar estableciendo relaciones comerciales entre una compañía productora de materiales extraidos del subsuelo y compradores potenciales.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 7
+    },
+    {
+      "id": "A_64",
+      "num": 64,
+      "texto": "Dirigir el centro de informática ( computacional) del Aeropuerto Internacional.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 8
+    },
+    {
+      "id": "A_65",
+      "num": 65,
+      "texto": "Presentar ideas a un corporativo espectro a cómo invertir sus utilidades.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 8
+    },
+    {
+      "id": "A_66",
+      "num": 66,
+      "texto": "Manejar la Ley Federal del Trabajo para conocer a fondo los derechos y obligaciones de los trabajadores.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 8
+    },
+    {
+      "id": "A_67",
+      "num": 67,
+      "texto": "Hacer estudios para saber qué tipo de transporte resulta más barato y más eficiente para el envío de mercancía entre ciudades.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 8
+    },
+    {
+      "id": "A_68",
+      "num": 68,
+      "texto": "Supervisar en un centro vacacional la buena marcha de los servicios de atención al turismo.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 8
+    },
+    {
+      "id": "A_69",
+      "num": 69,
+      "texto": "Planear de manera más eficiente el control de gastos de los servicios del municipio, como policía, recolección de basura y mantenimiento de parques y jardines.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 8
+    },
+    {
+      "id": "A_70",
+      "num": 70,
+      "texto": "Presupuestar los gastos anuales de una escuela de educación superior y vigilar que éstos se apliquen correctamente.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 8
+    },
+    {
+      "id": "A_71",
+      "num": 71,
+      "texto": "Diseñar y proponer a la Secretaría de Agricultura un programa para el impulso de empresas agrícolas.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 8
+    },
+    {
+      "id": "A_72",
+      "num": 72,
+      "texto": "Hacer más fácil y eficiente la organización de las oficinas de una siderúrgica.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 8
+    },
+    {
+      "id": "A_73",
+      "num": 73,
+      "texto": "Buscar nuevas formas de organizar eficientemente la información en oficinas de gobierno.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 9
+    },
+    {
+      "id": "A_74",
+      "num": 74,
+      "texto": "Llevar la contabilidad de una institución educativa.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 9
+    },
+    {
+      "id": "A_75",
+      "num": 75,
+      "texto": "Conocer qué motiva a la gente a realizar mejor su trabajo.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 9
+    },
+    {
+      "id": "A_76",
+      "num": 76,
+      "texto": "Conocer a fondo el derecho mercantil.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 9
+    },
+    {
+      "id": "A_77",
+      "num": 77,
+      "texto": "Proponer campañas para atraer turismo extranjero al país.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 9
+    },
+    {
+      "id": "A_78",
+      "num": 78,
+      "texto": "Trabajar como directivo de la Secretaría de Hacienda y Crédito Público, realizando estudios acerca de la inversión de obras públicas.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 9
+    },
+    {
+      "id": "A_79",
+      "num": 79,
+      "texto": "Fundar una nueva escuela.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 9
+    },
+    {
+      "id": "A_80",
+      "num": 80,
+      "texto": "Llevar la organización de un establo - granja.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 9
+    },
+    {
+      "id": "A_81",
+      "num": 81,
+      "texto": "Hacer cálculos a una compañía minera respecto a los costos de extracción y producción.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 9
+    },
+    {
+      "id": "A_82",
+      "num": 82,
+      "texto": "Hacerse cargo de los sistemas de cómputo- electoral en las campañas políticas.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Instrumentales",
+      "grupo": 10
+    },
+    {
+      "id": "A_83",
+      "num": 83,
+      "texto": "Conocer a fondo el derecho fiscal para asesorar a la planta productiva.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Financieros",
+      "grupo": 10
+    },
+    {
+      "id": "A_84",
+      "num": 84,
+      "texto": "Planear programas publicitarios para una compañía.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Humanos",
+      "grupo": 10
+    },
+    {
+      "id": "A_85",
+      "num": 85,
+      "texto": "Promover en el extranjero y en el país la comercialización de nuevos productos eléctricos de uso doméstico.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Comerciales",
+      "grupo": 10
+    },
+    {
+      "id": "A_86",
+      "num": 86,
+      "texto": "Conocer la gastronomía nacional con el propósito de promover el turismo.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Turísticos",
+      "grupo": 10
+    },
+    {
+      "id": "A_87",
+      "num": 87,
+      "texto": "Supervisar el buen funcionamiento de las oficinas y departamentos que laboran en el gobierno del estado.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Públicos",
+      "grupo": 10
+    },
+    {
+      "id": "A_88",
+      "num": 88,
+      "texto": "Supervisar el buen funcionamiento académico de los profesores, de las instalaciones deportivas y de los laboratorios de la escuela.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Educativos",
+      "grupo": 10
+    },
+    {
+      "id": "A_89",
+      "num": 89,
+      "texto": "Ser distribuidor de productos agrícolas y ganaderos a establos y granjas.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Agrícolas",
+      "grupo": 10
+    },
+    {
+      "id": "A_90",
+      "num": 90,
+      "texto": "Promover empresas campesinas que se dediquen a la explotación de yacimientos mineros\t propios de sus tierras.",
+      "area": "A",
+      "areaNombre": "Administrativas",
+      "subarea": "Rec. Mineros",
+      "grupo": 10
+    },
+    {
+      "id": "S_1",
+      "num": 1,
+      "texto": "Conocer cómo afecta a las costumbres de una clase social la religión que profesan los individuos de dicha clase.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 1
+    },
+    {
+      "id": "S_2",
+      "num": 2,
+      "texto": "Ayudar a los enfermos de un hospital.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 1
+    },
+    {
+      "id": "S_3",
+      "num": 3,
+      "texto": "Conocer qué motiva al hombre a comportarse como lo hace.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 1
+    },
+    {
+      "id": "S_4",
+      "num": 4,
+      "texto": "Conocer a fondo cómo ha evolucionado la relación política entre los países latino americanos",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 1
+    },
+    {
+      "id": "S_5",
+      "num": 5,
+      "texto": "Conocer detalladamente las técnicas de enseñanza con las cuales los alumnos aprenden mejor del material impartido.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 1
+    },
+    {
+      "id": "S_6",
+      "num": 6,
+      "texto": "Ser portavoz ante los medios de comunicación, de los avances científicos de una universidad",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 1
+    },
+    {
+      "id": "S_7",
+      "num": 7,
+      "texto": "Investigar el por qué un grupo de indigenismo querrán hablar español.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 2
+    },
+    {
+      "id": "S_8",
+      "num": 8,
+      "texto": "Platicar con los familiares de los reclusos en un centro penitenciario con el propósito de que formen parte de la rehabilitación de los mismos.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 2
+    },
+    {
+      "id": "S_9",
+      "num": 9,
+      "texto": "Ayudar a alguien que está pasando por un momento difícil.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 2
+    },
+    {
+      "id": "S_10",
+      "num": 10,
+      "texto": "Conocer con detalle el derecho internacional que regula la relación entre los países.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 2
+    },
+    {
+      "id": "S_11",
+      "num": 11,
+      "texto": "Diseñar técnicas de educación para sordos y ciegos.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 2
+    },
+    {
+      "id": "S_12",
+      "num": 12,
+      "texto": "Representar en eventos de la comunidad a un grupo de empresarios.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 2
+    },
+    {
+      "id": "S_13",
+      "num": 13,
+      "texto": "Investigar con detalle los elementos que influyen para la formación de las pandillas que exhiben conductas antisociales.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 3
+    },
+    {
+      "id": "S_14",
+      "num": 14,
+      "texto": "Organizar colectas para los menesterosos e indígenas.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 3
+    },
+    {
+      "id": "S_15",
+      "num": 15,
+      "texto": "Ayudar a las familias en proceso de desintegración a integrarse nuevamente.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 3
+    },
+    {
+      "id": "S_16",
+      "num": 16,
+      "texto": "Defender con base en el derecho, los intereses de una empresa.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 3
+    },
+    {
+      "id": "S_17",
+      "num": 17,
+      "texto": "Trabajar en una institución educativa, diseñando programas para el mejor aprendizaje de los alumnos.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 3
+    },
+    {
+      "id": "S_18",
+      "num": 18,
+      "texto": "Representar a una ciudad dando una cálida recepción a visitantes extranjeros.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 3
+    },
+    {
+      "id": "S_19",
+      "num": 19,
+      "texto": "Investigar los elementos que influyen en el divorcio.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 4
+    },
+    {
+      "id": "S_20",
+      "num": 20,
+      "texto": "Promover cooperativas de consumo entre los más necesitados.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 4
+    },
+    {
+      "id": "S_21",
+      "num": 21,
+      "texto": "Entender cómo evoluciona o se desarrolla mejor la psicología del hombre.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 4
+    },
+    {
+      "id": "S_22",
+      "num": 22,
+      "texto": "Trabajar en una embajada fuera del país y defender de acuerdo con el derecho, a los indocumentados e inmigrantes.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 4
+    },
+    {
+      "id": "S_23",
+      "num": 23,
+      "texto": "Formar centros de capacitación e instrucción para campesinos.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 4
+    },
+    {
+      "id": "S_24",
+      "num": 24,
+      "texto": "Atender las quejas de los usuarios en una empresa",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 4
+    },
+    {
+      "id": "S_25",
+      "num": 25,
+      "texto": "Investigar los elementos que influyen en ciertos grupos humanos (indígenas o menonitas, por ejemplo, para que éstos no quieran vivir en la ciudad.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 5
+    },
+    {
+      "id": "S_26",
+      "num": 26,
+      "texto": "Servir como tercero en discordia para reconciliar familias.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 5
+    },
+    {
+      "id": "S_27",
+      "num": 27,
+      "texto": "Conocer la psicología profunda del hombre y saber cómo ésta lo lleva a actuar de una manera determinada.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 5
+    },
+    {
+      "id": "S_28",
+      "num": 28,
+      "texto": "Ser un experto en el derecho mercantil, nacional e internacional, para que de esta manera se agilice el comercio.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 5
+    },
+    {
+      "id": "S_29",
+      "num": 29,
+      "texto": "Implementar programas educativos que lleven a los estudiantes a un mejor aprovechamiento de las diferentes disciplinas.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 5
+    },
+    {
+      "id": "S_30",
+      "num": 30,
+      "texto": "Trabajar en un complejo turístico atendiendo a los usuarios para hacer más agradable su estancia.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 5
+    },
+    {
+      "id": "S_31",
+      "num": 31,
+      "texto": "Investigar las causas y consecuencias sociales de la explosión demográfica",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 6
+    },
+    {
+      "id": "S_32",
+      "num": 32,
+      "texto": "Conseguir donativos para equipar un hospital.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 6
+    },
+    {
+      "id": "S_33",
+      "num": 33,
+      "texto": "Conocer técnicas psicológicas que permitan a los demás conocerse e integrarse mejor.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 6
+    },
+    {
+      "id": "S_34",
+      "num": 34,
+      "texto": "Ser parte de un juzgado que determine, basado en el derecho, la culpabilidad o inocencia  de alguien.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 6
+    },
+    {
+      "id": "S_35",
+      "num": 35,
+      "texto": "Trabajar en brigadas de alfabetización.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 6
+    },
+    {
+      "id": "S_36",
+      "num": 36,
+      "texto": "Organizar actividades de convivencia (deportivas y culturales), en un complejo turístico.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 6
+    },
+    {
+      "id": "S_37",
+      "num": 37,
+      "texto": "Investigar las causas que llevan a los campesinos a emigrar a los Estados Unidos de América.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 7
+    },
+    {
+      "id": "S_38",
+      "num": 38,
+      "texto": "Promover mejores condiciones de vida para los jubilados, y que éstos se sientan bien sin las actividades acostumbradas.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 7
+    },
+    {
+      "id": "S_39",
+      "num": 39,
+      "texto": "Ayudar a los jóvenes a orientarse profesionalmente.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 7
+    },
+    {
+      "id": "S_40",
+      "num": 40,
+      "texto": "Actuar como  diputado o senador en la cámara legislativa. Aprobar, desaprobar y diseñar nuevas leyes.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 7
+    },
+    {
+      "id": "S_41",
+      "num": 41,
+      "texto": "Hacer estudios comparativos entre sistemas de enseñanza para determinar cuál es mejor.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 7
+    },
+    {
+      "id": "S_42",
+      "num": 42,
+      "texto": "Mejorar las relacione humanas en un centro laboral.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 7
+    },
+    {
+      "id": "S_43",
+      "num": 43,
+      "texto": "Investigar por qué en una comunidad hay diferentes formas de practicar la religión.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 8
+    },
+    {
+      "id": "S_44",
+      "num": 44,
+      "texto": "Hacer campañas para recolectar objetos domésticos usados y dárselos a los más necesitad.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 8
+    },
+    {
+      "id": "S_45",
+      "num": 45,
+      "texto": "Conocer a fondo cómo se desarrolla la personalidad e inteligencia del niño.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 8
+    },
+    {
+      "id": "S_46",
+      "num": 46,
+      "texto": "Participar en campañas políticas.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 8
+    },
+    {
+      "id": "S_47",
+      "num": 47,
+      "texto": "Crear programas para niños y adultos que exhiben problemas de aprendizaje.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 8
+    },
+    {
+      "id": "S_48",
+      "num": 48,
+      "texto": "Conocer las causas de una mala comunicación entre los trabajadores de un centro laboral y corregirlas.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 8
+    },
+    {
+      "id": "S_49",
+      "num": 49,
+      "texto": "Investigar la vida matrimonial y familiar de los grupos marginados.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 9
+    },
+    {
+      "id": "S_50",
+      "num": 50,
+      "texto": "Trabajar en una escuela del Estado para integrar a los padres de familia dentro del proceso educativo.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 9
+    },
+    {
+      "id": "S_51",
+      "num": 51,
+      "texto": "Aplicar pruebas que develen la personalidad de otros.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 9
+    },
+    {
+      "id": "S_52",
+      "num": 52,
+      "texto": "Proponer y diseñar nuevas leyes para la regulación del comercio internacional.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 9
+    },
+    {
+      "id": "S_53",
+      "num": 53,
+      "texto": "Supervisar que en una institución educativa, se cumplan los programas de estudio.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 9
+    },
+    {
+      "id": "S_54",
+      "num": 54,
+      "texto": "Conocer técnicas para diagnosticar y señalar a un grupo de empresarios los errores y problemas de comunicación que existen entre su empresa y la comunidad",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 9
+    },
+    {
+      "id": "S_55",
+      "num": 55,
+      "texto": "Investigar las formas de vida que caracterizan a las clases sociales altas.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Principios y Leyes",
+      "grupo": 10
+    },
+    {
+      "id": "S_56",
+      "num": 56,
+      "texto": "Ayudar a los habitantes de colonias pobres a tramitar los servicios de luz, agua, etc., ante el gobierno.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Asistencial",
+      "grupo": 10
+    },
+    {
+      "id": "S_57",
+      "num": 57,
+      "texto": "Trabajar en la rehabilitación de personas con trastornos psicológicos.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Existencial",
+      "grupo": 10
+    },
+    {
+      "id": "S_58",
+      "num": 58,
+      "texto": "Ser expertos en el conocimiento de la historia y evolución de los diversos grupos políticos del país.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Legal",
+      "grupo": 10
+    },
+    {
+      "id": "S_59",
+      "num": 59,
+      "texto": "Hacer investigación acerca de las técnicas de enseñanza y aprendizaje (cómo enseñar mejor)",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Educacional",
+      "grupo": 10
+    },
+    {
+      "id": "S_60",
+      "num": 60,
+      "texto": "Asesorar a una institución de gobierno en la implementación de programas que lleven a susmempleados a mejorar la comunicación y relación entre ellos y los directivos.",
+      "area": "S",
+      "areaNombre": "Sociales",
+      "subarea": "Rel. Interhumana",
+      "grupo": 10
+    },
+    {
+      "id": "H_1",
+      "num": 1,
+      "texto": "Conocer por qué y para qué existe el hombre.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 1
+    },
+    {
+      "id": "H_2",
+      "num": 2,
+      "texto": "Dirigir una obra teatral.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 1
+    },
+    {
+      "id": "H_3",
+      "num": 3,
+      "texto": "Escribir en un periódico.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 1
+    },
+    {
+      "id": "H_4",
+      "num": 4,
+      "texto": "Aprender técnicas de fotograbado.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 1
+    },
+    {
+      "id": "H_5",
+      "num": 5,
+      "texto": "Dirigir a un grupo escolar dedicado a realizar bailables folklóricos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 1
+    },
+    {
+      "id": "H_6",
+      "num": 6,
+      "texto": "Dirigir un coro eclesiástico.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 1
+    },
+    {
+      "id": "H_7",
+      "num": 7,
+      "texto": "Supervisar la información en un periódico.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 1
+    },
+    {
+      "id": "H_8",
+      "num": 8,
+      "texto": "Traducir las grandes obras clásicas de la literatura.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 1
+    },
+    {
+      "id": "H_9",
+      "num": 9,
+      "texto": "Hacer excavaciones en búsqueda de objetos pertenecientes a las civilizaciones antiguas.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 1
+    },
+    {
+      "id": "H_10",
+      "num": 10,
+      "texto": "Trabajar en una biblioteca.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 1
+    },
+    {
+      "id": "H_11",
+      "num": 11,
+      "texto": "Conocer a fondo el pensamiento de Aristóteles, Platón y Marx.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 2
+    },
+    {
+      "id": "H_12",
+      "num": 12,
+      "texto": "Actuar en televisión.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 2
+    },
+    {
+      "id": "H_13",
+      "num": 13,
+      "texto": "Supervisar la redacción y el estilo de los escritos realizados en un periódico.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 2
+    },
+    {
+      "id": "H_14",
+      "num": 14,
+      "texto": "Ser hábil en el manejo de técnicas para construcción de maquetas.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 2
+    },
+    {
+      "id": "H_15",
+      "num": 15,
+      "texto": "Participar en un grupo que investiga bailables y danzas regionales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 2
+    },
+    {
+      "id": "H_16",
+      "num": 16,
+      "texto": "Realizar composiciones musicales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 2
+    },
+    {
+      "id": "H_17",
+      "num": 17,
+      "texto": "Elaborar una revista de difusión dentro de la universidad.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 2
+    },
+    {
+      "id": "H_18",
+      "num": 18,
+      "texto": "Hacer doblajes de películas extranjeras.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 2
+    },
+    {
+      "id": "H_19",
+      "num": 19,
+      "texto": "Conocer la forma de vida de los pueblos a través de su religión y arte.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 2
+    },
+    {
+      "id": "H_20",
+      "num": 20,
+      "texto": "Conocer a fondo los sistemas de clasificación de libros.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 2
+    },
+    {
+      "id": "H_21",
+      "num": 21,
+      "texto": "Poder explicar el sentido  de la existencia de la vida humana.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 3
+    },
+    {
+      "id": "H_22",
+      "num": 22,
+      "texto": "Dirigir un grupo escolar de teatro.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 3
+    },
+    {
+      "id": "H_23",
+      "num": 23,
+      "texto": "Participar en un jurado que califique un concurso de novela.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 3
+    },
+    {
+      "id": "H_24",
+      "num": 24,
+      "texto": "Dominar las técnicas de acuarela y óleo.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 3
+    },
+    {
+      "id": "H_25",
+      "num": 25,
+      "texto": "Fungir como jurado en un certamen de baile y danza.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 3
+    },
+    {
+      "id": "H_26",
+      "num": 26,
+      "texto": "Ser hábil en el manejo de diversos instrumentos musicales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 3
+    },
+    {
+      "id": "H_27",
+      "num": 27,
+      "texto": "Producir documentales videograbados.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 3
+    },
+    {
+      "id": "H_28",
+      "num": 28,
+      "texto": "Traducir simultáneamente los trabajos de investigación que se exponen en un congreso internacional de ciencias.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 3
+    },
+    {
+      "id": "H_29",
+      "num": 29,
+      "texto": "Conocer las diferencias y semejanzas en la forma de vida de los diversos grupos indígenas.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 3
+    },
+    {
+      "id": "H_30",
+      "num": 30,
+      "texto": "Asesorar a coleccionistas de libros acerca de cómo organizarlos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 3
+    },
+    {
+      "id": "H_31",
+      "num": 31,
+      "texto": "Comparar diferentes teorías filosóficas que hablen del hombre, en relación con la religión.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 4
+    },
+    {
+      "id": "H_32",
+      "num": 32,
+      "texto": "Conocer con detalle las nuevas técnicas de dirección teatral.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 4
+    },
+    {
+      "id": "H_33",
+      "num": 33,
+      "texto": "Supervisar la redacción y el estilo de las editoriales de periódicos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 4
+    },
+    {
+      "id": "H_34",
+      "num": 34,
+      "texto": "Manejar las técnicas de reconstrucción de murales y esculturas.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 4
+    },
+    {
+      "id": "H_35",
+      "num": 35,
+      "texto": "Investigar la historia y evolución de los diferentes bailables y danzas internacionales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 4
+    },
+    {
+      "id": "H_36",
+      "num": 36,
+      "texto": "Conocer con detalle las posibilidades y limitaciones de diversos instrumentos musicales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 4
+    },
+    {
+      "id": "H_37",
+      "num": 37,
+      "texto": "Manejar hábilmente las cámaras fotográficas y de cine para producir audiovisuales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 4
+    },
+    {
+      "id": "H_38",
+      "num": 38,
+      "texto": "Servir como intérprete entre dos personas de diferente nacionalidad.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 4
+    },
+    {
+      "id": "H_39",
+      "num": 39,
+      "texto": "Saber clasificar utensilios, tales como herramientas de caza y de trabajo dejados por nuestros antepasados.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 4
+    },
+    {
+      "id": "H_40",
+      "num": 40,
+      "texto": "Ser experto en clasificación de documentos antiguos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 4
+    },
+    {
+      "id": "H_41",
+      "num": 41,
+      "texto": "Investigar lo que significa  el trabajo para el hombre.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 5
+    },
+    {
+      "id": "H_42",
+      "num": 42,
+      "texto": "Crear nuevos estilos de actuación.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 5
+    },
+    {
+      "id": "H_43",
+      "num": 43,
+      "texto": "Escribir cuentos cortos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 5
+    },
+    {
+      "id": "H_44",
+      "num": 44,
+      "texto": "Diseñar escenografías para obras teatrales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 5
+    },
+    {
+      "id": "H_45",
+      "num": 45,
+      "texto": "Participar en un grupo que ejecute danza clásica.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 5
+    },
+    {
+      "id": "H_46",
+      "num": 46,
+      "texto": "Investigar e interpretar la música latinoamericana.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 5
+    },
+    {
+      "id": "H_47",
+      "num": 47,
+      "texto": "Trabajar en un estudio dedicado a la fotografía.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 5
+    },
+    {
+      "id": "H_48",
+      "num": 48,
+      "texto": "Traducir documentos oficiales para los servidores de una embajada.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 5
+    },
+    {
+      "id": "H_49",
+      "num": 49,
+      "texto": "Entender las razones que llevaron a nuestros antepasados a construir sus centros ceremoniales y comerciales de una forma específica.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 5
+    },
+    {
+      "id": "H_50",
+      "num": 50,
+      "texto": "Dirigir o administrar una biblioteca universitaria.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 5
+    },
+    {
+      "id": "H_51",
+      "num": 51,
+      "texto": "Saber en detalle cómo el hombre conoce el mundo que lo rodea.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 6
+    },
+    {
+      "id": "H_52",
+      "num": 52,
+      "texto": "Representar papeles dramáticos y cómicos en un programa de radio.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 6
+    },
+    {
+      "id": "H_53",
+      "num": 53,
+      "texto": "Escribir guiones de teatro con temas de actualidad.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 6
+    },
+    {
+      "id": "H_54",
+      "num": 54,
+      "texto": "Conocer con detalle las técnicas para trabajar piel, vidrio, madera, etcétera.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 6
+    },
+    {
+      "id": "H_55",
+      "num": 55,
+      "texto": "Crear nuevas formas de expresión corporal y musical a través del baile.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 6
+    },
+    {
+      "id": "H_56",
+      "num": 56,
+      "texto": "Enseñar a los niños a solfear.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 6
+    },
+    {
+      "id": "H_57",
+      "num": 57,
+      "texto": "Producir programas televisivos en circuito cerrado dentro de la universidad.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 6
+    },
+    {
+      "id": "H_58",
+      "num": 58,
+      "texto": "Doblar al español series de televisión.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 6
+    },
+    {
+      "id": "H_59",
+      "num": 59,
+      "texto": "Conocer en profundidad las formas de vida de la gente que habita las ciudades perdidas o cinturones de miseria.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 6
+    },
+    {
+      "id": "H_60",
+      "num": 60,
+      "texto": "Ser encargado del cuidado de los libros de un gran monasterio.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 6
+    },
+    {
+      "id": "H_61",
+      "num": 61,
+      "texto": "Escribir un libro en el que analice a fondo el sentido y la razón de la relación entre los seres humanos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 7
+    },
+    {
+      "id": "H_62",
+      "num": 62,
+      "texto": "Actuar como maestro de ceremonias en un festival de música.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 7
+    },
+    {
+      "id": "H_63",
+      "num": 63,
+      "texto": "Participar en un programa de televisión charlando acerca de los diferentes géneros literarios.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 7
+    },
+    {
+      "id": "H_64",
+      "num": 64,
+      "texto": "Hacer una investigación respecto a la evolución de la artesanía en México.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 7
+    },
+    {
+      "id": "H_65",
+      "num": 65,
+      "texto": "Montar la coreografía para un programa o revista musical.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 7
+    },
+    {
+      "id": "H_66",
+      "num": 66,
+      "texto": "Leer e interpretar notas musicales.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 7
+    },
+    {
+      "id": "H_67",
+      "num": 67,
+      "texto": "Producir audiovisuales con las actividades más importantes del año.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 7
+    },
+    {
+      "id": "H_68",
+      "num": 68,
+      "texto": "Dominar perfectamente tres o más idiomas.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 7
+    },
+    {
+      "id": "H_69",
+      "num": 69,
+      "texto": "Estudiar a fondo la historia y evolución de un pueblo.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 7
+    },
+    {
+      "id": "H_70",
+      "num": 70,
+      "texto": "Hacer visitas de estudio a las más grandes y famosas bibliotecas del mundo, para conocer qué actividades se desarrollan ahí.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 7
+    },
+    {
+      "id": "H_71",
+      "num": 71,
+      "texto": "Conocer las teorías que hablan de Dios como fin último y fundamento del hombre.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 8
+    },
+    {
+      "id": "H_72",
+      "num": 72,
+      "texto": "Ser parte de un jurado que califique la mejor obra teatral.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 8
+    },
+    {
+      "id": "H_73",
+      "num": 73,
+      "texto": "Investigar los diferentes estilos y géneros literarios contenidos en la Biblia.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 8
+    },
+    {
+      "id": "H_74",
+      "num": 74,
+      "texto": "Ser jurado en un concurso de logotipos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 8
+    },
+    {
+      "id": "H_75",
+      "num": 75,
+      "texto": "Dirigir una escuela de danza y baile.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 8
+    },
+    {
+      "id": "H_76",
+      "num": 76,
+      "texto": "Hacer arreglos musicales para un intérprete famoso.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 8
+    },
+    {
+      "id": "H_77",
+      "num": 77,
+      "texto": "Tomar fotografías para una revista de circulación internacional.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 8
+    },
+    {
+      "id": "H_78",
+      "num": 78,
+      "texto": "Trabajar en una editorial haciendo traducciones de obras diversas.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 8
+    },
+    {
+      "id": "H_79",
+      "num": 79,
+      "texto": "Participar en el rescate de construcciones antiguas para reconstruir su historia.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 8
+    },
+    {
+      "id": "H_80",
+      "num": 80,
+      "texto": "Ser un experto en el manejo de colecciones clásicas de libros.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 8
+    },
+    {
+      "id": "H_81",
+      "num": 81,
+      "texto": "Conocer a fondo el fin que persigue el hombre , y la razón de la historia.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 9
+    },
+    {
+      "id": "H_82",
+      "num": 82,
+      "texto": "Investigar y representar teatro de origen indígena.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 9
+    },
+    {
+      "id": "H_83",
+      "num": 83,
+      "texto": "Enseñar redacción y ortografía.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 9
+    },
+    {
+      "id": "H_84",
+      "num": 84,
+      "texto": "Manejar las técnicas de dibujo.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 9
+    },
+    {
+      "id": "H_85",
+      "num": 85,
+      "texto": "Dirigir a un grupo de niños que ejecuten rondas infantiles.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 9
+    },
+    {
+      "id": "H_86",
+      "num": 86,
+      "texto": "Ser parte de una sinfónica.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 9
+    },
+    {
+      "id": "H_87",
+      "num": 87,
+      "texto": "Diseñar y producir programas televisivos para niños, con nuevos conceptos de la comunicación.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 9
+    },
+    {
+      "id": "H_88",
+      "num": 88,
+      "texto": "Conocer a fondo la gramática de otros idiomas, como francés, inglés, alemán, etcétera.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 9
+    },
+    {
+      "id": "H_89",
+      "num": 89,
+      "texto": "Hacer revisiones y estudios de documentos y manuscritos antiguos para escribir un artículo de historia.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 9
+    },
+    {
+      "id": "H_90",
+      "num": 90,
+      "texto": "Promover entre el público las visitas a la biblioteca.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 9
+    },
+    {
+      "id": "H_91",
+      "num": 91,
+      "texto": "Enseñar la materia de filosofía en una universidad prestigiada.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Humanidades",
+      "grupo": 10
+    },
+    {
+      "id": "H_92",
+      "num": 92,
+      "texto": "Dirigir telenovelas de alta calidad.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Oral",
+      "grupo": 10
+    },
+    {
+      "id": "H_93",
+      "num": 93,
+      "texto": "Hacer conciencia en la gente de lo importante que es el uso correcto del lenguaje escrito.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Escrita",
+      "grupo": 10
+    },
+    {
+      "id": "H_94",
+      "num": 94,
+      "texto": "Ser hábil en el uso de herramientas de dibujo y modelado.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Plástica",
+      "grupo": 10
+    },
+    {
+      "id": "H_95",
+      "num": 95,
+      "texto": "Organizar un programa para que la gente tome conciencia de la importancia  de la danza y el baile",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Corporal",
+      "grupo": 10
+    },
+    {
+      "id": "H_96",
+      "num": 96,
+      "texto": "Componer y ejecutar música con aparatos electrónicos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Expresión Auditiva",
+      "grupo": 10
+    },
+    {
+      "id": "H_97",
+      "num": 97,
+      "texto": "Manejar las teorías de la comunicación humana.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Complementación",
+      "grupo": 10
+    },
+    {
+      "id": "H_98",
+      "num": 98,
+      "texto": "Ayudar a estudiantes de posgrado en la traducción de materiales científicos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Idiomas",
+      "grupo": 10
+    },
+    {
+      "id": "H_99",
+      "num": 99,
+      "texto": "Investigar las diferentes maneras de cómo los diversos grupos sociales ofrecen culto a sus muertos.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Combinación",
+      "grupo": 10
+    },
+    {
+      "id": "H_100",
+      "num": 100,
+      "texto": "Conocer a fondo el manejo de una biblioteca.",
+      "area": "H",
+      "areaNombre": "Humanidades",
+      "subarea": "Cuidado Cultural",
+      "grupo": 10
+    }
+  ]
+}
