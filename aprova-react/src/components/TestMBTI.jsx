@@ -4,10 +4,28 @@ import './TestMBTI.css'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
 const ITEMS_PER_PAGE = 9
+const STORAGE_KEY = 'aprova_mbti_progreso'
+
+function cargarProgreso() {
+  try {
+    const saved = localStorage.getItem(STORAGE_KEY)
+    return saved ? JSON.parse(saved) : null
+  } catch { return null }
+}
+
+function guardarProgreso(data) {
+  localStorage.setItem(STORAGE_KEY, JSON.stringify(data))
+}
+
+function borrarProgreso() {
+  localStorage.removeItem(STORAGE_KEY)
+}
 
 function TestMBTI({ acceso, onVolver, onCompletado }) {
-  const [respuestas, setRespuestas] = useState({})
-  const [paginaActual, setPaginaActual] = useState(0)
+  const progreso = cargarProgreso()
+
+  const [respuestas, setRespuestas] = useState(progreso?.respuestas || {})
+  const [paginaActual, setPaginaActual] = useState(progreso?.paginaActual || 0)
   const [enviando, setEnviando] = useState(false)
   const [error, setError] = useState('')
   const [mostrarResultado, setMostrarResultado] = useState(false)
@@ -17,6 +35,11 @@ function TestMBTI({ acceso, onVolver, onCompletado }) {
   const totalPaginas = Math.ceil(dataMBTI.items.length / ITEMS_PER_PAGE)
   const itemsPagina = dataMBTI.items.slice(paginaActual * ITEMS_PER_PAGE, (paginaActual + 1) * ITEMS_PER_PAGE)
   const totalRespondidas = Object.keys(respuestas).length
+
+  // Guardar progreso cada vez que cambian las respuestas o la página
+  useEffect(() => {
+    guardarProgreso({ respuestas, paginaActual })
+  }, [respuestas, paginaActual])
 
   const handleRespuesta = (id) => {
     setRespuestas(prev => {
@@ -89,6 +112,7 @@ function TestMBTI({ acceso, onVolver, onCompletado }) {
 
       const data = await response.json()
       if (data.success) {
+        borrarProgreso()
         setMostrarResultado(true)
       } else {
         setError('Error al enviar. Intenta de nuevo.')

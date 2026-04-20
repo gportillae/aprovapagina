@@ -1300,6 +1300,257 @@ async function generarExcel({ nombre, email, modalidad, testNombre, respuestas, 
       mbtiSheet.addRow([])
     })
 
+    // ===== DESCRIPCIÓN DETALLADA DEL TIPO =====
+    const descripcionesMBTI = {
+      ISTJ: {
+        titulo: 'ISTJ - El Inspector',
+        motivacion: 'Le gusta mirar la información en términos de hechos y detalles. Se enfoca más en el aquí y ahora más que en las posibilidades del futuro. Se siente confortable en áreas que han sido probadas con la experiencia. Toma un enfoque realista de las cosas.',
+        preferencias: 'Busca desarrollar una visión realista del mundo como es a la luz de lo que observa. Es pragmático por naturaleza y aprende constantemente a adaptarse al mundo como es ahora. Observa de modo subjetivo, seleccionando y relacionando los hechos que otros dejan pasar.',
+        conducta: 'Se enfoca en su mundo interior sensitivo en hechos impersonales y opciones lógicas. Tiende a detectar las fallas y las injusticias. Toma decisiones con base en el análisis lógico que soporta su forma de entender el mundo.',
+        equipo: 'Trabajar duro y eficientemente para completar tareas en los plazos previstos. Clasificar las ideas e identificar aquellas que son más prácticas. Aplicar el sentido común para enfrentarse a la resolución de problemas. Mantener al equipo enfocado en el objetivo. Aplicar procedimientos y metodologías.',
+        irritar: 'No articula su comprensión de la situación. No ve el bosque sino los árboles. Es demasiado serio. Parece ser inflexible. No estimula a los otros a experimentar o innovar.',
+        crecimiento: 'Articular más sus propios puntos de vista. Desarrollar una visión de largo plazo. Entender más cómo sienten los demás. Cambiar las cosas por experimentar para ver de qué manera pueden mejorarse.',
+        estres: 'Buscar un lugar solitario en donde pueda pensar y trabajar. Usar métodos probados y confiables para resolver problemas. Dirigir o criticar los esfuerzos de los otros.'
+      },
+      ISFJ: {
+        titulo: 'ISFJ - El Protector',
+        motivacion: 'Le gusta mirar la información en términos de hechos y detalles. Se enfoca más en el aquí y ahora más que en las posibilidades del futuro. Se siente confortable en áreas que han sido probadas con la experiencia. Toma un enfoque realista de las cosas.',
+        preferencias: 'Busca desarrollar una visión realista del mundo como es a la luz de lo que observa. Es pragmático por naturaleza y aprende constantemente a adaptarse al mundo como es ahora.',
+        conducta: 'Enfoca su mundo interior de emociones en ideas y posibilidades que se relacionan con la gente. Expresa su aprecio por las contribuciones de los otros. Toma decisiones con base en los valores que soportan su forma de entender el mundo.',
+        equipo: 'Trabaja duro y eficientemente para completar tareas en los plazos previstos. Construye el espíritu del equipo manteniendo buenas relaciones con cada miembro. Asegura que cada uno en el equipo se siente valorado.',
+        irritar: 'Evita el conflicto y no proporciona su crítica cuando es requerida. No articula su forma de entender las situaciones. No ve el bosque sino los árboles. Falla en establecer sus propias necesidades.',
+        crecimiento: 'Articular más sus propios puntos de vista. Desarrollar una visión de largo plazo. Entrenamiento en ser más asertivo. Ser más franco y ofrecer una crítica directa.',
+        estres: 'Buscar un lugar solitario en donde pueda pensar y trabajar. Valorar los esfuerzos de los otros. Usar métodos probados y confiables para resolver problemas.'
+      },
+      INFJ: {
+        titulo: 'INFJ - El Consejero',
+        motivacion: 'Le gusta mirar la información desde un punto de vista global, detectando los patrones y relaciones que lo llevan a entender los puntos clave. Se enfoca más en las posibilidades para el futuro que en el aquí y ahora. Disfruta del cambio, el reto y la variedad.',
+        preferencias: 'Busca desarrollar un entendimiento de cómo es o cómo puede ser el mundo. Busca entender los patrones que se esconden en sus observaciones. Es estratégico por naturaleza, deseando establecer una visión clara hacia la cual trabajar.',
+        conducta: 'Enfoca su mundo interior de intuición en ideas y posibilidades que se relacionan con la gente. Expresa su apreciación por las contribuciones de los demás. Toma decisiones con base en los valores que soportan su forma de entender el mundo.',
+        equipo: 'Observa y entiende la dinámica del equipo. Escucha cuidadosamente varios puntos de vista e identifica áreas de acuerdo. Es confiable y cumple con sus compromisos. Aporta ideas creativas orientadas a las personas.',
+        irritar: 'No incluye a los demás en su proceso de desarrollar ideas y visión. No critica o expresa su desacuerdo cuando es apropiado. Ignora la realidad presente en búsqueda de profundidad y significado.',
+        crecimiento: 'Estar preparado para declarar sus propias visiones o metas. Investigar y reconocer los hechos antes de interpretar su significado. Cambiar su visión para ajustarla a lo que es realmente posible.',
+        estres: 'Buscar un lugar solitario en donde pueda pensar y trabajar. Tratar de resolver el problema a largo plazo. Cometer errores de hecho o ignorar elementos rutinarios esenciales.'
+      },
+      INTJ: {
+        titulo: 'INTJ - El Estratega',
+        motivacion: 'Le gusta mirar la información desde un punto de vista global, detectando los patrones y relaciones que lo llevan a entender los puntos clave. Se enfoca más en las posibilidades para el futuro. Disfruta el cambio, el reto y la variedad.',
+        preferencias: 'Busca desarrollar un entendimiento de cómo es o cómo puede ser el mundo. Busca entender los patrones que se esconden en sus observaciones. Es estratégico por naturaleza, deseando establecer una visión clara hacia la cual trabajar.',
+        conducta: 'Enfoca su mundo interior de intuición en ideas y posibilidades que se relacionan con los sistemas y conceptos. Mantiene una visión de largo plazo. Aplica un análisis lógico a los patrones y posibilidades percibidos.',
+        equipo: 'Retar al status quo. Conducir al equipo a un mayor entendimiento de los principios involucrados. Encontrar formas de superar dificultades aparentemente insolubles. Producir trabajo de alto nivel de calidad.',
+        irritar: 'Puede ser obstinado y terco. No toma en cuenta suficientemente las realidades presentes. No expresa su apreciación por las contribuciones de los otros. No delega.',
+        crecimiento: 'Articular su visión y permitir que otros contribuyan en su desarrollo. Expresar apreciación por el trabajo realizado. Investigar los hechos y documentarlos antes de interpretar lo que significan.',
+        estres: 'Retirarse a un lugar privado para pensar a fondo un problema. Tratar de mantener un alto grado de calidad en la solución. Criticar las ideas de los demás.'
+      },
+      ISTP: {
+        titulo: 'ISTP - El Artesano',
+        motivacion: 'Le gusta tomar decisiones con base en la lógica, mediante consideraciones objetivas. Se preocupa por la verdad, los principios y la justicia. Es analítico y crítico, tiende a ver los inconvenientes en las situaciones.',
+        preferencias: 'Pasa tiempo pensando analíticamente, organizando sus pensamientos sobre una base lógica. Desarrolla una comprensión de los principios que hay detrás de una situación. Toma decisiones internamente, pero no las comunica a los demás.',
+        conducta: 'Enfoca su mundo interior en entender problemas prácticos o mecánicos. Percibe los hechos que son apropiados para respaldar su análisis lógico.',
+        equipo: 'Ser la fuente de información o un "experto" en algunos temas. Usar destrezas analíticas para producir soluciones prácticas a problemas difíciles. Permanecer con cabeza fría en una crisis.',
+        irritar: 'Se enfoca demasiado en la tarea presente a expensas del largo plazo. No ve el bosque sino los árboles. No completa una tarea antes de trasladar su atención a la siguiente. No comunica su forma de entender una situación.',
+        crecimiento: 'Tomarse tiempo para considerar el impacto de sus enfoques e ideas en los sentimientos de los demás. Expresar apreciación hacia los otros. Desarrollar una estrategia personal de largo plazo.',
+        estres: 'Aislarse de la gente, para pensar a fondo las posibles soluciones. Usar soluciones probadas y conocidas para los problemas de corto plazo. Criticar los esfuerzos de los otros.'
+      },
+      ISFP: {
+        titulo: 'ISFP - El Aventurero',
+        motivacion: 'Toma decisiones basado en sus valores personales. Aprecia y acepta a las personas, disfrutando su compañía y la búsqueda de la armonía. Establece el impacto de las decisiones en los demás, es comprensivo y compasivo.',
+        preferencias: 'Desarrolla una vida interna emocional que a menudo no es percibida por los demás, pero que es experimentada intensamente. Conserva un sentido fuerte de los valores, que a menudo no expresa.',
+        conducta: 'Enfoca su mundo interior de sentimientos hacia sus relaciones presentes y hacia las personas. Busca disfrutar de la compañía de aquellos que conoce. Ayuda a los demás en forma práctica.',
+        equipo: 'Resolver problemas tan pronto ocurran, especialmente aquellos que involucran personas. Generar el espíritu de equipo mediante la promoción de la cooperación. Asegurar el bienestar de los miembros del equipo.',
+        irritar: 'Se preocupa demasiado por la armonía del grupo. No impulsa suficientemente sus propias ideas. Es obstinado acerca de temas que el grupo no había considerado como problemas. Evita los conflictos.',
+        crecimiento: 'Estar preparado para declarar sus valores personales. Interpretar los hechos que observa para revelar los significados ocultos. Establecer metas de largo plazo y desarrollar un plan detallado.',
+        estres: 'Concentrarse solamente en lo que le parece importante. Trabajar solo. Actuar impulsivamente y tomar riesgos.'
+      },
+      INFP: {
+        titulo: 'INFP - El Mediador',
+        motivacion: 'Toma decisiones con base en sus valores personales. Aprecia y acepta a las personas, disfrutando su compañía y la búsqueda de la armonía. Es comprensivo y compasivo. Toma las cosas desde el punto de vista de las personas.',
+        preferencias: 'Desarrolla una vida interna emocional que a menudo no es percibida por los demás, pero que es experimentada intensamente. Acepta o rechaza emocionalmente varios aspectos de la vida.',
+        conducta: 'Enfoca su mundo interior de sentimientos hacia ideas y posibilidades para las personas, buscando relaciones significativas. Decide sobre la amistad a través de indagar en la personalidad y las motivaciones de los demás.',
+        equipo: 'Promover la reflexión y el entendimiento común entre el equipo. Contribuir con ideas meditadas a fondo e innovadoras. Generar el espíritu de equipo a través de escuchar con atención.',
+        irritar: 'Es demasiado idealista. Parece fuera de contacto, sin reconocer las realidades presentes. Pasa mucho tiempo reflexionando. Evita los conflictos y no proporciona crítica directa.',
+        crecimiento: 'Estar preparado para declarar sus valores personales. Investigar y reconocer los hechos antes de interpretar su significado. Enfocarse en detalles impersonales durante las discusiones.',
+        estres: 'Concentrarse solamente en lo que le parece importante. Trabajar solo. Contribuir ideas creativas pero pasar por alto las realidades presentes.'
+      },
+      INTP: {
+        titulo: 'INTP - El Lógico',
+        motivacion: 'Le gusta tomar decisiones con base en la lógica y mediante consideraciones objetivas. Se preocupa con la verdad, los principios y la justicia. Es analítico y crítico, tiende a ver las deficiencias en las situaciones.',
+        preferencias: 'Pasa tiempo pensando analíticamente y organizando sus pensamientos sobre bases lógicas. Desarrolla una comprensión de los principios que hay detrás de una situación. Piensa principalmente sobre temas impersonales.',
+        conducta: 'Enfoca su mundo interior en entender las posibilidades para el futuro. Percibe patrones en la información para sustentar su análisis lógico.',
+        equipo: 'Usar destrezas analíticas y críticas para resolver problemas. Enfocar la atención en el punto central de una situación. Proporcionar perspicacia intelectual. Sugerir ideas que apuntan a metas de corto y largo plazo.',
+        irritar: 'Es demasiado intelectual. Encuentra demasiadas fallas y no acepta soluciones imperfectas. No toma en cuenta los sentimientos de los otros. Se aferra a un principio a expensas de las relaciones.',
+        crecimiento: 'Expresar apreciación hacia los otros. Trabajar dentro de las limitaciones de los demás. Aceptar y reconocer los esfuerzos imperfectos de los otros. Desarrollar relaciones personales.',
+        estres: 'Apartarse para pensar acerca del punto principal que requiere atención. Debatir el tema desde un punto de vista intelectual. Criticar los esfuerzos de los demás e ignorar sus sentimientos.'
+      },
+      ESTP: {
+        titulo: 'ESTP - El Emprendedor',
+        motivacion: 'Le gusta mirar la información en términos de hechos y detalles. Se enfoca más en el aquí y ahora. Se siente confortable en áreas que han sido probadas con la experiencia. Toma un enfoque realista de las cosas.',
+        preferencias: 'Busca experimentar y disfrutar el mundo como es. Está muy interesado en los eventos actuales. Es pragmático por naturaleza, buscando cambiar el mundo a la forma en que quiere que sea.',
+        conducta: 'Se enfoca en su mundo interior sensitivo en hechos impersonales y opciones lógicas. Tiende a disfrutar la acción y los eventos en sí mismos. Disfruta de las posesiones materiales.',
+        equipo: 'Hacer que las cosas sucedan, con un enfoque orientado a la acción. Construir una atmósfera de "puede hacerse". Enfocarse en ideas prácticas. Aplicar el sentido común cuando se trata de resolver problemas.',
+        irritar: 'Actúa muy rápido aparentemente sin pensar las cosas con cuidado. Se enfoca demasiado en la tarea actual. No toma en cuenta la sensibilidad de los demás. Genera crisis como forma de hacer que las cosas se lleven a cabo.',
+        crecimiento: 'Desarrollar una visión de largo plazo. Entender más cómo sienten los demás. Detenerse y pensar antes de actuar. Asegurarse de que todos los aspectos de una tarea se han completado.',
+        estres: 'Usar su energía impulsiva para sobrepasar cualquier obstáculo. Generar nuevas acciones. Usar métodos probados y confiables para resolver problemas.'
+      },
+      ESFP: {
+        titulo: 'ESFP - El Animador',
+        motivacion: 'Le gusta mirar la información en términos de hechos y detalles. Se enfoca más en el aquí y ahora. Se siente confortable en áreas que han sido probadas con la experiencia. Toma un enfoque realista de las cosas.',
+        preferencias: 'Busca experimentar y disfrutar el mundo como es. Está muy interesado en los eventos actuales. Es pragmático por naturaleza. Observa de modo objetivo.',
+        conducta: 'Se enfoca en su mundo exterior de sensaciones en relaciones y hechos que se refieren a las personas. Tiende a disfrutar la acción y los eventos por la compañía de los demás. Disfruta de la interacción con otras personas.',
+        equipo: 'Involucrar a todos en la discusión y la toma de decisiones. Valorar las fortalezas de cada individuo. Usar el sentido del humor para construir una atmósfera amistosa. Aplicar el sentido común.',
+        irritar: 'Toma un enfoque demasiado personal, asume las críticas personalmente. Actúa muy rápido aparentemente sin pensar. No toma en cuenta los costos o las consideraciones lógicas. Abusa del humor.',
+        crecimiento: 'Desarrollar una mayor comprensión de la forma en que sienten las personas. Detenerse y pensar antes de actuar. Pasar tiempo interpretando los hechos, buscando significados subjetivos y patrones ocultos.',
+        estres: 'Convocar la ayuda de otras personas. Usar métodos probados y confiables. Actuar impulsivamente y tomar riesgos.'
+      },
+      ENFP: {
+        titulo: 'ENFP - El Activista',
+        motivacion: 'Le gusta mirar la información desde un punto de vista global, detectando patrones y relaciones que lleven a entender los puntos claves. Se enfoca más en las posibilidades para el futuro. Disfruta del cambio, el reto y la variedad.',
+        preferencias: 'Ensaya las ideas, explora nuevas posibilidades y descubre por experiencia cuáles funcionan. Cambia los procedimientos para ver qué mejoras se pueden hacer. Está más interesado en explorar las ideas que en llevarlas a término.',
+        conducta: 'Se enfoca en su mundo exterior de ideas y posibilidades que se relacionan con las personas. Internamente aprecia las contribuciones de los demás, aunque no las expresa a menudo.',
+        equipo: 'Actuar como un catalizador del cambio. Enfocarse en puntos de acuerdo y construir sobre las proposiciones de los demás. Contribuir con ideas creativas orientadas a las personas. Generar espíritu de equipo.',
+        irritar: 'Pierde la visión del propósito principal. Inicia demasiados proyectos y no puede responder por todos. Habla demasiado. Realiza muchos cambios. Comete errores de hecho.',
+        crecimiento: 'Ser selectivo acerca de iniciar proyectos. Aceptar el valor de las rutinas existentes que funcionan bien. Investigar los hechos y documentarlos antes de interpretar su significado.',
+        estres: 'Involucrar a las personas en sesiones de lluvia de ideas. Ser democrático en la escogencia de la solución. Proporcionar mucho impulso, pero tratar de hacer demasiado.'
+      },
+      ENTP: {
+        titulo: 'ENTP - El Innovador',
+        motivacion: 'Le gusta mirar la información desde un punto de vista global, detectando los patrones y relaciones que lo llevan a entender los puntos clave. Se enfoca más en las posibilidades para el futuro. Disfruta el cambio, el reto y la variedad.',
+        preferencias: 'Ensaya las ideas, explora nuevas posibilidades y descubre por experiencia cuáles funcionan. Cambia los procedimientos para ver qué mejoras se pueden hacer. Está más interesado en explorar las ideas que en llevarlas a término.',
+        conducta: 'Enfoca su mundo interior de intuición en ideas y posibilidades que se relacionan con los sistemas y conceptos. Internamente tiende a detectar las fallas en las situaciones. Aplica un análisis lógico a los patrones percibidos.',
+        equipo: 'Retar al status quo y promover que otros miembros del equipo logren más. Conducir al equipo a un mayor entendimiento de los principios. Crear nuevas ideas a partir de discusiones. Encontrar formas de vencer dificultades insuperables.',
+        irritar: 'Inicia demasiados proyectos y no puede responder por todos. No se da cuenta de las realidades presentes. Parece competitivo y no aprecia las contribuciones de los demás. Deja a otros el trabajo rutinario.',
+        crecimiento: 'Ser selectivo acerca de iniciar proyectos. Aceptar el valor de las rutinas existentes. Investigar los hechos y documentarlos. Tomarse tiempo para considerar el impacto en los sentimientos de los demás.',
+        estres: 'Dedicar tiempo a sesiones de lluvias de ideas y debatir. Proporcionar mucho impulso pero tratar de hacer demasiado. Convocar personas con habilidades comprobadas.'
+      },
+      ESTJ: {
+        titulo: 'ESTJ - El Director',
+        motivacion: 'Le gusta tomar decisiones con base en la lógica, mediante consideraciones objetivas. Se preocupa por la verdad, los principios y la justicia. Es analítico y crítico. Toma un punto de vista objetivo.',
+        preferencias: 'Organiza la vida con una base lógica, clasificando, ordenando y dirigiendo los hechos y situaciones. Es decisivo con el fin de ser justo y equitativo. Critica espontáneamente. No le teme al conflicto.',
+        conducta: 'Enfoca su mundo exterior de reflexión en decisiones prácticas que llevan a formas confiables y probadas de organizarse y resolver problemas. Enfoca sus decisiones en consideraciones inmediatas.',
+        equipo: 'Trabajar duro y eficientemente para completar tareas en los plazos previstos. Contribuir con sus capacidades de organizar en forma práctica el trabajo. Aplicar argumentos relevantes y realistas.',
+        irritar: 'Se enfoca demasiado en la tarea actual. Es demasiado franco al criticar. No ve el bosque sino los árboles. No estimula a los otros a experimentar o innovar. No tiene en cuenta los sentimientos de los demás.',
+        crecimiento: 'Detenerse a pensar y reconocer que los otros pueden aceptar mejor sus ideas si las contribuciones de ellos también son valoradas. Tomarse tiempo para considerar el impacto en los sentimientos de los demás.',
+        estres: 'Tomar el control, decidir y decirle a todos lo que hay que hacer. Usar soluciones probadas y conocidas. Tomar decisiones apresuradamente sin considerar el impacto en las personas.'
+      },
+      ESFJ: {
+        titulo: 'ESFJ - El Cónsul',
+        motivacion: 'Toma decisiones basado en sus valores personales. Aprecia y acepta a las personas, disfrutando su compañía y la búsqueda de la armonía. Es comprensivo y compasivo. Toma las cosas desde el punto de vista de las personas.',
+        preferencias: 'Busca relaciones estables y armoniosas. Tiende a adaptarse al entorno. Expresa la apreciación que siente hacia los demás. Tiende a considerar los sentimientos de los otros antes que los propios.',
+        conducta: 'Enfoca su mundo exterior de sentimientos en las relaciones presentes y las personas. Encuentra formas prácticas de estar al servicio de las personas. Observa a las personas subjetivamente.',
+        equipo: 'Trabaja duro y eficientemente para completar tareas. Asegura que cada uno se siente valorado. Mantiene buenas relaciones y construye el espíritu de equipo. Mantiene al equipo informado pidiendo contribuciones de todos.',
+        irritar: 'Habla demasiado. Asume que conoce las necesidades de los demás. Evita el conflicto. No pone atención a sus propias necesidades. Es reacio a intentar nuevas cosas.',
+        crecimiento: 'Aprender a observar y aceptar los aspectos negativos de personas que admira. Intentar ver a las personas de manera más independiente y objetiva. Expresar su desacuerdo o crítica cuando sea de valor.',
+        estres: 'Trabajar duro para completar tareas predeterminadas. Expresar apreciación por los esfuerzos de todos. No reconocer la necesidad de cambio. Negar sus propias necesidades.'
+      },
+      ENFJ: {
+        titulo: 'ENFJ - El Protagonista',
+        motivacion: 'Toma decisiones basado en sus valores personales. Aprecia y acepta a las personas, disfrutando su compañía y la búsqueda de la armonía. Es comprensivo y compasivo. Toma las cosas desde el punto de vista de las personas.',
+        preferencias: 'Busca relaciones estables y armoniosas. Tiende a adaptarse al entorno. Expresa la apreciación que siente hacia los demás. Es sensible al elogio y la crítica.',
+        conducta: 'Enfoca su mundo exterior de sentimientos en ideas y posibilidades orientadas hacia las personas. Busca relaciones significativas. Intenta entender a las personas, obteniendo conocimiento de su personalidad y motivaciones.',
+        equipo: 'Promueve inspiración y entendimiento mutuo dentro del equipo. Facilita las discusiones promoviendo los aportes de todos. Busca llegar a decisiones por consenso. Genera espíritu de equipo con energía y entusiasmo.',
+        irritar: 'Habla demasiado. Asume que conoce las necesidades de los demás. Evita el conflicto. Toma la crítica en forma personal. Se enfoca demasiado en los temas interpersonales.',
+        crecimiento: 'Buscar formas objetivas e independientes de verificar sus ideas acerca de las personas. Detenerse a pensar e impulsar a los otros a expresar sus propias necesidades. Enfocarse en los detalles impersonales.',
+        estres: 'Organizar a todo el mundo. Expresar aprecio por sus esfuerzos. Contribuir con ideas creativas pero ignorar las realidades presentes.'
+      },
+      ENTJ: {
+        titulo: 'ENTJ - El Comandante',
+        motivacion: 'Le gusta tomar decisiones con base en la lógica, mediante consideraciones objetivas. Se preocupa por la verdad, los principios y la justicia. Es analítico y crítico. Toma un punto de vista objetivo.',
+        preferencias: 'Organiza la vida con una base lógica, clasificando, ordenando y dirigiendo los hechos y situaciones. Es decisivo. Critica espontáneamente. No le teme al conflicto. Toma un enfoque impersonal.',
+        conducta: 'Enfoca su mundo exterior de reflexión hacia decisiones creativas que llevan al cambio y a nuevas posibilidades. Organiza sus actividades en la búsqueda de un propósito o estrategia superiores.',
+        equipo: 'Enfocarse en las tareas que deben realizarse y mantener al equipo en la ruta. Proporcionar impulso para completar las tareas a tiempo y con alta calidad. Moldear la estructura del equipo.',
+        irritar: 'Establece directivas sin explicar las razones. Domina al equipo. No toma en cuenta los sentimientos de los demás. Dirige con rudeza. Decide apresuradamente.',
+        crecimiento: 'Detenerse a pensar y reconocer que los demás aceptarán su dirección más fácilmente si las contribuciones de ellos también son valoradas. Tomarse tiempo para considerar el impacto en los sentimientos de los demás.',
+        estres: 'Tomar el control, decidir y decirle a todos lo que hay que hacer. Mantener el sentido de dirección. Tomar decisiones apresuradamente sin considerar el impacto en las personas.'
+      }
+    }
+
+    // Hoja de descripción del tipo del usuario
+    mbtiSheet.addRow([])
+    mbtiSheet.addRow([])
+    const descTitle = mbtiSheet.addRow(['DESCRIPCIÓN DETALLADA DE TU TIPO: ' + tipo])
+    descTitle.font = { bold: true, size: 14, color: { argb: 'FF26215C' } }
+    mbtiSheet.mergeCells(`A${descTitle.number}:F${descTitle.number}`)
+    mbtiSheet.addRow([])
+
+    const tipoDesc = descripcionesMBTI[tipo]
+    if (tipoDesc) {
+      const secciones = [
+        ['¿Qué lo hace mover?', tipoDesc.motivacion],
+        ['Sus preferencias hacen que:', tipoDesc.preferencias],
+        ['Su forma de conducirse:', tipoDesc.conducta],
+        ['Contribuciones al trabajo en equipo:', tipoDesc.equipo],
+        ['Puede irritar a los demás porque:', tipoDesc.irritar],
+        ['Crecimiento personal:', tipoDesc.crecimiento],
+        ['Reconocer el estrés:', tipoDesc.estres]
+      ]
+      secciones.forEach(([secTitulo, secTexto]) => {
+        const secRow = mbtiSheet.addRow([secTitulo])
+        secRow.font = { bold: true, size: 11, color: { argb: 'FF534AB7' } }
+        const textoRow = mbtiSheet.addRow([secTexto])
+        textoRow.getCell(1).alignment = { wrapText: true }
+        mbtiSheet.mergeCells(`A${textoRow.number}:F${textoRow.number}`)
+        mbtiSheet.addRow([])
+      })
+    }
+
+    // ===== HOJA 2: DESCRIPCIÓN 16 PERSONALITIES =====
+    const desc16 = require('./mbti_16personalidades.json')
+    const tipoInfo = desc16[tipo]
+    if (tipoInfo) {
+      const perSheet = workbook.addWorksheet('Tu Personalidad')
+      perSheet.getColumn(1).width = 45
+      perSheet.getColumn(2).width = 70
+
+      // Título
+      const t1 = perSheet.addRow([tipoInfo.titulo])
+      t1.font = { bold: true, size: 18, color: { argb: 'FFFFFFFF' } }
+      t1.getCell(1).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF534AB7' } }
+      t1.getCell(2).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FF534AB7' } }
+      perSheet.mergeCells('A1:B1')
+      t1.height = 30
+      t1.alignment = { vertical: 'middle' }
+
+      const t2 = perSheet.addRow([tipoInfo.subtitulo])
+      t2.font = { italic: true, size: 12, color: { argb: 'FF6b7280' } }
+      perSheet.mergeCells('A2:B2')
+      perSheet.addRow([])
+
+      // Descripción
+      const descHdr = perSheet.addRow(['DESCRIPCIÓN'])
+      descHdr.font = { bold: true, size: 13, color: { argb: 'FF26215C' } }
+      perSheet.mergeCells(`A${descHdr.number}:B${descHdr.number}`)
+
+      const descRow = perSheet.addRow([tipoInfo.descripcion])
+      descRow.getCell(1).alignment = { wrapText: true, vertical: 'top' }
+      perSheet.mergeCells(`A${descRow.number}:B${descRow.number}`)
+      perSheet.addRow([])
+
+      // Fortalezas
+      const fHdr = perSheet.addRow(['FORTALEZAS'])
+      fHdr.font = { bold: true, size: 13, color: { argb: 'FF16a34a' } }
+      perSheet.mergeCells(`A${fHdr.number}:B${fHdr.number}`)
+
+      tipoInfo.fortalezas.forEach(f => {
+        const r = perSheet.addRow(['✓  ' + f])
+        r.getCell(1).alignment = { wrapText: true }
+        r.getCell(1).font = { size: 11 }
+        perSheet.mergeCells(`A${r.number}:B${r.number}`)
+      })
+      perSheet.addRow([])
+
+      // Debilidades
+      const dHdr = perSheet.addRow(['ÁREAS DE MEJORA'])
+      dHdr.font = { bold: true, size: 13, color: { argb: 'FFdc2626' } }
+      perSheet.mergeCells(`A${dHdr.number}:B${dHdr.number}`)
+
+      tipoInfo.debilidades.forEach(d => {
+        const r = perSheet.addRow(['•  ' + d])
+        r.getCell(1).alignment = { wrapText: true }
+        r.getCell(1).font = { size: 11 }
+        perSheet.mergeCells(`A${r.number}:B${r.number}`)
+      })
+    }
+
   } else {
     // Genérico
     const genSheet = workbook.addWorksheet('Respuestas')

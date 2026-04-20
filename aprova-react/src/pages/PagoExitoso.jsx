@@ -44,6 +44,7 @@ function PagoExitoso() {
                 localStorage.removeItem('aprova_top3_aptitudes')
                 localStorage.removeItem('aprova_top3_intereses')
                 localStorage.removeItem('aprova_razonamiento_progreso')
+                localStorage.removeItem('aprova_mbti_progreso')
               }
             } catch (e) { /* ignorar JSON inválido */ }
           }

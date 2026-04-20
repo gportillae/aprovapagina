@@ -82,6 +82,7 @@ function Tests() {
       localStorage.removeItem('aprova_top3_aptitudes')
       localStorage.removeItem('aprova_top3_intereses')
       localStorage.removeItem('aprova_razonamiento_progreso')
+      localStorage.removeItem('aprova_mbti_progreso')
       setTestsCompletados([])
       setDiagnostico(null)
     }
@@ -127,6 +128,7 @@ function Tests() {
       localStorage.removeItem('aprova_top3_aptitudes')
       localStorage.removeItem('aprova_top3_intereses')
       localStorage.removeItem('aprova_razonamiento_progreso')
+      localStorage.removeItem('aprova_mbti_progreso')
       setTestsCompletados([])
       setDiagnostico(null)
       const accesoPrueba = { email: 'prueba@aprova.com', nombre: 'Usuario Prueba', modalidad: 'modalidad1' }

@@ -1,0 +1,322 @@
+{
+  "ISTJ": {
+    "titulo": "ISTJ - El Logístico",
+    "subtitulo": "Personas prácticas, responsables y confiables que valoran la tradición y el orden.",
+    "descripcion": "El tipo de personalidad ISTJ es uno de los más comunes. Las personas con este tipo respetan enormemente los hechos y tienden a acumular gran cantidad de información en su memoria. Su estilo de energía Observador les permite analizar su entorno sin esfuerzo. A diferencia de los tipos Intuitivos, los ISTJ se centran en datos y hechos concretos, lo que los convierte en excelentes analistas y auditores.\n\nLas personas con este tipo son casi imparables cuando creen que una idea específica es valiosa y puede implementarse: considerarán su deber establecer y mantener una operación fluida. Una vez que un nuevo procedimiento demuestra su utilidad, los ISTJ pondrán mucho esfuerzo para facilitar su implementación exitosa, incluso a costa de su propia salud.\n\nLos ISTJ tienden a ser extremadamente meticulosos, siempre verificando los hechos y sin asumir nada. También son respetados por su excepcional lealtad al deber: su precisión, paciencia y capacidad de concentración los convierten en empleados ideales en muchas profesiones. No es sorprendente que las personas con este tipo graviten hacia instituciones tradicionales y jerárquicas: servicio público, derecho, militar, etc.\n\nLos ISTJ disfrutan siendo responsables de sus acciones y aman el poder que se deriva de ello. Suelen ser personas versátiles, lo que puede llevar a logros significativos en diversas áreas. Tienden a ser personas brillantes, lógicas y sabias, caracterizadas por su deseo de buscar una vida segura y estable.\n\nLos ISTJ respetan las tradiciones y hacen todo lo posible por adherirse a las reglas y directrices existentes. No son particularmente buenos escuchando sus propios sentimientos (y especialmente los de los demás). Sin embargo, rara vez tienen dificultades para lidiar con situaciones emocionalmente cargadas: siempre pueden mantener la cabeza fría y actuar racionalmente.",
+    "fortalezas": [
+      "Honestos y directos: la integridad es la esencia de su carácter. Los ISTJ prefieren asumir la responsabilidad de sus acciones e ir directos al grano.",
+      "Fuerza de voluntad y dedicación: no se rinden fácilmente ante un reto y se aseguran de cumplir con sus compromisos.",
+      "Responsables y confiables: prefieren mantener su palabra y cumplen sus promesas sin excepción.",
+      "Calmados y prácticos: pueden mantener la cabeza fría en situaciones de estrés y tomar decisiones basadas en la lógica.",
+      "Organizados y metódicos: trabajan de forma sistemática y eficiente, creando orden en todo lo que hacen.",
+      "Buenos planificadores: piensan a largo plazo y establecen metas claras para alcanzar sus objetivos."
+    ],
+    "debilidades": [
+      "Tercos: una vez que toman una decisión, puede ser muy difícil hacerlos cambiar de opinión.",
+      "Insensibles: pueden herir involuntariamente los sentimientos de otros al priorizar la verdad sobre la sensibilidad.",
+      "Siempre por las reglas: tienden a resistirse a cambiar lo que ya funciona, incluso cuando el cambio podría mejorar las cosas.",
+      "Tendencia a culparse: cuando algo sale mal, cargan con la culpa de manera desproporcionada.",
+      "Dificultad para expresar emociones: les cuesta mostrar sus sentimientos y pueden parecer fríos o distantes."
+    ]
+  },
+  "ISFJ": {
+    "titulo": "ISFJ - El Defensor",
+    "subtitulo": "Personas cálidas, dedicadas y protectoras que cuidan de quienes los rodean.",
+    "descripcion": "Los ISFJ son personas notablemente cálidas y altruistas, pero no deben ser confundidos con pusilánimes. Son eficientes y responsables, dedicados a hacer las cosas bien. Aunque son Introvertidos por naturaleza, tienen habilidades sociales bien desarrolladas y relaciones sólidas.\n\nLos ISFJ tienden a ser muy observadores, acumulando hechos y detalles sobre las personas que les importan. Son especialmente sensibles a los sentimientos de los demás y tienen una memoria excepcional para los detalles personales. A menudo recuerdan cumpleaños, aniversarios y eventos importantes de las personas cercanas a ellos.\n\nSon personas extremadamente leales y confiables que toman sus responsabilidades muy en serio. Prefieren trabajar detrás de escena y rara vez buscan reconocimiento por sus contribuciones. Los ISFJ encuentran satisfacción en ayudar a los demás y crear un entorno armonioso.\n\nA pesar de su naturaleza generosa, los ISFJ pueden tener dificultades para decir que no, lo que a veces les lleva a sobrecargarse de trabajo. También pueden ser reacios al cambio y prefieren seguir métodos probados y confiables. Su deseo de evitar conflictos puede llevarlos a reprimir sus propias necesidades en favor de las de los demás.",
+    "fortalezas": [
+      "Apoyo incondicional: son los primeros en ofrecer ayuda y los últimos en abandonar cuando alguien los necesita.",
+      "Confiables y pacientes: cumplen con lo prometido y esperan pacientemente a que los demás también lo hagan.",
+      "Imaginativos y observadores: notan detalles que otros pasan por alto y los usan para anticipar las necesidades de los demás.",
+      "Entusiastas: cuando encuentran una causa o persona que valoran, ponen todo su corazón en ello.",
+      "Trabajadores y dedicados: su ética de trabajo es ejemplar y buscan la excelencia en todo lo que hacen.",
+      "Buenas habilidades prácticas: son excelentes administradores y organizadores del día a día."
+    ],
+    "debilidades": [
+      "Demasiado humildes: suelen minimizar sus propios logros y no buscan el reconocimiento que merecen.",
+      "Se cargan de trabajo: les cuesta decir que no y terminan asumiendo más responsabilidades de las que pueden manejar.",
+      "Reacios al cambio: prefieren la estabilidad y pueden resistirse a nuevas ideas o métodos.",
+      "Reprimen sus sentimientos: en su afán por mantener la armonía, pueden ignorar sus propias necesidades emocionales.",
+      "Demasiado altruistas: pueden llegar a sacrificarse excesivamente por los demás."
+    ]
+  },
+  "INFJ": {
+    "titulo": "INFJ - El Abogado",
+    "subtitulo": "Personas idealistas, perspicaces y profundamente comprometidas con sus valores.",
+    "descripcion": "Los INFJ son el tipo de personalidad más raro, representando menos del 1% de la población. Son visionarios silenciosos que buscan dar significado a todo lo que les rodea. Su combinación única de idealismo y determinación los convierte en personas capaces de tomar medidas concretas para realizar sus metas.\n\nLos INFJ no son soñadores ociosos: su pasión y determinación pueden arrollar a cualquiera que se interponga en su camino. Son capaces de ver a través de las fachadas y comprender las verdaderas motivaciones de las personas. Esta capacidad intuitiva, combinada con su profunda empatía, los convierte en excelentes consejeros y mediadores.\n\nTienen una visión clara de cómo debería ser el mundo y trabajan incansablemente para acercarse a ese ideal. Son personas reservadas pero intensamente apasionadas que eligen cuidadosamente sus batallas. Cuando encuentran una causa que resuena con sus valores, se convierten en defensores inquebrantables.\n\nLos INFJ necesitan tiempo a solas para recargar energías y procesar sus pensamientos y emociones. Aunque son naturalmente empáticos, pueden agotarse emocionalmente si no se cuidan. Su deseo de perfección y su tendencia a absorber las emociones de los demás pueden ser desafiantes.",
+    "fortalezas": [
+      "Creativos: combinan una imaginación vívida con un fuerte sentido de compasión para producir ideas innovadoras.",
+      "Perspicaces: pueden leer a las personas con facilidad y comprender sus verdaderas motivaciones.",
+      "Inspiradores y convincentes: su pasión y elocuencia pueden motivar e inspirar a otros a actuar.",
+      "Decididos: cuando se comprometen con una causa, son imparables en su determinación.",
+      "Altruistas: genuinamente se preocupan por el bienestar de los demás y buscan hacer del mundo un lugar mejor.",
+      "Apasionados: ponen todo su corazón en lo que hacen y sus convicciones son inquebrantables."
+    ],
+    "debilidades": [
+      "Extremadamente reservados: pueden ser difíciles de conocer realmente y a veces se aíslan demasiado.",
+      "Perfeccionistas: se imponen estándares muy altos que pueden ser difíciles de alcanzar.",
+      "Sensibles a la crítica: pueden tomarse las críticas de manera muy personal.",
+      "Tendencia al agotamiento: su empatía puede llevarlos a absorber demasiado las emociones negativas de otros.",
+      "Dificultad para dejar ir: pueden aferrarse a relaciones o situaciones que ya no les benefician."
+    ]
+  },
+  "INTJ": {
+    "titulo": "INTJ - El Arquitecto",
+    "subtitulo": "Personas estratégicas, independientes y decididas con sed insaciable de conocimiento.",
+    "descripcion": "Los INTJ son uno de los tipos más raros e interesantes. Representan aproximadamente el 2% de la población y combinan imaginación y confiabilidad de una manera única. Son pensadores estratégicos natos que ven la vida como un tablero de ajedrez gigante, siempre planificando varios movimientos por adelantado.\n\nLas personas con este tipo tienen una mente abierta a nuevas ideas (siempre y cuando sean racionales), pero también son extremadamente escépticos. Cuestionan todo y no aceptan nada por fe ciega. Los INTJ son conocidos por su capacidad para desarrollar planes complejos y llevarlos a cabo con determinación implacable.\n\nSon personas naturalmente curiosas que disfrutan profundizando en temas complejos. Su capacidad analítica les permite ver patrones donde otros no los ven y desarrollar soluciones innovadoras a problemas difíciles. Son auto-confiados y directos, prefiriendo la eficiencia sobre la diplomacia.\n\nLos INTJ valoran la competencia por encima de casi todo lo demás y tienen poca paciencia para la ineficiencia o la incompetencia. Pueden parecer arrogantes o insensibles, pero simplemente aplican los mismos altos estándares a los demás que se aplican a sí mismos. Su mayor desafío suele ser en el ámbito social, donde su franqueza y falta de consideración emocional pueden alienar a otros.",
+    "fortalezas": [
+      "Rápidos, imaginativos y estratégicos: ven posibilidades donde otros ven obstáculos.",
+      "Altamente confiados: confían en sus habilidades y conocimientos para superar cualquier desafío.",
+      "Independientes y decididos: no necesitan validación externa para actuar según sus convicciones.",
+      "Trabajadores y determinados: cuando se proponen algo, trabajan incansablemente hasta lograrlo.",
+      "Abiertos a nuevas ideas: siempre están buscando formas de mejorar y optimizar.",
+      "Excelentes pensadores críticos: analizan situaciones desde múltiples ángulos antes de actuar."
+    ],
+    "debilidades": [
+      "Arrogantes: su confianza puede percibirse como superioridad.",
+      "Excesivamente analíticos: pueden sobre-pensar las situaciones y paralizarse por el análisis.",
+      "Despreciativos de las emociones: tienden a desestimar los sentimientos como irracionales.",
+      "Impacientes: tienen poca tolerancia para personas o procesos que consideran ineficientes.",
+      "Dificultad en relaciones sociales: su franqueza y falta de tacto pueden crear fricción interpersonal."
+    ]
+  },
+  "ISTP": {
+    "titulo": "ISTP - El Virtuoso",
+    "subtitulo": "Personas prácticas, observadoras y analíticas que disfrutan resolviendo problemas mecánicos.",
+    "descripcion": "Los ISTP son personas naturalmente curiosas con un enfoque práctico de la vida. Les encanta explorar con sus manos y sus ojos, tocando y examinando el mundo que les rodea con racionalismo tranquilo y curiosidad entusiasta. Son fabricantes natos que pasan de un proyecto a otro, construyendo lo útil y lo superfluo por el simple placer de hacerlo.\n\nLos ISTP suelen ser mecánicos e ingenieros naturales. Encuentran gran satisfacción en desmontar cosas y volverlas a armar, mejorándolas en el proceso. Prefieren aprender haciendo en lugar de leyendo teoría, y se aburren rápidamente con las discusiones abstractas.\n\nSon personas de pocas palabras que prefieren la acción a la conversación. Cuando hablan, son directos y al punto. Los ISTP son excelentes en situaciones de crisis porque pueden mantener la calma y encontrar soluciones prácticas rápidamente.\n\nSu mayor desafío suele ser en las relaciones personales, donde su naturaleza reservada y su dificultad para expresar emociones pueden crear malentendidos. También pueden tener dificultades con compromisos a largo plazo y rutinas establecidas, prefiriendo la libertad y la espontaneidad.",
+    "fortalezas": [
+      "Optimistas y enérgicos: su entusiasmo es contagioso y rara vez se estresan.",
+      "Creativos y prácticos: combinan creatividad con sentido práctico para solucionar problemas reales.",
+      "Espontáneos y racionales: pueden tomar decisiones rápidas basadas en la lógica cuando es necesario.",
+      "Excelentes en crisis: mantienen la calma y encuentran soluciones cuando otros entran en pánico.",
+      "Buenos con las manos: tienen una habilidad natural para trabajar con herramientas y objetos físicos.",
+      "Relajados: su actitud tranquila les permite adaptarse fácilmente a nuevas situaciones."
+    ],
+    "debilidades": [
+      "Tercos: pueden resistirse a hacer las cosas de maneras que no les parecen lógicas.",
+      "Insensibles: a veces ignoran los sentimientos de los demás al enfocarse en la lógica.",
+      "Reservados: pueden ser difíciles de conocer porque no comparten fácilmente sus pensamientos.",
+      "Se aburren fácilmente: pueden abandonar proyectos o relaciones cuando pierden interés.",
+      "No les gustan los compromisos: prefieren mantener sus opciones abiertas y evitar ataduras."
+    ]
+  },
+  "ISFP": {
+    "titulo": "ISFP - El Aventurero",
+    "subtitulo": "Personas sensibles, creativas y encantadoras que viven el momento con pasión.",
+    "descripcion": "Los ISFP son artistas verdaderos, aunque no necesariamente en el sentido tradicional. Para ellos, la vida misma es un lienzo para su autoexpresión. Desde lo que visten hasta cómo pasan su tiempo libre, los ISFP actúan con base en quiénes son. Su lema podría ser 'No me encasilles'.\n\nLos ISFP son personas cálidas, sensibles y consideradas que viven en el presente y disfrutan su entorno con un entusiasmo alegre y discreto. Son flexibles y espontáneos, prefiriendo ir con la corriente y disfrutar de lo que la vida tiene para ofrecer.\n\nSon personas profundamente leales a sus valores y a las personas que les importan, aunque rara vez intentan imponer sus valores a otros. Prefieren liderar con el ejemplo en lugar de con palabras. Los ISFP tienen un fuerte sentido estético y aprecian la belleza en todas sus formas.\n\nSu naturaleza tranquila y reservada puede llevar a otros a subestimarlos, pero los ISFP tienen una rica vida interior llena de pasión y creatividad. Su mayor desafío suele ser planificar a largo plazo y lidiar con las críticas, ya que tienden a tomar las cosas de manera muy personal.",
+    "fortalezas": [
+      "Encantadores: son personas genuinamente agradables que hacen sentir cómodos a los demás.",
+      "Sensibles a los demás: perciben fácilmente los estados emocionales de quienes los rodean.",
+      "Imaginativos: su creatividad se manifiesta en formas únicas y personales de ver el mundo.",
+      "Apasionados: cuando algo les importa, se entregan por completo.",
+      "Curiosos: están siempre abiertos a nuevas experiencias y perspectivas.",
+      "Artísticos: tienen un talento natural para la expresión creativa en múltiples formas."
+    ],
+    "debilidades": [
+      "Independientes en exceso: pueden resistirse a pedir ayuda incluso cuando la necesitan.",
+      "Impredecibles: su espontaneidad puede dificultar la planificación y los compromisos.",
+      "Evitan conflictos: prefieren retirarse antes que enfrentar una confrontación directa.",
+      "Sensibles a la crítica: pueden tomarse comentarios constructivos de manera muy personal.",
+      "Dificultad para planificar: viven tan en el presente que pueden descuidar el futuro."
+    ]
+  },
+  "INFP": {
+    "titulo": "INFP - El Mediador",
+    "subtitulo": "Personas idealistas, empáticas y creativas guiadas por sus valores más profundos.",
+    "descripcion": "Los INFP son soñadores idealistas que buscan señales del bien incluso en las peores personas y eventos. A pesar de su naturaleza tranquila y reservada, los INFP tienen llamas internas de pasión que pueden brillar intensamente. Representan aproximadamente el 4-5% de la población.\n\nSon personas guiadas por sus principios más que por la lógica, la excitación o la practicidad. Al decidir cómo actuar, se basan en su honor, belleza, moralidad y virtud. Los INFP son personas orgullosas de esta cualidad, y con razón, pero no todos entienden la fuerza de estos sentimientos.\n\nLos INFP tienen un talento natural para la expresión personal, revelando su belleza y sus secretos a través de metáforas y personajes ficticios. Su capacidad para la escritura creativa es notable, y muchos grandes autores de la historia han sido INFP.\n\nSon personas profundamente empáticas que genuinamente se preocupan por el bienestar de los demás. Sin embargo, su idealismo puede llevarlos a decepciones cuando el mundo no cumple con sus expectativas. Su tendencia a internalizar los problemas puede afectar su bienestar emocional.",
+    "fortalezas": [
+      "Idealistas: su optimismo y visión del bien pueden inspirar y motivar a los demás.",
+      "Buscan y valoran la armonía: trabajan incansablemente por crear paz y entendimiento.",
+      "Abiertos y flexibles: aceptan diferentes perspectivas y se adaptan a situaciones cambiantes.",
+      "Creativos: tienen una imaginación rica que aplican tanto a la resolución de problemas como al arte.",
+      "Apasionados: cuando encuentran una causa que resuena con sus valores, son defensores incansables.",
+      "Dedicados: una vez comprometidos, ponen todo su esfuerzo en lograr sus objetivos."
+    ],
+    "debilidades": [
+      "Demasiado idealistas: pueden crear expectativas poco realistas que llevan a decepciones.",
+      "Demasiado altruistas: pueden descuidar sus propias necesidades por atender las de los demás.",
+      "Impracticos: a veces se pierden en sus ideales y olvidan los detalles prácticos.",
+      "No les gustan los datos: pueden ignorar información importante si no se alinea con sus valores.",
+      "Vulnerables emocionalmente: su sensibilidad puede hacer que sufran intensamente ante las críticas."
+    ]
+  },
+  "INTP": {
+    "titulo": "INTP - El Lógico",
+    "subtitulo": "Personas analíticas, objetivas y reservadas con una pasión por las ideas y la lógica.",
+    "descripcion": "Los INTP son conocidos por sus brillantes teorías y su lógica implacable. De hecho, se les considera los más lógicamente precisos de todos los tipos de personalidad. Aman los patrones, detectan discrepancias rápidamente y tienen la capacidad de leer a las personas con facilidad.\n\nLas personas con este tipo tienen poco interés en las actividades prácticas del día a día, prefiriendo los entornos donde pueden expresar su creatividad y libertad. Pasan mucho tiempo dentro de su propia mente, examinando teorías e ideas desde todos los ángulos posibles.\n\nLos INTP son personas naturalmente escépticas que disfrutan debatiendo y desafiando ideas establecidas. No aceptan nada sin antes someterlo a un riguroso análisis lógico. Son innovadores por naturaleza, capaces de ver conexiones que otros pasan por alto.\n\nSu mayor desafío suele estar en las interacciones sociales y emocionales. Los INTP pueden parecer distantes o desinteresados, pero simplemente procesan el mundo de manera diferente. Su tendencia a analizar todo puede hacer que parezcan indecisos, y su franqueza puede ser malinterpretada como insensibilidad.",
+    "fortalezas": [
+      "Grandes analistas: su capacidad para descomponer problemas complejos es excepcional.",
+      "Abstractos: pueden manejar conceptos teóricos complejos con facilidad.",
+      "Imaginativos: su creatividad les permite encontrar soluciones innovadoras.",
+      "Originales: piensan fuera de lo convencional y aportan perspectivas únicas.",
+      "Abiertos de mente: están dispuestos a considerar cualquier idea, sin importar cuán inusual sea.",
+      "Honestos: valoran la verdad por encima de todo y son directos en sus comunicaciones."
+    ],
+    "debilidades": [
+      "Muy reservados: pueden aislarse y dificultar la conexión emocional con otros.",
+      "Insensibles: su enfoque lógico puede hacerlos parecer fríos o indiferentes.",
+      "Ausentes: pueden perderse tanto en sus pensamientos que olvidan el mundo exterior.",
+      "Condescendientes: pueden involuntariamente menospreciar a quienes no comparten su nivel intelectual.",
+      "Indecisos: su deseo de analizar todo puede llevarlos a la parálisis por análisis."
+    ]
+  },
+  "ESTP": {
+    "titulo": "ESTP - El Emprendedor",
+    "subtitulo": "Personas energéticas, perceptivas y directas que disfrutan vivir al límite.",
+    "descripcion": "Los ESTP son personas llenas de energía y acción. Son personas que viven en el momento, sumergiéndose directamente en la acción. Disfrutan del drama, la pasión y el placer, no por la excitación emocional, sino porque les estimula la mente lógica.\n\nSon personas que toman decisiones rápidas y actúan sobre ellas de inmediato. Los ESTP tienen una percepción aguda de su entorno y pueden notar cambios sutiles que otros pasan por alto. Esta habilidad les permite responder rápidamente a las situaciones y aprovechar las oportunidades cuando se presentan.\n\nLos ESTP son naturalmente sociables y disfrutan siendo el centro de atención. Son conversadores entretenidos que pueden mantener a una audiencia cautivada con historias y humor. Su enfoque directo y pragmático les permite resolver problemas de manera eficiente.\n\nSu mayor desafío suele ser la planificación a largo plazo y el manejo de las emociones propias y ajenas. Los ESTP pueden ser impacientes con las discusiones teóricas y prefieren la acción sobre la reflexión. Su tendencia a buscar emociones nuevas puede llevarlos a tomar riesgos innecesarios.",
+    "fortalezas": [
+      "Audaces: no tienen miedo de experimentar cosas nuevas y tomar riesgos calculados.",
+      "Racionales y prácticos: combinan la lógica con la acción para resolver problemas eficientemente.",
+      "Originales: aplican soluciones creativas y fuera de lo convencional.",
+      "Perceptivos: notan cambios y detalles en su entorno que otros pasan por alto.",
+      "Directos: comunican sus ideas de forma clara y sin rodeos.",
+      "Sociables: hacen amigos fácilmente y disfrutan de la interacción social."
+    ],
+    "debilidades": [
+      "Impacientes: quieren resultados inmediatos y se frustran con procesos lentos.",
+      "Arriesgados: su búsqueda de emoción puede llevarlos a tomar decisiones imprudentes.",
+      "Poco estructurados: pueden tener dificultad para seguir rutinas y procedimientos establecidos.",
+      "Desafiantes: pueden ignorar reglas y normas que consideran limitantes.",
+      "Insensibles: pueden pasar por alto los sentimientos de los demás en su afán por actuar."
+    ]
+  },
+  "ESFP": {
+    "titulo": "ESFP - El Animador",
+    "subtitulo": "Personas espontáneas, energéticas y entusiastas que hacen la vida más divertida.",
+    "descripcion": "Los ESFP son las personas más espontáneas y energéticas de todos los tipos. Son los 'animadores de la fiesta', siempre listos para una buena experiencia. Sus risas, su sentido del humor y su energía contagiosa los convierten en el alma de cualquier reunión.\n\nSon personas que viven completamente en el momento presente, disfrutando cada experiencia al máximo. Los ESFP son generosos con su tiempo y energía, siempre dispuestos a animar a quienes los rodean. Tienen un sentido estético desarrollado y disfrutan de la belleza en todas sus formas.\n\nLos ESFP son observadores agudos que perciben rápidamente las necesidades emocionales de los demás. Son los primeros en ofrecer apoyo emocional y los mejores en hacer que las personas se sientan incluidas y valoradas.\n\nSin embargo, su enfoque en el presente puede hacer que descuiden la planificación a largo plazo. Los ESFP pueden tener dificultades para concentrarse en tareas aburridas o repetitivas y pueden evitar situaciones difíciles en lugar de enfrentarlas directamente.",
+    "fortalezas": [
+      "Audaces: están dispuestos a probar cosas nuevas sin dudarlo.",
+      "Originales: su creatividad natural les permite encontrar soluciones únicas.",
+      "Observadores: perciben los estados emocionales de los demás con facilidad.",
+      "Excelentes habilidades sociales: hacen amigos fácilmente y crean ambientes positivos.",
+      "Positivos y entusiastas: su energía es contagiosa y motivan a quienes los rodean.",
+      "Prácticos: prefieren la acción sobre la teoría y obtienen resultados concretos."
+    ],
+    "debilidades": [
+      "Sensibles: pueden tomarse las críticas de manera muy personal.",
+      "Evitan conflictos: prefieren ignorar los problemas con la esperanza de que desaparezcan.",
+      "Se aburren fácilmente: las tareas rutinarias y repetitivas les resultan insoportables.",
+      "Poco enfocados: pueden saltar de una actividad a otra sin terminar ninguna.",
+      "Dificultad para planificar: su enfoque en el presente puede descuidar las consecuencias futuras."
+    ]
+  },
+  "ENFP": {
+    "titulo": "ENFP - El Activista",
+    "subtitulo": "Personas entusiastas, creativas y sociables que ven la vida llena de posibilidades.",
+    "descripcion": "Los ENFP son uno de los tipos más amables e interesantes. Son personas curiosas, idealistas y a menudo místicas. Buscan significado y están muy interesados en las motivaciones de otras personas, viendo la vida como un gran rompecabezas complejo donde todo está conectado.\n\nLos ENFP tienden a ser personas muy perspicaces y empáticas. Esto, más su encanto y habilidades sociales, a menudo los convierte en personas muy populares e influyentes. La llama interior y la pasión de los ENFP no es algo que deba tomarse a la ligera: son realmente afectuosos y su compasión puede ser muy ferviente y duradera.\n\nLos ENFP suelen ser muy carismáticos y elocuentes, encontrando natural y fácil comunicar sus ideas y opiniones, especialmente en persona. No les importa si están presentando hechos fríos o expresando emociones intensas, es poco probable que tengan miedo de ponerse de pie y hablar.\n\nLos ENFP buscan la armonía en sus vidas y su entorno, a menudo esforzándose por crear algo positivo. Son personas genuinamente preocupadas por el bienestar de los demás y trabajan activamente para hacer del mundo un lugar mejor.",
+    "fortalezas": [
+      "Curiosos: tienen un deseo insaciable de aprender y explorar nuevas ideas.",
+      "Observadores: perciben conexiones y patrones que otros no ven.",
+      "Enérgicos y entusiastas: su pasión es contagiosa e inspira a los demás.",
+      "Excelentes comunicadores: expresan sus ideas con claridad y carisma.",
+      "Saben relajarse: equilibran el trabajo duro con la diversión y el descanso.",
+      "Populares y amigables: su calidez natural atrae a las personas hacia ellos."
+    ],
+    "debilidades": [
+      "Poco prácticos: pueden perderse en sus ideas y descuidar los detalles concretos.",
+      "Se estresan fácilmente: su sensibilidad emocional puede abrumarlos en situaciones difíciles.",
+      "Dificultad para enfocarse: su curiosidad puede llevarlos a dispersarse en muchas direcciones.",
+      "Demasiado emocionales: pueden dejar que sus emociones nublen su juicio.",
+      "Buscan demasiado la aprobación: pueden preocuparse excesivamente por la opinión de los demás."
+    ]
+  },
+  "ENTP": {
+    "titulo": "ENTP - El Innovador",
+    "subtitulo": "Personas ingeniosas, estratégicas y emprendedoras que adoran los desafíos intelectuales.",
+    "descripcion": "Los ENTP son los últimos 'abogados del diablo': disfrutan del proceso de destruir argumentos y creencias para reconstruirlos desde una nueva perspectiva. A diferencia de los tipos más determinados, los ENTP no hacen esto porque estén tratando de lograr un objetivo más profundo, sino simplemente porque es divertido.\n\nNadie disfruta más del proceso de debate mental que los ENTP. Les encanta ejercitar su rapidez mental contra otra persona y ven cada conversación como una oportunidad para aprender algo nuevo o probar una nueva idea.\n\nLos ENTP son personas naturalmente emprendedoras, llenas de ideas y energía. Son maestros en generar lluvia de ideas y pueden ver posibilidades donde otros solo ven problemas. Su mente ágil les permite conectar conceptos aparentemente no relacionados de maneras innovadoras.\n\nSu mayor desafío es seguir adelante con sus ideas hasta la implementación. Los ENTP pueden aburrirse una vez que el problema intelectual ha sido resuelto y pasar al siguiente desafío sin completar el anterior. También pueden ser argumentativos e insensibles en su búsqueda de la verdad.",
+    "fortalezas": [
+      "Conocedores: acumulan una gran cantidad de conocimiento sobre diversos temas.",
+      "Pensadores rápidos: procesan información rápidamente y conectan ideas de manera innovadora.",
+      "Originales: su creatividad les permite desarrollar soluciones únicas e inesperadas.",
+      "Carismáticos: su entusiasmo y confianza atraen a los demás.",
+      "Enérgicos: abordan nuevos desafíos con vigor y entusiasmo.",
+      "Excelentes para lluvia de ideas: generan una gran cantidad de ideas creativas en poco tiempo."
+    ],
+    "debilidades": [
+      "Argumentativos: pueden debatir por el gusto de debatir, sin considerar los sentimientos ajenos.",
+      "Insensibles: su franqueza puede herir a personas más sensibles.",
+      "Intolerantes: pueden ser despectivos con personas que consideran menos inteligentes.",
+      "Dificultad para enfocarse: saltan de una idea a otra sin terminar proyectos.",
+      "No les gustan las tareas prácticas: prefieren la fase creativa y evitan la implementación."
+    ]
+  },
+  "ESTJ": {
+    "titulo": "ESTJ - El Ejecutivo",
+    "subtitulo": "Personas organizadas, dedicadas y directas que lideran con el ejemplo.",
+    "descripcion": "Los ESTJ son representantes de la tradición y el orden, utilizando su comprensión de lo correcto e incorrecto y lo socialmente aceptable para unir a familias y comunidades. Valoran la honestidad, la dedicación y la dignidad, y son valorados por sus consejos claros y su orientación.\n\nLas personas con este tipo lideran con el ejemplo, demostrando dedicación y honestidad intencionada. Son personas que creen en la importancia de la estructura y las reglas, y trabajan duro para mantener el orden en sus entornos.\n\nLos ESTJ son excelentes organizadores y administradores. Son personas de acción que toman decisiones rápidas y eficientes. Respetan la jerarquía y esperan que otros también lo hagan. Su enfoque directo y franco puede ser refrescante, aunque a veces puede parecer demasiado brusco.\n\nSon personas que trabajan duro para ganarse el respeto de los demás a través de sus acciones, no de sus palabras. Sin embargo, su rigidez y su apego a las reglas pueden hacer que sean inflexibles ante el cambio. También pueden tener dificultades para comprender y respetar los sentimientos de los demás cuando estos entran en conflicto con la lógica o las normas establecidas.",
+    "fortalezas": [
+      "Dedicados: se comprometen completamente con las causas y personas que valoran.",
+      "Fuerza de voluntad: su determinación los impulsa a superar cualquier obstáculo.",
+      "Directos y honestos: dicen lo que piensan sin rodeos.",
+      "Leales, pacientes y confiables: son pilares de estabilidad en cualquier grupo.",
+      "Excelentes organizadores: crean sistemas eficientes y mantienen el orden.",
+      "Disfrutan creando orden: encuentran satisfacción en organizar y estructurar su entorno."
+    ],
+    "debilidades": [
+      "Inflexibles y tercos: les cuesta aceptar ideas o métodos que difieren de lo establecido.",
+      "Incómodos con situaciones no convencionales: pueden sentirse perdidos fuera de su zona de confort.",
+      "Dificultad para expresar emociones: pueden parecer fríos o insensibles.",
+      "Juzgan rápidamente: pueden formar opiniones precipitadas sobre personas o situaciones.",
+      "Demasiado enfocados en el estatus social: pueden dar excesiva importancia a las apariencias."
+    ]
+  },
+  "ESFJ": {
+    "titulo": "ESFJ - El Cónsul",
+    "subtitulo": "Personas atentas, sociables y populares que se preocupan genuinamente por los demás.",
+    "descripcion": "Los ESFJ son personas que se preocupan genuinamente por el bienestar de los demás. Son sociables, leales y organizados, y siempre están buscando formas de ayudar y crear armonía en su entorno.\n\nLos ESFJ son personas populares y queridas, lo cual no es sorprendente dado su naturaleza atenta y sociable. Se esfuerzan por hacer sentir bienvenido a todos y son excelentes anfitriones. Tienen un talento natural para recordar detalles sobre las personas y usar esa información para hacerlas sentir especiales.\n\nSon personas que valoran la tradición, la lealtad y la estabilidad. Los ESFJ respetan las jerarquías y hacen todo lo posible por mantener el orden social. Son trabajadores diligentes que se toman sus responsabilidades muy en serio.\n\nSu mayor desafío suele ser su necesidad de aprobación y su sensibilidad a las críticas. Los ESFJ pueden tomarse las cosas demasiado personalmente y pueden tener dificultades para aceptar que no todos comparten sus valores o prioridades. Su deseo de agradar puede llevarlos a sacrificar sus propias necesidades.",
+    "fortalezas": [
+      "Fuertes habilidades prácticas: son excelentes administradores y organizadores.",
+      "Fuerte sentido del deber: se toman sus responsabilidades muy en serio.",
+      "Muy leales: son devotos a sus amigos, familia y comunidad.",
+      "Sensibles y cálidos: se preocupan genuinamente por el bienestar de los demás.",
+      "Buenos para conectar con los demás: hacen que las personas se sientan valoradas.",
+      "Cooperativos: trabajan bien en equipo y promueven la armonía grupal."
+    ],
+    "debilidades": [
+      "Preocupados por su estatus social: pueden dar excesiva importancia a la imagen y las apariencias.",
+      "Inflexibles: les cuesta adaptarse a cambios o ideas que desafían sus tradiciones.",
+      "Vulnerables a las críticas: pueden tomarse los comentarios negativos de manera muy personal.",
+      "Necesitan aprobación: pueden depender demasiado de la validación de los demás.",
+      "Demasiado desinteresados: pueden descuidar sus propias necesidades por atender las de otros."
+    ]
+  },
+  "ENFJ": {
+    "titulo": "ENFJ - El Protagonista",
+    "subtitulo": "Personas carismáticas, inspiradoras y empáticas que lideran con pasión.",
+    "descripcion": "Los ENFJ son líderes natos, llenos de pasión y carisma. No son el tipo de líder que busca poder o control; más bien, son personas que inspiran y motivan a otros hacia una causa superior. Representan aproximadamente el 2% de la población.\n\nLos ENFJ tienen una capacidad natural para inspirar confianza y lealtad en los demás. Son comunicadores excepcionales que pueden conectar con personas de todos los ámbitos de la vida. Su empatía genuina y su preocupación por los demás los convierten en mentores y guías naturales.\n\nSon personas que ven el potencial en todos y trabajan incansablemente para ayudar a otros a alcanzar su máximo potencial. Los ENFJ son visionarios que pueden articular una visión clara y motivar a otros a trabajar hacia ella.\n\nSin embargo, su intensa preocupación por los demás puede ser tanto una bendición como una maldición. Los ENFJ pueden agotarse emocionalmente al absorber los problemas de los demás. También pueden ser demasiado idealistas sobre las personas, viendo lo mejor en todos incluso cuando la evidencia sugiere lo contrario.",
+    "fortalezas": [
+      "Tolerantes: aceptan a las personas tal como son y buscan lo mejor en cada uno.",
+      "Confiables: cumplen sus promesas y son personas en las que otros pueden contar.",
+      "Carismáticos: su presencia natural inspira y motiva a quienes los rodean.",
+      "Altruistas: se preocupan genuinamente por el bienestar de los demás.",
+      "Líderes naturales: inspiran a otros a dar lo mejor de sí mismos.",
+      "Buenos comunicadores: expresan sus ideas de manera clara, cálida y convincente."
+    ],
+    "debilidades": [
+      "Demasiado idealistas: pueden tener expectativas poco realistas sobre las personas.",
+      "Demasiado desinteresados: pueden sacrificar sus propias necesidades por las de los demás.",
+      "Sensibles a las críticas: pueden tomarse las críticas de manera muy personal.",
+      "Fluctuantes: su estado emocional puede variar dependiendo de las emociones de los demás.",
+      "Dificultad para tomar decisiones difíciles: pueden evitar decisiones que podrían herir a otros."
+    ]
+  },
+  "ENTJ": {
+    "titulo": "ENTJ - El Comandante",
+    "subtitulo": "Personas audaces, imaginativas y decididas que siempre encuentran un camino.",
+    "descripcion": "Los ENTJ son líderes natos. Las personas con este tipo encarnan los dones del carisma y la confianza, proyectando autoridad de una manera que cautiva a multitudes hacia un objetivo común. Se caracterizan por un nivel de racionalidad a menudo despiadado, usando su empuje, determinación y mente aguda para lograr cualquier objetivo que se propongan.\n\nLos ENTJ son pensadores estratégicos que disfrutan del proceso de planificación y ejecución. Ven la ineficiencia no solo como un problema, sino como algo personalmente ofensivo. Son personas que creen que con suficiente tiempo y recursos, pueden lograr cualquier cosa.\n\nSon personas directas que valoran la competencia y la eficiencia por encima de todo. Los ENTJ no tienen paciencia para la indecisión o la pereza, y esperan que los demás estén a su nivel de compromiso y rendimiento.\n\nSu mayor desafío suele estar en las relaciones personales y la inteligencia emocional. Los ENTJ pueden ser percibidos como dominantes, inflexibles o insensibles. Su naturaleza competitiva y su franqueza pueden crear fricción en las relaciones. Sin embargo, cuando aprenden a equilibrar su ambición con la empatía, pueden ser líderes verdaderamente transformadores.",
+    "fortalezas": [
+      "Eficientes: optimizan todo lo que hacen y buscan constantemente mejorar los procesos.",
+      "Energéticos: abordan sus objetivos con vigor y entusiasmo incansable.",
+      "Seguros de sí mismos: confían en sus habilidades y no dudan en tomar la iniciativa.",
+      "Fuerza de voluntad: su determinación los impulsa a superar cualquier obstáculo.",
+      "Pensadores estratégicos: planifican a largo plazo y anticipan los desafíos.",
+      "Carismáticos e inspiradores: su confianza natural atrae a los demás y los motiva a actuar."
+    ],
+    "debilidades": [
+      "Tercos y dominantes: pueden imponer su voluntad sin considerar las opiniones de los demás.",
+      "Intolerantes: tienen poca paciencia para personas que no cumplen con sus estándares.",
+      "Impacientes: quieren resultados inmediatos y se frustran con la lentitud.",
+      "Arrogantes: su confianza puede percibirse como superioridad.",
+      "Pobre manejo emocional: pueden despreciar las emociones como debilidades."
+    ]
+  }
+}

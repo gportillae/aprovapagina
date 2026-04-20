@@ -17,6 +17,7 @@
     "exceljs": "^4.4.0",
     "express": "^5.2.1",
     "nodemailer": "^8.0.5",
+    "pdf-parse": "^2.4.5",
     "stripe": "^22.0.1"
   }
 }
