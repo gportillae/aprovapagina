@@ -1,0 +1,245 @@
+/* Hero Contacto */
+.contacto-hero {
+  background: linear-gradient(135deg, var(--color-primary-bg) 0%, var(--color-white) 100%);
+  padding: 80px 24px 60px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.contacto-hero .badge {
+  display: inline-block;
+  background: var(--color-primary-pale);
+  color: var(--color-primary-dark);
+  font-size: 13px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 24px;
+  margin-bottom: 20px;
+}
+
+.contacto-hero h1 {
+  font-size: 38px;
+  font-weight: 700;
+  color: var(--color-primary-darker);
+  margin-bottom: 16px;
+}
+
+.contacto-hero p {
+  font-size: 18px;
+  color: var(--color-text-secondary);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Grid principal */
+.contacto-main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Formulario */
+.contacto-form-wrapper h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--color-primary-darker);
+  margin-bottom: 8px;
+}
+
+.form-sub {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+  margin-bottom: 28px;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.contacto-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contacto-form label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-primary-darker);
+}
+
+.contacto-form input,
+.contacto-form select,
+.contacto-form textarea {
+  padding: 12px 14px;
+  border: 1px solid var(--color-primary-lighter);
+  border-radius: var(--border-radius-sm);
+  font-size: 14px;
+  color: var(--color-text-primary);
+  background: var(--color-white);
+  transition: border-color 0.2s ease;
+}
+
+.contacto-form input:focus,
+.contacto-form select:focus,
+.contacto-form textarea:focus {
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(83, 74, 183, 0.1);
+}
+
+.contacto-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contacto-form .btn-submit {
+  align-self: flex-start;
+  padding: 14px 32px;
+  font-size: 15px;
+}
+
+/* Éxito */
+.form-exito {
+  text-align: center;
+  padding: 48px 24px;
+  background: var(--color-primary-bg);
+  border-radius: var(--border-radius-lg);
+}
+
+.form-exito svg {
+  width: 48px;
+  height: 48px;
+  color: var(--color-primary);
+  margin-bottom: 16px;
+}
+
+.form-exito h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--color-primary-darker);
+  margin-bottom: 8px;
+}
+
+.form-exito p {
+  font-size: 15px;
+  color: var(--color-text-secondary);
+}
+
+/* Info de contacto */
+.contacto-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.info-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-primary-lighter);
+  border-radius: var(--border-radius-lg);
+  padding: 24px;
+}
+
+.info-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-primary-darker);
+  margin-bottom: 8px;
+}
+
+.info-card > p {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.info-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-primary);
+  transition: color 0.2s ease;
+}
+
+.info-link:hover {
+  color: var(--color-primary-dark);
+}
+
+.info-link svg {
+  color: var(--color-primary);
+}
+
+/* Sedes */
+.sedes-info {
+  background: var(--color-primary-bg);
+  border-color: transparent;
+}
+
+.sede-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 0;
+}
+
+.sede-item svg {
+  color: var(--color-primary);
+  flex-shrink: 0;
+}
+
+.sede-item strong {
+  display: block;
+  font-size: 14px;
+  color: var(--color-primary-darker);
+}
+
+.sede-item span {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+.virtual-note {
+  margin-top: 12px;
+  font-size: 13px;
+  color: var(--color-primary);
+  font-weight: 500;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contacto-hero h1 {
+    font-size: 28px;
+  }
+
+  .contacto-grid {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .contacto-form .btn-submit {
+    align-self: stretch;
+  }
+}

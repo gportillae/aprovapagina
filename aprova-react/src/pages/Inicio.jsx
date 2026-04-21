@@ -13,25 +13,50 @@ function Inicio() {
     <div className="inicio-page">
       {/* Hero Section */}
       <section className="hero">
+        <img
+          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          alt=""
+          className="hero-watermark"
+          aria-hidden="true"
+        />
         <div className="hero-content">
           <span className="hero-badge">Orientación Vocacional Profesional</span>
-          <h1>Descubre tu vocación con claridad y confianza</h1>
+          <h1>¿No sabes qué carrera elegir? No estás solo.</h1>
           <p>
-            En APROVA te ayudamos a conocerte mejor para que tomes la mejor decisión
-            sobre tu futuro profesional. Tests psicométricos y asesoría personalizada
-            en Aguascalientes, Guadalajara y CDMX.
+            Más del 40% de los universitarios en México cambian de carrera o abandonan sus estudios.
+            En APROVA te ayudamos a descubrir tu vocación con tests psicométricos y asesoría
+            personalizada para que elijas con confianza.
           </p>
           <div className="hero-cta">
             <Link to="/servicios" className="btn btn-primary">
-              Ver servicios
+              Conoce nuestros servicios
             </Link>
             <button className="btn btn-secondary" onClick={openWhatsApp}>
-              Contáctanos
+              Escríbenos por WhatsApp
             </button>
           </div>
         </div>
-        <div className="hero-visual">
-          <div className="hero-shape"></div>
+      </section>
+
+      {/* Estadísticas de impacto */}
+      <section className="impacto-strip">
+        <div className="impacto-grid">
+          <div className="impacto-item">
+            <span className="impacto-num">500+</span>
+            <span className="impacto-label">Estudiantes orientados</span>
+          </div>
+          <div className="impacto-item">
+            <span className="impacto-num">95%</span>
+            <span className="impacto-label">Satisfacción</span>
+          </div>
+          <div className="impacto-item">
+            <span className="impacto-num">10+</span>
+            <span className="impacto-label">Años de experiencia</span>
+          </div>
+          <div className="impacto-item">
+            <span className="impacto-num">6</span>
+            <span className="impacto-label">Tests psicométricos</span>
+          </div>
         </div>
       </section>
 
@@ -53,7 +78,7 @@ function Inicio() {
               </svg>
             </div>
             <h3>Tests psicométricos</h3>
-            <p>Evaluaciones diseñadas por especialistas para conocer tu personalidad, habilidades e intereses.</p>
+            <p>6 evaluaciones que miden tu personalidad, inteligencia, aptitudes, intereses y habilidades de razonamiento.</p>
           </div>
           <div className="feature-card">
             <div className="feature-icon">
@@ -78,6 +103,36 @@ function Inicio() {
             </div>
             <h3>Proceso flexible</h3>
             <p>Modalidades presencial y virtual disponibles. Tú decides cómo y cuándo avanzar en tu proceso.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Proceso paso a paso */}
+      <section className="section proceso-inicio">
+        <span className="section-label">¿Cómo funciona?</span>
+        <h2>Tu camino en 4 pasos</h2>
+        <p className="sub">Un proceso claro y sencillo para descubrir tu vocación.</p>
+
+        <div className="pasos-grid">
+          <div className="paso-card">
+            <div className="paso-num">1</div>
+            <h3>Contáctanos</h3>
+            <p>Escríbenos por WhatsApp o formulario y elige la modalidad que más te convenga.</p>
+          </div>
+          <div className="paso-card">
+            <div className="paso-num">2</div>
+            <h3>Realiza los tests</h3>
+            <p>Responde los tests psicométricos en línea desde tu casa, a tu propio ritmo.</p>
+          </div>
+          <div className="paso-card">
+            <div className="paso-num">3</div>
+            <h3>Recibe tu perfil</h3>
+            <p>Obtén un análisis detallado de tu personalidad, habilidades e intereses profesionales.</p>
+          </div>
+          <div className="paso-card">
+            <div className="paso-num">4</div>
+            <h3>Decide con confianza</h3>
+            <p>Con tu perfil y la asesoría de nuestros especialistas, elige la carrera correcta para ti.</p>
           </div>
         </div>
       </section>
@@ -115,7 +170,53 @@ function Inicio() {
 
         <div className="section-cta">
           <Link to="/servicios" className="btn btn-primary">
-            Ver detalles completos
+            Ver detalles y precios
+          </Link>
+        </div>
+      </section>
+
+      {/* Testimonios preview */}
+      <section className="section testimonios-preview">
+        <span className="section-label">Testimonios</span>
+        <h2>Lo que dicen nuestros estudiantes</h2>
+        <p className="sub">Conoce las experiencias de quienes ya encontraron su vocación.</p>
+
+        <div className="testimonios-preview-grid">
+          <div className="testimonio-preview-card">
+            <p>"El proceso con APROVA me ayudó a entender que mi perfil es mucho más afín a la psicología clínica. Hoy estoy en tercer semestre y me encanta lo que estudio."</p>
+            <div className="testimonio-preview-autor">
+              <div className="tp-avatar">S</div>
+              <div>
+                <strong>Sofía M.</strong>
+                <span>Aguascalientes</span>
+              </div>
+            </div>
+          </div>
+          <div className="testimonio-preview-card">
+            <p>"Los tests me dieron una claridad que no tenía. Descubrí aptitudes que no sabía que tenía y eso me ayudó a elegir ingeniería industrial con confianza."</p>
+            <div className="testimonio-preview-autor">
+              <div className="tp-avatar">C</div>
+              <div>
+                <strong>Carlos R.</strong>
+                <span>Guadalajara</span>
+              </div>
+            </div>
+          </div>
+          <div className="testimonio-preview-card">
+            <p>"Como papá, lo que más me gustó fue que incluyeron una sesión con nosotros. Entendimos mejor las fortalezas de nuestro hijo y pudimos apoyarlo."</p>
+            <div className="testimonio-preview-autor">
+              <div className="tp-avatar">R</div>
+              <div>
+                <strong>Roberto G.</strong>
+                <span>Aguascalientes</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="section-cta">
+          <Link to="/testimonios" className="btn btn-secondary">
+            Ver más testimonios
           </Link>
         </div>
       </section>
@@ -144,6 +245,12 @@ function Inicio() {
 
       {/* CTA Final */}
       <section className="cta-final">
+        <img
+          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          alt=""
+          className="cta-watermark"
+          aria-hidden="true"
+        />
         <h2>¿Listo para descubrir tu vocación?</h2>
         <p>Contáctanos hoy y da el primer paso hacia tu futuro profesional.</p>
         <div className="cta-buttons">

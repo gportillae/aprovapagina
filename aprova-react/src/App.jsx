@@ -1,11 +1,17 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import WhatsAppFloat from './components/WhatsAppFloat'
 import Inicio from './pages/Inicio'
 import Servicios from './pages/Servicios'
 import Pago from './pages/Pago'
 import PagoExitoso from './pages/PagoExitoso'
 import Tests from './pages/Tests'
+import Contacto from './pages/Contacto'
+import Testimonios from './pages/Testimonios'
+import Privacidad from './pages/Privacidad'
+import Terminos from './pages/Terminos'
+import Contenido from './pages/Contenido'
 import './App.css'
 
 function App() {
@@ -20,14 +26,15 @@ function App() {
             <Route path="/pago" element={<Pago />} />
             <Route path="/pago-exitoso" element={<PagoExitoso />} />
             <Route path="/tests" element={<Tests />} />
-            <Route path="/contenido" element={<PaginaEnConstruccion titulo="Contenido" />} />
-            <Route path="/testimonios" element={<PaginaEnConstruccion titulo="Testimonios" />} />
-            <Route path="/contacto" element={<PaginaEnConstruccion titulo="Contacto" />} />
-            <Route path="/privacidad" element={<PaginaEnConstruccion titulo="Privacidad" />} />
-            <Route path="/terminos" element={<PaginaEnConstruccion titulo="Términos y Condiciones" />} />
+            <Route path="/contacto" element={<Contacto />} />
+            <Route path="/testimonios" element={<Testimonios />} />
+            <Route path="/privacidad" element={<Privacidad />} />
+            <Route path="/terminos" element={<Terminos />} />
+            <Route path="/contenido" element={<Contenido />} />
           </Routes>
         </main>
         <Footer />
+        <WhatsAppFloat />
       </div>
     </Router>
   )

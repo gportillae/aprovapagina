@@ -189,7 +189,7 @@ function Tests() {
       },
       {
         id: 'aptitudes',
-        nombre: 'Test de Aptitudes BRP',
+        nombre: 'Test de Aptitudes',
         descripcion: 'Autoevaluación de 12 aptitudes: científica, verbal, numérica, persuasiva, mecánica, social, directiva, organización, musical, artística, espacial y coordinación',
         duracion: '30-45 min',
         preguntas: 120,
@@ -197,7 +197,7 @@ function Tests() {
       },
       {
         id: 'intereses',
-        nombre: 'Test de Intereses Ocupacionales BRP',
+        nombre: 'Test de Intereses Ocupacionales',
         descripcion: 'Evalúa 13 escalas de intereses: biológicos, mecánico, campestre, geofísicos, servicio social, literativo, organización, ejecutivo, cálculo, contabilidad, musical, artístico y científico',
         duracion: '30-45 min',
         preguntas: 130,
@@ -242,7 +242,7 @@ function Tests() {
 
     list.push({
       id: 'mbti',
-      nombre: 'Test de Personalidad MBTI',
+      nombre: 'Test de Personalidad',
       descripcion: 'Identifica tu tipo de personalidad en 4 dimensiones: Extraversión/Introversión, Sensación/Intuición, Pensamiento/Sentimiento y Juicio/Percepción',
       duracion: '15-20 min',
       preguntas: 72,

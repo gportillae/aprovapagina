@@ -136,3 +136,37 @@ img {
 .btn-whatsapp:hover {
   background: #20bd5a;
 }
+
+/* Marca de agua del logo en hero sections */
+.hero-watermark {
+  position: absolute;
+  right: 40px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: auto;
+  opacity: 0.06;
+  pointer-events: none;
+  user-select: none;
+}
+
+/* Marca de agua en secciones CTA oscuras */
+.cta-watermark {
+  position: absolute;
+  right: 80px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+  height: auto;
+  opacity: 0.05;
+  filter: brightness(0) invert(1);
+  pointer-events: none;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .hero-watermark,
+  .cta-watermark {
+    display: none;
+  }
+}

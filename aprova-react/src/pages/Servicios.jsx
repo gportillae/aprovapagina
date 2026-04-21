@@ -31,7 +31,15 @@ function Servicios() {
   const faqs = [
     {
       question: "¿Los resultados de los tests son confidenciales?",
-      answer: "Sí. Solo tú y tu especialista APROVA tienen acceso a los resultados. Nunca se comparten con terceros."
+      answer: "Sí. Solo tú y tu especialista APROVA tienen acceso a los resultados. Nunca se comparten con terceros ni con instituciones educativas."
+    },
+    {
+      question: "¿Qué tests psicométricos incluye el servicio?",
+      answer: "Incluye 6 evaluaciones: Test de Inteligencia (Terman), Áreas Vocacionales, Razonamiento (DAT-5), Aptitudes, Intereses Ocupacionales y Test de Personalidad. Cada uno evalúa una dimensión diferente de tu perfil."
+    },
+    {
+      question: "¿Qué incluye la sesión con padres de familia?",
+      answer: "En la Modalidad 2, la última sesión es un coaching para padres donde compartimos el resumen del proceso, entregamos el reporte escrito del perfil vocacional y resolvemos todas las inquietudes para que puedan apoyar la decisión en familia."
     },
     {
       question: "¿Las sesiones virtuales son en vivo o grabadas?",
@@ -39,11 +47,19 @@ function Servicios() {
     },
     {
       question: "¿Tienen servicio en Guadalajara y Ciudad de México?",
-      answer: "Sí. Tenemos especialistas en Aguascalientes, Guadalajara y CDMX. La modalidad virtual está disponible desde cualquier lugar."
+      answer: "Sí. Tenemos especialistas en Aguascalientes, Guadalajara y CDMX. La modalidad virtual está disponible desde cualquier lugar de México."
     },
     {
       question: "¿A qué edad es recomendable hacer la orientación?",
-      answer: "Idealmente en los últimos años de preparatoria, aunque también trabajamos con jóvenes que ya están en universidad y desean reorientar su carrera."
+      answer: "Idealmente en los últimos años de preparatoria, aunque también trabajamos con jóvenes que ya están en universidad y desean reorientar su carrera. Nunca es tarde para tomar una mejor decisión."
+    },
+    {
+      question: "¿Cuánto tiempo toma el proceso completo?",
+      answer: "La Modalidad 1 (solo tests) se completa en 1-2 días. La Modalidad 2 es un proceso de aproximadamente 12 horas divididas en sesiones de 2 horas, distribuidas a lo largo de varias semanas según tu disponibilidad."
+    },
+    {
+      question: "¿Puedo hacer reembolso si no estoy satisfecho?",
+      answer: "Puedes solicitar reembolso completo dentro de las primeras 48 horas después del pago, siempre que no hayas iniciado ningún test. Consulta nuestros Términos y Condiciones para más detalles."
     }
   ]
 
@@ -70,6 +86,12 @@ function Servicios() {
     <div className="servicios-page">
       {/* Hero Section */}
       <section className="hero-servicios">
+        <img
+          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          alt=""
+          className="hero-watermark"
+          aria-hidden="true"
+        />
         <span className="badge">Nuestros servicios</span>
         <h1>Dos caminos, un mismo destino</h1>
         <p>Elige la modalidad que mejor se adapte a ti. Ambas incluyen tests psicométricos diseñados por nuestros especialistas.</p>
@@ -190,6 +212,63 @@ function Servicios() {
         </div>
       </section>
 
+      {/* Qué evaluamos */}
+      <section className="section autoconocimiento-section">
+        <span className="section-label">Autoconocimiento</span>
+        <h2>¿Qué evaluamos de ti?</h2>
+        <p className="sub">
+          Para ser feliz y exitoso en una carrera, necesitas elegir algo que se adapte a quien realmente eres.
+          Nuestros tests y asesoría exploran 4 dimensiones clave de tu perfil.
+        </p>
+
+        <div className="autoconocimiento-grid">
+          <div className="ac-card">
+            <div className="ac-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                <polyline points="22 4 12 14.01 9 11.01"/>
+              </svg>
+            </div>
+            <h3>Habilidades y aptitudes</h3>
+            <p className="ac-question">¿Qué sabes hacer bien? ¿En qué destacas? ¿Qué materias se te dan mejor?</p>
+            <p>Identificamos tus capacidades naturales y las áreas donde tienes mayor potencial de desarrollo profesional.</p>
+          </div>
+          <div className="ac-card">
+            <div className="ac-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                <line x1="9" y1="9" x2="9.01" y2="9"/>
+                <line x1="15" y1="9" x2="15.01" y2="9"/>
+              </svg>
+            </div>
+            <h3>Personalidad</h3>
+            <p className="ac-question">¿Cómo eres? ¿Cómo te comportas? ¿Qué te diferencia de los demás?</p>
+            <p>Evaluamos tus rasgos de personalidad para encontrar carreras y ambientes laborales donde puedas ser tú mismo.</p>
+          </div>
+          <div className="ac-card">
+            <div className="ac-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+            </div>
+            <h3>Valores</h3>
+            <p className="ac-question">¿Qué es importante para ti? ¿Cuáles son las razones detrás de tus decisiones?</p>
+            <p>Tus valores determinan qué tipo de trabajo te dará satisfacción a largo plazo, no solo al inicio de tu carrera.</p>
+          </div>
+          <div className="ac-card">
+            <div className="ac-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h3>Intereses profesionales</h3>
+            <p className="ac-question">¿Qué te gusta hacer? ¿Cuáles son tus preferencias? ¿Qué haces en tu tiempo libre?</p>
+            <p>Exploramos tus intereses genuinos para conectarlos con campos profesionales donde disfrutarás lo que hagas.</p>
+          </div>
+        </div>
+      </section>
+
       {/* Proceso Section */}
       <section className="proceso">
         <span className="section-label">El camino</span>
@@ -213,7 +292,7 @@ function Servicios() {
             </div>
             <div className="step-text">
               <h4>Accedes a los tests psicométricos</h4>
-              <p>Los respondes en línea a tu ritmo. Tus resultados son confidenciales.</p>
+              <p>Respondes en línea a tu ritmo. Evaluamos tu inteligencia, personalidad, aptitudes, intereses y razonamiento con 6 tests especializados.</p>
               <span className="step-tag">Ambas modalidades</span>
             </div>
           </div>
@@ -224,17 +303,28 @@ function Servicios() {
             </div>
             <div className="step-text">
               <h4>Recibes tu perfil vocacional</h4>
-              <p>Análisis detallado de tu personalidad, habilidades, valores e intereses profesionales.</p>
+              <p>Un reporte escrito con el análisis detallado de tu personalidad, habilidades, valores e intereses, junto con las carreras más afines a tu perfil.</p>
               <span className="step-tag">Ambas modalidades</span>
             </div>
           </div>
           <div className="step">
             <div className="step-left">
               <div className="step-num">4</div>
+              <div className="step-line"></div>
             </div>
             <div className="step-text">
-              <h4>Sesiones de coaching virtual</h4>
-              <p>Proceso de ~12 horas dividido en sesiones de 2 horas. Acompañamiento hasta tu decisión.</p>
+              <h4>Coaching personalizado</h4>
+              <p>Proceso de ~12 horas en sesiones de 2 horas. Te ayudamos a descubrir tu potencial, detectar tus fortalezas y debilidades, y encontrar áreas de oportunidad.</p>
+              <span className="step-tag mod2">Solo Modalidad 2</span>
+            </div>
+          </div>
+          <div className="step">
+            <div className="step-left">
+              <div className="step-num">5</div>
+            </div>
+            <div className="step-text">
+              <h4>Sesión con padres de familia</h4>
+              <p>Una sesión final donde compartimos un resumen del acompañamiento, entregamos el reporte escrito y resolvemos las inquietudes de los padres para apoyar la toma de decisión en familia.</p>
               <span className="step-tag mod2">Solo Modalidad 2</span>
             </div>
           </div>

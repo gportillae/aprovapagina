@@ -3,6 +3,8 @@
   background: var(--color-primary-bg);
   padding: 60px 24px 50px;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-servicios .badge {
@@ -211,6 +213,71 @@
 
 .btn-form:hover {
   background: var(--color-primary-bg);
+}
+
+/* Autoconocimiento Section */
+.autoconocimiento-section {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.autoconocimiento-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  text-align: left;
+}
+
+.ac-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-primary-lighter);
+  border-radius: var(--border-radius-lg);
+  padding: 28px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.ac-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(83, 74, 183, 0.1);
+}
+
+.ac-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--color-primary-bg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.ac-icon svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-primary);
+}
+
+.ac-card h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--color-primary-darker);
+  margin-bottom: 8px;
+}
+
+.ac-question {
+  font-size: 14px;
+  color: var(--color-primary);
+  font-style: italic;
+  line-height: 1.5;
+  margin-bottom: 10px;
+}
+
+.ac-card > p:last-child {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
 }
 
 /* Proceso Section */
@@ -447,6 +514,10 @@
 /* Responsive */
 @media (max-width: 768px) {
   .modalidades-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .autoconocimiento-grid {
     grid-template-columns: 1fr;
   }
 
