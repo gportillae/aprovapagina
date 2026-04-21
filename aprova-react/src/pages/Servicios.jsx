@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { IlustracionServicios, IlustracionAutoconocimiento } from '../components/Ilustraciones'
 import './Servicios.css'
 
 // Icono de check para las features
@@ -95,6 +96,9 @@ function Servicios() {
         <span className="badge">Nuestros servicios</span>
         <h1>Dos caminos, un mismo destino</h1>
         <p>Elige la modalidad que mejor se adapte a ti. Ambas incluyen tests psicométricos diseñados por nuestros especialistas.</p>
+        <div className="hero-servicios-ilustracion">
+          <IlustracionServicios />
+        </div>
       </section>
 
       {/* Modalidades Section */}
@@ -214,12 +218,19 @@ function Servicios() {
 
       {/* Qué evaluamos */}
       <section className="section autoconocimiento-section">
-        <span className="section-label">Autoconocimiento</span>
-        <h2>¿Qué evaluamos de ti?</h2>
-        <p className="sub">
-          Para ser feliz y exitoso en una carrera, necesitas elegir algo que se adapte a quien realmente eres.
-          Nuestros tests y asesoría exploran 4 dimensiones clave de tu perfil.
-        </p>
+        <div className="ac-header">
+          <div className="ac-header-text">
+            <span className="section-label">Autoconocimiento</span>
+            <h2>¿Qué evaluamos de ti?</h2>
+            <p className="sub">
+              Para ser feliz y exitoso en una carrera, necesitas elegir algo que se adapte a quien realmente eres.
+              Nuestros tests y asesoría exploran 4 dimensiones clave de tu perfil.
+            </p>
+          </div>
+          <div className="ac-header-ilustracion">
+            <IlustracionAutoconocimiento />
+          </div>
+        </div>
 
         <div className="autoconocimiento-grid">
           <div className="ac-card">

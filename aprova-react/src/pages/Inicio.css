@@ -5,15 +5,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 40px;
   min-height: 70vh;
   position: relative;
   overflow: hidden;
 }
 
 .hero-content {
-  max-width: 600px;
-  text-align: center;
+  max-width: 540px;
+  text-align: left;
   z-index: 1;
+  flex: 1;
+}
+
+.hero-ilustracion {
+  flex: 0 0 380px;
+  z-index: 1;
+}
+
+.ilustracion-hero {
+  width: 100%;
+  height: auto;
 }
 
 .hero-badge {
@@ -45,8 +57,18 @@
 .hero-cta {
   display: flex;
   gap: 16px;
-  justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Ilustración de proceso */
+.proceso-ilustracion {
+  max-width: 500px;
+  margin: 0 auto 24px;
+}
+
+.ilustracion-proceso {
+  width: 100%;
+  height: auto;
 }
 
 /* Impacto strip */
@@ -420,6 +442,24 @@
 
 /* Responsive */
 @media (max-width: 900px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-content {
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-ilustracion {
+    flex: 0 0 auto;
+    max-width: 300px;
+  }
+
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -443,12 +483,20 @@
 }
 
 @media (max-width: 768px) {
+  .hero-ilustracion {
+    display: none;
+  }
+
   .hero h1 {
     font-size: 32px;
   }
 
   .hero p {
     font-size: 16px;
+  }
+
+  .proceso-ilustracion {
+    display: none;
   }
 
   .features-grid {

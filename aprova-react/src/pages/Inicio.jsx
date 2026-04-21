@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { IlustracionHero, IlustracionProceso } from '../components/Ilustraciones'
 import './Inicio.css'
 
 function Inicio() {
@@ -35,6 +36,9 @@ function Inicio() {
               Escríbenos por WhatsApp
             </button>
           </div>
+        </div>
+        <div className="hero-ilustracion">
+          <IlustracionHero />
         </div>
       </section>
 
@@ -112,6 +116,10 @@ function Inicio() {
         <span className="section-label">¿Cómo funciona?</span>
         <h2>Tu camino en 4 pasos</h2>
         <p className="sub">Un proceso claro y sencillo para descubrir tu vocación.</p>
+
+        <div className="proceso-ilustracion">
+          <IlustracionProceso />
+        </div>
 
         <div className="pasos-grid">
           <div className="paso-card">

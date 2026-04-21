@@ -33,6 +33,16 @@
   margin: 0 auto;
 }
 
+.hero-servicios-ilustracion {
+  max-width: 360px;
+  margin: 24px auto 0;
+}
+
+.ilustracion-servicios {
+  width: 100%;
+  height: auto;
+}
+
 /* Modalidades Section */
 .modalidades-section {
   max-width: 1000px;
@@ -219,7 +229,27 @@
 .autoconocimiento-section {
   max-width: 1000px;
   margin: 0 auto;
-  text-align: center;
+}
+
+.ac-header {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 8px;
+}
+
+.ac-header-text {
+  flex: 1;
+  text-align: left;
+}
+
+.ac-header-ilustracion {
+  flex: 0 0 180px;
+}
+
+.ilustracion-autoconocimiento {
+  width: 100%;
+  height: auto;
 }
 
 .autoconocimiento-grid {
@@ -519,6 +549,24 @@
 
   .autoconocimiento-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ac-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ac-header-text {
+    text-align: center;
+  }
+
+  .ac-header-ilustracion {
+    flex: 0 0 auto;
+    max-width: 150px;
+  }
+
+  .hero-servicios-ilustracion {
+    max-width: 260px;
   }
 
   .hero-servicios h1 {
