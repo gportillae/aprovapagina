@@ -4,8 +4,43 @@ const cors = require('cors')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const nodemailer = require('nodemailer')
 const ExcelJS = require('exceljs')
+const fs = require('fs')
+const path = require('path')
+const { generarReportePDF } = require('./generar-reporte')
 
 const app = express()
+
+// ===== ALMACENAMIENTO DE RESULTADOS POR USUARIO =====
+const RESULTADOS_DIR = path.join(__dirname, 'resultados')
+if (!fs.existsSync(RESULTADOS_DIR)) {
+  fs.mkdirSync(RESULTADOS_DIR, { recursive: true })
+}
+
+function sanitizeEmail(email) {
+  return email.toLowerCase().replace(/[^a-z0-9]/g, '_')
+}
+
+function getArchivoUsuario(email) {
+  return path.join(RESULTADOS_DIR, `${sanitizeEmail(email)}.json`)
+}
+
+function cargarResultadosUsuario(email) {
+  const archivo = getArchivoUsuario(email)
+  try {
+    if (fs.existsSync(archivo)) {
+      return JSON.parse(fs.readFileSync(archivo, 'utf-8'))
+    }
+  } catch (e) {
+    console.error('Error al cargar resultados:', e.message)
+  }
+  return { email, nombre: '', tests: {}, fechaCreacion: new Date().toISOString() }
+}
+
+function guardarResultadosUsuario(email, datos) {
+  const archivo = getArchivoUsuario(email)
+  datos.fechaActualizacion = new Date().toISOString()
+  fs.writeFileSync(archivo, JSON.stringify(datos, null, 2), 'utf-8')
+}
 
 // Configurar transporter de Gmail
 const transporter = nodemailer.createTransport({
@@ -1621,11 +1656,149 @@ app.post('/api/enviar-resultados', async (req, res) => {
 
     await transporter.sendMail(mailOptions)
 
+    // Guardar resultados en el servidor para el reporte final
+    try {
+      const datosUsuario = cargarResultadosUsuario(email)
+      datosUsuario.nombre = nombre
+      datosUsuario.email = email
+      datosUsuario.modalidad = modalidad
+
+      if (tipoResultado === 'terman') {
+        datosUsuario.tests.terman = { resultados: respuestas, fecha: new Date().toISOString() }
+      } else if (tipoResultado === 'aptitudes') {
+        datosUsuario.tests.aptitudes = { resultados: respuestas, fecha: new Date().toISOString() }
+      } else if (tipoResultado === 'intereses') {
+        datosUsuario.tests.intereses = { resultados: respuestas, fecha: new Date().toISOString() }
+      } else if (tipoResultado === 'areas') {
+        // Las áreas se acumulan (PU + subtipos)
+        const prevAreas = datosUsuario.tests.areas ? datosUsuario.tests.areas.resultados : {}
+        datosUsuario.tests.areas = { resultados: { ...prevAreas, ...respuestas }, fecha: new Date().toISOString() }
+      } else if (tipoResultado === 'razonamiento') {
+        datosUsuario.tests.razonamiento = { resultados: respuestas, datosPersonales, fecha: new Date().toISOString() }
+      } else if (tipoResultado === 'mbti') {
+        datosUsuario.tests.mbti = { resultados: respuestas, fecha: new Date().toISOString() }
+      }
+
+      guardarResultadosUsuario(email, datosUsuario)
+      console.log(`Resultados guardados en servidor para: ${email} (${tipoResultado})`)
+    } catch (saveErr) {
+      console.error('Error al guardar resultados en servidor:', saveErr.message)
+    }
+
     console.log(`Resultados enviados con Excel: ${testNombre} - ${nombre}`)
     res.json({ success: true, message: 'Resultados enviados correctamente' })
   } catch (error) {
     console.error('Error al enviar resultados:', error)
     res.status(500).json({ error: 'Error al enviar los resultados' })
+  }
+})
+
+// Consultar resultados guardados de un usuario
+app.get('/api/resultados/:email', (req, res) => {
+  try {
+    const email = decodeURIComponent(req.params.email)
+    const datos = cargarResultadosUsuario(email)
+
+    // Devolver qué tests tiene completados y sus resultados
+    const testsCompletados = Object.keys(datos.tests || {})
+    res.json({
+      nombre: datos.nombre,
+      email: datos.email,
+      modalidad: datos.modalidad,
+      testsCompletados,
+      tests: datos.tests || {},
+      fechaCreacion: datos.fechaCreacion,
+      fechaActualizacion: datos.fechaActualizacion
+    })
+  } catch (error) {
+    console.error('Error al consultar resultados:', error)
+    res.status(500).json({ error: 'Error al consultar resultados' })
+  }
+})
+
+// Generar reporte PDF vocacional con todos los resultados guardados en el servidor
+app.post('/api/generar-reporte', async (req, res) => {
+  try {
+    const { email } = req.body
+
+    if (!email) {
+      return res.status(400).json({ error: 'Se requiere el email del participante' })
+    }
+
+    // Cargar todos los resultados del servidor
+    const datosUsuario = cargarResultadosUsuario(email)
+    const nombre = datosUsuario.nombre || email
+    const tests = datosUsuario.tests || {}
+
+    const terman = tests.terman ? tests.terman.resultados : null
+    const mbti = tests.mbti ? tests.mbti.resultados : null
+    const aptitudes = tests.aptitudes ? tests.aptitudes.resultados : null
+    const intereses = tests.intereses ? tests.intereses.resultados : null
+    const areas = tests.areas ? tests.areas.resultados : null
+    const razonamiento = tests.razonamiento ? {
+      secciones: tests.razonamiento.resultados,
+      datosPersonales: tests.razonamiento.datosPersonales
+    } : null
+
+    const pdfBuffer = await generarReportePDF({ nombre, email, terman, mbti, aptitudes, intereses, areas, razonamiento })
+
+    const fecha = new Date().toLocaleDateString('es-MX', { timeZone: 'America/Mexico_City' }).replace(/\//g, '-')
+    const nombreArchivo = `Reporte_Vocacional_${nombre.replace(/\s+/g, '_')}_${fecha}.pdf`
+
+    // Enviar por correo
+    try {
+      const mailOptions = {
+        from: `"APROVA" <${process.env.GMAIL_USER}>`,
+        to: process.env.EMAIL_DESTINO,
+        subject: `Reporte Vocacional Generado: ${nombre}`,
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+            <div style="background: #534AB7; color: white; padding: 20px; text-align: center;">
+              <h1 style="margin: 0;">APROVA</h1>
+              <p style="margin: 5px 0 0;">Reporte Vocacional</p>
+            </div>
+            <div style="padding: 20px; background: #f5f5f5;">
+              <h2 style="color: #26215C;">Reporte generado</h2>
+              <p><strong>Nombre:</strong> ${nombre}</p>
+              <p><strong>Email:</strong> ${email}</p>
+              <p><strong>Fecha:</strong> ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}</p>
+              <p><strong>Tests incluidos:</strong></p>
+              <ul>
+                ${terman ? '<li>Terman (Inteligencia)</li>' : ''}
+                ${mbti ? '<li>MBTI (Personalidad)</li>' : ''}
+                ${aptitudes ? '<li>Aptitudes</li>' : ''}
+                ${intereses ? '<li>Intereses</li>' : ''}
+                ${areas ? '<li>Áreas Vocacionales</li>' : ''}
+                ${razonamiento ? '<li>Razonamiento DAT-5</li>' : ''}
+              </ul>
+            </div>
+            <div style="background: #26215C; color: #AFA9EC; padding: 15px; text-align: center; font-size: 12px;">
+              <p style="margin: 0;">Reporte generado automáticamente por APROVA.</p>
+            </div>
+          </div>
+        `,
+        attachments: [
+          {
+            filename: nombreArchivo,
+            content: pdfBuffer,
+            contentType: 'application/pdf'
+          }
+        ]
+      }
+
+      await transporter.sendMail(mailOptions)
+      console.log(`Reporte vocacional enviado: ${nombre}`)
+    } catch (mailError) {
+      console.error('Error al enviar email del reporte:', mailError)
+    }
+
+    // Devolver el PDF como descarga
+    res.setHeader('Content-Type', 'application/pdf')
+    res.setHeader('Content-Disposition', `attachment; filename="${nombreArchivo}"`)
+    res.send(pdfBuffer)
+  } catch (error) {
+    console.error('Error al generar reporte:', error)
+    res.status(500).json({ error: 'Error al generar el reporte vocacional' })
   }
 })
 

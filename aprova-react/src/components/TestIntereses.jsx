@@ -88,6 +88,7 @@ function TestIntereses({ acceso, onVolver, onCompletado }) {
           .slice(0, 3)
           .map(([nombre]) => nombre)
         localStorage.setItem('aprova_top3_intereses', JSON.stringify(top3))
+        localStorage.setItem('aprova_resultado_intereses', JSON.stringify(resultados))
         onCompletado()
       } else {
         setError('Error al enviar. Intenta de nuevo.')

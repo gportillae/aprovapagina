@@ -89,6 +89,7 @@ function TestAptitudes({ acceso, onVolver, onCompletado }) {
           .slice(0, 3)
           .map(([nombre]) => nombre)
         localStorage.setItem('aprova_top3_aptitudes', JSON.stringify(top3))
+        localStorage.setItem('aprova_resultado_aptitudes', JSON.stringify(resultados))
         onCompletado()
       } else {
         setError('Error al enviar. Intenta de nuevo.')

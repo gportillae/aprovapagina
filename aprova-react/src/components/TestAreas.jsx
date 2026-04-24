@@ -123,6 +123,10 @@ function TestAreas({ acceso, onVolver, onCompletado, areasRecomendadas }) {
 
       const data = await response.json()
       if (data.success) {
+        // Guardar/acumular resultados de áreas para el reporte
+        const prevAreas = JSON.parse(localStorage.getItem('aprova_resultado_areas') || '{}')
+        const merged = { ...prevAreas, ...resultados }
+        localStorage.setItem('aprova_resultado_areas', JSON.stringify(merged))
         onCompletado()
       } else {
         setError('Error al enviar. Intenta de nuevo.')

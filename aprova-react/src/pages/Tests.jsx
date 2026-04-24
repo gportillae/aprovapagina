@@ -67,6 +67,14 @@ function Tests() {
   const [enviando, setEnviando] = useState(false)
   const [error, setError] = useState('')
   const [diagnostico, setDiagnostico] = useState(null)
+  const [generandoReporte, setGenerandoReporte] = useState(false)
+  const [reporteError, setReporteError] = useState('')
+  const [reporteExito, setReporteExito] = useState(false)
+  const [esPrueba, setEsPrueba] = useState(() => {
+    const params = new URLSearchParams(window.location.search)
+    return params.get('prueba') === '1'
+  })
+  const [cargandoEstado, setCargandoEstado] = useState(true)
   const [testsCompletados, setTestsCompletados] = useState(() => {
     const saved = localStorage.getItem('aprova_tests_completados')
     return saved ? JSON.parse(saved) : []
@@ -83,12 +91,102 @@ function Tests() {
       localStorage.removeItem('aprova_top3_intereses')
       localStorage.removeItem('aprova_razonamiento_progreso')
       localStorage.removeItem('aprova_mbti_progreso')
+      localStorage.removeItem('aprova_resultado_terman')
+      localStorage.removeItem('aprova_resultado_aptitudes')
+      localStorage.removeItem('aprova_resultado_intereses')
+      localStorage.removeItem('aprova_resultado_areas')
+      localStorage.removeItem('aprova_resultado_razonamiento')
+      localStorage.removeItem('aprova_resultado_mbti')
       setTestsCompletados([])
       setDiagnostico(null)
     }
     // Siempre guardar el email del usuario actual
     localStorage.setItem('aprova_tests_usuario', acceso.email)
   }, [acceso])
+
+  // Cargar estado de tests desde el servidor
+  useEffect(() => {
+    if (!acceso) { setCargandoEstado(false); return }
+    if (esPrueba) { setCargandoEstado(false); return }
+    const cargarEstadoServidor = async () => {
+      try {
+        const response = await fetch(`${API_URL}/api/resultados/${encodeURIComponent(acceso.email)}`)
+        if (response.ok) {
+          const data = await response.json()
+          if (data.testsCompletados && data.testsCompletados.length > 0) {
+            setTestsCompletados(prev => {
+              const merged = [...new Set([...prev, ...data.testsCompletados])]
+              localStorage.setItem('aprova_tests_completados', JSON.stringify(merged))
+              return merged
+            })
+            // Restaurar diagnóstico si el servidor tiene aptitudes e intereses
+            if (data.tests?.aptitudes?.resultados && data.tests?.intereses?.resultados) {
+              const aptRes = data.tests.aptitudes.resultados
+              const intRes = data.tests.intereses.resultados
+              // Extraer top3 de aptitudes (por porcentaje)
+              const aptEntries = Object.entries(aptRes).sort((a, b) => b[1].porcentaje - a[1].porcentaje)
+              const top3Apt = aptEntries.slice(0, 3).map(([nombre]) => nombre)
+              // Extraer top3 de intereses (por porcentaje)
+              const intEntries = Object.entries(intRes).sort((a, b) => b[1].porcentaje - a[1].porcentaje)
+              const top3Int = intEntries.slice(0, 3).map(([nombre]) => nombre)
+              localStorage.setItem('aprova_top3_aptitudes', JSON.stringify(top3Apt))
+              localStorage.setItem('aprova_top3_intereses', JSON.stringify(top3Int))
+              const areas = calcularDiagnostico(top3Apt, top3Int)
+              setDiagnostico({ top3Apt, top3Int, areas })
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('No se pudo conectar al servidor para cargar estado:', err)
+      } finally {
+        setCargandoEstado(false)
+      }
+    }
+    cargarEstadoServidor()
+  }, [acceso])
+
+  // Verificar si todos los tests están completados
+  const todosTestsCompletos = testsCompletados.includes('terman') &&
+    testsCompletados.includes('aptitudes') &&
+    testsCompletados.includes('intereses') &&
+    testsCompletados.includes('razonamiento') &&
+    testsCompletados.includes('mbti') &&
+    testsCompletados.includes('area_PU')
+
+  const handleGenerarReporte = async () => {
+    setGenerandoReporte(true)
+    setReporteError('')
+    setReporteExito(false)
+
+    try {
+      const response = await fetch(`${API_URL}/api/generar-reporte`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email: acceso.email })
+      })
+
+      if (!response.ok) {
+        throw new Error('Error al generar el reporte')
+      }
+
+      // Descargar el PDF
+      const blob = await response.blob()
+      const url = window.URL.createObjectURL(blob)
+      const a = document.createElement('a')
+      a.href = url
+      a.download = `Reporte_Vocacional_${(acceso.nombre || 'usuario').replace(/\s+/g, '_')}.pdf`
+      document.body.appendChild(a)
+      a.click()
+      document.body.removeChild(a)
+      window.URL.revokeObjectURL(url)
+      setReporteExito(true)
+    } catch (err) {
+      console.error('Error al generar reporte:', err)
+      setReporteError('Error al generar el reporte. Intenta de nuevo.')
+    } finally {
+      setGenerandoReporte(false)
+    }
+  }
 
   const marcarTestCompletado = (testId) => {
     setTestsCompletados(prev => {
@@ -111,9 +209,6 @@ function Tests() {
     }
   }
 
-  // Detectar modo prueba
-  const [esPrueba, setEsPrueba] = useState(false)
-
   // Verificar acceso al cargar
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
@@ -129,6 +224,12 @@ function Tests() {
       localStorage.removeItem('aprova_top3_intereses')
       localStorage.removeItem('aprova_razonamiento_progreso')
       localStorage.removeItem('aprova_mbti_progreso')
+      localStorage.removeItem('aprova_resultado_terman')
+      localStorage.removeItem('aprova_resultado_aptitudes')
+      localStorage.removeItem('aprova_resultado_intereses')
+      localStorage.removeItem('aprova_resultado_areas')
+      localStorage.removeItem('aprova_resultado_razonamiento')
+      localStorage.removeItem('aprova_resultado_mbti')
       setTestsCompletados([])
       setDiagnostico(null)
       const accesoPrueba = { email: 'prueba@aprova.com', nombre: 'Usuario Prueba', modalidad: 'modalidad1' }
@@ -251,6 +352,17 @@ function Tests() {
 
     return list
   })()
+
+  // Mostrar carga mientras se sincroniza con el servidor
+  if (cargandoEstado) {
+    return (
+      <div className="tests-page">
+        <div style={{ textAlign: 'center', padding: '60px 20px' }}>
+          <p style={{ color: '#6b7280', fontSize: '16px' }}>Cargando tu progreso...</p>
+        </div>
+      </div>
+    )
+  }
 
   // Vista de test completado (debe estar antes de otras verificaciones)
   if (testCompletado) {
@@ -482,6 +594,42 @@ function Tests() {
                   </span>
                 ))}
               </div>
+            </div>
+          )}
+
+          {/* Botón para generar reporte cuando todos los tests están completos */}
+          {todosTestsCompletos && (
+            <div style={{
+              background: 'linear-gradient(135deg, #26215C 0%, #534AB7 100%)',
+              borderRadius: '12px', padding: '28px', marginTop: '20px',
+              textAlign: 'center', color: '#fff'
+            }}>
+              <h3 style={{ margin: '0 0 8px', fontSize: '20px' }}>Todos los tests completados</h3>
+              <p style={{ margin: '0 0 20px', color: '#AFA9EC', fontSize: '15px' }}>
+                Ya puedes generar tu reporte vocacional completo en PDF.
+              </p>
+              <button
+                onClick={handleGenerarReporte}
+                disabled={generandoReporte}
+                style={{
+                  background: '#fff', color: '#26215C', border: 'none',
+                  padding: '14px 32px', borderRadius: '8px', fontSize: '16px',
+                  fontWeight: '600', cursor: generandoReporte ? 'wait' : 'pointer',
+                  opacity: generandoReporte ? 0.7 : 1, transition: 'opacity 0.2s'
+                }}
+              >
+                {generandoReporte ? 'Generando reporte...' : 'Generar Reporte PDF'}
+              </button>
+              {reporteExito && (
+                <p style={{ margin: '12px 0 0', color: '#22c55e', fontSize: '14px' }}>
+                  Reporte generado y descargado correctamente. También fue enviado por correo.
+                </p>
+              )}
+              {reporteError && (
+                <p style={{ margin: '12px 0 0', color: '#EF4444', fontSize: '14px' }}>
+                  {reporteError}
+                </p>
+              )}
             </div>
           )}
 

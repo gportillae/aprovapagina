@@ -246,6 +246,7 @@ function TestTerman({ acceso, onVolver, onCompletado }) {
 
       const data = await response.json()
       if (data.success) {
+        localStorage.setItem('aprova_resultado_terman', JSON.stringify(resultados))
         onCompletado()
       } else {
         setError('Error al enviar. Intenta de nuevo.')

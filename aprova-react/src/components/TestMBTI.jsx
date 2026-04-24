@@ -112,6 +112,7 @@ function TestMBTI({ acceso, onVolver, onCompletado }) {
 
       const data = await response.json()
       if (data.success) {
+        localStorage.setItem('aprova_resultado_mbti', JSON.stringify(resultados))
         borrarProgreso()
         setMostrarResultado(true)
       } else {

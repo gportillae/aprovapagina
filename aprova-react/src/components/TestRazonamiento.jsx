@@ -298,6 +298,14 @@ function TestRazonamiento({ acceso, onVolver, onCompletado }) {
 
       const data = await response.json()
       if (data.success) {
+        localStorage.setItem('aprova_resultado_razonamiento', JSON.stringify({
+          secciones: resultados,
+          datosPersonales: {
+            sexo: datosPersonales.sexo === 'V' ? 'Masculino' : 'Femenino',
+            nivel: datosPersonales.nivel === 'secundaria' ? 'Secundaria' :
+                   datosPersonales.nivel === 'preparatoria1' ? '1° Preparatoria' : '2° Preparatoria'
+          }
+        }))
         borrarProgreso()
         onCompletado()
       } else {
