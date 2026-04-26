@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react'
 import dataMBTI from '../data/items_mbti.json'
 import './TestMBTI.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = import.meta.env.VITE_API_URL ?? ''
 const ITEMS_PER_PAGE = 9
 const STORAGE_KEY = 'aprova_mbti_progreso'
 

@@ -6,7 +6,7 @@ import './Pago.css'
 // Tu Publishable Key de Stripe (desde .env)
 const stripePromise = loadStripe(import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY || 'pk_test_AQUI_VA_TU_PUBLISHABLE_KEY')
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = import.meta.env.VITE_API_URL ?? ''
 
 const MODALIDADES = {
   modalidad1: {

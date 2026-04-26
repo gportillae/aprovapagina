@@ -8,7 +8,7 @@ import TestIntereses from '../components/TestIntereses'
 import TestMBTI from '../components/TestMBTI'
 import './Tests.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = import.meta.env.VITE_API_URL ?? ''
 
 // Diagnóstico Diferencial - mapeo de áreas a aptitudes e intereses requeridos
 const DIAGNOSTICO_DIFERENCIAL = {

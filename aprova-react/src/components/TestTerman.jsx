@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, useCallback } from 'react'
 import itemsTerman from '../data/items_terman.json'
 import './TestTerman.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = import.meta.env.VITE_API_URL ?? ''
 
 const SERIES_ORDER = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
 

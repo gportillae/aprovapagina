@@ -3,7 +3,7 @@ import itemsRazonamiento from '../data/items_razonamiento.json'
 import baremosData from '../data/baremos_razonamiento.json'
 import './TestRazonamiento.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = import.meta.env.VITE_API_URL ?? ''
 
 const SECCIONES_ORDER = itemsRazonamiento.ordenSecciones
 const ITEMS_PER_PAGE = 10

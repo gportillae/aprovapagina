@@ -1,0 +1,14 @@
+{
+  "name": "aprova",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "cd aprova-backend && npm install && cd ../aprova-react && npm install",
+    "build": "cd aprova-react && npm run build",
+    "start": "cd aprova-backend && node server.js",
+    "dev": "cd aprova-backend && node server.js"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

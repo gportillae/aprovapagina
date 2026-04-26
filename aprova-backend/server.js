@@ -51,8 +51,12 @@ const transporter = nodemailer.createTransport({
   }
 })
 
-// Middleware - permitir todas las conexiones en desarrollo
-app.use(cors())
+// Middleware
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production'
+    ? [process.env.FRONTEND_URL, 'https://aprovamx.com', 'https://www.aprovamx.com'].filter(Boolean)
+    : true
+}))
 app.use(express.json())
 
 // Productos/Precios de APROVA
@@ -1801,6 +1805,17 @@ app.post('/api/generar-reporte', async (req, res) => {
     res.status(500).json({ error: 'Error al generar el reporte vocacional' })
   }
 })
+
+// ===== SERVIR FRONTEND EN PRODUCCIÓN =====
+const clientBuildPath = path.join(__dirname, '..', 'aprova-react', 'dist')
+if (fs.existsSync(clientBuildPath)) {
+  app.use(express.static(clientBuildPath))
+  // Todas las rutas que no sean /api/ devuelven index.html (SPA)
+  app.get(/^\/(?!api\/).*/, (req, res) => {
+    res.sendFile(path.join(clientBuildPath, 'index.html'))
+  })
+  console.log('Sirviendo frontend desde:', clientBuildPath)
+}
 
 const PORT = process.env.PORT || 3001
 

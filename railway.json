@@ -1,0 +1,13 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "builder": "NIXPACKS",
+    "nixpacksVersion": "1.30.0",
+    "buildCommand": "cd aprova-backend && npm install && cd ../aprova-react && npm install && npm run build"
+  },
+  "deploy": {
+    "startCommand": "cd aprova-backend && node server.js",
+    "restartPolicyType": "ON_FAILURE",
+    "restartPolicyMaxRetries": 10
+  }
+}

@@ -2,7 +2,7 @@ import { useState, useRef } from 'react'
 import datosAreas from '../data/items_areas.json'
 import './TestAptitudes.css'
 
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
+const API_URL = import.meta.env.VITE_API_URL ?? ''
 
 const TIEMPOS = { FM: '15-20 minutos', B: '15-20 minutos', Q: '15-20 minutos', A: '20-25 minutos', S: '10-15 minutos', H: '20-30 minutos' }
 
