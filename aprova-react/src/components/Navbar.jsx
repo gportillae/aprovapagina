@@ -7,7 +7,7 @@ function Navbar() {
       <div className="nav-container">
         <NavLink to="/" className="nav-logo">
           <img
-            src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+            src="/logo-aprova.png"
             alt="APROVA"
           />
           <span className="nav-tagline">Orientación Vocacional</span>
