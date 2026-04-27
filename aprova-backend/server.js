@@ -1664,8 +1664,6 @@ app.post('/api/enviar-resultados', async (req, res) => {
       ]
     }
 
-    await transporter.sendMail(mailOptions)
-
     // Guardar resultados en el servidor para el reporte final
     try {
       const datosUsuario = cargarResultadosUsuario(email)
@@ -1695,8 +1693,13 @@ app.post('/api/enviar-resultados', async (req, res) => {
       console.error('Error al guardar resultados en servidor:', saveErr.message)
     }
 
-    console.log(`Resultados enviados con Excel: ${testNombre} - ${nombre}`)
+    // Responder al cliente inmediatamente sin esperar el correo
     res.json({ success: true, message: 'Resultados enviados correctamente' })
+
+    // Enviar correo en background
+    transporter.sendMail(mailOptions)
+      .then(() => console.log(`Resultados enviados con Excel: ${testNombre} - ${nombre}`))
+      .catch((emailError) => console.error('Error al enviar resultados:', emailError))
   } catch (error) {
     console.error('Error al enviar resultados:', error)
     res.status(500).json({ error: 'Error al enviar los resultados' })
@@ -1796,13 +1799,15 @@ app.post('/api/generar-reporte', async (req, res) => {
         ]
       }
 
-      await transporter.sendMail(mailOptions)
-      console.log(`Reporte vocacional enviado: ${nombre}`)
+      // Enviar correo en background
+      transporter.sendMail(mailOptions)
+        .then(() => console.log(`Reporte vocacional enviado: ${nombre}`))
+        .catch((mailError) => console.error('Error al enviar email del reporte:', mailError))
     } catch (mailError) {
-      console.error('Error al enviar email del reporte:', mailError)
+      console.error('Error al preparar email del reporte:', mailError)
     }
 
-    // Devolver el PDF como descarga
+    // Devolver el PDF como descarga inmediatamente
     res.setHeader('Content-Type', 'application/pdf')
     res.setHeader('Content-Disposition', `attachment; filename="${nombreArchivo}"`)
     res.send(pdfBuffer)
