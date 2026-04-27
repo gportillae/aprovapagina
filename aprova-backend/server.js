@@ -1,14 +1,14 @@
 require('dotenv').config()
-const dns = require('dns')
-dns.setDefaultResultOrder('ipv4first')
 const express = require('express')
 const cors = require('cors')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
-const nodemailer = require('nodemailer')
+const { Resend } = require('resend')
 const ExcelJS = require('exceljs')
 const fs = require('fs')
 const path = require('path')
 const { generarReportePDF } = require('./generar-reporte')
+
+const resend = new Resend(process.env.RESEND_API_KEY)
 
 const app = express()
 
@@ -44,16 +44,8 @@ function guardarResultadosUsuario(email, datos) {
   fs.writeFileSync(archivo, JSON.stringify(datos, null, 2), 'utf-8')
 }
 
-// Configurar transporter de Gmail
-const transporter = nodemailer.createTransport({
-  host: 'smtp.gmail.com',
-  port: 587,
-  secure: false,
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD
-  }
-})
+// Email sender address (dominio verificado en Resend)
+const EMAIL_FROM = process.env.EMAIL_FROM || 'APROVA <onboarding@resend.dev>'
 
 // Middleware
 app.use(cors({
@@ -144,8 +136,8 @@ app.get('/api/verificar-pago/:sessionId', async (req, res) => {
       // Enviar correos en background (no bloquea la respuesta)
       const enviarCorreos = async () => {
         try {
-          const mailCliente = {
-            from: `"APROVA" <${process.env.GMAIL_USER}>`,
+          await resend.emails.send({
+            from: EMAIL_FROM,
             to: email,
             subject: '¡Gracias por tu compra! - APROVA',
             html: `
@@ -178,13 +170,11 @@ app.get('/api/verificar-pago/:sessionId', async (req, res) => {
                 </div>
               </div>
             `
-          }
-
-          await transporter.sendMail(mailCliente)
+          })
           console.log(`Recibo enviado a: ${email}`)
 
-          const mailAprova = {
-            from: `"APROVA Sistema" <${process.env.GMAIL_USER}>`,
+          await resend.emails.send({
+            from: EMAIL_FROM,
             to: process.env.EMAIL_DESTINO,
             subject: `Nueva venta: ${nombre} - ${producto ? producto.nombre : modalidad}`,
             html: `
@@ -201,9 +191,7 @@ app.get('/api/verificar-pago/:sessionId', async (req, res) => {
                 </div>
               </div>
             `
-          }
-
-          await transporter.sendMail(mailAprova)
+          })
           console.log(`Notificación de venta enviada a APROVA`)
 
         } catch (emailError) {
@@ -1627,8 +1615,8 @@ app.post('/api/enviar-resultados', async (req, res) => {
     const fecha = new Date().toLocaleDateString('es-MX', { timeZone: 'America/Mexico_City' }).replace(/\//g, '-')
     const nombreArchivo = `Resultados_${testNombre.replace(/\s+/g, '_')}_${nombre.replace(/\s+/g, '_')}_${fecha}.xlsx`
 
-    const mailOptions = {
-      from: `"APROVA Tests" <${process.env.GMAIL_USER}>`,
+    const mailData = {
+      from: EMAIL_FROM,
       to: process.env.EMAIL_DESTINO,
       subject: `Nuevos resultados de test: ${testNombre} - ${nombre}`,
       html: `
@@ -1659,8 +1647,7 @@ app.post('/api/enviar-resultados', async (req, res) => {
       attachments: [
         {
           filename: nombreArchivo,
-          content: excelBuffer,
-          contentType: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'
+          content: excelBuffer
         }
       ]
     }
@@ -1698,7 +1685,7 @@ app.post('/api/enviar-resultados', async (req, res) => {
     res.json({ success: true, message: 'Resultados enviados correctamente' })
 
     // Enviar correo en background
-    transporter.sendMail(mailOptions)
+    resend.emails.send(mailData)
       .then(() => console.log(`Resultados enviados con Excel: ${testNombre} - ${nombre}`))
       .catch((emailError) => console.error('Error al enviar resultados:', emailError))
   } catch (error) {
@@ -1761,8 +1748,8 @@ app.post('/api/generar-reporte', async (req, res) => {
 
     // Enviar por correo
     try {
-      const mailOptions = {
-        from: `"APROVA" <${process.env.GMAIL_USER}>`,
+      const mailData = {
+        from: EMAIL_FROM,
         to: process.env.EMAIL_DESTINO,
         subject: `Reporte Vocacional Generado: ${nombre}`,
         html: `
@@ -1794,14 +1781,13 @@ app.post('/api/generar-reporte', async (req, res) => {
         attachments: [
           {
             filename: nombreArchivo,
-            content: pdfBuffer,
-            contentType: 'application/pdf'
+            content: pdfBuffer
           }
         ]
       }
 
       // Enviar correo en background
-      transporter.sendMail(mailOptions)
+      resend.emails.send(mailData)
         .then(() => console.log(`Reporte vocacional enviado: ${nombre}`))
         .catch((mailError) => console.error('Error al enviar email del reporte:', mailError))
     } catch (mailError) {
