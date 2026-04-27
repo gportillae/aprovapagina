@@ -44,7 +44,10 @@ function guardarResultadosUsuario(email, datos) {
 
 // Configurar transporter de Gmail
 const transporter = nodemailer.createTransport({
-  service: 'gmail',
+  host: 'smtp.gmail.com',
+  port: 465,
+  secure: true,
+  family: 4,
   auth: {
     user: process.env.GMAIL_USER,
     pass: process.env.GMAIL_APP_PASSWORD
@@ -129,81 +132,84 @@ app.get('/api/verificar-pago/:sessionId', async (req, res) => {
       const producto = PRODUCTOS[modalidad]
       const precio = producto ? producto.precio / 100 : 0
 
-      // Enviar correo de confirmación al cliente
-      try {
-        const mailCliente = {
-          from: `"APROVA" <${process.env.GMAIL_USER}>`,
-          to: email,
-          subject: '¡Gracias por tu compra! - APROVA',
-          html: `
-            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <div style="background: #534AB7; color: white; padding: 30px; text-align: center;">
-                <h1 style="margin: 0;">¡Gracias por tu compra!</h1>
-              </div>
-
-              <div style="padding: 30px; background: #ffffff;">
-                <p style="font-size: 16px;">Hola <strong>${nombre}</strong>,</p>
-                <p style="font-size: 16px;">Tu pago ha sido procesado exitosamente. Ya tienes acceso a los tests psicométricos de APROVA.</p>
-
-                <div style="background: #EEEDFE; padding: 20px; border-radius: 10px; margin: 20px 0;">
-                  <h3 style="color: #26215C; margin-top: 0;">Detalles de tu compra:</h3>
-                  <p><strong>Servicio:</strong> ${producto ? producto.nombre : modalidad}</p>
-                  <p><strong>Monto:</strong> $${precio.toFixed(2)} MXN</p>
-                  <p><strong>Fecha:</strong> ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}</p>
-                </div>
-
-                <div style="text-align: center; margin: 30px 0;">
-                  <a href="${process.env.FRONTEND_URL || 'http://localhost:5174'}/tests" style="background: #534AB7; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">Comenzar mis tests</a>
-                </div>
-
-                <p style="color: #666; font-size: 14px;">Si tienes alguna pregunta, no dudes en contactarnos respondiendo a este correo o por WhatsApp al (449) 911 9192.</p>
-              </div>
-
-              <div style="background: #26215C; color: #AFA9EC; padding: 20px; text-align: center; font-size: 12px;">
-                <p style="margin: 0;">APROVA - Orientación Vocacional</p>
-                <p style="margin: 5px 0 0;">Aguascalientes | Guadalajara | CDMX</p>
-              </div>
-            </div>
-          `
-        }
-
-        await transporter.sendMail(mailCliente)
-        console.log(`Recibo enviado a: ${email}`)
-
-        // También notificar a APROVA de la nueva venta
-        const mailAprova = {
-          from: `"APROVA Sistema" <${process.env.GMAIL_USER}>`,
-          to: process.env.EMAIL_DESTINO,
-          subject: `Nueva venta: ${nombre} - ${producto ? producto.nombre : modalidad}`,
-          html: `
-            <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-              <div style="background: #22c55e; color: white; padding: 20px; text-align: center;">
-                <h1 style="margin: 0;">¡Nueva Venta!</h1>
-              </div>
-              <div style="padding: 20px;">
-                <p><strong>Cliente:</strong> ${nombre}</p>
-                <p><strong>Email:</strong> ${email}</p>
-                <p><strong>Servicio:</strong> ${producto ? producto.nombre : modalidad}</p>
-                <p><strong>Monto:</strong> $${precio.toFixed(2)} MXN</p>
-                <p><strong>Fecha:</strong> ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}</p>
-              </div>
-            </div>
-          `
-        }
-
-        await transporter.sendMail(mailAprova)
-        console.log(`Notificación de venta enviada a APROVA`)
-
-      } catch (emailError) {
-        console.error('Error al enviar correos:', emailError)
-      }
-
+      // Responder al cliente inmediatamente sin esperar correos
       res.json({
         pagado: true,
         email: email,
         nombre: nombre,
         modalidad: modalidad
       })
+
+      // Enviar correos en background (no bloquea la respuesta)
+      const enviarCorreos = async () => {
+        try {
+          const mailCliente = {
+            from: `"APROVA" <${process.env.GMAIL_USER}>`,
+            to: email,
+            subject: '¡Gracias por tu compra! - APROVA',
+            html: `
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <div style="background: #534AB7; color: white; padding: 30px; text-align: center;">
+                  <h1 style="margin: 0;">¡Gracias por tu compra!</h1>
+                </div>
+
+                <div style="padding: 30px; background: #ffffff;">
+                  <p style="font-size: 16px;">Hola <strong>${nombre}</strong>,</p>
+                  <p style="font-size: 16px;">Tu pago ha sido procesado exitosamente. Ya tienes acceso a los tests psicométricos de APROVA.</p>
+
+                  <div style="background: #EEEDFE; padding: 20px; border-radius: 10px; margin: 20px 0;">
+                    <h3 style="color: #26215C; margin-top: 0;">Detalles de tu compra:</h3>
+                    <p><strong>Servicio:</strong> ${producto ? producto.nombre : modalidad}</p>
+                    <p><strong>Monto:</strong> $${precio.toFixed(2)} MXN</p>
+                    <p><strong>Fecha:</strong> ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}</p>
+                  </div>
+
+                  <div style="text-align: center; margin: 30px 0;">
+                    <a href="${process.env.FRONTEND_URL || 'http://localhost:5174'}/tests" style="background: #534AB7; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">Comenzar mis tests</a>
+                  </div>
+
+                  <p style="color: #666; font-size: 14px;">Si tienes alguna pregunta, no dudes en contactarnos respondiendo a este correo o por WhatsApp al (449) 911 9192.</p>
+                </div>
+
+                <div style="background: #26215C; color: #AFA9EC; padding: 20px; text-align: center; font-size: 12px;">
+                  <p style="margin: 0;">APROVA - Orientación Vocacional</p>
+                  <p style="margin: 5px 0 0;">Aguascalientes | Guadalajara | CDMX</p>
+                </div>
+              </div>
+            `
+          }
+
+          await transporter.sendMail(mailCliente)
+          console.log(`Recibo enviado a: ${email}`)
+
+          const mailAprova = {
+            from: `"APROVA Sistema" <${process.env.GMAIL_USER}>`,
+            to: process.env.EMAIL_DESTINO,
+            subject: `Nueva venta: ${nombre} - ${producto ? producto.nombre : modalidad}`,
+            html: `
+              <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+                <div style="background: #22c55e; color: white; padding: 20px; text-align: center;">
+                  <h1 style="margin: 0;">¡Nueva Venta!</h1>
+                </div>
+                <div style="padding: 20px;">
+                  <p><strong>Cliente:</strong> ${nombre}</p>
+                  <p><strong>Email:</strong> ${email}</p>
+                  <p><strong>Servicio:</strong> ${producto ? producto.nombre : modalidad}</p>
+                  <p><strong>Monto:</strong> $${precio.toFixed(2)} MXN</p>
+                  <p><strong>Fecha:</strong> ${new Date().toLocaleString('es-MX', { timeZone: 'America/Mexico_City' })}</p>
+                </div>
+              </div>
+            `
+          }
+
+          await transporter.sendMail(mailAprova)
+          console.log(`Notificación de venta enviada a APROVA`)
+
+        } catch (emailError) {
+          console.error('Error al enviar correos:', emailError)
+        }
+      }
+      enviarCorreos()
     } else {
       res.json({ pagado: false })
     }
