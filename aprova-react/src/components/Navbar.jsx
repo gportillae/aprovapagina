@@ -8,9 +8,8 @@ function Navbar() {
         <NavLink to="/" className="nav-logo">
           <img
             src="/logo-aprova.png"
-            alt="APROVA"
+            alt="APROVA - Asesoría Profesional en Orientación Vocacional"
           />
-          <span className="nav-tagline">Orientación Vocacional</span>
         </NavLink>
 
         <div className="nav-links">

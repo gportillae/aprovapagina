@@ -22,17 +22,10 @@
 }
 
 .nav-logo img {
-  height: 96px;
+  height: 70px;
   width: auto;
   object-fit: contain;
   filter: brightness(0) invert(1);
-}
-
-.nav-tagline {
-  color: var(--color-primary-pale);
-  font-size: 18px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
 }
 
 .nav-links {
