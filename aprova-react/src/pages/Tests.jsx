@@ -146,12 +146,12 @@ function Tests() {
   }, [acceso])
 
   // Verificar si todos los tests están completados
+  const esModalidad2 = acceso && acceso.modalidad === 'modalidad2'
   const todosTestsCompletos = testsCompletados.includes('terman') &&
     testsCompletados.includes('aptitudes') &&
     testsCompletados.includes('intereses') &&
-    testsCompletados.includes('razonamiento') &&
-    testsCompletados.includes('mbti') &&
-    testsCompletados.includes('area_PU')
+    testsCompletados.includes('area_PU') &&
+    (!esModalidad2 || (testsCompletados.includes('razonamiento') && testsCompletados.includes('mbti')))
 
   const handleGenerarReporte = async () => {
     setGenerandoReporte(true)
@@ -332,23 +332,26 @@ function Tests() {
       })
     }
 
-    list.push({
-      id: 'razonamiento',
-      nombre: 'Test de Razonamiento',
-      descripcion: 'Evalúa razonamiento verbal, numérico, abstracto, mecánico, espacial, ortografía y rapidez perceptiva',
-      duracion: '90-120 min',
-      preguntas: 250,
-      componente: 'razonamiento'
-    })
+    // Razonamiento y MBTI solo para modalidad 2
+    if (acceso && acceso.modalidad === 'modalidad2') {
+      list.push({
+        id: 'razonamiento',
+        nombre: 'Test de Razonamiento',
+        descripcion: 'Evalúa razonamiento verbal, numérico, abstracto, mecánico, espacial, ortografía y rapidez perceptiva',
+        duracion: '90-120 min',
+        preguntas: 250,
+        componente: 'razonamiento'
+      })
 
-    list.push({
-      id: 'mbti',
-      nombre: 'Test de Personalidad',
-      descripcion: 'Identifica tu tipo de personalidad en 4 dimensiones: Extraversión/Introversión, Sensación/Intuición, Pensamiento/Sentimiento y Juicio/Percepción',
-      duracion: '15-20 min',
-      preguntas: 72,
-      componente: 'mbti'
-    })
+      list.push({
+        id: 'mbti',
+        nombre: 'Test de Personalidad',
+        descripcion: 'Identifica tu tipo de personalidad en 4 dimensiones: Extraversión/Introversión, Sensación/Intuición, Pensamiento/Sentimiento y Juicio/Percepción',
+        duracion: '15-20 min',
+        preguntas: 72,
+        componente: 'mbti'
+      })
+    }
 
     return list
   })()
