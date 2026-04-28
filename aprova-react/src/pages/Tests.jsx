@@ -119,6 +119,16 @@ function Tests() {
               localStorage.setItem('aprova_tests_completados', JSON.stringify(merged))
               return merged
             })
+          } else {
+            // Servidor sin datos: limpiar estado local
+            setTestsCompletados([])
+            localStorage.removeItem('aprova_tests_completados')
+            localStorage.removeItem('aprova_top3_aptitudes')
+            localStorage.removeItem('aprova_top3_intereses')
+            localStorage.removeItem('aprova_razonamiento_progreso')
+            localStorage.removeItem('aprova_mbti_progreso')
+            localStorage.removeItem('aprova_resultado_razonamiento')
+            localStorage.removeItem('aprova_resultado_mbti')
             // Restaurar diagnóstico si el servidor tiene aptitudes e intereses
             if (data.tests?.aptitudes?.resultados && data.tests?.intereses?.resultados) {
               const aptRes = data.tests.aptitudes.resultados
