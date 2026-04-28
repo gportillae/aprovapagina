@@ -147,10 +147,14 @@ function Tests() {
 
   // Verificar si todos los tests están completados
   const esModalidad2 = acceso && acceso.modalidad === 'modalidad2'
+  const subtiposCompletos = diagnostico
+    ? diagnostico.areas.every(key => testsCompletados.includes(`area_${key}`))
+    : false
   const todosTestsCompletos = testsCompletados.includes('terman') &&
     testsCompletados.includes('aptitudes') &&
     testsCompletados.includes('intereses') &&
     testsCompletados.includes('area_PU') &&
+    subtiposCompletos &&
     (!esModalidad2 || (testsCompletados.includes('razonamiento') && testsCompletados.includes('mbti')))
 
   const handleGenerarReporte = async () => {
