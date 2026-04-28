@@ -106,6 +106,9 @@ app.post('/api/crear-checkout', async (req, res) => {
     }
 
     if (cupon) {
+      if (modalidad !== 'modalidad2') {
+        return res.status(400).json({ error: 'Los códigos de descuento solo aplican para la Modalidad 2' })
+      }
       // Buscar el promotion code por el código que escribió el usuario
       const promoCodes = await stripe.promotionCodes.list({ code: cupon, active: true, limit: 1 })
       if (promoCodes.data.length > 0) {

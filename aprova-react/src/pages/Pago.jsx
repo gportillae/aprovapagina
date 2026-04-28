@@ -141,16 +141,18 @@ function Pago() {
               <span className="form-hint">Aquí recibirás acceso a los tests y tus resultados</span>
             </div>
 
-            <div className="form-group">
-              <label htmlFor="cupon">Código de descuento (opcional)</label>
-              <input
-                type="text"
-                id="cupon"
-                value={cupon}
-                onChange={(e) => setCupon(e.target.value)}
-                placeholder="Ingresa tu código"
-              />
-            </div>
+            {modalidad === 'modalidad2' && (
+              <div className="form-group">
+                <label htmlFor="cupon">Código de descuento (opcional)</label>
+                <input
+                  type="text"
+                  id="cupon"
+                  value={cupon}
+                  onChange={(e) => setCupon(e.target.value)}
+                  placeholder="Ingresa tu código"
+                />
+              </div>
+            )}
 
             {error && <div className="error-message">{error}</div>}
 
