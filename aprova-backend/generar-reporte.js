@@ -426,11 +426,10 @@ async function generarReportePDF(datos) {
     doc.text('Reporte de Orientación Vocacional', { align: 'center', width: doc.page.width - 120 })
 
     doc.moveDown(4)
-    doc.fontSize(28).font('Helvetica-Bold').fillColor(COLORS.white)
-    doc.text('APROVA', { align: 'center', width: doc.page.width - 120 })
-
-    doc.fontSize(14).font('Helvetica').fillColor(COLORS.primaryLight)
-    doc.text('Orientación Vocacional', { align: 'center', width: doc.page.width - 120 })
+    const logoPath = path.join(__dirname, 'logo-aprova.png')
+    const logoW = 280
+    const logoX = (doc.page.width - logoW) / 2
+    doc.image(logoPath, logoX, doc.y, { width: logoW })
 
     doc.moveDown(4)
     doc.fontSize(12).fillColor(COLORS.primaryLight)
