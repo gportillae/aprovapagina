@@ -1717,6 +1717,21 @@ app.get('/api/resultados/:email', (req, res) => {
   }
 })
 
+// Limpiar resultados de un usuario
+app.delete('/api/resultados/:email', (req, res) => {
+  try {
+    const email = decodeURIComponent(req.params.email)
+    const archivo = getArchivoUsuario(email)
+    if (fs.existsSync(archivo)) {
+      fs.unlinkSync(archivo)
+    }
+    res.json({ success: true, message: `Resultados de ${email} eliminados` })
+  } catch (error) {
+    console.error('Error al eliminar resultados:', error)
+    res.status(500).json({ error: 'Error al eliminar resultados' })
+  }
+})
+
 // Generar reporte PDF vocacional con todos los resultados guardados en el servidor
 app.post('/api/generar-reporte', async (req, res) => {
   try {
