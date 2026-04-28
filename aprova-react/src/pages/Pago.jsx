@@ -37,6 +37,7 @@ function Pago() {
 
   const [email, setEmail] = useState('')
   const [nombre, setNombre] = useState('')
+  const [cupon, setCupon] = useState('')
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
@@ -61,7 +62,8 @@ function Pago() {
         body: JSON.stringify({
           modalidad,
           email,
-          nombre
+          nombre,
+          cupon: cupon.trim() || undefined
         })
       })
 
@@ -73,7 +75,7 @@ function Pago() {
         // Redirigir a Stripe Checkout
         window.location.href = data.url
       } else {
-        setError('Error al procesar el pago. Intenta de nuevo.')
+        setError(data.error || 'Error al procesar el pago. Intenta de nuevo.')
       }
     } catch (err) {
       console.error('Error:', err)
@@ -137,6 +139,17 @@ function Pago() {
                 required
               />
               <span className="form-hint">Aquí recibirás acceso a los tests y tus resultados</span>
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="cupon">Código de descuento (opcional)</label>
+              <input
+                type="text"
+                id="cupon"
+                value={cupon}
+                onChange={(e) => setCupon(e.target.value)}
+                placeholder="Ingresa tu código"
+              />
             </div>
 
             {error && <div className="error-message">{error}</div>}

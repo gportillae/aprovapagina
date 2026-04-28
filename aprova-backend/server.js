@@ -72,7 +72,7 @@ const PRODUCTOS = {
 // Crear sesión de checkout
 app.post('/api/crear-checkout', async (req, res) => {
   try {
-    const { modalidad, email, nombre } = req.body
+    const { modalidad, email, nombre, cupon } = req.body
 
     if (!PRODUCTOS[modalidad]) {
       return res.status(400).json({ error: 'Modalidad no válida' })
@@ -80,7 +80,7 @@ app.post('/api/crear-checkout', async (req, res) => {
 
     const producto = PRODUCTOS[modalidad]
 
-    const session = await stripe.checkout.sessions.create({
+    const sessionConfig = {
       payment_method_types: ['card'],
       mode: 'payment',
       customer_email: email,
@@ -103,7 +103,19 @@ app.post('/api/crear-checkout', async (req, res) => {
       ],
       success_url: `${process.env.FRONTEND_URL || 'http://localhost:5174'}/pago-exitoso?session_id={CHECKOUT_SESSION_ID}&modalidad=${modalidad}`,
       cancel_url: `${process.env.FRONTEND_URL || 'http://localhost:5174'}/servicios`
-    })
+    }
+
+    if (cupon) {
+      // Buscar el promotion code por el código que escribió el usuario
+      const promoCodes = await stripe.promotionCodes.list({ code: cupon, active: true, limit: 1 })
+      if (promoCodes.data.length > 0) {
+        sessionConfig.discounts = [{ promotion_code: promoCodes.data[0].id }]
+      } else {
+        return res.status(400).json({ error: 'Código de descuento no válido' })
+      }
+    }
+
+    const session = await stripe.checkout.sessions.create(sessionConfig)
 
     res.json({ url: session.url })
   } catch (error) {
