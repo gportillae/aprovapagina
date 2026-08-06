@@ -1,4 +1,215 @@
 {
+  "ESTJ": {
+    "personalidad": {
+      "titulo": "Características de la personalidad",
+      "parrafos": [
+        "Son generalmente prácticos, extrovertidos, organizados, estructurados y decisivos. Tienden a concentrar su energía en su entorno externo y disfruta interactuando con la gente. A menudo tienen una visión clara de creencias y vivirán según estos estándares. Por lo general, se sienten cómodos al compartir sus opiniones y puntos de vista con los demás.",
+        "Tienden a valorar la tradición, la seguridad, el orden social y la estabilidad. A menudo están motivados para superar las expectativas de los demás. Trabajarán duro para cumplir con sus propios altos estándares. Tienden a centrarse en asegurarse de que todo en su trabajo o su vida personal se desarrolle sin problemas y de manera eficiente. Ponen mucha energía en cualquiera de sus compromisos y se mantienen enfocados en el resultado final.",
+        "Generalmente prosperan en la organización y gestión de personas y, a menudo, se sienten atraídos por puestos de liderazgo.",
+        "Disfrutan el poder que se asocia con estar a cargo y tener la capacidad de organizar a las personas para completar tareas con una óptima eficiencia. Su enfoque de trabajo agresivo y orientado a las tareas puede influir en ellos para que pasen por alto las necesidades de las personas.",
+        "A menudo esperan que otros imiten sus estándares laborales y que posean los mismos valores. Pueden convertirse en críticos o crítico de aquellos que no reflejan estos principios. Generalmente no son demasiado sensibles a los sentimientos de los demás y deben tener cuidado de no imponer su propio deseo de estructura a otras personas. También tienden a luchar para lidiar o comprender sus propias emociones o las emociones de los demás.",
+        "A menudo utilizan un enfoque cuidadoso y meticuloso para realizar tareas al más alto nivel. A menudo, utilizan un proceso secuencial, es decir, paso a paso para recopilar detalles específicos a través de sus cinco sentidos y luego evalúan lógicamente la información recopilada.",
+        "Tienden a tener un interés mínimo en la teoría y prefieren las realidades prácticas a las posibilidades. Generalmente son impulsados ​​por los resultados y disfrutan organizando y estructurando sus actividades y tareas para lograr visiblemente sus metas. Se esfuerzan por organizar y darle sentido a todo y recopilarán la información suficiente para hacer una decisión rápida y lógica. A menudo, utilizarán la toma de decisiones como un mecanismo para encontrar un cierre y facilitar su paso al siguiente proyecto. A menudo determinarán la mejor manera de hacer algo y utilizarán ese proceso para completar tareas futuras. Como tal, pueden tener dificultades para alterar sus planes o lidiar con un cambio inesperado."
+      ]
+    },
+    "aprendizaje": {
+      "titulo": "Escuela y aprendizaje",
+      "parrafos": [
+        "Como estudiantes a menudo ...",
+        "Prefieren aprender a través de un proceso paso a paso y práctico",
+        "Aplicar información para establecer su relevancia",
+        "No les gusta la teoría del aprendizaje",
+        "Desean escuchar presentaciones claras y expectativas explícitas",
+        "Quieren que los instructores despierten interés en un tema y respalden su información con hechos.",
+        "Crean y siguen un plan de estudio específico.",
+        "Estudian bien con los demás"
+      ]
+    },
+    "escritura": {
+      "titulo": "Escritura",
+      "parrafos": [
+        "Generalmente escriben desde un punto de vista objetivo que implica el análisis lógico de un tema. A menudo preferirán no escribir sobre sus sentimientos o temas relacionados con su vida personal. Para este tipo de personalidad, su escritura más efectiva ocurre siguiendo una pauta establecida. Al examinar la teoría, a menudo utilizan estudios de casos como un mecanismo para encontrar la aplicación real o práctica. También tienden a ser buenos para identificar cualquier discrepancia al revisar ideas.",
+        "En un puesto administrativo, a menudo se sienten cómodos redactando los documentos comerciales necesarios.",
+        "En el proceso de redacción, a menudo ...",
+        "Crean y siguen un plan de redacción.",
+        "Utilizan un proceso paso a paso para evaluar los datos y completar su redacción.",
+        "Enfatizan el punto principal y se apoyan en los datos recopilados.",
+        "Comprenden cuándo dejar de investigar y comenzar la etapa de escritura.",
+        "Necesitan considerar cómo su escritura afectará a su audiencia.",
+        "Se benefician al permanecer abiertos a nuevas ideas",
+        "Cumplen con la fecha límite, pero deben tener cuidado de no apresurarse en las etapas de redacción."
+      ]
+    },
+    "procrastinacion": {
+      "titulo": "Procrastinación",
+      "parrafos": [
+        "A menudo están motivados para completar su trabajo a tiempo y es posible que no experimenten una procrastinación significativa. Ellos tienden a limitar su procrastinación a una situación o proyecto particular. Estas situaciones a menudo ocurren cuando se sienten que no tienen el control adecuado o perciben una falta de capacidad para completar una tarea. Cuando se sienten impotentes, pueden tener problemas para comunicarse y expresar sus sentimientos. Esto puede generar frustración y retrasar aún más su trabajo.",
+        "Para ayudar a reducir la procrastinación, a menudo se benefician al desarrollar sus habilidades o reestructurar la situación para adquirir un mayor sentido de control. También pueden beneficiarse al abordar un problema en particular y los aspectos de una tarea que son abrumadores, a menudo, hablando de sus preocupaciones con los demás, se logra."
+      ]
+    },
+    "exploracionCarrera": {
+      "titulo": "Exploración de carrera",
+      "parrafos": [
+        "A menudo tienden a encontrar satisfacción profesional con carreras que tienen las siguientes características:",
+        "Implica un entorno de trabajo estructurado, estable, organizado y ajetreado",
+        "Requiere organizar tareas, personas y recursos para crear un producto o servicio tangible.",
+        "Implica un alto grado de responsabilidad y control",
+        "Describe reglas y procedimientos específicos",
+        "Brinda la oportunidad de interactuar con numerosas personas",
+        "Respeta las experiencias individuales y valora las aportaciones de las personas.",
+        "Evalúa las contribuciones individuales con un sistema justo, objetivo y lógico.",
+        "Al explorar opciones de carrera, a menudo ...",
+        "Reúna hechos y detalles relacionados con la carrera",
+        "Utilice las oportunidades de establecer contactos para obtener una comprensión detallada de varias carreras.",
+        "Evaluar lógicamente sus opciones profesionales.",
+        "Necesidad de incorporar sus valores en la decisión de su carrera.",
+        "Seleccione la dirección de su carrera temprano y rara vez cuestione su elección"
+      ]
+    },
+    "busquedaTrabajo": {
+      "titulo": "Búsqueda de trabajo",
+      "parrafos": [
+        "Durante su búsqueda de trabajo, a menudo ...",
+        "Organizan una búsqueda de empleo eficiente",
+        "Recopilan datos e información relacionados con el trabajo",
+        "Establecen contactos con una gran cantidad de personas.",
+        "Basan su decisión en comparar los requisitos laborales y sus habilidades personales.",
+        "Necesitan dedicar tiempo a considerar todas sus posibilidades antes de tomar una decisión.",
+        "se benefician de considerar las implicaciones futuras del puesto potencial",
+        "Durante una entrevista, a menudo ...",
+        "Transmiten eficazmente sus habilidades y competencias que se relacionan con el puesto.",
+        "Proporcionan ejemplos de experiencias pasadas",
+        "Necesitan cultivar intencionalmente una conexión con el empleador.",
+        "Deben tener cuidado de no parecer demasiado brusco o hablar demasiado."
+      ]
+    },
+    "trabajo": {
+      "titulo": "En el trabajo",
+      "parrafos": [
+        "En el trabajo, a menudo ...",
+        "Son confiables, resolutivos, detallistas y prácticos",
+        "Organizan sus tareas laborales para promover la eficiencia y lograr resultados tangibles",
+        "Tratan de completar correctamente una tarea en el primer intento",
+        "se comportan de manera competente y profesional",
+        "Completan las tareas de manera confiable antes de su fecha límite",
+        "Valoran y apoyan los procedimientos, políticas y objetivos de la organización.",
+        "Desean una estructura organizativa jerárquica con roles y responsabilidades claramente definidos",
+        "Desean instrucciones y expectativas claras en un entorno de trabajo de apoyo",
+        "Utilizan métodos establecidos para abordar los problemas a medida que ocurren.",
+        "Supervisan los procedimientos actuales y realizar los cambios necesarios",
+        "Disfrutan trabajando en un ambiente de equipo",
+        "En el trabajo, deben ser consciente de que pueden ...",
+        "Dominar las opiniones de las personas y volverse impacientes o inflexibles cuando sus contribuciones no son reconocidas.",
+        "Deben tener cuidado de no abrumarse al completar el trabajo de otros.",
+        "Oponerse al cambio a menos que se identifiquen los beneficios a largo plazo",
+        "Necesitar aceptar que las nuevas ideas y cambios a menudo son necesarios y pueden mejorar la eficiencia.",
+        "Necesitar considerar intencionalmente el panorama general o posibilidades adicionales que no son inmediatamente obvias.",
+        "Beneficiarse de mantener una mente abierta",
+        "Ser críticos con otros que no se adhieren a sus altos estándares de trabajo.",
+        "Necesitar reconocer que no todas las personas serán como ellos y pueden trabajar efectivamente a un ritmo diferente.",
+        "Necesitar recopilar información adicional con paciencia para optimizar la calidad de su trabajo."
+      ]
+    },
+    "equipo": {
+      "titulo": "Trabajo en equipo",
+      "parrafos": [
+        "En un equipo, a menudo ...",
+        "Contribuyen con su tiempo, energía y habilidades para resolver problemas.",
+        "Utilizan un enfoque directo para interactuar con los miembros de su equipo.",
+        "Desafían a los miembros del equipo a sobresalir",
+        "Se mantienen enfocados en el siguiente paso o tarea requerida",
+        "Trabajan de manera más eficaz con personas competentes que reflejen sus estándares de trabajo.",
+        "Esperan que otros miembros cumplan con los plazos y completen sus respectivas tareas",
+        "En un equipo, debe ser conscientes de que pueden ...",
+        "Requerir un esfuerzo adicional para desarrollar una buena relación con los miembros de su equipo.",
+        "Necesitan alentar a los miembros del grupo a desarrollar sus habilidades de liderazgo.",
+        "Irritan a los demás concentrándose solo en la tarea y siendo demasiado directo o controlador",
+        "Sentirse frustrados con los miembros que trabajan lentamente que se desvían de los procedimientos establecidos, carecen de compromiso o tareas completas de manera ineficiente",
+        "Necesitan equilibrar su enfoque en la tarea con las necesidades de cada miembro del grupo."
+      ]
+    },
+    "liderazgo": {
+      "titulo": "Liderazgo",
+      "parrafos": [
+        "Generalmente disfrutan y persiguen posiciones de liderazgo. Como líder, a menudo ...",
+        "Crean un plan organizado que se enfoque en lograr resultados.",
+        "Brindan instrucciones y expectativas claras para garantizar que las personas se adhieran al plan y de manera eficiente completar su trabajo",
+        "Disfrutan dirigiendo y organizando personas",
+        "Modelen el comportamiento que esperan de su equipo",
+        "Siguen y hacen cumplir las políticas y procedimientos de la organización.",
+        "Toman decisiones rápidas",
+        "Necesitan reconocer los pequeños logros a lo largo de un proyecto.",
+        "Necesitan recordar abordar las necesidades personales de su grupo."
+      ]
+    },
+    "comunicacion": {
+      "titulo": "Comunicación",
+      "parrafos": [
+        "A menudo ...",
+        "Presentan honesta y claramente sus pensamientos, ideas y opiniones.",
+        "Desean escuchar información pertinente, detallada y lógica",
+        "Promueven la eficiencia limitando las discusiones innecesarias.",
+        "Disfrutan discutiendo temas o debatiendo problemas.",
+        "Discuten abiertamente sus opiniones de manera directa.",
+        "Limitan su participación en conversaciones triviales.",
+        "Debe ser consciente de que es posible que deban ...",
+        "Transmitir sus opiniones sin ser demasiado crítico o crítico",
+        "Comunicarse con sus compañeros de trabajo en todas las etapas de un proyecto.",
+        "Asegúrese de que escuchen a los demás y no sean demasiado contundentes con sus ideas.",
+        "Abstenerse de interrumpir a las personas durante una conversación.",
+        "Brinde comentarios positivos y reconozca los logros de las personas."
+      ]
+    },
+    "decisiones": {
+      "titulo": "Toma de decisiones",
+      "parrafos": [
+        "Cuando se trata de la toma de decisiones, a menudo ...",
+        "Evalúan objetiva y lógicamente cada opción",
+        "Reflexionan sobre experiencias pasadas y aplicarlas a decisiones actuales.",
+        "Son capaces de tomar decisiones difíciles y adherirse a sus principios.",
+        "Necesitan considerar intencionalmente el efecto que su decisión tendrá en los demás.",
+        "Necesitan asegurarse de que recopilan toda la información necesaria antes de tomar una decisión.",
+        "Toman decisiones rápidas y puede beneficiarse de una mayor consideración de sus opciones."
+      ]
+    },
+    "juego": {
+      "titulo": "Tiempo libre",
+      "parrafos": [
+        "A menudo se toman en serio la idea de terminar su trabajo y pueden divertirse una vez que se completa una tarea. El alto énfasis que colocan en el orden social, la seguridad y la tradición tiende a influir en su participación en su comunidad.",
+        "Además, a menudo sienten la obligación de asistir a las funciones y reuniones familiares. También pueden valorar sus posesiones y asegurarse de que mantengan su mantenimiento. En un entorno postsecundario, tienden a participar en posiciones de liderazgo en clubes del campus o unirse a grupos atléticos. A menudo son bastante amigables con sus compañeros de cuarto, pero debe tener cuidado de no volverse demasiado controladores. También podrá disfrutar compitiendo y traspasará su ética de trabajo a las actividades extracurriculares."
+      ]
+    },
+    "estres": {
+      "titulo": "Estrés",
+      "parrafos": [
+        "A menudo experimentará estrés cuando ...",
+        "Percibir que los demás o ellos mismos no pueden cumplir con sus deberes.",
+        "Hacer frente a los cambios frecuentes o la incertidumbre",
+        "Falta de control sobre su tiempo o deberes.",
+        "Trabajar en un grupo ineficiente o en un entorno desorganizado.",
+        "Sentirse incapaz de lidiar con sus emociones o la expresión emocional de los demás.",
+        "Se le solicita que se extienda más allá de su posición de liderazgo durante una crisis.",
+        "Tener involuntariamente un efecto negativo en las personas mientras persiguen sus objetivos.",
+        "Planificar y organizar no soluciona un problema",
+        "Cuando se ven afectados por el estrés, a menudo ...",
+        "Se retrae y cuestiona su valor personal.",
+        "Pierden el control de sus emociones y muestran arrebatos de ira o lágrimas",
+        "Consumirse de trabajo y volverse más impersonales o desapegados",
+        "Se vuelve rígido, inflexible o no está dispuesto a considerar nuevas ideas.",
+        "Miedo a que los demás no los agraden.",
+        "Experimenta dificultad para discutir y articular sus sentimientos.",
+        "Bajo estrés significativo, expresa de manera abrupta sus juicios críticos sobre los demás o experimenta dificultad para discutir sus sentimientos personales de desesperación o depresión",
+        "Puede reducir el estrés al ...",
+        "Hablar de sus sentimientos con los demás.",
+        "Considerar cómo la situación afectará a los demás.",
+        "Reestablecer el control pasando tiempo a solas",
+        "Evaluar si sus objetivos deben ajustarse",
+        "Participar en actividades que faciliten la reflexión sobre sus sentimientos.",
+        "Dedicar tiempo a tomar una decisión",
+        "Evaluar de manera realista las expectativas que tienen de los demás."
+      ]
+    }
+  },
   "ISTJ": {
     "personalidad": {
       "titulo": "Características de la personalidad",

@@ -1,11 +1,22 @@
 // Extrae la narrativa específica de cada tipo MBTI desde los reportes .docx de APROVA.
 // El andamiaje fijo del reporte (intro, valores, aptitudes, intereses, asesoría) NO se
 // extrae: eso lo genera generar-reporte.js. Aquí solo interesa lo que cambia por tipo.
+//
+//   node scripts/extraer-mbti.js data/mbti-reportes.json <carpeta-o-docx>...
+//
+// Acepta carpetas (toma sus .docx) y archivos sueltos. Si un tipo aparece en varias
+// rutas, gana la última: sirve para corregir un tipo suelto sin tocar la carpeta.
 const fs = require('fs')
 const path = require('path')
+const zlib = require('zlib')
 
-const BASE = process.argv[2]
-const SALIDA = process.argv[3]
+const SALIDA = process.argv[2]
+const RUTAS = process.argv.slice(3)
+
+if (!SALIDA || !RUTAS.length) {
+  console.error('Uso: node scripts/extraer-mbti.js <salida.json> <carpeta-o-docx>...')
+  process.exit(1)
+}
 
 // Cada sección con sus variantes de encabezado (los documentos se editaron a mano
 // durante años y el mismo apartado quedó con nombres distintos).
@@ -35,13 +46,68 @@ function normalizar(texto) {
 // Marca dónde termina la parte específica del tipo y empieza el andamiaje fijo.
 const FIN_BLOQUE = ['Inteligencia', 'Valores o', 'Valores']
 
-function parrafosDe(documentXml) {
-  const xml = fs.readFileSync(documentXml, 'utf-8')
+// Un .docx es un ZIP. Se lee word/document.xml directamente con zlib, sin depender
+// de herramientas externas ni de descomprimir a mano. Se recorre el directorio
+// central del ZIP, que es la única parte con tamaños y offsets confiables.
+function leerDelDocx(rutaDocx, nombreInterno) {
+  const buf = fs.readFileSync(rutaDocx)
+
+  // Fin del directorio central (EOCD): firma 0x06054b50, buscada desde el final
+  let eocd = -1
+  for (let i = buf.length - 22; i >= 0 && i > buf.length - 66000; i--) {
+    if (buf.readUInt32LE(i) === 0x06054b50) { eocd = i; break }
+  }
+  if (eocd === -1) throw new Error('no parece un .docx (no se encontró el EOCD)')
+
+  const totalEntradas = buf.readUInt16LE(eocd + 10)
+  let pos = buf.readUInt32LE(eocd + 16)
+
+  for (let n = 0; n < totalEntradas; n++) {
+    if (buf.readUInt32LE(pos) !== 0x02014b50) break
+    const metodo = buf.readUInt16LE(pos + 10)
+    const tamComprimido = buf.readUInt32LE(pos + 20)
+    const largoNombre = buf.readUInt16LE(pos + 28)
+    const largoExtra = buf.readUInt16LE(pos + 30)
+    const largoComentario = buf.readUInt16LE(pos + 32)
+    const offsetLocal = buf.readUInt32LE(pos + 42)
+    const nombre = buf.toString('utf-8', pos + 46, pos + 46 + largoNombre)
+
+    if (nombre === nombreInterno) {
+      // En la cabecera local los largos pueden diferir de los del directorio
+      const nombreLocal = buf.readUInt16LE(offsetLocal + 26)
+      const extraLocal = buf.readUInt16LE(offsetLocal + 28)
+      const inicio = offsetLocal + 30 + nombreLocal + extraLocal
+      const datos = buf.subarray(inicio, inicio + tamComprimido)
+      return metodo === 0 ? datos : zlib.inflateRawSync(datos)
+    }
+    pos += 46 + largoNombre + largoExtra + largoComentario
+  }
+  throw new Error(`el .docx no contiene ${nombreInterno}`)
+}
+
+function parrafosDe(rutaDocx) {
+  const xml = leerDelDocx(rutaDocx, 'word/document.xml').toString('utf-8')
   return xml
     .split(/<w:p[ >]/)
     .map(p => [...p.matchAll(/<w:t[^>]*>([^<]*)<\/w:t>/g)].map(m => m[1]).join(''))
     .map(t => t.replace(/\s+/g, ' ').trim())
     .filter(Boolean)
+}
+
+// Expande carpetas a sus .docx y deja pasar los archivos sueltos, en orden
+function recolectarDocx(rutas) {
+  const archivos = []
+  rutas.forEach(ruta => {
+    if (!fs.existsSync(ruta)) { console.error('No existe:', ruta); return }
+    if (fs.statSync(ruta).isDirectory()) {
+      fs.readdirSync(ruta).sort()
+        .filter(n => n.toLowerCase().endsWith('.docx') && !n.startsWith('~$'))
+        .forEach(n => archivos.push(path.join(ruta, n)))
+    } else {
+      archivos.push(ruta)
+    }
+  })
+  return archivos
 }
 
 // Todos los pares (sección, alias) ordenados del alias más largo al más corto.
@@ -74,13 +140,18 @@ function tipoDeNombre(nombre) {
 const resultado = {}
 const informe = []
 
-fs.readdirSync(BASE).sort().forEach(dir => {
-  const archivo = path.join(BASE, dir, 'word', 'document.xml')
-  if (!fs.existsSync(archivo)) return
-  const tipo = tipoDeNombre(dir)
-  if (!tipo) { informe.push(`${dir}: no se pudo deducir el tipo MBTI`); return }
+recolectarDocx(RUTAS).forEach(archivo => {
+  const nombre = path.basename(archivo, '.docx')
+  const tipo = tipoDeNombre(nombre)
+  if (!tipo) { informe.push(`${nombre}: no se pudo deducir el tipo MBTI`); return }
 
-  const parrafos = parrafosDe(archivo)
+  let parrafos
+  try {
+    parrafos = parrafosDe(archivo)
+  } catch (e) {
+    informe.push(`${nombre}: no se pudo leer (${e.message})`)
+    return
+  }
   const secciones = {}
   let actual = null
   let terminado = false
@@ -109,7 +180,15 @@ fs.readdirSync(BASE).sort().forEach(dir => {
     if (cuerpo.length) limpias[sec.key] = { titulo: sec.titulo, parrafos: cuerpo }
   })
 
+  // Última ruta gana, pero un archivo del que no se sacó nada no pisa uno bueno:
+  // en esas carpetas conviven reportes de APROVA con documentos de otro formato.
+  const previas = resultado[tipo] ? Object.keys(resultado[tipo]).length : 0
+  if (previas > 0 && Object.keys(limpias).length === 0) {
+    informe.push(`${tipo.padEnd(5)} se ignora ${nombre}: no se le extrajo ninguna sección`)
+    return
+  }
   resultado[tipo] = limpias
+
   const faltantes = SECCIONES.filter(s => !limpias[s.key]).map(s => s.key)
   const totalParrafos = Object.values(limpias).reduce((n, s) => n + s.parrafos.length, 0)
   informe.push(`${tipo.padEnd(5)} ${String(Object.keys(limpias).length).padStart(2)}/13 secciones  ${String(totalParrafos).padStart(3)} parrafos  ${faltantes.length ? '| faltan: ' + faltantes.join(', ') : ''}`)
