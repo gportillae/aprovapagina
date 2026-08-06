@@ -47,9 +47,11 @@ const A_INTERESES = {
 }
 
 // Definiciones que NO existen en el reporte Word de Gabriela y se redactaron aparte.
-// Las de razonamiento siguen la descripción oficial del subtest en el manual DAT-5;
-// las de aptitudes se redactaron a partir de los reactivos de items_aptitudes.json,
-// respetando el estilo de las definiciones originales.
+// La de razonamiento mecánico sigue la descripción oficial del subtest en el manual
+// DAT-5; las de aptitudes salen de los reactivos de items_aptitudes.json y las de
+// áreas, de las subáreas y listados de carreras del propio instrumento. Todas
+// respetan el estilo de las definiciones originales.
+// Revisadas y aprobadas por Gabriela el 6 de agosto de 2026.
 // Solo se usan para rellenar huecos: si el Word llega a traerlas, gana el Word.
 const COMPLEMENTO = {
   razonamiento: {
