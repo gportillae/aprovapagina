@@ -79,7 +79,7 @@ function Acceso() {
         <h1>Recuperar mi acceso</h1>
         <p>
           Escribe el correo con el que hiciste tu compra y recuperaremos tu acceso
-          a los tests, junto con el progreso que ya llevas.
+          a los tests, junto con el progreso que ya llevas. No necesitas contraseña.
         </p>
 
         <form onSubmit={handleSubmit}>

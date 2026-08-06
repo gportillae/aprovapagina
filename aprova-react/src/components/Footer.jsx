@@ -9,6 +9,7 @@ function Footer() {
       <div className="footer-container">
         <p className="footer-copy">© {currentYear} APROVA · aprovamx.com</p>
         <div className="footer-links">
+          <Link to="/acceso">Recuperar mi acceso</Link>
           <Link to="/privacidad">Privacidad</Link>
           <Link to="/terminos">Términos</Link>
           <a href="tel:+524499119192">(449) 911 9192</a>

@@ -191,6 +191,18 @@ app.get('/api/verificar-pago/:sessionId', async (req, res) => {
                     <a href="${process.env.FRONTEND_URL || 'http://localhost:5174'}/tests" style="background: #534AB7; color: white; padding: 15px 30px; text-decoration: none; border-radius: 8px; font-weight: bold;">Comenzar mis tests</a>
                   </div>
 
+                  <div style="border: 2px solid #AFA9EC; border-radius: 10px; padding: 20px; margin: 25px 0;">
+                    <h3 style="color: #26215C; margin-top: 0; font-size: 16px;">Guarda este correo</h3>
+                    <p style="font-size: 15px; margin: 0 0 12px;">No necesitas usuario ni contraseña: tu acceso queda guardado en el navegador donde compraste.</p>
+                    <p style="font-size: 15px; margin: 0 0 12px;"><strong>Si cambias de dispositivo, borras los datos del navegador, o te aparece "Acceso restringido"</strong>, recupéralo así:</p>
+                    <ol style="font-size: 15px; margin: 0 0 12px; padding-left: 20px;">
+                      <li style="margin-bottom: 6px;">Entra a <a href="${process.env.FRONTEND_URL || 'http://localhost:5174'}/acceso" style="color: #534AB7;">${(process.env.FRONTEND_URL || 'http://localhost:5174').replace(/^https?:\/\//, '')}/acceso</a></li>
+                      <li style="margin-bottom: 6px;">Escribe este mismo correo: <strong>${email}</strong></li>
+                      <li>Listo. Vuelves a tus tests con el avance que llevabas.</li>
+                    </ol>
+                    <p style="font-size: 14px; color: #666; margin: 0;">Tu progreso se guarda solo. Puedes cerrar la página y continuar otro día desde donde te quedaste.</p>
+                  </div>
+
                   <p style="color: #666; font-size: 14px;">Si tienes alguna pregunta, no dudes en contactarnos respondiendo a este correo o por WhatsApp al (449) 911 9192.</p>
                 </div>
 
