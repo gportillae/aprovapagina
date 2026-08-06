@@ -13,9 +13,23 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 const app = express()
 
 // ===== ALMACENAMIENTO DE RESULTADOS POR USUARIO =====
-const RESULTADOS_DIR = path.join(__dirname, 'resultados')
+// En producción debe apuntar al volumen persistente de Railway (ej. /data/resultados);
+// si no, los resultados se pierden en cada redeploy.
+const RESULTADOS_DIR = process.env.RESULTADOS_DIR || path.join(__dirname, 'resultados')
 if (!fs.existsSync(RESULTADOS_DIR)) {
   fs.mkdirSync(RESULTADOS_DIR, { recursive: true })
+}
+console.log(`Resultados almacenados en: ${RESULTADOS_DIR}`)
+
+// Mapa nombre de área -> clave usada por el frontend (area_PU, area_FM, ...)
+const AREA_NOMBRE_A_KEY = {
+  'Preferencias Universitarias': 'PU',
+  'Físico-Matemáticas': 'FM',
+  'Biológicas': 'B',
+  'Químicas': 'Q',
+  'Administrativas': 'A',
+  'Sociales': 'S',
+  'Humanidades': 'H'
 }
 
 function sanitizeEmail(email) {
@@ -86,7 +100,8 @@ app.post('/api/crear-checkout', async (req, res) => {
       customer_email: email,
       metadata: {
         nombre: nombre,
-        modalidad: modalidad
+        modalidad: modalidad,
+        email: email
       },
       line_items: [
         {
@@ -220,6 +235,81 @@ app.get('/api/verificar-pago/:sessionId', async (req, res) => {
   } catch (error) {
     console.error('Error al verificar pago:', error)
     res.status(500).json({ error: 'Error al verificar el pago' })
+  }
+})
+
+// ===== RECUPERACIÓN DE ACCESO =====
+// El acceso a los tests vive en el localStorage del navegador. Si el usuario
+// cambia de dispositivo o borra los datos del sitio, lo reconstruimos
+// preguntándole a Stripe: es la fuente de verdad de quién pagó.
+
+function emailDeSesion(session) {
+  const email = session.customer_details?.email || session.customer_email || session.metadata?.email || ''
+  return email.trim().toLowerCase()
+}
+
+async function buscarSesionesPagadas(email) {
+  const encontradas = []
+
+  // Intento 1: filtro nativo por email (disponible en versiones recientes de la API)
+  try {
+    const { data } = await stripe.checkout.sessions.list({ customer_details: { email }, limit: 100 })
+    // Se verifica el email igual que en el fallback: si el filtro no se aplicara,
+    // no queremos devolverle a nadie el acceso de otra persona.
+    encontradas.push(...data.filter(s => s.payment_status === 'paid' && emailDeSesion(s) === email))
+    if (encontradas.length > 0) return encontradas
+  } catch (e) {
+    console.warn('Filtro customer_details no disponible, se recorrerán las sesiones:', e.message)
+  }
+
+  // Intento 2: recorrer las sesiones recientes (cubre pagos anteriores a este cambio)
+  let startingAfter
+  for (let pagina = 0; pagina < 10; pagina++) {
+    const params = { limit: 100 }
+    if (startingAfter) params.starting_after = startingAfter
+    const { data, has_more } = await stripe.checkout.sessions.list(params)
+    encontradas.push(...data.filter(s => s.payment_status === 'paid' && emailDeSesion(s) === email))
+    if (!has_more || data.length === 0) break
+    startingAfter = data[data.length - 1].id
+  }
+  return encontradas
+}
+
+app.post('/api/recuperar-acceso', async (req, res) => {
+  try {
+    const { email } = req.body
+
+    if (!email || typeof email !== 'string' || !email.includes('@')) {
+      return res.status(400).json({ error: 'Escribe un correo electrónico válido' })
+    }
+
+    const emailNormalizado = email.trim().toLowerCase()
+    const sesiones = await buscarSesionesPagadas(emailNormalizado)
+
+    if (sesiones.length === 0) {
+      return res.json({ encontrado: false })
+    }
+
+    // Si compró más de una vez, gana la modalidad 2 (incluye todo lo de la 1);
+    // en caso contrario, la compra más reciente.
+    const sesion = sesiones.find(s => s.metadata?.modalidad === 'modalidad2')
+      || sesiones.sort((a, b) => b.created - a.created)[0]
+
+    // El nombre guardado en el servidor es más confiable que el de Stripe
+    // si el usuario ya empezó los tests.
+    const datosGuardados = cargarResultadosUsuario(emailNormalizado)
+
+    res.json({
+      encontrado: true,
+      email: emailNormalizado,
+      nombre: datosGuardados.nombre || sesion.metadata?.nombre || sesion.customer_details?.name || '',
+      modalidad: sesion.metadata?.modalidad || 'modalidad1',
+      sessionId: sesion.id,
+      fecha: new Date(sesion.created * 1000).toISOString()
+    })
+  } catch (error) {
+    console.error('Error al recuperar acceso:', error)
+    res.status(500).json({ error: 'No se pudo verificar tu compra. Intenta de nuevo.' })
   }
 })
 
@@ -1715,8 +1805,21 @@ app.get('/api/resultados/:email', (req, res) => {
     const email = decodeURIComponent(req.params.email)
     const datos = cargarResultadosUsuario(email)
 
-    // Devolver qué tests tiene completados y sus resultados
-    const testsCompletados = Object.keys(datos.tests || {})
+    // Devolver qué tests tiene completados y sus resultados.
+    // Las áreas se guardan todas bajo la clave 'areas', pero el frontend
+    // las identifica como area_PU, area_FM, etc. — hay que expandirlas.
+    const testsCompletados = []
+    Object.keys(datos.tests || {}).forEach(clave => {
+      if (clave !== 'areas') {
+        testsCompletados.push(clave)
+        return
+      }
+      const areasResueltas = datos.tests.areas?.resultados || {}
+      Object.keys(areasResueltas).forEach(nombreArea => {
+        const areaKey = AREA_NOMBRE_A_KEY[nombreArea]
+        if (areaKey) testsCompletados.push(`area_${areaKey}`)
+      })
+    })
     res.json({
       nombre: datos.nombre,
       email: datos.email,

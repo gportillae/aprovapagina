@@ -7,6 +7,7 @@ import Servicios from './pages/Servicios'
 import Pago from './pages/Pago'
 import PagoExitoso from './pages/PagoExitoso'
 import Tests from './pages/Tests'
+import Acceso from './pages/Acceso'
 import Contacto from './pages/Contacto'
 import Testimonios from './pages/Testimonios'
 import Privacidad from './pages/Privacidad'
@@ -26,6 +27,7 @@ function App() {
             <Route path="/pago" element={<Pago />} />
             <Route path="/pago-exitoso" element={<PagoExitoso />} />
             <Route path="/tests" element={<Tests />} />
+            <Route path="/acceso" element={<Acceso />} />
             <Route path="/contacto" element={<Contacto />} />
             <Route path="/testimonios" element={<Testimonios />} />
             <Route path="/privacidad" element={<Privacidad />} />

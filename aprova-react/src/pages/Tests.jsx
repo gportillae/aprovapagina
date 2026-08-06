@@ -44,6 +44,14 @@ const DIAGNOSTICO_DIFERENCIAL = {
   }
 }
 
+// Extrae los 3 nombres con mayor porcentaje de un objeto de resultados
+function topTresPorPorcentaje(resultados) {
+  return Object.entries(resultados)
+    .sort((a, b) => (b[1]?.porcentaje ?? 0) - (a[1]?.porcentaje ?? 0))
+    .slice(0, 3)
+    .map(([nombre]) => nombre)
+}
+
 function calcularDiagnostico(top3Aptitudes, top3Intereses) {
   const scores = {}
   Object.entries(DIAGNOSTICO_DIFERENCIAL).forEach(([key, area]) => {
@@ -113,6 +121,18 @@ function Tests() {
         const response = await fetch(`${API_URL}/api/resultados/${encodeURIComponent(acceso.email)}`)
         if (response.ok) {
           const data = await response.json()
+
+          // Restaurar el diagnóstico diferencial desde el servidor SIEMPRE que haya
+          // aptitudes e intereses. Es la única forma de recuperarlo si el navegador
+          // perdió el localStorage; sin él los subtipos ni siquiera se muestran.
+          if (data.tests?.aptitudes?.resultados && data.tests?.intereses?.resultados) {
+            const top3Apt = topTresPorPorcentaje(data.tests.aptitudes.resultados)
+            const top3Int = topTresPorPorcentaje(data.tests.intereses.resultados)
+            localStorage.setItem('aprova_top3_aptitudes', JSON.stringify(top3Apt))
+            localStorage.setItem('aprova_top3_intereses', JSON.stringify(top3Int))
+            setDiagnostico({ top3Apt, top3Int, areas: calcularDiagnostico(top3Apt, top3Int) })
+          }
+
           if (data.testsCompletados && data.testsCompletados.length > 0) {
             setTestsCompletados(prev => {
               const merged = [...new Set([...prev, ...data.testsCompletados])]
@@ -122,6 +142,7 @@ function Tests() {
           } else {
             // Servidor sin datos: limpiar estado local
             setTestsCompletados([])
+            setDiagnostico(null)
             localStorage.removeItem('aprova_tests_completados')
             localStorage.removeItem('aprova_top3_aptitudes')
             localStorage.removeItem('aprova_top3_intereses')
@@ -129,21 +150,6 @@ function Tests() {
             localStorage.removeItem('aprova_mbti_progreso')
             localStorage.removeItem('aprova_resultado_razonamiento')
             localStorage.removeItem('aprova_resultado_mbti')
-            // Restaurar diagnóstico si el servidor tiene aptitudes e intereses
-            if (data.tests?.aptitudes?.resultados && data.tests?.intereses?.resultados) {
-              const aptRes = data.tests.aptitudes.resultados
-              const intRes = data.tests.intereses.resultados
-              // Extraer top3 de aptitudes (por porcentaje)
-              const aptEntries = Object.entries(aptRes).sort((a, b) => b[1].porcentaje - a[1].porcentaje)
-              const top3Apt = aptEntries.slice(0, 3).map(([nombre]) => nombre)
-              // Extraer top3 de intereses (por porcentaje)
-              const intEntries = Object.entries(intRes).sort((a, b) => b[1].porcentaje - a[1].porcentaje)
-              const top3Int = intEntries.slice(0, 3).map(([nombre]) => nombre)
-              localStorage.setItem('aprova_top3_aptitudes', JSON.stringify(top3Apt))
-              localStorage.setItem('aprova_top3_intereses', JSON.stringify(top3Int))
-              const areas = calcularDiagnostico(top3Apt, top3Int)
-              setDiagnostico({ top3Apt, top3Int, areas })
-            }
           }
         }
       } catch (err) {
@@ -275,6 +281,10 @@ function Tests() {
           <Link to="/servicios" className="btn btn-primary">
             Ver servicios disponibles
           </Link>
+          <p style={{ marginTop: '24px', marginBottom: 0, fontSize: '14px' }}>
+            ¿Ya compraste y estás en otro dispositivo?{' '}
+            <Link to="/acceso">Recupera tu acceso con tu correo</Link>
+          </p>
         </div>
       </div>
     )

@@ -53,6 +53,7 @@ Deployed on **Railway** as a single service. Express serves the React build as s
 - `EMAIL_DESTINO` — Destination email for test results and sale notifications
 - `FRONTEND_URL` — Frontend URL for Stripe redirects (prod: `https://aprovamx.com`)
 - `PORT` — Server port (default: `3001`)
+- `RESULTADOS_DIR` — Where per-user result JSONs are stored. **In production must point to the Railway volume** (e.g. `/data/resultados`); otherwise every redeploy wipes all user progress. Defaults to `aprova-backend/resultados/`.
 
 ## Architecture
 
@@ -65,6 +66,11 @@ Deployed on **Railway** as a single service. Express serves the React build as s
 6. On success, backend sends confirmation email to client + notification to APROVA
 7. Access credentials are stored in `localStorage` as `aprova_acceso`
 
+Since access lives only in the browser, `/acceso` lets a user recover it by email:
+`POST /api/recuperar-acceso` looks up paid Checkout Sessions in Stripe (Stripe is the
+source of truth for who paid) and rebuilds `aprova_acceso`. If several purchases exist,
+modalidad2 wins; otherwise the most recent one.
+
 ### Test System
 - Six psychometric tests: **Terman** (IQ), **Aptitudes**, **Intereses**, **Areas Vocacionales** (PU + 3 subtypes from diagnostic), **Razonamiento DAT-5**, **MBTI** (personality)
 - Tests must be completed in sequential order; the `/tests` page enforces this
@@ -72,8 +78,9 @@ Deployed on **Railway** as a single service. Express serves the React build as s
 - Each test has its own React component in `aprova-react/src/components/`
 - Bypass access gate with `?prueba=1` query param for testing
 - Results are sent via `POST /api/enviar-resultados` (generates Excel + emails it)
-- Results are persisted server-side in `aprova-backend/resultados/` as per-user JSON files (keyed by sanitized email)
-- `GET /api/resultados/:email` returns test completion status from server
+- Results are persisted server-side under `RESULTADOS_DIR` as per-user JSON files (keyed by sanitized email)
+- `GET /api/resultados/:email` returns test completion status from server. Note the backend stores all areas under a single `areas` key, but the endpoint expands them into the frontend's `area_PU`, `area_FM`, … ids
+- The endpoint also returns raw `tests` results, which the frontend uses to rebuild the diagnóstico diferencial (top 3 aptitudes/intereses) when localStorage was lost
 - Frontend syncs completion status from server on page load (multi-device/multi-day persistence)
 
 ### Diagnostic Diferencial
