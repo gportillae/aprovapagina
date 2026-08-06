@@ -545,25 +545,9 @@ function Tests() {
                     mensajeBloqueo = `Completa primero: ${AREA_INFO[prevKey]?.nombre || prevKey}`
                   }
                 }
-              } else if (test.id === 'razonamiento') {
-                // Razonamiento requiere los 3 subtipos completados
-                if (!diagnostico) {
-                  bloqueado = true
-                  mensajeBloqueo = 'Completa los tests anteriores primero'
-                } else {
-                  const faltante = diagnostico.areas.find(key => !testsCompletados.includes(`area_${key}`))
-                  if (faltante) {
-                    bloqueado = true
-                    mensajeBloqueo = `Completa los subtipos de áreas primero`
-                  }
-                }
-              } else if (test.id === 'mbti') {
-                // MBTI requiere razonamiento completado
-                if (!testsCompletados.includes('razonamiento')) {
-                  bloqueado = true
-                  mensajeBloqueo = 'Completa el Test de Razonamiento primero'
-                }
               }
+              // Razonamiento y MBTI no se bloquean nunca: están siempre
+              // disponibles, sin importar el avance en los demás tests.
 
               return (
                 <div key={test.id} className={`test-card ${bloqueado || completado ? 'proximamente' : ''}`}>
