@@ -2,6 +2,15 @@ const PDFDocument = require('pdfkit')
 const path = require('path')
 const fs = require('fs')
 
+// Qué mide cada apartado de razonamiento y cada aptitud. Se extraen de los
+// reportes Word de APROVA con scripts/extraer-definiciones.js.
+let DEFINICIONES = { razonamiento: {}, aptitudes: {} }
+try {
+  DEFINICIONES = require('./data/definiciones.json')
+} catch (e) {
+  console.error('No se pudo cargar data/definiciones.json:', e.message)
+}
+
 // Colores APROVA
 const COLORS = {
   primary: '#534AB7',
@@ -74,8 +83,9 @@ const INTERPRETACIONES_TERMAN = {
   X: { nombre: 'Atención, Anticipación o Seriación', descripcion: 'Mide la atención, concentración y deducción. El rendimiento indicará el nivel de capacidad para interpretar y verificar cálculos numéricos y la habilidad para estar concentrado en una tarea que requiere manejar símbolos bajo cierta presión.', alto: 'Buena capacidad de observación, sintetiza información para analizarla y aplicarla. Actividades básicas para desempeñar una gerencia con éxito.', bajo: 'Dificultad para observar detalles, las presiones provocan ansiedad.' }
 }
 
-// CARRERAS por área/subárea (copiado de server.js)
-const CARRERAS = {"FM":{"Puras":["Lic. en Matemáticas","Lic. en Física","Lic. en Fisicomatemáticos","Ingeniería Física Industrial","Ingeniería en Nanotecnología"],"Artefactos":["Ingeniería en Mecatrónica","Ingeniería en Sistemas Computacionales","Ingeniería Mecánica","Ingeniería Eléctrica","Ingeniería en Electrónica y Comunicaciones","Ingeniería en Aeronáutica","Ingeniería Biomédica"],"Naturaleza":["Ingeniería Geológica","Ingeniería Petrolera","Ingeniería en Energía","Lic. en Ciencias de la Tierra","Lic. en Geofísica"],"Industria":["Ingeniería Industrial y de Sistemas","Ingeniería Industrial","Ingeniería en Software Industrial","Ingeniería en Gestión y Control de Calidad"],"Construcción":["Ingeniería Civil","Arquitectura","Ingeniero Urbanista","Arquitectura y Urbanismo","Ingeniería Topográfica"],"Manejo de datos":["Lic. en Actuaría","Lic. en Estadística","Lic. en Matemáticas Aplicadas","Lic. en Ciencias en Computación"],"Medición Geodésica":["Ingeniería Topográfica y Geodésica","Ingeniero Geógrafo","Lic. en Geografía","Lic. en Geomática"],"Diseño":["Lic. en Diseño Industrial","Ingeniería en Diseño Gráfico","Ingeniería en Innovación y Diseño"]},"B":{"Puras":["Lic. en Biología","Lic. en Biología Marina","Ingeniería en Biotecnología","Lic. en Genómica","Lic. en Ecología"],"Salud Humana":["Medicina","Médico Cirujano","Lic. en Enfermería","Lic. en Nutrición","Lic. en Odontología","Lic. en Fisioterapia","Lic. en Farmacia","Ingeniería Biomédica"],"Salud Animal":["Médico Veterinario y Zootecnista","Ingeniero Zootecnista","Lic. en Producción Animal"],"Terrestre":["Ingeniería Agronómica","Ingeniero Agrónomo","Ingeniero Agroindustrial","Lic. en Agronegocios"],"Silvícola":["Ingeniería Forestal","Lic. en Ciencias Forestales","Ingeniería en Manejo de Recursos Naturales"],"Ambientalista":["Ingeniería Ambiental","Lic. en Ciencias Ambientales","Lic. en Desarrollo Sustentable","Ingeniería en Sistemas Ambientales"],"Marítima":["Biología Marina","Ingeniería en Acuicultura","Oceanólogo","Lic. en Hidrobiología"]},"Q":{"Puras":["Lic. en Química","Lic. en Ciencias Químicas","Ingeniería en Nanotecnología"],"Inorgánicas":["Ingeniería Química","Ingeniería Química Metalúrgica","Químico Metalúrgico"],"Org. Bioq. Alimentos":["Ingeniería en Alimentos","Lic. en Química de los Alimentos","Bioquímica en Alimentos","Ingeniero Bioquímico"],"Org. Bioq. Farmacología":["Química Farmacéutica Biológica","Lic. en Farmacia Clínica","Lic. en Ciencias Farmacéuticas"],"Químicas Agrícolas":["Química Agrícola","Ingeniería Química en Agroindustria","Lic. Agroquímico"],"Org. Petroquímico Industrial":["Ingeniería Química Petrolera","Ingeniería Química de Procesos","Ingeniería Química Industrial"],"Org. Bioq. Clínica":["Químico Clínico","Lic. en Análisis Clínicos","Lic. Químico Biólogo","Ingeniero Bioquímico"]},"A":{"Rec. Instrumentales":["Lic. en Informática","Lic. en Computación","Ingeniería en Software","Ingeniería en Sistemas Computacionales","Lic. en Ciencias de la Información"],"Rec. Financieros":["Lic. en Contaduría Pública","Lic. en Economía","Lic. en Finanzas","Lic. en Administración Financiera","Lic. en Auditoría"],"Rec. Humanos":["Lic. en Administración de Empresas","Lic. en Recursos Humanos","Lic. en Psicología Organizacional","Lic. en Relaciones Industriales"],"Rec. Comerciales":["Lic. en Mercadotecnia","Lic. en Comercio Internacional","Lic. en Logística","Lic. en Publicidad","Lic. en Negocios Internacionales"],"Rec. Turísticos":["Lic. en Turismo","Lic. en Gastronomía","Lic. en Hotelería","Lic. en Administración de Eventos"],"Rec. Públicos":["Lic. en Administración Pública","Lic. en Ciencias Políticas","Lic. en Políticas Públicas","Lic. en Gobierno"],"Rec. Educativos":["Lic. en Pedagogía","Lic. en Psicología Educativa","Lic. en Administración Educativa","Lic. en Innovación Educativa"],"Rec. Agrícolas":["Lic. en Administración de Agronegocios","Lic. en Administración Agropecuaria"],"Rec. Mineros":["Lic. en Administración de Empresas Mineras"]},"S":{"Principios y Leyes":["Lic. en Sociología","Lic. en Antropología Social","Lic. en Ciencias Sociales","Lic. en Demografía"],"Rel. Asistencial":["Lic. en Trabajo Social","Lic. en Desarrollo Comunitario"],"Rel. Existencial":["Lic. en Psicología","Lic. en Psicología Clínica","Lic. en Criminología","Lic. en Desarrollo Humano"],"Rel. Legal":["Lic. en Derecho","Lic. en Ciencias Políticas","Lic. en Relaciones Internacionales","Lic. en Criminología y Criminalística"],"Rel. Educacional":["Lic. en Pedagogía","Lic. en Ciencias de la Educación","Lic. en Educación Especial","Lic. en Psicopedagogía"],"Rel. Interhumana":["Lic. en Relaciones Públicas","Lic. en Comunicación Organizacional","Lic. en Comunicación Humana"]},"H":{"Humanidades":["Lic. en Filosofía","Lic. en Teología","Lic. en Ciencias Humanas","Lic. en Humanidades"],"Expresión Oral":["Lic. en Artes Escénicas","Lic. en Teatro","Lic. en Comunicación","Lic. en Ciencias de la Comunicación"],"Expresión Escrita":["Lic. en Letras","Lic. en Lingüística","Lic. en Periodismo","Lic. en Creación Literaria"],"Expresión Plástica":["Lic. en Artes Visuales","Lic. en Diseño Gráfico","Lic. en Diseño de Interiores","Arquitectura","Lic. en Diseño de Modas"],"Expresión Corporal":["Lic. en Danza","Lic. en Ciencias del Deporte","Lic. en Cultura Física y Deporte"],"Expresión Auditiva":["Lic. en Música","Ingeniería en Sonido","Lic. en Composición"],"Complementación":["Lic. en Ciencias de la Comunicación","Lic. en Publicidad","Lic. en Comunicación y Medios Digitales"],"Idiomas":["Lic. en Traducción","Lic. en Lenguas Extranjeras","Lic. en Lenguas Modernas"],"Combinación":["Arqueología","Lic. en Historia","Lic. en Antropología","Lic. en Restauración y Museos"],"Cuidado Cultural":["Lic. en Biblioteconomía","Lic. en Archivonomía","Lic. en Bibliotecología"]}}
+// CARRERAS por área/subárea. Fuente única compartida con server.js: antes había
+// dos copias en el código y la de este archivo se quedó con un tercio de las carreras.
+const CARRERAS = require('./data/carreras.json')
 
 const AREA_KEY_MAP = {
   'Preferencias Universitarias': 'PU',
@@ -283,6 +293,21 @@ function addSubsectionTitle(doc, text) {
   doc.moveDown(0.5)
   doc.fontSize(14).font('Helvetica-Bold').fillColor(COLORS.primary).text(text)
   doc.moveDown(0.3)
+}
+
+// Lista de definiciones: cada entrada es { nombre, definicion }.
+// Se usa para explicar qué mide cada apartado de razonamiento y cada aptitud.
+function addDefinitionList(doc, entradas) {
+  entradas.forEach(({ nombre, definicion }) => {
+    if (!definicion) return
+    checkPageSpace(doc, 60)
+    doc.fontSize(11).font('Helvetica-Bold').fillColor(COLORS.primaryDark)
+    doc.text(nombre)
+    doc.moveDown(0.2)
+    doc.fontSize(10).font('Helvetica').fillColor(COLORS.textSecondary)
+    doc.text(definicion, { lineGap: 3 })
+    doc.moveDown(0.6)
+  })
 }
 
 function addBodyText(doc, text) {
@@ -546,15 +571,6 @@ async function generarReportePDF(datos) {
     if (terman) {
       addSectionTitle(doc, 'Inteligencia')
 
-      // Resumen general
-      doc.fontSize(14).font('Helvetica-Bold').fillColor(COLORS.primaryDark)
-      doc.text(`Coeficiente Intelectual: ${terman.ci}`)
-      doc.fontSize(12).font('Helvetica').fillColor(COLORS.text)
-      doc.text(`Rango: ${terman.rango}`)
-      doc.text(`Sumatoria Total: ${terman.sumatoria}`)
-      if (terman.edadMental) doc.text(`Edad Mental: ${terman.edadMental}`)
-      doc.moveDown(1)
-
       // Gráfica de barras por serie
       const seriesOrder = ['I', 'II', 'III', 'IV', 'V', 'VI', 'VII', 'VIII', 'IX', 'X']
       const series = terman.series || {}
@@ -587,15 +603,13 @@ async function generarReportePDF(datos) {
 
         const rango = getRangoSerie(key, datos.puntuacion)
         const interp = INTERPRETACIONES_TERMAN[key]
-        const rangoIdx = RANGOS_ORDER.indexOf(rango)
-        const esAlto = rangoIdx <= 2
-        const etiqueta = getEtiquetaNivel(rango)
+        const esAlto = RANGOS_ORDER.indexOf(rango) <= 2
 
         checkPageSpace(doc, 120)
 
-        // Título de la serie
+        // Título de la serie: solo el nombre, sin aciertos ni nivel
         doc.fontSize(12).font('Helvetica-Bold').fillColor(COLORS.primaryDark)
-        doc.text(`${key} ${interp.nombre}. Resultado: ${datos.puntuacion} aciertos | Nivel: ${rango} | ${etiqueta}`)
+        doc.text(`${key} ${interp.nombre}`)
         doc.moveDown(0.3)
 
         // Descripción
@@ -630,56 +644,72 @@ async function generarReportePDF(datos) {
       doc.text('Nota importante: Este reporte es una herramienta de orientación. Los resultados deben ser interpretados por un profesional calificado y considerados en conjunto con otras fuentes de información (observación, historial académico, entrevistas).', { lineGap: 3 })
     }
 
-    // ===== APTITUDES =====
-    if (aptitudes || razonamiento) {
-      addSectionTitle(doc, 'Aptitudes')
+    // ===== RAZONAMIENTO (DAT-5) =====
+    if (razonamiento) {
+      addSectionTitle(doc, 'Razonamiento')
 
-      if (aptitudes) {
-        addSubsectionTitle(doc, 'Perfil de Aptitudes')
-        doc.moveDown(0.3)
-
-        const aptOrdenadas = Object.entries(aptitudes).sort((a, b) => b[1].puntaje - a[1].puntaje)
-        const items = aptOrdenadas.map(([aptitud, datos]) => ({
-          label: aptitud,
-          value: datos.puntaje,
-          displayValue: `${datos.puntaje} (${datos.porcentaje}%)`,
-          level: datos.nivel,
-          color: getLevelColor(datos.nivel)
-        }))
-
-        drawBarChart(doc, items, 50)
-        doc.moveDown(1)
+      if (razonamiento.datosPersonales) {
+        doc.fontSize(10).font('Helvetica').fillColor(COLORS.textSecondary)
+        if (razonamiento.datosPersonales.sexo) doc.text(`Sexo: ${razonamiento.datosPersonales.sexo}`)
+        if (razonamiento.datosPersonales.nivel) doc.text(`Nivel educativo: ${razonamiento.datosPersonales.nivel}`)
+        doc.moveDown(0.5)
       }
 
-      if (razonamiento) {
-        checkPageSpace(doc, 100)
-        addSubsectionTitle(doc, 'Aptitudes de Razonamiento (DAT-5)')
-        doc.moveDown(0.3)
+      const secciones = razonamiento.secciones || razonamiento.respuestas || {}
+      const secOrdenadas = Object.entries(secciones).sort((a, b) => (b[1].centil || 0) - (a[1].centil || 0))
 
-        if (razonamiento.datosPersonales) {
-          doc.fontSize(10).font('Helvetica').fillColor(COLORS.textSecondary)
-          if (razonamiento.datosPersonales.sexo) doc.text(`Sexo: ${razonamiento.datosPersonales.sexo}`)
-          if (razonamiento.datosPersonales.nivel) doc.text(`Nivel educativo: ${razonamiento.datosPersonales.nivel}`)
-          doc.moveDown(0.5)
+      const items = secOrdenadas.map(([key, datos]) => {
+        const centil = datos.centil != null ? datos.centil : datos.porcentaje
+        const nivel = getNivelRaz(centil)
+        return {
+          label: datos.nombre || key,
+          value: centil,
+          displayValue: `${centil}`,
+          level: nivel,
+          color: getLevelColor(nivel)
         }
+      })
 
-        const secciones = razonamiento.secciones || razonamiento.respuestas || {}
-        const secOrdenadas = Object.entries(secciones).sort((a, b) => (b[1].centil || 0) - (a[1].centil || 0))
+      drawBarChart(doc, items, 99)
+      doc.moveDown(1)
 
-        const items = secOrdenadas.map(([key, datos]) => {
-          const centil = datos.centil != null ? datos.centil : datos.porcentaje
-          const nivel = getNivelRaz(centil)
-          return {
-            label: datos.nombre || key,
-            value: centil,
-            displayValue: `${centil}`,
-            level: nivel,
-            color: getLevelColor(nivel)
-          }
-        })
+      // Qué mide cada apartado
+      const defsRaz = secOrdenadas
+        .map(([key, datos]) => ({ nombre: datos.nombre || key, definicion: DEFINICIONES.razonamiento?.[key] }))
+        .filter(d => d.definicion)
+      if (defsRaz.length) {
+        checkPageSpace(doc, 100)
+        addSubsectionTitle(doc, 'Qué mide cada apartado')
+        doc.moveDown(0.3)
+        addDefinitionList(doc, defsRaz)
+      }
+    }
 
-        drawBarChart(doc, items, 99)
-        doc.moveDown(1)
+    // ===== APTITUDES =====
+    if (aptitudes) {
+      addSectionTitle(doc, 'Aptitudes')
+
+      const aptOrdenadas = Object.entries(aptitudes).sort((a, b) => b[1].puntaje - a[1].puntaje)
+      const items = aptOrdenadas.map(([aptitud, datos]) => ({
+        label: aptitud,
+        value: datos.puntaje,
+        displayValue: `${datos.puntaje} (${datos.porcentaje}%)`,
+        level: datos.nivel,
+        color: getLevelColor(datos.nivel)
+      }))
+
+      drawBarChart(doc, items, 50)
+      doc.moveDown(1)
+
+      // Qué mide cada aptitud
+      const defsApt = aptOrdenadas
+        .map(([aptitud]) => ({ nombre: aptitud, definicion: DEFINICIONES.aptitudes?.[aptitud] }))
+        .filter(d => d.definicion)
+      if (defsApt.length) {
+        checkPageSpace(doc, 100)
+        addSubsectionTitle(doc, 'Qué mide cada aptitud')
+        doc.moveDown(0.3)
+        addDefinitionList(doc, defsApt)
       }
     }
 
@@ -698,28 +728,76 @@ async function generarReportePDF(datos) {
 
       drawBarChart(doc, items, 50)
       doc.moveDown(1)
+
+      // Qué mide cada interés
+      const defsInt = intOrdenados
+        .map(([escala]) => ({ nombre: escala, definicion: DEFINICIONES.intereses?.[escala] }))
+        .filter(d => d.definicion)
+      if (defsInt.length) {
+        checkPageSpace(doc, 100)
+        addSubsectionTitle(doc, 'Qué mide cada interés')
+        doc.moveDown(0.3)
+        addDefinitionList(doc, defsInt)
+      }
     }
 
     // ===== PREFERENCIAS UNIVERSITARIAS (ÁREAS VOCACIONALES) =====
     if (areas) {
       addSectionTitle(doc, 'Preferencias Universitarias')
 
-      // Resumen general de áreas
-      const areasOrdenadas = Object.entries(areas).sort((a, b) => b[1].porcentaje - a[1].porcentaje)
+      // Gráfica del test de PU: sus subáreas son las 6 áreas profesionales, así que
+      // muestra cómo jerarquizó el alumno las áreas entre sí.
+      const pu = areas['Preferencias Universitarias']
+      if (pu && pu.subareas) {
+        addSubsectionTitle(doc, 'Preferencia entre las áreas profesionales')
+        doc.moveDown(0.3)
+        const puItems = Object.entries(pu.subareas)
+          .sort((a, b) => b[1].porcentaje - a[1].porcentaje)
+          .map(([area, datos]) => ({
+            label: area,
+            value: datos.porcentaje,
+            displayValue: `${datos.porcentaje}%`,
+            color: COLORS.primary
+          }))
+        drawBarChart(doc, puItems, 100)
+        doc.moveDown(1)
+      }
 
-      addSubsectionTitle(doc, 'Áreas Vocacionales')
-      const areaItems = areasOrdenadas.map(([area, datos]) => ({
-        label: area,
-        value: datos.porcentaje,
-        displayValue: `${datos.porcentaje}%`,
-        color: COLORS.primary
-      }))
-      drawBarChart(doc, areaItems, 100)
-      doc.moveDown(1)
+      // Áreas exploradas a detalle. Se excluye PU: no es un área, es la
+      // jerarquización de todas, y como barra no se compara con las demás.
+      const areasOrdenadas = Object.entries(areas)
+        .filter(([area]) => area !== 'Preferencias Universitarias')
+        .sort((a, b) => b[1].porcentaje - a[1].porcentaje)
 
-      // Top 3 áreas con carreras afines
-      const topAreas = areasOrdenadas.slice(0, 3)
-      topAreas.forEach(([area, datos]) => {
+      if (areasOrdenadas.length) {
+        checkPageSpace(doc, 100)
+        addSubsectionTitle(doc, 'Áreas Vocacionales exploradas')
+        doc.moveDown(0.3)
+        const areaItems = areasOrdenadas.map(([area, datos]) => ({
+          label: area,
+          value: datos.porcentaje,
+          displayValue: `${datos.porcentaje}%`,
+          color: COLORS.primary
+        }))
+        drawBarChart(doc, areaItems, 100)
+        doc.moveDown(1)
+      }
+
+      // Qué comprende cada área profesional
+      const ORDEN_AREAS = ['Físico-Matemáticas', 'Biológicas', 'Químicas', 'Administrativas', 'Sociales', 'Humanidades']
+      const defsAreas = ORDEN_AREAS
+        .map(area => ({ nombre: area, definicion: DEFINICIONES.areas?.[area] }))
+        .filter(d => d.definicion)
+      if (defsAreas.length) {
+        checkPageSpace(doc, 100)
+        addSubsectionTitle(doc, 'Qué comprende cada área profesional')
+        doc.moveDown(0.3)
+        addDefinitionList(doc, defsAreas)
+      }
+
+      // Carreras afines de cada área explorada. Se listan todas las subáreas y
+      // todas sus carreras: el alumno necesita el panorama completo para elegir.
+      areasOrdenadas.forEach(([area, datos]) => {
         if (!datos.subareas) return
         const areaKey = AREA_KEY_MAP[area]
         if (!areaKey || !CARRERAS[areaKey]) return
@@ -727,11 +805,9 @@ async function generarReportePDF(datos) {
         checkPageSpace(doc, 80)
         addSubsectionTitle(doc, `${area} (${datos.porcentaje}%)`)
 
-        // Top subáreas
         const subsOrdenadas = Object.entries(datos.subareas).sort((a, b) => b[1].porcentaje - a[1].porcentaje)
-        const topSubs = subsOrdenadas.slice(0, 3)
 
-        topSubs.forEach(([sub, subDatos]) => {
+        subsOrdenadas.forEach(([sub, subDatos]) => {
           const carreras = CARRERAS[areaKey][sub]
           if (!carreras || carreras.length === 0) return
 
