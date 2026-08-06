@@ -21,12 +21,13 @@ if (!SALIDA || !RUTAS.length) {
 // Cada sección con sus variantes de encabezado (los documentos se editaron a mano
 // durante años y el mismo apartado quedó con nombres distintos).
 const SECCIONES = [
-  { key: 'personalidad', titulo: 'Características de la personalidad', alias: ['Características de la Personalidad', 'Caracteristicas de la Personalidad', 'Visión General', 'Vision General', 'PERSONALIDAD'] },
+  { key: 'personalidad', titulo: 'Características de la personalidad', alias: ['Características de la Personalidad', 'Caracteristicas de la Personalidad', 'Principales Características', 'Principales Caracteristicas', 'Visión General', 'Vision General', 'PERSONALIDAD'] },
   // Ojo: no incluir "Escuela" a secas — en DATOS PERSONALES existe el campo "Escuela:"
   { key: 'aprendizaje', titulo: 'Escuela y aprendizaje', alias: ['En la escuela y Aprendizaje', 'En la Escuela Aprendizaje', 'En la Escuela Aprendiendo', 'La Escuela Aprendizaje', 'La Escuela Aprendiendo', 'Escuela Aprendizaje', 'Escuela Aprendiendo', 'En la Escuela', 'La Escuela', 'APRENDIZAJE', 'Aprendiendo', 'Aprendizaje'] },
   { key: 'escritura', titulo: 'Escritura', alias: ['Escribiendo', 'Escritura', 'ESCRITURA'] },
-  { key: 'procrastinacion', titulo: 'Procrastinación', alias: ['Dilación Procrastinación', 'Dilación Procrastinar', 'Procrastinar Dilación', 'Procrastinación', 'Procrastinacion', 'Procrastinar', 'Dilación', 'Dilacion', 'POSTERGAR'] },
-  { key: 'exploracionCarrera', titulo: 'Exploración de carrera', alias: ['Exploración profesional o exploración de Carreras', 'INVESTIGACION DE LA CARRERA', 'INVESTIGACIÓN DE LA CARRERA', 'Exploración de carreras', 'Exploración de carrera', 'Exploración profesional', 'Exploracion de carrera', 'Búsqueda de Profesión', 'Busqueda de Profesion'] },
+  // "Procastinación" y "Expoloración" son erratas del reporte de 2021, no descuidos aquí
+  { key: 'procrastinacion', titulo: 'Procrastinación', alias: ['Dilación Procrastinación', 'Dilación Procrastinar', 'Procrastinar Dilación', 'Procrastinación', 'Procrastinacion', 'Procastinación', 'Procastinacion', 'Procrastinar', 'Dilación', 'Dilacion', 'POSTERGAR'] },
+  { key: 'exploracionCarrera', titulo: 'Exploración de carrera', alias: ['Exploración profesional o exploración de Carreras', 'INVESTIGACION DE LA CARRERA', 'INVESTIGACIÓN DE LA CARRERA', 'Exploración de carreras', 'Exploración de carrera', 'Expoloración de Carrera', 'Expoloracion de Carrera', 'Exploración profesional', 'Exploracion de carrera', 'Búsqueda de Profesión', 'Busqueda de Profesion'] },
   { key: 'busquedaTrabajo', titulo: 'Búsqueda de trabajo', alias: ['Búsqueda de trabajo', 'Búsqueda de empleo', 'Busqueda de trabajo', 'Busqueda de empleo'] },
   { key: 'trabajo', titulo: 'En el trabajo', alias: ['El Trabajo', 'Trabajo'] },
   { key: 'equipo', titulo: 'Trabajo en equipo', alias: ['Trabajo en equipo'] },
@@ -34,7 +35,25 @@ const SECCIONES = [
   { key: 'comunicacion', titulo: 'Comunicación', alias: ['Comunicación', 'Comunicacion', 'COMUNICACION'] },
   { key: 'decisiones', titulo: 'Toma de decisiones', alias: ['Toma de decisiones', 'Toma de Decisión', 'Toma de decision', 'Decisiones'] },
   { key: 'juego', titulo: 'Tiempo libre', alias: ['Jugando', 'Juego', 'Tiempo libre'] },
-  { key: 'estres', titulo: 'Estrés', alias: ['Estrés', 'Estres', 'ESTRES'] }
+  { key: 'estres', titulo: 'Estrés', alias: ['Estrés', 'Estres', 'ESTRES', 'Stress'] }
+]
+
+// Encabezados que cierran la sección en curso sin abrir ninguna: son apartados que
+// solo trae algún reporte suelto y no forman parte de las 13 secciones comunes.
+// Sin esto, su contenido se acumularía en la sección anterior.
+// Casi todos vienen del reporte de ISTJ de 2021, que trae apartados que los
+// demás no: listados de carreras por tipo, reglas de éxito y un anexo final.
+const SECCIONES_IGNORADAS = [
+  'Carreras a considerar',
+  'Qué significa el éxito',
+  '¿Qué significa el éxito?',
+  'Diez reglas para vivir para lograr el éxito',
+  'Permitiendo que tus fortalezas',
+  'Áreas con problemas potenciales',
+  'Explicación de problemas',
+  'Soluciones',
+  'Versión Reducida',
+  'La Sombra'
 ]
 
 // Los encabezados traen puntos, guiones y dos puntos según quién editó el archivo.
@@ -132,6 +151,12 @@ function esFinDeBloque(parrafo) {
   return FIN_BLOQUE.some(m => limpio === normalizar(m))
 }
 
+function esSeccionIgnorada(parrafo) {
+  if (parrafo.length > 60) return false
+  const limpio = normalizar(parrafo)
+  return SECCIONES_IGNORADAS.some(m => limpio.startsWith(normalizar(m)))
+}
+
 function tipoDeNombre(nombre) {
   const m = nombre.toUpperCase().match(/\b(IS|IN|ES|EN)(TJ|TP|FJ|FP)\b/)
   return m ? m[0] : null
@@ -158,18 +183,22 @@ recolectarDocx(RUTAS).forEach(archivo => {
 
   for (const p of parrafos) {
     if (terminado) break
+
+    // Al llegar al andamiaje fijo se corta todo. Va antes que cualquier otra
+    // comprobación: después de "Inteligencia" vienen las tablas de Aptitudes e
+    // Intereses, cuyas filas reutilizan palabras como "Organización" o "Musical".
+    if (esFinDeBloque(p)) { terminado = true; break }
+
+    if (esSeccionIgnorada(p)) { actual = null; continue }
+
     const enc = encabezadoDe(p)
     if (enc) {
-      // Los encabezados del andamiaje fijo (Aptitudes/Intereses) reutilizan
-      // palabras como "Organización", así que una sección ya llenada no se reabre.
-      // Pero si sigue vacía, es que el encabezado venía repetido ("Decisiones" dos
-      // veces seguidas) y hay que seguir capturando en ella.
-      if (!secciones[enc.key]) { secciones[enc.key] = []; actual = enc.key }
-      else if (secciones[enc.key].length === 0) actual = enc.key
-      else actual = null
+      // Una sección puede reabrirse y seguir acumulando: hay reportes que parten
+      // la personalidad en "Visión General" y "Principales Características".
+      if (!secciones[enc.key]) secciones[enc.key] = []
+      actual = enc.key
       continue
     }
-    if (actual && esFinDeBloque(p)) { terminado = true; break }
     if (actual) secciones[actual].push(p)
   }
 
