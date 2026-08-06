@@ -4,12 +4,29 @@ const fs = require('fs')
 
 // Qué mide cada apartado de razonamiento y cada aptitud. Se extraen de los
 // reportes Word de APROVA con scripts/extraer-definiciones.js.
-let DEFINICIONES = { razonamiento: {}, aptitudes: {} }
+let DEFINICIONES = { razonamiento: {}, aptitudes: {}, intereses: {}, areas: {} }
 try {
   DEFINICIONES = require('./data/definiciones.json')
 } catch (e) {
   console.error('No se pudo cargar data/definiciones.json:', e.message)
 }
+
+// Narrativa por tipo de personalidad, extraída de los reportes Word de APROVA
+// con scripts/extraer-mbti.js. Los tipos que no estén aquí (hoy solo ESTJ, que
+// no tiene reporte propio) recurren a la descripción breve de más abajo.
+let REPORTES_MBTI = {}
+try {
+  REPORTES_MBTI = require('./data/mbti-reportes.json')
+} catch (e) {
+  console.error('No se pudo cargar data/mbti-reportes.json:', e.message)
+}
+
+// Orden en que se presentan las secciones de la narrativa de personalidad
+const ORDEN_SECCIONES_MBTI = [
+  'personalidad', 'aprendizaje', 'escritura', 'procrastinacion',
+  'exploracionCarrera', 'busquedaTrabajo', 'trabajo', 'equipo',
+  'liderazgo', 'comunicacion', 'decisiones', 'juego', 'estres'
+]
 
 // Colores APROVA
 const COLORS = {
@@ -310,6 +327,32 @@ function addDefinitionList(doc, entradas) {
   })
 }
 
+// Los reportes de Gabriela alternan párrafos corridos con listas introducidas por
+// una frase que termina en "…" o en ":" ("En el trabajo, a menudo suelen..."). Al
+// extraer el .docx se pierde la viñeta, así que se reconstruye: lo que sigue a una
+// frase introductoria se dibuja como viñeta hasta que aparezca otra introducción.
+function addNarrativaMBTI(doc, parrafos) {
+  let enLista = false
+  parrafos.forEach(parrafo => {
+    const esIntroduccion = /[…:]$/.test(parrafo) || /\.\.\.$/.test(parrafo)
+    if (esIntroduccion) {
+      checkPageSpace(doc, 40)
+      doc.fontSize(10).font('Helvetica-Bold').fillColor(COLORS.text)
+      doc.text(parrafo, { lineGap: 3 })
+      doc.moveDown(0.3)
+      enLista = true
+      return
+    }
+    if (enLista) {
+      checkPageSpace(doc, 20)
+      addBulletPoint(doc, parrafo)
+      return
+    }
+    checkPageSpace(doc, 40)
+    addBodyText(doc, parrafo)
+  })
+}
+
 function addBodyText(doc, text) {
   doc.fontSize(11).font('Helvetica').fillColor(COLORS.text).text(text, { lineGap: 4, align: 'justify' })
   doc.moveDown(0.5)
@@ -521,8 +564,27 @@ async function generarReportePDF(datos) {
 
       doc.moveDown(1)
 
-      // Descripción general de 16personalidades
-      if (tipo16) {
+      // Narrativa del reporte de APROVA para este tipo. Es la fuente preferente:
+      // es contenido propio y mucho más extenso que las descripciones de respaldo.
+      const narrativa = REPORTES_MBTI[tipo]
+      const seccionesNarrativa = narrativa
+        ? ORDEN_SECCIONES_MBTI.filter(key => narrativa[key] && narrativa[key].parrafos.length)
+        : []
+
+      if (seccionesNarrativa.length) {
+        seccionesNarrativa.forEach(key => {
+          const seccion = narrativa[key]
+          checkPageSpace(doc, 80)
+          addSubsectionTitle(doc, seccion.titulo)
+          doc.moveDown(0.2)
+          addNarrativaMBTI(doc, seccion.parrafos)
+          doc.moveDown(0.5)
+        })
+      }
+
+      // Respaldo: si este tipo aún no tiene reporte propio (hoy solo ESTJ),
+      // se usan las descripciones breves para no dejar la sección vacía.
+      if (!seccionesNarrativa.length && tipo16) {
         addSubsectionTitle(doc, 'Visión General')
         addBodyText(doc, tipo16.descripcion)
 
@@ -547,8 +609,8 @@ async function generarReportePDF(datos) {
         }
       }
 
-      // Secciones detalladas del MBTI
-      if (tipoDesc) {
+      // Secciones detalladas del MBTI (también respaldo)
+      if (!seccionesNarrativa.length && tipoDesc) {
         const seccionesMBTI = [
           ['¿Qué lo hace mover?', tipoDesc.motivacion],
           ['Sus preferencias hacen que:', tipoDesc.preferencias],
