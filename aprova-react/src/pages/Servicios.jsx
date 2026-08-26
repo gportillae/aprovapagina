@@ -57,7 +57,7 @@ function Servicios() {
       {/* Hero Section */}
       <section className="hero-servicios">
         <img
-          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          src="/marca-aprova.png"
           alt=""
           className="hero-watermark"
           aria-hidden="true"

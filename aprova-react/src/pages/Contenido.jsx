@@ -10,7 +10,7 @@ function Contenido() {
       {/* Hero */}
       <section className="contenido-hero">
         <img
-          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          src="/marca-aprova.png"
           alt=""
           className="hero-watermark"
           aria-hidden="true"
@@ -260,7 +260,7 @@ function Contenido() {
       {/* CTA */}
       <section className="cta-contenido">
         <img
-          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          src="/marca-aprova.png"
           alt=""
           className="cta-watermark"
           aria-hidden="true"

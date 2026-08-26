@@ -15,7 +15,7 @@ function Inicio() {
       {/* Hero Section */}
       <section className="hero">
         <img
-          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          src="/marca-aprova.png"
           alt=""
           className="hero-watermark"
           aria-hidden="true"
@@ -254,7 +254,7 @@ function Inicio() {
       {/* CTA Final */}
       <section className="cta-final">
         <img
-          src="https://www.aprovamx.com/uploads/4/6/5/8/46584589/4332272.png"
+          src="/marca-aprova.png"
           alt=""
           className="cta-watermark"
           aria-hidden="true"
