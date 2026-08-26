@@ -2025,10 +2025,30 @@ app.post('/api/generar-reporte', async (req, res) => {
 // ===== SERVIR FRONTEND EN PRODUCCIÓN =====
 const clientBuildPath = path.join(__dirname, '..', 'aprova-react', 'dist')
 if (fs.existsSync(clientBuildPath)) {
-  app.use(express.static(clientBuildPath))
-  // Todas las rutas que no sean /api/ devuelven index.html (SPA)
+  // `extensions: ['html']` hace que /servicios sirva directamente dist/servicios.html,
+  // el archivo que dejó el prerender, sin redirigir a /servicios/. Importa para SEO:
+  // la URL servida es exactamente la del canonical y la del sitemap.
+  app.use(express.static(clientBuildPath, {
+    extensions: ['html'],
+    setHeaders: (res, filePath) => {
+      // El HTML tiene que revalidarse o los cambios de contenido no se ven;
+      // los assets con hash en el nombre se pueden cachear indefinidamente.
+      if (filePath.endsWith('.html')) {
+        res.setHeader('Cache-Control', 'no-cache')
+      } else if (filePath.includes(`${path.sep}assets${path.sep}`)) {
+        res.setHeader('Cache-Control', 'public, max-age=31536000, immutable')
+      }
+    }
+  }))
+
+  // Rutas privadas de la app (/tests, /pago, /acceso...): no están prerenderizadas
+  // porque dependen del navegador del usuario. Se les sirve el cascarón con noindex.
+  const cascaronApp = path.join(clientBuildPath, 'app.html')
+  const respaldo = fs.existsSync(cascaronApp) ? cascaronApp : path.join(clientBuildPath, 'index.html')
+
   app.get(/^\/(?!api\/).*/, (req, res) => {
-    res.sendFile(path.join(clientBuildPath, 'index.html'))
+    res.setHeader('Cache-Control', 'no-cache')
+    res.sendFile(respaldo)
   })
   console.log('Sirviendo frontend desde:', clientBuildPath)
 }

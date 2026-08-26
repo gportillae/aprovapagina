@@ -445,12 +445,30 @@
   font-weight: 300;
 }
 
+/* La respuesta siempre está en el DOM (ver Servicios.jsx): se colapsa animando la
+   altura de la fila del grid, no ocultándola con display:none ni quitándola del
+   árbol. Así el texto queda en el HTML para los buscadores y los motores de IA. */
+.faq-a-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.25s ease;
+}
+
+.faq-item.open .faq-a-wrap {
+  grid-template-rows: 1fr;
+}
+
 .faq-a {
   font-size: 14px;
   color: var(--color-text-secondary);
   line-height: 1.6;
-  margin-top: 12px;
   padding-right: 30px;
+  overflow: hidden;
+  min-height: 0;
+}
+
+.faq-item.open .faq-a {
+  padding-top: 12px;
 }
 
 /* Contacto Section */

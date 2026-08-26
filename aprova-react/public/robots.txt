@@ -1,0 +1,60 @@
+# robots.txt — aprovamx.com
+
+# Buscadores tradicionales
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Crawlers de motores de respuesta con IA.
+# Se permiten a propósito: son los que alimentan las respuestas de ChatGPT,
+# Perplexity, Claude y Gemini, y es donde queremos que APROVA aparezca citada.
+#   OAI-SearchBot / ChatGPT-User -> búsqueda y navegación de ChatGPT
+#   GPTBot                       -> rastreo de OpenAI
+#   Google-Extended              -> respuestas de Gemini y AI Overviews
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+# Regla general: todo abierto salvo el área privada de la aplicación.
+# Esas rutas dependen del navegador del usuario, no tienen contenido indexable
+# y solo gastarían presupuesto de rastreo.
+User-agent: *
+Allow: /
+Disallow: /tests
+Disallow: /pago
+Disallow: /pago-exitoso
+Disallow: /acceso
+Disallow: /api/
+
+Sitemap: https://aprovamx.com/sitemap.xml

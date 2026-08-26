@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { IlustracionServicios, IlustracionAutoconocimiento } from '../components/Ilustraciones'
+import { FAQS as faqs } from '../seo/siteMeta'
 import './Servicios.css'
 
 // Icono de check para las features
@@ -29,40 +30,8 @@ function Servicios() {
     navigate(`/pago?modalidad=${modalidad}`)
   }
 
-  const faqs = [
-    {
-      question: "¿Los resultados de los tests son confidenciales?",
-      answer: "Sí. Solo tú y tu especialista APROVA tienen acceso a los resultados. Nunca se comparten con terceros ni con instituciones educativas."
-    },
-    {
-      question: "¿Qué tests psicométricos incluye el servicio?",
-      answer: "Incluye 6 evaluaciones: Test de Inteligencia (Terman), Áreas Vocacionales, Razonamiento (DAT-5), Aptitudes, Intereses Ocupacionales y Test de Personalidad. Cada uno evalúa una dimensión diferente de tu perfil."
-    },
-    {
-      question: "¿Qué incluye la sesión con padres de familia?",
-      answer: "En la Modalidad 2, la última sesión es un coaching para padres donde compartimos el resumen del proceso, entregamos el reporte escrito del perfil vocacional y resolvemos todas las inquietudes para que puedan apoyar la decisión en familia."
-    },
-    {
-      question: "¿Las sesiones virtuales son en vivo o grabadas?",
-      answer: "Son sesiones en vivo por videoconferencia con tu especialista asignado. Se agendan en horarios convenientes para ti."
-    },
-    {
-      question: "¿Tienen servicio en Guadalajara y Ciudad de México?",
-      answer: "Sí. Tenemos especialistas en Aguascalientes, Guadalajara y CDMX. La modalidad virtual está disponible desde cualquier lugar de México."
-    },
-    {
-      question: "¿A qué edad es recomendable hacer la orientación?",
-      answer: "Idealmente en los últimos años de preparatoria, aunque también trabajamos con jóvenes que ya están en universidad y desean reorientar su carrera. Nunca es tarde para tomar una mejor decisión."
-    },
-    {
-      question: "¿Cuánto tiempo toma el proceso completo?",
-      answer: "La Modalidad 1 (solo tests) se completa en 1-2 días. La Modalidad 2 es un proceso de aproximadamente 12 horas divididas en sesiones de 2 horas, distribuidas a lo largo de varias semanas según tu disponibilidad."
-    },
-    {
-      question: "¿Puedo hacer reembolso si no estoy satisfecho?",
-      answer: "Puedes solicitar reembolso completo dentro de las primeras 48 horas después del pago, siempre que no hayas iniciado ningún test. Consulta nuestros Términos y Condiciones para más detalles."
-    }
-  ]
+  // Las preguntas viven en src/seo/siteMeta.js porque de ahí sale también el
+  // JSON-LD de FAQPage. Con una sola fuente no pueden quedar desincronizadas.
 
   const toggleFaq = (index) => {
     setOpenFaq(openFaq === index ? null : index)
@@ -363,15 +332,18 @@ function Servicios() {
               className={`faq-item ${openFaq === index ? 'open' : ''}`}
               onClick={() => toggleFaq(index)}
             >
-              <div className="faq-q">
+              <div className="faq-q" aria-expanded={openFaq === index} aria-controls={`faq-a-${index}`}>
                 <p>{faq.question}</p>
                 <span>{openFaq === index ? '−' : '+'}</span>
               </div>
-              {openFaq === index && (
+              {/* La respuesta se renderiza siempre y se colapsa por CSS, no con un
+                  condicional: si no está en el HTML, los crawlers que no ejecutan
+                  JavaScript (ChatGPT, Perplexity) nunca la leen. */}
+              <div className="faq-a-wrap" id={`faq-a-${index}`}>
                 <div className="faq-a">
                   {faq.answer}
                 </div>
-              )}
+              </div>
             </div>
           ))}
         </div>

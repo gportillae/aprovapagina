@@ -2,6 +2,7 @@ node_modules/
 .env
 .env.local
 dist/
+dist-ssr/
 tmpclaude-*
 nul
 temp_manual/

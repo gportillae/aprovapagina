@@ -92,6 +92,28 @@ After Aptitudes and Intereses are completed, the top 3 aptitudes and interests a
 - `POST /api/generar-reporte` loads results from server files, generates PDF, emails it to `EMAIL_DESTINO`, and returns it as download
 - Report includes the `pasos_aprova.jpg` image as second-to-last page
 
+### SEO and Prerendering
+The public pages are **prerendered to static HTML at build time**. This matters because the
+site is a client-rendered SPA: Googlebot renders JS but on a delayed second pass, and the AI
+answer-engine crawlers (GPTBot / OAI-SearchBot for ChatGPT, PerplexityBot, ClaudeBot) do **not**
+run JavaScript at all — without prerendering they see an empty page.
+
+- `src/seo/siteMeta.js` is the single source of truth: per-route titles, descriptions,
+  canonicals, JSON-LD, and the FAQ list. Both the React app and the build script read it,
+  so metadata cannot drift.
+- `npm run build` runs three steps: client build → SSR build (`dist-ssr/`) → `scripts/prerender.js`.
+- The prerender writes one flat HTML file per public route (`dist/servicios.html`, …) plus
+  `dist/app.html` (a `noindex` shell for the private routes), `dist/sitemap.xml` and `dist/llms.txt`.
+- `index.html` has `<!--seo-inicio-->` / `<!--seo-fin-->` markers; the prerender replaces
+  everything between them. **Removing the markers breaks the build** (on purpose).
+- Express serves these with `express.static(..., { extensions: ['html'] })` so `/servicios`
+  returns `servicios.html` with no trailing-slash redirect — the served URL matches the canonical.
+- `src/seo/Seo.jsx` updates the head **imperatively** on SPA navigation. It deliberately does not
+  render `<title>`/`<meta>` into the tree: the prerendered HTML already has them, and rendering
+  them again would duplicate the tags.
+- Content that should be indexed must be in the DOM, not behind a conditional render. The
+  `/servicios` FAQ answers are always rendered and collapsed with CSS for this reason.
+
 ### Two Service Modalidades
 - **modalidad1** ($4,000 MXN): Online tests + vocational profile by email
 - **modalidad2** ($7,000 MXN): Tests + multiple virtual advisory sessions + coaching
