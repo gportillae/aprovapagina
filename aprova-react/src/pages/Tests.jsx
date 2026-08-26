@@ -173,6 +173,8 @@ function Tests() {
     subtiposCompletos &&
     (!esModalidad2 || (testsCompletados.includes('razonamiento') && testsCompletados.includes('mbti')))
 
+  // El reporte no se descarga: el servidor lo genera en PDF y Word y lo envía
+  // al especialista de APROVA, que es quien lo revisa antes de entregarlo.
   const handleGenerarReporte = async () => {
     setGenerandoReporte(true)
     setReporteError('')
@@ -185,24 +187,14 @@ function Tests() {
         body: JSON.stringify({ email: acceso.email })
       })
 
-      if (!response.ok) {
-        throw new Error('Error al generar el reporte')
+      const data = await response.json().catch(() => ({}))
+      if (!response.ok || !data.enviado) {
+        throw new Error(data.error || 'Error al generar el reporte')
       }
-
-      // Descargar el PDF
-      const blob = await response.blob()
-      const url = window.URL.createObjectURL(blob)
-      const a = document.createElement('a')
-      a.href = url
-      a.download = `Reporte_Vocacional_${(acceso.nombre || 'usuario').replace(/\s+/g, '_')}.pdf`
-      document.body.appendChild(a)
-      a.click()
-      document.body.removeChild(a)
-      window.URL.revokeObjectURL(url)
       setReporteExito(true)
     } catch (err) {
       console.error('Error al generar reporte:', err)
-      setReporteError('Error al generar el reporte. Intenta de nuevo.')
+      setReporteError(err.message || 'Error al generar el reporte. Intenta de nuevo.')
     } finally {
       setGenerandoReporte(false)
     }
@@ -617,7 +609,8 @@ function Tests() {
             }}>
               <h3 style={{ margin: '0 0 8px', fontSize: '20px' }}>Todos los tests completados</h3>
               <p style={{ margin: '0 0 20px', color: '#AFA9EC', fontSize: '15px' }}>
-                Ya puedes generar tu reporte vocacional completo en PDF.
+                Envía tu reporte vocacional a tu especialista APROVA. Él lo revisará
+                y se pondrá en contacto contigo para darte los resultados.
               </p>
               <button
                 onClick={handleGenerarReporte}
@@ -629,11 +622,11 @@ function Tests() {
                   opacity: generandoReporte ? 0.7 : 1, transition: 'opacity 0.2s'
                 }}
               >
-                {generandoReporte ? 'Generando reporte...' : 'Generar Reporte PDF'}
+                {generandoReporte ? 'Enviando reporte...' : 'Enviar mi reporte'}
               </button>
               {reporteExito && (
                 <p style={{ margin: '12px 0 0', color: '#22c55e', fontSize: '14px' }}>
-                  Reporte generado y descargado correctamente. También fue enviado por correo.
+                  Listo. Tu reporte fue enviado a tu especialista APROVA.
                 </p>
               )}
               {reporteError && (

@@ -7,6 +7,7 @@ const ExcelJS = require('exceljs')
 const fs = require('fs')
 const path = require('path')
 const { generarReportePDF } = require('./generar-reporte')
+const { generarReporteWord } = require('./generar-reporte-word')
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -1887,10 +1888,19 @@ app.post('/api/generar-reporte', async (req, res) => {
       datosPersonales: tests.razonamiento.datosPersonales
     } : null
 
-    const pdfBuffer = await generarReportePDF({ nombre, email, terman, mbti, aptitudes, intereses, areas, razonamiento })
+    const datosReporte = { nombre, email, terman, mbti, aptitudes, intereses, areas, razonamiento }
+
+    // Se generan los dos formatos: ambos se adjuntan al correo y el cliente
+    // descarga el que haya pedido.
+    const [pdfBuffer, wordBuffer] = await Promise.all([
+      generarReportePDF(datosReporte),
+      generarReporteWord(datosReporte)
+    ])
 
     const fecha = new Date().toLocaleDateString('es-MX', { timeZone: 'America/Mexico_City' }).replace(/\//g, '-')
-    const nombreArchivo = `Reporte_Vocacional_${nombre.replace(/\s+/g, '_')}_${fecha}.pdf`
+    const base = `Reporte_Vocacional_${nombre.replace(/\s+/g, '_')}_${fecha}`
+    const nombreArchivo = `${base}.pdf`
+    const nombreArchivoWord = `${base}.docx`
 
     // Enviar por correo
     try {
@@ -1925,25 +1935,24 @@ app.post('/api/generar-reporte', async (req, res) => {
           </div>
         `,
         attachments: [
-          {
-            filename: nombreArchivo,
-            content: pdfBuffer
-          }
+          { filename: nombreArchivo, content: pdfBuffer },
+          { filename: nombreArchivoWord, content: wordBuffer }
         ]
       }
 
-      // Enviar correo en background
-      resend.emails.send(mailData)
-        .then(() => console.log(`Reporte vocacional enviado: ${nombre}`))
-        .catch((mailError) => console.error('Error al enviar email del reporte:', mailError))
+      // El correo es la única vía de entrega del reporte, así que se espera el
+      // envío: si falla, el alumno tiene que enterarse para volver a intentar.
+      // Ojo: Resend no lanza excepción ante un error de la API, devuelve { error }.
+      const { error: errorResend } = await resend.emails.send(mailData)
+      if (errorResend) throw new Error(errorResend.message || 'Resend rechazó el envío')
+      console.log(`Reporte vocacional enviado (PDF + Word): ${nombre}`)
     } catch (mailError) {
-      console.error('Error al preparar email del reporte:', mailError)
+      console.error('Error al enviar el reporte por correo:', mailError)
+      return res.status(502).json({ error: 'El reporte se generó pero no se pudo enviar por correo. Intenta de nuevo.' })
     }
 
-    // Devolver el PDF como descarga inmediatamente
-    res.setHeader('Content-Type', 'application/pdf')
-    res.setHeader('Content-Disposition', `attachment; filename="${nombreArchivo}"`)
-    res.send(pdfBuffer)
+    // El reporte no se descarga: solo se envía a APROVA.
+    res.json({ enviado: true, nombre })
   } catch (error) {
     console.error('Error al generar reporte:', error)
     res.status(500).json({ error: 'Error al generar el reporte vocacional' })
