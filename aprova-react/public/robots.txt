@@ -1,4 +1,4 @@
-# robots.txt — aprovamx.com
+# robots.txt — www.aprovamx.com
 
 # Buscadores tradicionales
 User-agent: Googlebot
@@ -57,4 +57,4 @@ Disallow: /pago-exitoso
 Disallow: /acceso
 Disallow: /api/
 
-Sitemap: https://aprovamx.com/sitemap.xml
+Sitemap: https://www.aprovamx.com/sitemap.xml

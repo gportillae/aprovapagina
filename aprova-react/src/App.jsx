@@ -14,6 +14,7 @@ import Privacidad from './pages/Privacidad'
 import Terminos from './pages/Terminos'
 import Contenido from './pages/Contenido'
 import Seo from './seo/Seo'
+import Analytics from './seo/Analytics'
 import './App.css'
 
 // El router lo aporta quien monta la app: BrowserRouter en main.jsx y
@@ -23,6 +24,9 @@ function App() {
   return (
     <div className="app">
       <Seo />
+      {/* Después de <Seo> a propósito: su efecto ya fijó el título de la ruta,
+          que es el que se manda como page_title. */}
+      <Analytics />
       <Navbar />
       <main className="main-content">
         <Routes>

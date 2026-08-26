@@ -12,16 +12,20 @@
 export const SITE = {
   nombre: 'APROVA',
   nombreLargo: 'APROVA — Asesoría Profesional en Orientación Vocacional',
-  url: 'https://aprovamx.com',
+  // Tiene que ser el dominio que realmente resuelve y sirve el sitio: es el que
+  // va en los canonical, el sitemap y og:url. El apex (aprovamx.com, sin www) no
+  // tiene registros DNS, así que apuntar ahí mandaría a los buscadores a una URL
+  // inexistente. Railway sirve el sitio en www y su FRONTEND_URL también es www.
+  url: 'https://www.aprovamx.com',
   idioma: 'es-MX',
   telefono: '+524499119192',
   telefonoLegible: '(449) 911 9192',
   email: 'contacto@aprovamx.com',
   whatsapp: 'https://wa.me/524499119192',
-  logo: 'https://aprovamx.com/logo-aprova.png',
+  logo: 'https://www.aprovamx.com/logo-aprova.png',
   // TODO: sustituir por una tarjeta social propia de 1200x630 px con texto legible.
   // Por ahora reutiliza el logo (1687x788, formato ancho válido para redes).
-  imagenSocial: 'https://aprovamx.com/logo-aprova.png',
+  imagenSocial: 'https://www.aprovamx.com/logo-aprova.png',
   ciudades: ['Aguascalientes', 'Guadalajara', 'Ciudad de México'],
   fundacion: '2014'
 }

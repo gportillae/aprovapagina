@@ -91,6 +91,15 @@ function Privacidad() {
             a los tests contratados. No utilizamos cookies de rastreo de terceros con fines
             publicitarios.
           </p>
+          <p>
+            Utilizamos Google Analytics para medir de forma agregada cómo se navega el sitio
+            (páginas visitadas, duración de la visita y origen del tráfico). Esta herramienta
+            instala cookies propias de Google y recopila datos de uso de manera anonimizada.
+            La información se emplea únicamente con fines estadísticos, para mejorar el sitio,
+            y nunca se cruza con los resultados de tus tests psicométricos ni permite
+            identificarte personalmente. Puedes impedir esta recopilación mediante la
+            configuración de tu navegador o el complemento de inhabilitación de Google Analytics.
+          </p>
 
           <h2>8. Modificaciones al aviso de privacidad</h2>
           <p>

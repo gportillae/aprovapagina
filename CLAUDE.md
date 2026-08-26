@@ -51,7 +51,7 @@ Deployed on **Railway** as a single service. Express serves the React build as s
 - `GMAIL_USER` — Gmail address for sending emails
 - `GMAIL_APP_PASSWORD` — Gmail app password
 - `EMAIL_DESTINO` — Destination email for test results and sale notifications
-- `FRONTEND_URL` — Frontend URL for Stripe redirects (prod: `https://aprovamx.com`)
+- `FRONTEND_URL` — Frontend URL for Stripe redirects (prod: `https://www.aprovamx.com`)
 - `PORT` — Server port (default: `3001`)
 - `RESULTADOS_DIR` — Where per-user result JSONs are stored. **In production must point to the Railway volume** (e.g. `/data/resultados`); otherwise every redeploy wipes all user progress. Defaults to `aprova-backend/resultados/`.
 
@@ -127,4 +127,6 @@ All prices are defined in the backend `PRODUCTOS` object in centavos (MXN). The 
 - Timezone is `America/Mexico_City` for all date formatting
 - Brand colors: primary purple `#534AB7`, dark navy `#26215C`, light purple `#EEEDFE`/`#AFA9EC`
 - Pages under construction use the inline `PaginaEnConstruccion` component in `App.jsx`
-- Domain: `aprovamx.com`
+- Domain: **`www.aprovamx.com`** — the apex `aprovamx.com` has no DNS records and does
+  not resolve. Always use the `www` form in canonicals, sitemaps and absolute URLs
+  (`SITE.url` in `src/seo/siteMeta.js`).
