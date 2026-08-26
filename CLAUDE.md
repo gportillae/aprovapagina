@@ -45,6 +45,9 @@ Deployed on **Railway** as a single service. Express serves the React build as s
 ### Frontend (`aprova-react/.env`)
 - `VITE_API_URL` — Backend URL (dev: `http://localhost:3001`, prod: not set)
 - `VITE_STRIPE_PUBLISHABLE_KEY` — Stripe publishable key
+- `VITE_GA_MEASUREMENT_ID` — GA4 measurement id (`G-…`). Optional: if unset, `Analytics.jsx`
+  does nothing and Vite strips the code from the bundle entirely. **Vite inlines this at
+  build time**, so changing it in Railway requires a redeploy to take effect.
 
 ### Backend (`aprova-backend/.env`)
 - `STRIPE_SECRET_KEY` — Stripe secret key
