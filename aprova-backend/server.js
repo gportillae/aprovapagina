@@ -59,6 +59,58 @@ function guardarResultadosUsuario(email, datos) {
   fs.writeFileSync(archivo, JSON.stringify(datos, null, 2), 'utf-8')
 }
 
+// ===== LIMPIEZA DE RESULTADOS ANTIGUOS =====
+// Evita que el volumen crezca sin control. Solo se borran expedientes cuyo reporte
+// YA se envió: si alguien va a la mitad de sus tests, su archivo nunca se toca,
+// porque borrarlo le haría perder todo su avance.
+const MAX_RESULTADOS = Number(process.env.MAX_RESULTADOS_GUARDADOS || 500)
+
+function limpiarResultadosAntiguos(emailEnCurso) {
+  try {
+    const archivos = fs.readdirSync(RESULTADOS_DIR).filter(n => n.endsWith('.json'))
+    if (archivos.length <= MAX_RESULTADOS) return { borrados: 0, total: archivos.length }
+
+    const archivoEnCurso = emailEnCurso ? path.basename(getArchivoUsuario(emailEnCurso)) : null
+
+    // Candidatos: reporte ya enviado y no es el expediente que se acaba de usar
+    const candidatos = []
+    archivos.forEach(nombre => {
+      if (nombre === archivoEnCurso) return
+      try {
+        const datos = JSON.parse(fs.readFileSync(path.join(RESULTADOS_DIR, nombre), 'utf-8'))
+        if (!datos.reporteGenerado) return
+        candidatos.push({ nombre, fecha: datos.reporteGenerado })
+      } catch (e) {
+        // Un archivo ilegible no se borra: puede ser una escritura a medias
+        console.warn(`No se pudo leer ${nombre} durante la limpieza:`, e.message)
+      }
+    })
+
+    const aBorrar = archivos.length - MAX_RESULTADOS
+    candidatos.sort((a, b) => new Date(a.fecha) - new Date(b.fecha))
+
+    let borrados = 0
+    candidatos.slice(0, aBorrar).forEach(c => {
+      try {
+        fs.unlinkSync(path.join(RESULTADOS_DIR, c.nombre))
+        borrados++
+      } catch (e) {
+        console.error(`No se pudo borrar ${c.nombre}:`, e.message)
+      }
+    })
+
+    if (borrados) {
+      console.log(`Limpieza: ${borrados} expediente(s) antiguos borrados; quedan ${archivos.length - borrados} de un máximo de ${MAX_RESULTADOS}`)
+    } else if (aBorrar > 0) {
+      console.warn(`Limpieza: hay ${archivos.length} expedientes (máx. ${MAX_RESULTADOS}) pero ninguno tiene el reporte enviado, así que no se borró nada`)
+    }
+    return { borrados, total: archivos.length - borrados }
+  } catch (e) {
+    console.error('Error durante la limpieza de resultados:', e.message)
+    return { borrados: 0, total: 0 }
+  }
+}
+
 // Email sender address (dominio verificado en Resend)
 const EMAIL_FROM = process.env.EMAIL_FROM || 'APROVA <onboarding@resend.dev>'
 
@@ -1950,6 +2002,17 @@ app.post('/api/generar-reporte', async (req, res) => {
       console.error('Error al enviar el reporte por correo:', mailError)
       return res.status(502).json({ error: 'El reporte se generó pero no se pudo enviar por correo. Intenta de nuevo.' })
     }
+
+    // Dejar constancia de que ya se entregó: es lo que habilita a este expediente
+    // para ser borrado más adelante si hace falta espacio.
+    try {
+      datosUsuario.reporteGenerado = new Date().toISOString()
+      guardarResultadosUsuario(email, datosUsuario)
+    } catch (e) {
+      console.error('No se pudo marcar el reporte como enviado:', e.message)
+    }
+
+    limpiarResultadosAntiguos(email)
 
     // El reporte no se descarga: solo se envía a APROVA.
     res.json({ enviado: true, nombre })

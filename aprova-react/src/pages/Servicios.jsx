@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { IlustracionServicios, IlustracionAutoconocimiento } from '../components/Ilustraciones'
 import './Servicios.css'
 
@@ -212,6 +212,16 @@ function Servicios() {
                 </button>
               </div>
             </div>
+          </div>
+
+          {/* Quien ya pagó no tiene que volver a comprar: puede recuperar su acceso */}
+          <div className="mod-ya-compraste">
+            <p>
+              ¿Ya compraste tu paquete? Entra a tus tests con el correo que usaste al pagar.
+            </p>
+            <Link to="/acceso" className="btn-acceso">
+              Acceder a mis tests
+            </Link>
           </div>
         </div>
       </section>

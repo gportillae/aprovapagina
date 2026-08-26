@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { useSearchParams, useNavigate } from 'react-router-dom'
+import { Link, useSearchParams, useNavigate } from 'react-router-dom'
 import { loadStripe } from '@stripe/stripe-js'
 import './Pago.css'
 
@@ -110,6 +110,12 @@ function Pago() {
             </svg>
             <span>Pago seguro procesado por Stripe</span>
           </div>
+
+          {/* Evita que alguien que ya pagó vuelva a comprar por no encontrar su acceso */}
+          <p className="pago-ya-compraste">
+            ¿Ya habías comprado? No vuelvas a pagar:{' '}
+            <Link to="/acceso">entra a tus tests con tu correo</Link>.
+          </p>
         </div>
 
         <div className="pago-form-container">

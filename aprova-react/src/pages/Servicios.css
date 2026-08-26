@@ -577,3 +577,42 @@
     font-size: 24px;
   }
 }
+
+/* Aviso para quien ya compró: recuperar acceso en vez de volver a pagar */
+.mod-ya-compraste {
+  margin-top: 32px;
+  padding: 20px 24px;
+  background: var(--color-primary-pale, #EEEDFE);
+  border: 1px solid var(--color-primary-light, #AFA9EC);
+  border-radius: var(--border-radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.mod-ya-compraste p {
+  margin: 0;
+  font-size: 15px;
+  color: var(--color-primary-darker, #26215C);
+}
+
+.btn-acceso {
+  background: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 10px 22px;
+  border-radius: var(--border-radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.btn-acceso:hover {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
