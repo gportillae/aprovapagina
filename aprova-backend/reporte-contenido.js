@@ -108,6 +108,18 @@ const INTERPRETACIONES_TERMAN = {
 // dos copias en el código y la de este archivo se quedó con un tercio de las carreras.
 const CARRERAS = require('./data/carreras.json')
 
+// Color de cada área, el mismo de items_areas.json y del Excel de resultados,
+// para que la gráfica general y la de cada subárea se lean como un solo sistema.
+const AREA_COLORS = {
+  'Preferencias Universitarias': '#3498DB',
+  'Físico-Matemáticas': '#E74C3C',
+  'Biológicas': '#27AE60',
+  'Químicas': '#9B59B6',
+  'Administrativas': '#F39C12',
+  'Sociales': '#1ABC9C',
+  'Humanidades': '#E91E63'
+}
+
 const AREA_KEY_MAP = {
   'Preferencias Universitarias': 'PU',
   'Físico-Matemáticas': 'FM',
@@ -611,7 +623,7 @@ function construirBloques(datos) {
       b.push({
         tipo: 'grafica',
         maxValue: 100,
-        items: ordenadas.map(par => ({ label: par[0], value: par[1].porcentaje, displayValue: `${par[1].porcentaje}%`, color: COLORS.primary }))
+        items: ordenadas.map(par => ({ label: par[0], value: par[1].porcentaje, displayValue: `${par[1].porcentaje}%`, color: AREA_COLORS[par[0]] || COLORS.primary }))
       })
     }
 
@@ -624,8 +636,11 @@ function construirBloques(datos) {
       b.push({ tipo: 'definiciones', entradas: defsAreas })
     }
 
-    // Carreras afines: todas las subáreas con todas sus carreras, para que el
-    // alumno tenga el panorama completo.
+    // Cada área que el alumno exploró (los tres subtipos que abrió el diagnóstico)
+    // lleva primero la gráfica con todas sus subáreas y enseguida las carreras, para
+    // que la puntuación y la oferta se lean juntas. Las carreras se limitan a las tres
+    // subáreas más altas, igual que en el Excel de resultados: la gráfica da el
+    // panorama completo y la lista se queda con lo que de verdad le conviene revisar.
     ordenadas.forEach(par => {
       const area = par[0]
       const d = par[1]
@@ -633,16 +648,30 @@ function construirBloques(datos) {
       const areaKey = AREA_KEY_MAP[area]
       if (!areaKey || !CARRERAS[areaKey]) return
 
-      b.push({ tipo: 'subseccion', titulo: `${area} (${d.porcentaje}%)`, espacioMin: 80 })
-
-      Object.entries(d.subareas)
+      const color = AREA_COLORS[area] || COLORS.primary
+      const subsOrdenadas = Object.entries(d.subareas)
         .sort((x, y) => y[1].porcentaje - x[1].porcentaje)
-        .forEach(sp => {
-          const carreras = CARRERAS[areaKey][sp[0]]
-          if (!carreras || !carreras.length) return
-          b.push({ tipo: 'subsubtitulo', texto: `${sp[0]} (${sp[1].porcentaje}%)`, tamano: 11, espacioMin: 40 })
-          carreras.forEach(c => b.push({ tipo: 'carrera', texto: c, espacioMin: 14 }))
-        })
+
+      b.push({ tipo: 'subseccion', titulo: `${area} (${d.porcentaje}%)`, espacioMin: 160 })
+      b.push({ tipo: 'subsubtitulo', texto: 'Puntuación por subárea', tamano: 11, espacioMin: 80 })
+      b.push({
+        tipo: 'grafica',
+        maxValue: 100,
+        items: subsOrdenadas.map(sp => ({
+          label: sp[0],
+          value: sp[1].porcentaje,
+          displayValue: `${sp[1].porcentaje}%`,
+          color
+        }))
+      })
+
+      b.push({ tipo: 'subsubtitulo', texto: 'Carreras afines (subáreas más altas)', tamano: 11, espacioMin: 60 })
+      subsOrdenadas.slice(0, 3).forEach(sp => {
+        const carreras = CARRERAS[areaKey][sp[0]]
+        if (!carreras || !carreras.length) return
+        b.push({ tipo: 'subsubtitulo', texto: `${sp[0]} (${sp[1].porcentaje}%)`, tamano: 11, espacioMin: 40 })
+        carreras.forEach(c => b.push({ tipo: 'carrera', texto: c, espacioMin: 14 }))
+      })
     })
   }
 
