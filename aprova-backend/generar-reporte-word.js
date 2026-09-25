@@ -1,20 +1,48 @@
 // Renderiza a Word (.docx) el contenido que arma reporte-contenido.js.
 // Comparte estructura con generar-reporte.js (PDF): ambos consumen los mismos
 // bloques, así que una sección nueva aparece en los dos formatos sin tocar nada aquí.
+//
+// El formato (tipografía, tamaños, viñetas, justificación, interlineado) replica un
+// reporte que se corrigió a mano en Word sobre uno generado por este archivo. La
+// muestra no vive en el repo (lleva datos de una alumna): está en la carpeta de
+// expedientes, como "Reporte_Vocacional_..._corregido.docx". Si se vuelve a ajustar
+// el formato en Word, ese tipo de archivo es la muestra a comparar.
 const path = require('path')
 const fs = require('fs')
 const {
   Document, Packer, Paragraph, TextRun, ImageRun, Table, TableRow, TableCell,
-  AlignmentType, WidthType, BorderStyle, PageBreak, VerticalAlign
+  AlignmentType, WidthType, BorderStyle, PageBreak, VerticalAlign,
+  SectionType, Footer, PageNumber, LevelFormat
 } = require('docx')
 const { construirBloques, COLORS } = require('./reporte-contenido')
 
 // docx quiere el color sin '#'
 const hex = c => String(c || '').replace('#', '')
 
-// Word mide en twips (1/20 de punto). El ancho útil de una carta con márgenes
-// de 1 pulgada es de 9360 twips.
-const ANCHO_UTIL = 9360
+// ===== FORMATO =====
+const FUENTE = 'Arial Narrow'
+// Tamaños en puntos. El cuerpo va en 10: con Arial Narrow el reporte queda
+// compacto sin perder legibilidad.
+const TAM = {
+  cuerpo: 10,
+  seccion: 14,      // título que abre página, con línea inferior
+  subseccion: 11,   // "Qué mide cada aptitud", "Biológicas (57%)"
+  subsubtitulo: 11, // "Ambientalista (63%)"
+  definicion: 11    // nombre de cada definición; el texto va en tamaño de cuerpo
+}
+// Interlineado 1.15 (Word mide en 1/240 de línea)
+const INTERLINEADO = 276
+// Viñetas: la normal para las listas de texto, la compacta para las carreras,
+// que van a dos columnas y necesitan la sangría mínima.
+const VINETA_NORMAL = 'vineta-normal'
+const VINETA_CARRERA = 'vineta-carrera'
+
+// Página A4 (lo que Word usa por omisión en estos reportes) con márgenes de 1".
+const MARGENES = { top: 1440, right: 1440, bottom: 1440, left: 1440 }
+const PAGINA = { size: { width: 11906, height: 16838 }, margin: MARGENES }
+// Ancho útil de la A4 con esos márgenes, en twips: 11906 - 2*1440.
+const ANCHO_UTIL = 9026
+
 const SIN_BORDES = {
   top: { style: BorderStyle.NONE, size: 0, color: 'FFFFFF' },
   bottom: { style: BorderStyle.NONE, size: 0, color: 'FFFFFF' },
@@ -66,14 +94,69 @@ function barra(proporcion, color, anchoTotal) {
 function parrafoTexto(texto, opciones = {}) {
   return new Paragraph({
     alignment: opciones.alineacion,
-    spacing: { after: opciones.despues != null ? opciones.despues : 120, line: 276 },
+    spacing: { after: opciones.despues != null ? opciones.despues : 120, line: INTERLINEADO },
     indent: opciones.sangria ? { left: opciones.sangria } : undefined,
     children: [new TextRun({
       text: texto,
       bold: opciones.negrita,
-      size: (opciones.tamano || 11) * 2, // docx usa medios puntos
+      size: (opciones.tamano || TAM.cuerpo) * 2, // docx usa medios puntos
       color: hex(opciones.color || COLORS.text),
-      font: 'Arial'
+      font: FUENTE
+    })]
+  })
+}
+
+// Los textos fijos del reporte traen varios párrafos separados por línea en
+// blanco. Word no interpreta el \n: si se manda todo en un solo TextRun queda
+// pegado en un bloque ilegible, así que aquí se convierten en párrafos reales.
+// Reglas: una línea en blanco cierra el párrafo, un salto simple se une con
+// espacio, y una línea que ya viene con viñeta escrita ("• …", como en los
+// textos de asesoría) se convierte en viñeta real de Word: se le quita el
+// carácter y se numera como lista, para que sangre y se alinee igual que las
+// demás listas del reporte.
+function parrafosDeTexto(texto, opciones = {}) {
+  const salida = []
+  let actual = []
+  const cerrar = () => {
+    const t = actual.join(' ').trim()
+    if (t) salida.push(parrafoTexto(t, opciones))
+    actual = []
+  }
+
+  String(texto).split('\n').forEach(linea => {
+    const l = linea.trim()
+    if (!l) return cerrar()
+    const esVineta = /^[•·]\s*/.test(l)
+    if (esVineta) {
+      cerrar()
+      salida.push(parrafoVineta(l.replace(/^[•·]\s*/, ''), {
+        tamano: opciones.tamano,
+        color: opciones.color,
+        alineacion: opciones.alineacion,
+        despues: 60
+      }))
+      return
+    }
+    actual.push(l)
+  })
+  cerrar()
+
+  return salida
+}
+
+function parrafoVineta(texto, opciones = {}) {
+  return new Paragraph({
+    numbering: { reference: opciones.referencia || VINETA_NORMAL, level: 0 },
+    alignment: opciones.alineacion,
+    spacing: {
+      after: opciones.despues != null ? opciones.despues : 60,
+      line: opciones.interlineado === false ? undefined : INTERLINEADO
+    },
+    children: [new TextRun({
+      text: texto,
+      size: (opciones.tamano || TAM.cuerpo) * 2,
+      color: hex(opciones.color || COLORS.text),
+      font: FUENTE
     })]
   })
 }
@@ -102,7 +185,7 @@ function bloqueDimensiones(bloque) {
   const salida = []
   bloque.filas.forEach(fila => {
     salida.push(parrafoTexto(fila.etiqueta, {
-      tamano: 10, negrita: true, alineacion: AlignmentType.CENTER, despues: 40
+      tamano: TAM.cuerpo, negrita: true, alineacion: AlignmentType.CENTER, despues: 40
     }))
     // Barra bicolor centrada: el polo dominante en color primario
     const ancho = 5000
@@ -128,8 +211,12 @@ function bloqueDefiniciones(bloque) {
   const salida = []
   bloque.entradas.forEach(({ nombre, definicion }) => {
     if (!definicion) return
-    salida.push(parrafoTexto(nombre, { tamano: 11, negrita: true, color: COLORS.primaryDark, despues: 40 }))
-    salida.push(parrafoTexto(definicion, { tamano: 10, color: COLORS.textSecondary, despues: 160 }))
+    salida.push(parrafoTexto(nombre, {
+      tamano: TAM.definicion, negrita: true, alineacion: AlignmentType.JUSTIFIED, despues: 40
+    }))
+    salida.push(...parrafosDeTexto(definicion, {
+      alineacion: AlignmentType.JUSTIFIED, despues: 160
+    }))
   })
   return salida
 }
@@ -203,6 +290,19 @@ function bloqueImagenPagina(bloque) {
   ]
 }
 
+// Número de página, abajo a la derecha.
+function pieDePagina() {
+  return new Footer({
+    children: [new Paragraph({
+      alignment: AlignmentType.RIGHT,
+      children: [new TextRun({
+        children: [PageNumber.CURRENT],
+        size: 9 * 2, color: hex(COLORS.textSecondary), font: FUENTE
+      })]
+    })]
+  })
+}
+
 /**
  * Genera el reporte vocacional en Word
  * @param {Object} datos - Resultados del participante (ver reporte-contenido.js)
@@ -210,9 +310,29 @@ function bloqueImagenPagina(bloque) {
  */
 async function generarReporteWord(datos) {
   const bloques = construirBloques(datos)
-  const hijos = []
+
+  // Las listas de carreras van a dos columnas, y en Word las columnas son una
+  // propiedad de sección: hay que partir el documento en secciones continuas.
+  // Cada tirada de bloques 'carrera' se aísla en su propia sección de 2 columnas.
+  const secciones = []
+  let hijos = []
+  let enCarreras = false
+
+  const cerrar = columnas => {
+    if (hijos.length) secciones.push({ columnas, hijos })
+    hijos = []
+  }
 
   bloques.forEach(bloque => {
+    if (bloque.tipo === 'carrera') {
+      if (!enCarreras) { cerrar(1); enCarreras = true }
+      hijos.push(parrafoVineta(bloque.texto, {
+        referencia: VINETA_CARRERA, despues: 20, interlineado: false
+      }))
+      return
+    }
+    if (enCarreras) { cerrar(2); enCarreras = false }
+
     switch (bloque.tipo) {
       case 'portada':
         hijos.push(...bloquePortada(bloque))
@@ -230,51 +350,44 @@ async function generarReporteWord(datos) {
           spacing: { after: 200 },
           border: { bottom: { style: BorderStyle.SINGLE, size: 18, color: hex(COLORS.primary), space: 6 } },
           children: [new TextRun({
-            text: bloque.titulo, bold: true, size: 44, color: hex(COLORS.primaryDark), font: 'Arial'
+            text: bloque.titulo, bold: true, size: TAM.seccion * 2,
+            color: hex(COLORS.primaryDark), font: FUENTE
           })]
         }))
         break
       case 'subseccion':
         hijos.push(parrafoTexto(bloque.titulo, {
-          tamano: 14, negrita: true, color: COLORS.primary, despues: 120
+          tamano: TAM.subseccion, negrita: true, color: COLORS.primary, despues: 120
         }))
         break
       case 'subsubtitulo':
         hijos.push(parrafoTexto(bloque.texto, {
-          tamano: bloque.tamano || 11, negrita: true, color: COLORS.primaryDark, despues: 60
+          tamano: bloque.tamano || TAM.subsubtitulo, negrita: true, color: COLORS.primaryDark, despues: 60
         }))
         break
       case 'parrafo':
-        hijos.push(parrafoTexto(bloque.texto, { alineacion: AlignmentType.JUSTIFIED }))
+        hijos.push(...parrafosDeTexto(bloque.texto, { alineacion: AlignmentType.JUSTIFIED }))
         break
       case 'destacado':
-        hijos.push(parrafoTexto(bloque.texto, { tamano: 10, negrita: true, despues: 80 }))
+        // Frase que introduce una lista ("El estudiante a menudo..."): sin negrita,
+        // para que no compita con los subtítulos.
+        hijos.push(...parrafosDeTexto(bloque.texto, { despues: 80 }))
         break
       case 'vineta':
-        hijos.push(new Paragraph({
-          bullet: { level: 0 },
-          spacing: { after: 60, line: 276 },
-          children: [new TextRun({ text: bloque.texto, size: 22, color: hex(COLORS.text), font: 'Arial' })]
-        }))
-        break
-      case 'carrera':
-        hijos.push(new Paragraph({
-          bullet: { level: 1 },
-          spacing: { after: 20 },
-          children: [new TextRun({ text: bloque.texto, size: 20, color: hex(COLORS.text), font: 'Arial' })]
-        }))
+        hijos.push(parrafoVineta(bloque.texto, { alineacion: AlignmentType.JUSTIFIED, despues: 60 }))
         break
       case 'nota':
-        hijos.push(parrafoTexto(bloque.texto, {
-          tamano: bloque.tamano || 10, color: COLORS.textSecondary, despues: 80
+        hijos.push(...parrafosDeTexto(bloque.texto, {
+          tamano: bloque.tamano || TAM.cuerpo, color: COLORS.textSecondary, despues: 80
         }))
         break
       case 'interpretacion':
         hijos.push(new Paragraph({
-          spacing: { after: 160, line: 276 },
+          alignment: AlignmentType.JUSTIFIED,
+          spacing: { after: 160, line: INTERLINEADO },
           children: [
-            new TextRun({ text: bloque.etiqueta, bold: true, size: 20, color: hex(COLORS.text), font: 'Arial' }),
-            new TextRun({ text: bloque.texto, size: 20, color: hex(COLORS.text), font: 'Arial' })
+            new TextRun({ text: bloque.etiqueta, bold: true, size: TAM.cuerpo * 2, color: hex(COLORS.text), font: FUENTE }),
+            new TextRun({ text: bloque.texto, size: TAM.cuerpo * 2, color: hex(COLORS.text), font: FUENTE })
           ]
         }))
         break
@@ -297,18 +410,57 @@ async function generarReporteWord(datos) {
         console.warn('Bloque desconocido en el Word:', bloque.tipo)
     }
   })
+  cerrar(enCarreras ? 2 : 1)
 
   const doc = new Document({
     creator: 'APROVA',
     title: `Reporte Vocacional - ${datos.nombre}`,
     subject: 'Perfil Vocacional',
     description: 'Reporte de Orientación Vocacional generado por APROVA',
-    sections: [{
+    styles: {
+      default: {
+        document: { run: { font: FUENTE, size: TAM.cuerpo * 2, color: hex(COLORS.text) } }
+      }
+    },
+    numbering: {
+      config: [
+        {
+          reference: VINETA_NORMAL,
+          levels: [{
+            level: 0,
+            format: LevelFormat.BULLET,
+            text: '•',
+            alignment: AlignmentType.LEFT,
+            style: { paragraph: { indent: { left: 720, hanging: 360 } } }
+          }]
+        },
+        {
+          reference: VINETA_CARRERA,
+          levels: [{
+            level: 0,
+            format: LevelFormat.BULLET,
+            text: '●',
+            alignment: AlignmentType.LEFT,
+            style: {
+              paragraph: { indent: { left: 360, hanging: 360 } },
+              run: { size: 7 * 2 }
+            }
+          }]
+        }
+      ]
+    },
+    sections: secciones.map((seccion, i) => ({
       properties: {
-        page: { margin: { top: 1440, right: 1440, bottom: 1440, left: 1440 } }
+        page: PAGINA,
+        // La primera sección abre el documento; las demás son continuas para que
+        // el cambio de número de columnas no provoque un salto de página.
+        type: i === 0 ? undefined : SectionType.CONTINUOUS,
+        column: seccion.columnas === 2 ? { count: 2, space: 480, equalWidth: true } : undefined
       },
-      children: hijos
-    }]
+      // El pie solo se declara en la primera sección: las siguientes lo heredan.
+      footers: i === 0 ? { default: pieDePagina() } : undefined,
+      children: seccion.hijos
+    }))
   })
 
   return Packer.toBuffer(doc)
