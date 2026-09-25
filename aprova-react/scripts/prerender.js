@@ -168,11 +168,11 @@ const llms = `# APROVA — Orientación Vocacional
   y una sesión final con los padres de familia.
 
 ## Tests incluidos
-1. Test de Inteligencia (Terman-Merrill)
+1. Test de Inteligencia
 2. Test de Aptitudes
 3. Test de Intereses Ocupacionales
 4. Áreas Vocacionales
-5. Razonamiento (DAT-5)
+5. Razonamiento
 6. Test de Personalidad (16 tipos / MBTI)
 
 ## Páginas

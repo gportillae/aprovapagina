@@ -237,7 +237,7 @@ function TestTerman({ acceso, onVolver, onCompletado }) {
         body: JSON.stringify({
           email: acceso.email,
           nombre: acceso.nombre || acceso.email,
-          testNombre: 'Test de Inteligencia TERMAN',
+          testNombre: 'Test de Inteligencia',
           respuestas: resultados,
           modalidad: acceso.modalidad,
           tipoResultado: 'terman'

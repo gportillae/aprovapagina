@@ -54,7 +54,7 @@ export const FAQS = [
   {
     question: '¿Qué tests psicométricos incluye el servicio?',
     answer:
-      'Incluye 6 evaluaciones: Test de Inteligencia (Terman), Áreas Vocacionales, Razonamiento (DAT-5), Aptitudes, Intereses Ocupacionales y Test de Personalidad. Cada uno evalúa una dimensión diferente de tu perfil.'
+      'Incluye 6 evaluaciones: Test de Inteligencia, Áreas Vocacionales, Razonamiento, Aptitudes, Intereses Ocupacionales y Test de Personalidad. Cada uno evalúa una dimensión diferente de tu perfil.'
   },
   {
     question: '¿Qué incluye la sesión con padres de familia?',
@@ -132,8 +132,8 @@ export const organizationJsonLd = {
     'Tests psicométricos',
     'Elección de carrera universitaria',
     'Test de personalidad MBTI',
-    'Test de inteligencia Terman',
-    'Test de razonamiento DAT-5',
+    'Test de inteligencia',
+    'Test de razonamiento',
     'Aptitudes e intereses profesionales',
     'Coaching educativo para adolescentes'
   ],
