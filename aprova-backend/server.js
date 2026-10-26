@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
+const { rateLimit } = require('express-rate-limit')
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY)
 const { Resend } = require('resend')
 const ExcelJS = require('exceljs')
@@ -121,6 +122,33 @@ app.use(cors({
     : true
 }))
 app.use(express.json())
+
+// ===== LÍMITE DE PETICIONES =====
+// Railway pone un proxy delante; sin 'trust proxy' todas las peticiones
+// llegarían con la IP del proxy y el límite sería compartido por todos.
+app.set('trust proxy', 1)
+
+// Generoso a propósito: un salón entero puede compartir la misma IP (NAT de la escuela).
+const limiteGeneral = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 300,
+  standardHeaders: 'draft-8',
+  legacyHeaders: false,
+  message: { error: 'Demasiadas solicitudes. Espera unos minutos e intenta de nuevo.' }
+})
+
+// Endpoints que envían correos o buscan en Stripe: más estrictos.
+const limiteEstricto = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 20,
+  standardHeaders: 'draft-8',
+  legacyHeaders: false,
+  message: { error: 'Demasiados intentos. Espera unos minutos e intenta de nuevo.' }
+})
+
+app.use('/api', limiteGeneral)
+app.use('/api/recuperar-acceso', limiteEstricto)
+app.use('/api/generar-reporte', limiteEstricto)
 
 // Productos/Precios de APROVA
 const PRODUCTOS = {
@@ -1898,21 +1926,6 @@ app.get('/api/resultados/:email', (req, res) => {
   } catch (error) {
     console.error('Error al consultar resultados:', error)
     res.status(500).json({ error: 'Error al consultar resultados' })
-  }
-})
-
-// Limpiar resultados de un usuario
-app.delete('/api/resultados/:email', (req, res) => {
-  try {
-    const email = decodeURIComponent(req.params.email)
-    const archivo = getArchivoUsuario(email)
-    if (fs.existsSync(archivo)) {
-      fs.unlinkSync(archivo)
-    }
-    res.json({ success: true, message: `Resultados de ${email} eliminados` })
-  } catch (error) {
-    console.error('Error al eliminar resultados:', error)
-    res.status(500).json({ error: 'Error al eliminar resultados' })
   }
 })
 
