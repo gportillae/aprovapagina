@@ -90,10 +90,15 @@ modalidad2 wins; otherwise the most recent one.
 After Aptitudes and Intereses are completed, the top 3 aptitudes and interests are cross-referenced against 6 professional areas (FM, B, Q, A, S, H) to determine which 3 area subtypes the user must complete. This logic is in `Tests.jsx`.
 
 ### PDF Report Generation
-- `aprova-backend/generar-reporte.js` generates a ~21-page PDF using PDFKit
+- `reporte-contenido.js` (`construirBloques`) is the single source of the report's content; three renderers consume it:
+  - `generar-reporte-diseno.js` — **the PDF that is sent**: fills `plantilla-reporte/plantilla_reporte.html` (APROVA design, blue/orange, ~35 pages) and prints it with Chromium via `puppeteer-core`
+  - `generar-reporte-word.js` — the editable Word, sent alongside
+  - `generar-reporte.js` — the classic PDFKit PDF, used only as a fallback if Chromium fails
 - Contains: MBTI personality (16 types with descriptions), Terman intelligence (10 series), aptitudes/razonamiento bar charts, intereses, areas vocacionales with career lists, and fixed advisory text sections
-- `POST /api/generar-reporte` loads results from server files, generates PDF, emails it to `EMAIL_DESTINO`, and returns it as download
-- Report includes the `pasos_aprova.jpg` image as second-to-last page
+- `POST /api/generar-reporte` loads results from server files, generates the design PDF + Word and emails both to `EMAIL_DESTINO` (never to the student)
+- Chromium comes from `nixpacks.toml`, pinned to a newer nixpkgs than nixpacks' default: the template's page header/footer (`@page` margin boxes) need Chromium ≥131. Locally it uses Edge/Chrome
+- The template is shared with a local Windows tool (OneDrive, `_Generar reporte para los padres de familia`) that rebuilds the same design from a Word edited by hand. Design changes must be copied to both. The fixed advisory sections (01, 02, 09–14) come from the template, not from `TEXTOS`
+- Font: the template asks for Arial Narrow (Microsoft, not redistributable — the repo is public). The server embeds metric-identical **Liberation Sans Narrow** under that name (`plantilla-reporte/fuentes`)
 
 ### SEO and Prerendering
 The public pages are **prerendered to static HTML at build time**. This matters because the
