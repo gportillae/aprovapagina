@@ -481,15 +481,15 @@ function construirBloques(datos) {
       }).filter(Boolean)
     })
 
-    // Detalle por serie: solo el nombre, sin aciertos ni nivel
+    // Detalle por serie: solo el nombre y qué mide, sin aciertos, nivel ni
+    // interpretación (APROVA pidió quitarla del reporte; los textos alto/bajo
+    // se conservan arriba por si se retoman)
     ordenSeries.forEach(key => {
       const d = series[key]
       if (!d) return
       const interp = INTERPRETACIONES_TERMAN[key]
-      const esAlto = RANGOS_ORDER.indexOf(getRangoSerie(key, d.puntuacion)) <= 2
       b.push({ tipo: 'subsubtitulo', texto: `${key} ${interp.nombre}`, tamano: 12, espacioMin: 120 })
       b.push({ tipo: 'nota', texto: interp.descripcion, tamano: 10 })
-      b.push({ tipo: 'interpretacion', etiqueta: 'Interpretación: ', texto: esAlto ? interp.alto : interp.bajo })
     })
 
     b.push({ tipo: 'subseccion', titulo: 'Recomendaciones Generales', espacioMin: 80 })
