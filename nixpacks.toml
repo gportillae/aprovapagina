@@ -1,9 +1,0 @@
-# Chromium para imprimir el reporte con diseño (aprova-backend/generar-reporte-diseno.js).
-# Se fija una versión de nixpkgs propia solo para Chromium: la que trae nixpacks por
-# defecto tiene Chromium 117, que no dibuja el encabezado ni el pie de página de la
-# plantilla (los márgenes de @page llegaron en Chromium 131). Esta es la última de
-# nixos-24.11, con Chromium 138, y es la versión que espera puppeteer-core 24.11.
-[phases.chromium]
-dependsOn = ['setup']
-nixPkgs = ['chromium']
-nixpkgsArchive = '50ab793786d9de88ee30ec4e4c24fb4236fc2674'

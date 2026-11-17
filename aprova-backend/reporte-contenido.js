@@ -406,11 +406,7 @@ function construirBloques(datos) {
         const pct1 = total > 0 ? Math.round((dim[key[0]] / total) * 100) : 50
         filas.push({
           etiqueta: `${info.polo1}: ${pct1}%    vs    ${info.polo2}: ${100 - pct1}%    →  Dominante: ${dim.dominante}`,
-          pct1,
-          // Los polos sueltos los usa el reporte con diseño, que dibuja cada lado por separado
-          polo1: key[0],
-          polo2: key[1],
-          dominante: dim.dominante
+          pct1
         })
       })
       if (filas.length) b.push({ tipo: 'dimensiones', filas })

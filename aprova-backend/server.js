@@ -9,7 +9,6 @@ const fs = require('fs')
 const path = require('path')
 const { generarReportePDF } = require('./generar-reporte')
 const { generarReporteWord } = require('./generar-reporte-word')
-const { generarReporteDiseno } = require('./generar-reporte-diseno')
 
 const resend = new Resend(process.env.RESEND_API_KEY)
 
@@ -1956,14 +1955,10 @@ app.post('/api/generar-reporte', async (req, res) => {
 
     const datosReporte = { nombre, email, terman, mbti, aptitudes, intereses, areas, razonamiento }
 
-    // El PDF sale con el diseño de APROVA y el Word en su formato editable, para
-    // corregirlo a mano y rediseñarlo después con la herramienta local. Si Chromium
-    // falla, se manda el PDF clásico: el reporte no debe quedarse sin enviar.
+    // Se generan los dos formatos: ambos se adjuntan al correo y el cliente
+    // descarga el que haya pedido.
     const [pdfBuffer, wordBuffer] = await Promise.all([
-      generarReporteDiseno(datosReporte).catch(e => {
-        console.error('No se pudo generar el reporte con diseño; se envía el PDF clásico:', e.message)
-        return generarReportePDF(datosReporte)
-      }),
+      generarReportePDF(datosReporte),
       generarReporteWord(datosReporte)
     ])
 
